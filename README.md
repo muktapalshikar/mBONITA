@@ -5,4 +5,4 @@ moBONITA integrates information from multiple datasets to simulate and perturb a
 
 __Mukta G. Palshikar, Shannon Hilchey, Martin Zand, Juilee Thakar__
 
-![Graphical abstract - Figure 2 from manuscript](https://github.com/mgp13/moBONITA/blob/main/Picture1.png?raw=true)
+![Graphical abstract](https://github.com/mgp13/moBONITA/blob/main/Picture1.png?raw=true)
