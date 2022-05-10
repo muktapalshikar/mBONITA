@@ -5,7 +5,7 @@
 ## Summary:
 moBONITA integrates information from multiple datasets to simulate and perturb a prior knowledge network with a consensus set of logic rules
 
-__Mukta G. Palshikar, Shannon Hilchey, Martin Zand & _Juilee Thakar_ __
+__Mukta G. Palshikar, Shannon Hilchey, Martin Zand & _Juilee Thakar___
 
 ## Contact: 
 Juilee_Thakar@URMC.Rochester.edu; Mukta_Palshikar@URMC.Rochester.edu
