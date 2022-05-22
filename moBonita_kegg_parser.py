@@ -144,6 +144,7 @@ def readKEGG(lines, graph, KEGGdict, hsaDict):
         ):
             color = "blue"
             signal = "i"
+            interaction = "i"
         else:
             print("color not detected. Signal assigned to activation arbitrarily")
             print(subtypes)
@@ -407,7 +408,7 @@ if __name__ == "__main__":
     if paths == "None":
         find_pathways_kegg(
             geneList=geneDict.keys(),
-            preDefList=pathList,
+            preDefList=[],
             organism=org
         )
     else:
