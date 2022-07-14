@@ -3,6 +3,7 @@
 from tensorflow.keras import models, layers, utils, backend as K
 import matplotlib.pyplot as plt
 import shap
+import numpy as np
 
 model = models.Sequential(name="Perceptron", layers=[
     layers.Dense(             #a fully connected layer
@@ -24,7 +25,7 @@ def R2(y, y_hat):
 model.compile(optimizer='adam', loss='mean_absolute_error', 
               metrics=[R2])
 
-import numpy as np
+
 X = np.random.rand(100,3)
 y = np.random.choice([1,0], size=100)# train/validation
 training = model.fit(x=X, y=y, batch_size=2, epochs=10, shuffle=True, verbose=0, validation_split=0.3)

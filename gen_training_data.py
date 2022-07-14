@@ -2,30 +2,6 @@ import pandas as pd
 import numpy as np
 from random import random
 
-def genInitValueList(newSampleList, model):
-    """use dictionaries of values at each node for each sample to construct initial value list for the model"""
-    newInitValueList = []
-    for j in range(0, len(newSampleList)):
-        newInitValueList.append([])
-    for j in range(0, len(model.nodeList)):
-        for k in range(0, len(newSampleList)):
-            ss = newSampleList[k]
-            if model.nodeList[j] in newSampleList[0]:
-                newInitValueList[k].append(ss[model.nodeList[j]])
-            else:
-                newInitValueList[k].append(0.5)
-    return newInitValueList
-
-def genEBNInitValues(individual, model, sampleProbs):
-    """init value generator for EBNs"""
-    return [True if (random()<sampleProbs[node]) else False for node in range(0,len(sampleProbs))]
-    #initValues = np.zeros(500, dtype=np.intc, order="C")
-    #for node in range(0, len(sampleProbs)):
-    #    if random() < sampleProbs[node]:
-    #        initValues[node] = 1
-    #return initValues
-#initValues = genEBNInitValues(individual, model, sampleProbs)  # get initial values for all nodes
-
 def readData(datafiles = {}):
     """
     Read csv training data files.
@@ -79,22 +55,30 @@ def makeFSCdataset(df, numberOfCells = 10):
     """
     alldata = pd.DataFrame()
     for col in df.columns:
-        print(alldata.shape)
-        print(col)
         temp = [not i for i in df.index.isin(['Type'])]
         fsc = fakeSingleCells(df.loc[temp, col], numberOfCells=5)
-        fsc.loc['Type'] = df.loc['Type']
+        type = df.loc['Type', col]
+        fsc.index = pd.MultiIndex.from_tuples([(type, str(i), col) for i in fsc.index], names=["Type", "Entity", "Sample"])
         if len(alldata) == 0:
             alldata = fsc
         else:
-            alldata = pd.concat([alldata, df], axis = 1).fillna(0)
+            alldata = pd.concat([alldata, fsc], axis = 0).fillna(0)
+        alldata.columns = [str(i) for i in range(0, len(alldata.columns))]
     return alldata
 
-if __name__ == "__main__":
+def experimentPartOneWrapper():
     concatDF = readData(datafiles = {"proteins": "bonita_proteomics.csv", "phosphoproteins": "bonita_phosphoproteomics.csv","mRNA": "bonita_transcriptomics.csv"})
     print("concatdf:", concatDF.shape)
-    splitDF = splitData(concatDF, ["proteins", "phosphoproteins"], ["mRNA"])
+    splitDF = splitData(concatDF, ["mRNA", "phosphoproteins"], ["proteins"])
     print("input", splitDF['input'].shape)
     print("target", splitDF['target'].shape)
-    alldata = makeFSCdataset(splitDF['input'], numberOfCells = 10)
-    print(alldata.columns)
+    # generate input data
+    inputdata = makeFSCdataset(splitDF['input'], numberOfCells = 10)
+    print(inputdata)
+    # generate target data
+    targetdata = makeFSCdataset(splitDF['target'], numberOfCells = 10)
+    print(targetdata)
+    return concatDF, splitDF, inputdata, targetdata
+
+if __name__ == "__main__":
+    concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
