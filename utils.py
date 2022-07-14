@@ -38,7 +38,7 @@ def readFpkmData(dataName, delmited):
 # writes rules as a network
 def Get_expanded_network(rules, equal_sign="*="):
     """
-	The code is written by Gang Yang, Department of Physics, Penn State University if not specified.
+    The code is written by Gang Yang, Department of Physics, Penn State University if not specified.
 
   Return the expanded network for a given Boolean network model.
   The Boolean network model is a DiGraph object in the output format of form_network().
@@ -56,7 +56,7 @@ def Get_expanded_network(rules, equal_sign="*="):
   Returns
   -------
   The expanded network for the given Boolean network model.
-	"""
+    """
     composite_nodes = []
     G_expand = nx.DiGraph()
     for line in rules:
