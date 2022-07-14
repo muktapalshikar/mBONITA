@@ -97,4 +97,4 @@ if __name__ == "__main__":
     print("input", splitDF['input'].shape)
     print("target", splitDF['target'].shape)
     alldata = makeFSCdataset(splitDF['input'], numberOfCells = 10)
-    print(alldata.columns())
+    print(alldata.columns)
