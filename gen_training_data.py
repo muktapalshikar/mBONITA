@@ -1,6 +1,6 @@
 import pandas as pd
-import numpy as np
 from random import random
+import networkx as nx
 
 def readData(datafiles = {}):
     """
@@ -81,4 +81,23 @@ def experimentPartOneWrapper():
     return concatDF, splitDF, inputdata, targetdata
 
 if __name__ == "__main__":
+    # prepare data
     concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
+    # prepare network
+    testNet = nx.read_graphml("consensus_net.graphml")
+    # get node
+    testNode = dict(filter(lambda elem: elem[1] == max(dict(testNet.in_degree).values()), dict(testNet.in_degree).items()))
+    testNode = list(testNode.keys())[0]
+    # get upstream nodes
+    upstream = testNet.in_edges(testNode)
+    upstream = [i[0] for i in upstream]
+    # subset input data
+    testInput = inputdata.iloc[inputdata.index.get_level_values('Entity').isin(upstream)]
+    print(testInput.shape)
+    # subset target data
+    testTarget = targetdata.iloc[targetdata.index.get_level_values('Entity').isin([testNode])]
+    print(testTarget.shape)
+    
+
+
+

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="node" attr.name="consensus_betweenness" attr.type="double"/>
 <key id="d0" for="node" attr.name="trans_betweenness" attr.type="double"/>
-<graph edgedefault="undirected"><node id="NADK">
+<graph edgedefault="directed"><node id="NADK">
   <data key="d0">0.0007847521373755707</data>
   <data key="d1">0.00021892832926350997</data>
 </node>
