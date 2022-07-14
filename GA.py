@@ -3,6 +3,7 @@ import pickle
 import copy as copy
 from deap import *
 from deap import base, creator, tools
+
 # from deap import algorithms as algo
 from random import random, seed, shuffle, randint, sample, choice
 import numpy as numpy
@@ -63,9 +64,9 @@ def cxTwoPointNode(ind1, ind2):
     # needed to account for bistring only being one of two components of individual
     """Executes a two-point crossover on the input :term:`sequence`
     individuals. The two individuals are modified in place and both keep
-    their original length. 
+    their original length.
     :returns: A tuple of two individuals.
-    This function uses the :func:`~random.randint` function from the Python 
+    This function uses the :func:`~random.randint` function from the Python
     base :mod:`random` module.
 
     Modified to cross over between rules
@@ -307,21 +308,21 @@ def mutFlipBitAdapt(indyIn, genfrac, mutModel):
 def selNSGA2(individuals, k):
     # NSGA2 selection taken from deap
     """Apply NSGA-II selection operator on the *individuals*. Usually, the
-	size of *individuals* will be larger than *k* because any individual
-	present in *individuals* will appear in the returned list at most once.
-	Having the size of *individuals* equals to *k* will have no effect other
-	than sorting the population according to their front rank. The
-	list returned contains references to the input *individuals*. For more
-	details on the NSGA-II operator see [Deb2002]_.
-	
-	:param individuals: A list of individuals to select from.
-	:param k: The number of individuals to select.
-	:returns: A list of selected individuals.
-	
-	.. [Deb2002] Deb, Pratab, Agarwal, and Meyarivan, "A fast elitist
-	   non-dominated sorting genetic algorithm for multi-objective
-	   optimization: NSGA-II", 2002.
-	"""
+    size of *individuals* will be larger than *k* because any individual
+    present in *individuals* will appear in the returned list at most once.
+    Having the size of *individuals* equals to *k* will have no effect other
+    than sorting the population according to their front rank. The
+    list returned contains references to the input *individuals*. For more
+    details on the NSGA-II operator see [Deb2002]_.
+
+    :param individuals: A list of individuals to select from.
+    :param k: The number of individuals to select.
+    :returns: A list of selected individuals.
+
+    .. [Deb2002] Deb, Pratab, Agarwal, and Meyarivan, "A fast elitist
+       non-dominated sorting genetic algorithm for multi-objective
+       optimization: NSGA-II", 2002.
+    """
     pareto_fronts = sortNondominatedAdapt(individuals, k)
     for front in pareto_fronts:
         assignCrowdingDist(front)
@@ -339,22 +340,22 @@ def selNSGA2(individuals, k):
 
 # taken from deap and modified slightly to make pareto sorting less strict
 def sortNondominatedAdapt(individuals, k, first_front_only=False):
-    """Sort the first *k* *individuals* into different nondomination levels 
-	using the "Fast Nondominated Sorting Approach" proposed by Deb et al.,
-	see [Deb2002]_. This algorithm has a time complexity of :math:`O(MN^2)`, 
-	where :math:`M` is the number of objectives and :math:`N` the number of 
-	individuals.
-	
-	:param individuals: A list of individuals to select from.
-	:param k: The number of individuals to select.
-	:param first_front_only: If :obj:`True` sort only the first front and
-							 exit.
-	:returns: A list of Pareto fronts (lists), the first list includes 
-			  nondominated individuals.
-	.. [Deb2002] Deb, Pratab, Agarwal, and Meyarivan, "A fast elitist
-	   non-dominated sorting genetic algorithm for multi-objective
-	   optimization: NSGA-II", 2002.
-	"""
+    """Sort the first *k* *individuals* into different nondomination levels
+    using the "Fast Nondominated Sorting Approach" proposed by Deb et al.,
+    see [Deb2002]_. This algorithm has a time complexity of :math:`O(MN^2)`,
+    where :math:`M` is the number of objectives and :math:`N` the number of
+    individuals.
+
+    :param individuals: A list of individuals to select from.
+    :param k: The number of individuals to select.
+    :param first_front_only: If :obj:`True` sort only the first front and
+                                                     exit.
+    :returns: A list of Pareto fronts (lists), the first list includes
+                      nondominated individuals.
+    .. [Deb2002] Deb, Pratab, Agarwal, and Meyarivan, "A fast elitist
+       non-dominated sorting genetic algorithm for multi-objective
+       optimization: NSGA-II", 2002.
+    """
     if k == 0:
         return []
 
@@ -406,13 +407,13 @@ def sortNondominatedAdapt(individuals, k, first_front_only=False):
 
 # taken from deap and modified slightly to make pareto sorting less strict
 def dominated(ind1, ind2):
-    """Return true if each objective of *self* is not strictly worse than 
-		the corresponding objective of *other* and at least one objective is 
-		strictly better.
-		:param obj: Slice indicating on which objectives the domination is 
-					tested. The default value is `slice(None)`, representing
-					every objectives.
-	"""
+    """Return true if each objective of *self* is not strictly worse than
+    the corresponding objective of *other* and at least one objective is
+    strictly better.
+    :param obj: Slice indicating on which objectives the domination is
+                            tested. The default value is `slice(None)`, representing
+                            every objectives.
+    """
     not_equal = False
     mean1 = numpy.mean(ind1.wvalues)
     mean2 = numpy.mean(ind2.wvalues)
@@ -426,10 +427,10 @@ def dominated(ind1, ind2):
 
 # taken from deap
 def assignCrowdingDist(individuals):
-    """Assign a crowding distance to each individual's fitness. The 
-	crowding distance can be retrieve via the :attr:`crowding_dist` 
-	attribute of each individual's fitness.
-	"""
+    """Assign a crowding distance to each individual's fitness. The
+    crowding distance can be retrieve via the :attr:`crowding_dist`
+    attribute of each individual's fitness.
+    """
     if len(individuals) == 0:
         return
 
