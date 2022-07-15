@@ -172,7 +172,7 @@ if __name__ == "__main__":
                     testInput.columns
                 ),  # number of features = number of upstream nodes from the PKN
                 units=1,  # and 1 node because we want 1 output
-                activation="linear",  # f(x)=x
+                activation="relu",  # f(x)=x
             )
         ],
     )
