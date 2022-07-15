@@ -56,22 +56,25 @@ def fakeSingleCells(column, numberOfCells=10):
     return fsc
 
 
-def makeFSCdataset(df, numberOfCells=10):
+def makeFSCdataset(df, numberOfCells):
     """
     Apply fakeSingleCells over all samples in the given dataset
     """
     alldata = pd.DataFrame()
     for col in df.columns:
         temp = [not i for i in df.index.isin(["Type"])]
-        fsc = fakeSingleCells(df.loc[temp, col], numberOfCells=5)
+        fsc = fakeSingleCells(df.loc[temp, col], numberOfCells=numberOfCells)
         type = df.loc["Type", col]
+        #fsc.index = pd.MultiIndex.from_tuples(
+        #    [(type, str(i), col) for i in fsc.index], names=["Type", "Entity", "Sample"]
+        #)
         fsc.index = pd.MultiIndex.from_tuples(
-            [(type, str(i), col) for i in fsc.index], names=["Type", "Entity", "Sample"]
+            [(type, str(i)) for i in fsc.index], names=["Type", "Entity"]
         )
         if len(alldata) == 0:
             alldata = fsc
         else:
-            alldata = pd.concat([alldata, fsc], axis=0).fillna(0)
+            alldata = pd.concat([alldata, fsc], axis=1).fillna(0)
         alldata.columns = [str(i) for i in range(0, len(alldata.columns))]
     return alldata
 
@@ -85,7 +88,6 @@ def experimentPartOneWrapper():
         }
     )
     prot_common_conditions = [
-        "Gene",
         "norm_19-A",
         "norm_19-B",
         "norm_19-C",
@@ -96,17 +98,39 @@ def experimentPartOneWrapper():
         "norm_1-1ug-B",
         "norm_1-1ug-C",
     ]
-
-    print("concatdf:", concatDF.shape)
+    mrna_common_conditions = [
+        "Ramos_19O2_NoCyclo_1",
+        "Ramos_19O2_NoCyclo_2",
+        "Ramos_19O2_NoCyclo_3",
+        "Ramos_1O2_NoCyclo_1",
+        "Ramos_1O2_NoCyclo_2",
+        "Ramos_1O2_NoCyclo_3",
+        "Ramos_1O2_PlusCyclo_1",
+        "Ramos_1O2_PlusCyclo_2",
+        "Ramos_1O2_PlusCyclo_3",
+    ]
+    phosph_common_conditions = [
+        "Gr1_F1: 126, Sample, 1",
+        "Gr1_F2: 126, Sample, 1",
+        "Gr1_F3: 126, Sample, 1",
+        "Gr1_F1: 128C, Sample, 4",
+        "Gr1_F2: 128C, Sample, 4",
+        "Gr1_F3: 128C, Sample, 4",
+        "Gr2_F1: 128N, Control, 781",
+        "Gr2_F2: 128N, Control, 781",
+        "Gr2_F3: 128N, Control, 781",
+    ]
+    concatDF = concatDF.loc[:,  prot_common_conditions+mrna_common_conditions+phosph_common_conditions]
+    #print("concatdf:", concatDF.shape)
     splitDF = splitData(concatDF, ["mRNA", "phosphoproteins"], ["proteins"])
-    print("input", splitDF["input"].shape)
-    print("target", splitDF["target"].shape)
+    #print("input", splitDF["input"].shape)
+    #print("target", splitDF["target"].shape)
     # generate input data
-    inputdata = makeFSCdataset(splitDF["input"], numberOfCells=10)
-    print(inputdata)
+    inputdata = makeFSCdataset(splitDF["input"], numberOfCells=5)
+    #print(inputdata)
     # generate target data
     targetdata = makeFSCdataset(splitDF["target"], numberOfCells=10)
-    print(targetdata)
+    #print(targetdata)
     return concatDF, splitDF, inputdata, targetdata
 
 
@@ -129,14 +153,16 @@ if __name__ == "__main__":
     # subset input data
     testInput = inputdata.iloc[
         inputdata.index.get_level_values("Entity").isin(upstream)
-    ].T
+    ].T.astype('int')
     print(testInput.shape)
     # subset target data
     testTarget = targetdata.iloc[
         targetdata.index.get_level_values("Entity").isin([testNode])
-    ].T
+    ].T.astype('int')
+    print(testTarget.shape)
     print(testTarget)
-
+    print(testInput)
+    
     model = models.Sequential(
         name="Perceptron",
         layers=[
@@ -203,3 +229,4 @@ if __name__ == "__main__":
         ax22.plot(training.history["val_" + metric], label=metric)
     ax22.set_ylabel("Score", color="steelblue")
     plt.savefig("temp.png")
+    
