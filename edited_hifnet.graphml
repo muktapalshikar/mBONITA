@@ -1,0 +1,3049 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d7" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d6" for="node" attr.name="Group_neighbors" attr.type="string"/>
+<key id="d5" for="node" attr.name="GRK5_neighbors" attr.type="string"/>
+<key id="d4" for="node" attr.name="LSP1_neighbors" attr.type="string"/>
+<key id="d3" for="node" attr.name="Display Name" attr.type="string"/>
+<key id="d2" for="node" attr.name="RA" attr.type="double"/>
+<key id="d1" for="node" attr.name="andNode" attr.type="long"/>
+<key id="d0" for="node" attr.name="IS" attr.type="double"/>
+<graph edgedefault="directed"><node id="HSP90AB1_PTK2">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ITGA4_APC_TIAM1">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CRKL">
+  <data key="d0">0.0801508849975</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.250836606698</data>
+  <data key="d3">CRKL</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PPP2R5C_ ~PTK2_ ~SOS1">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="STK11">
+  <data key="d0">0.119467467118</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.0707912507071</data>
+  <data key="d3">STK11</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="ITGA4_ARHGAP35">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="IKBKB">
+  <data key="d0">0.0321980337195</data>
+  <data key="d1">0</data>
+  <data key="d2">0.832167222834</data>
+  <data key="d3">IKBKB</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="AKT1">
+  <data key="d0">0.244769245169</data>
+  <data key="d1">0</data>
+  <data key="d2">0.281813365181</data>
+  <data key="d3">AKT1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PTK2B">
+  <data key="d0">0.117292559462</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.833360136179</data>
+  <data key="d3">PTK2B</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ARAF">
+  <data key="d0">0.108284518934</data>
+  <data key="d1">0</data>
+  <data key="d2">1.34824095232</data>
+  <data key="d3">ARAF</data>
+  <data key="d4">LSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">Both</data>
+</node>
+<node id="IKBKG">
+  <data key="d0">0.0314362657623</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.137540616927</data>
+  <data key="d3">IKBKG</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="IKBKE">
+  <data key="d0">0.0314600093015</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">IKBKE</data>
+  <data key="d4">LSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">LSP1</data>
+</node>
+<node id="ARHGAP35">
+  <data key="d0">0.0877791009957</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.838309847695</data>
+  <data key="d3">ARHGAP35</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="~MIOS_ ~WDR24_SESN2">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="ARHGAP35_ARHGEF6">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="MAP3K2">
+  <data key="d0">0.0314571398926</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.184018317019</data>
+  <data key="d3">MAP3K2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ARHGEF7">
+  <data key="d0">0.127918550997</data>
+  <data key="d1">0</data>
+  <data key="d2">3.45320365227</data>
+  <data key="d3">ARHGEF7</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="GRK5">
+  <data key="d0">1.0</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.263650795788</data>
+  <data key="d3">GRK5</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="GRK2">
+  <data key="d0">0.0820672664037</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.630009155332</data>
+  <data key="d3">GRK2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="MAP3K7">
+  <data key="d0">0.144660403992</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.250734662709</data>
+  <data key="d3">MAP3K7</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="MAP3K5">
+  <data key="d0">0.0588552311204</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.462794340185</data>
+  <data key="d3">MAP3K5</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="HSP90AB1">
+  <data key="d0">0.0911014975996</data>
+  <data key="d1">0</data>
+  <data key="d2">2.91272788337</data>
+  <data key="d3">HSP90AB1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="~BIRC2_SYK">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="AKT1S1">
+  <data key="d0">0.0314677446813</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.532158376549</data>
+  <data key="d3">AKT1S1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="RELB">
+  <data key="d0">0.147480992475</data>
+  <data key="d1">0</data>
+  <data key="d2">1.22771051635</data>
+  <data key="d3">RELB</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="LYN">
+  <data key="d0">0.232768807794</data>
+  <data key="d1">0</data>
+  <data key="d2">2.89061546255</data>
+  <data key="d3">LYN</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="IRAK4">
+  <data key="d0">0.0315377760357</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">IRAK4</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="~IKBKB_ ~NFKB1_CSNK2B">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="BRCA1">
+  <data key="d0">0.0314793017025</data>
+  <data key="d1">0</data>
+  <data key="d2">0.773779461078</data>
+  <data key="d3">BRCA1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="HSPA8">
+  <data key="d0">0.0611940263851</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.466440327615</data>
+  <data key="d3">HSPA8</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="DIAPH1">
+  <data key="d0">0.0313952951449</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">DIAPH1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PTK2B_CXCR4">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CAMK2D">
+  <data key="d0">0.222994852982</data>
+  <data key="d1">0</data>
+  <data key="d2">2.64333829839</data>
+  <data key="d3">CAMK2D</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="CD22">
+  <data key="d0">0.0315747323784</data>
+  <data key="d1">0</data>
+  <data key="d2">0.108225967669</data>
+  <data key="d3">CD22</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="CREB1">
+  <data key="d0">0.0315361417882</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.532878651444</data>
+  <data key="d3">CREB1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PLCG2">
+  <data key="d0">0.384487190547</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.107092406966</data>
+  <data key="d3">PLCG2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="TELO2_MTOR">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="~STK11_ ~PRKAA1_IKBKB">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="IFNAR2">
+  <data key="d0">0.0320246577438</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">IFNAR2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="TTI1">
+  <data key="d0">0.0313943999102</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">TTI1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="SYK">
+  <data key="d0">0.634465246905</data>
+  <data key="d1">0</data>
+  <data key="d2">0.480975732891</data>
+  <data key="d3">SYK</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="ARPC1B">
+  <data key="d0">0.0313865689258</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0205996501123</data>
+  <data key="d3">ARPC1B</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PTPN11">
+  <data key="d0">0.0313876601824</data>
+  <data key="d1">0</data>
+  <data key="d2">0.198080719455</data>
+  <data key="d3">PTPN11</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PAK4_PAK2">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="SLC2A1">
+  <data key="d0">0.031500312624</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.256003102162</data>
+  <data key="d3">SLC2A1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="GSK3B">
+  <data key="d0">0.0620895695699</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">GSK3B</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="GNG5">
+  <data key="d0">0.0314386772962</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">GNG5</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CYLD">
+  <data key="d0">0.0315058240287</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.615023399605</data>
+  <data key="d3">CYLD</data>
+  <data key="d4">LSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">LSP1</data>
+</node>
+<node id="PAK4">
+  <data key="d0">0.0795699422142</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.567362879549</data>
+  <data key="d3">PAK4</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="APC">
+  <data key="d0">0.0888421255922</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.291866515193</data>
+  <data key="d3">APC</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="ACTB">
+  <data key="d0">0.0314986462138</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.676417798685</data>
+  <data key="d3">ACTB</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ELMO1">
+  <data key="d0">0.0315160941317</data>
+  <data key="d1">0</data>
+  <data key="d2">0.709982671031</data>
+  <data key="d3">ELMO1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PAK2">
+  <data key="d0">0.128203005644</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.440861821719</data>
+  <data key="d3">PAK2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CSF2RB">
+  <data key="d0">0.24628531756</data>
+  <data key="d1">0</data>
+  <data key="d2">0.033852449611</data>
+  <data key="d3">CSF2RB</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="NFATC1">
+  <data key="d0">0.0314274684948</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.291393332581</data>
+  <data key="d3">NFATC1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="NFATC2">
+  <data key="d0">0.0314880382268</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.228225077367</data>
+  <data key="d3">NFATC2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="NFATC3">
+  <data key="d0">0.0315177555287</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.456454322299</data>
+  <data key="d3">NFATC3</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="STMN1">
+  <data key="d0">0.031492035256</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.470224749711</data>
+  <data key="d3">STMN1</data>
+  <data key="d4">LSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">Both</data>
+</node>
+<node id="DOCK2">
+  <data key="d0">0.0315181317409</data>
+  <data key="d1">0</data>
+  <data key="d2">0.979763732655</data>
+  <data key="d3">DOCK2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="GSK3A">
+  <data key="d0">0.0315196254551</data>
+  <data key="d1">0</data>
+  <data key="d2">0.312474935103</data>
+  <data key="d3">GSK3A</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="EP300_CAMK2D">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="ITGA4">
+  <data key="d0">0.234163191255</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.864972568399</data>
+  <data key="d3">ITGA4</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="GAPDH">
+  <data key="d0">0.0314759131419</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">GAPDH</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="~CRK_ ~ARHGEF7">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CRTC2">
+  <data key="d0">0.0621150287747</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.474315819109</data>
+  <data key="d3">CRTC2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="~AKT1_CXCR4">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CRK">
+  <data key="d0">0.174982049124</data>
+  <data key="d1">0</data>
+  <data key="d2">0.400291640933</data>
+  <data key="d3">CRK</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="RICTOR">
+  <data key="d0">0.062138621948</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.669366122751</data>
+  <data key="d3">RICTOR</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="HSP90AA1_HSP90AB1">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="DAXX">
+  <data key="d0">0.0315099981349</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0346111606712</data>
+  <data key="d3">DAXX</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="ITGB7">
+  <data key="d0">0.137676845896</data>
+  <data key="d1">0</data>
+  <data key="d2">0.445562532663</data>
+  <data key="d3">ITGB7</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="IL4R_SYK">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="TSC2">
+  <data key="d0">0.0628201675888</data>
+  <data key="d1">0</data>
+  <data key="d2">1.0923016791</data>
+  <data key="d3">TSC2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="RIPK1_MAP3K7">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="TIAM1">
+  <data key="d0">0.0455380617146</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.312582000819</data>
+  <data key="d3">TIAM1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="TFRC">
+  <data key="d0">0.0314749326179</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">TFRC</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PRKCQ">
+  <data key="d0">0.0619783382988</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.0565404830094</data>
+  <data key="d3">PRKCQ</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="ITGB7_MAP3K11">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="~BIRC2_BTK_RIPK1">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="LYN_CXCR4_GRK2">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PGK1">
+  <data key="d0">0.0314724609049</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.707931333749</data>
+  <data key="d3">PGK1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="IL4R">
+  <data key="d0">0.0617650373132</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.394439730365</data>
+  <data key="d3">IL4R</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PIKFYVE">
+  <data key="d0">0.0314822848146</data>
+  <data key="d1">0</data>
+  <data key="d2">0.176947944653</data>
+  <data key="d3">PIKFYVE</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CDC25B">
+  <data key="d0">0.0314679726179</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">CDC25B</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="MAP3K1_MAP3K11">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PRKCA">
+  <data key="d0">0.114886264779</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">PRKCA</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="~GRK5_ ~GRK2_ ~CXCR4">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="TELO2">
+  <data key="d0">0.0587004947977</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0017315214714</data>
+  <data key="d3">TELO2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="ITPR1">
+  <data key="d0">0.0314966534924</data>
+  <data key="d1">0</data>
+  <data key="d2">1.6992456212</data>
+  <data key="d3">ITPR1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PTPN7">
+  <data key="d0">0.0351133455357</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.487575459792</data>
+  <data key="d3">PTPN7</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PLCG2_MTOR_EZR">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="F11R">
+  <data key="d0">0.0619731543132</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">F11R</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="EIF4B">
+  <data key="d0">0.0314741410904</data>
+  <data key="d1">0</data>
+  <data key="d2">0.797229021577</data>
+  <data key="d3">EIF4B</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="GYS1">
+  <data key="d0">0.0314975931562</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.310875242955</data>
+  <data key="d3">GYS1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="EGLN1">
+  <data key="d0">0.0978467117173</data>
+  <data key="d1">0</data>
+  <data key="d2">0.034742167642</data>
+  <data key="d3">EGLN1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="TP53">
+  <data key="d0">0.0314801228164</data>
+  <data key="d1">0</data>
+  <data key="d2">0.265637345762</data>
+  <data key="d3">TP53</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PAK2_CRK">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PHLPP1">
+  <data key="d0">0.268379785608</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.359208942999</data>
+  <data key="d3">PHLPP1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="~BIRC2_CSNK2B">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="MEF2C">
+  <data key="d0">0.0315555681152</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.649219461757</data>
+  <data key="d3">MEF2C</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ARHGEF6">
+  <data key="d0">0.0980384373102</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.754289267502</data>
+  <data key="d3">ARHGEF6</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="~PTK2_ ~ITGA4">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="EIF4EBP1">
+  <data key="d0">0.031459062293</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.0955190075264</data>
+  <data key="d3">EIF4EBP1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="GIT1">
+  <data key="d0">0.0315145744337</data>
+  <data key="d1">0</data>
+  <data key="d2">0.367926502646</data>
+  <data key="d3">GIT1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="DEPDC5">
+  <data key="d0">0.031486758079</data>
+  <data key="d1">0</data>
+  <data key="d2">0.228492330673</data>
+  <data key="d3">DEPDC5</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PPP2R5D">
+  <data key="d0">0.0313869486625</data>
+  <data key="d1">0</data>
+  <data key="d2">-1.1992108143</data>
+  <data key="d3">PPP2R5D</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="FLNA">
+  <data key="d0">0.031488996397</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.80267975919</data>
+  <data key="d3">FLNA</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="FLNB">
+  <data key="d0">0.0314330045441</data>
+  <data key="d1">0</data>
+  <data key="d2">-1.03823683928</data>
+  <data key="d3">FLNB</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="BTK">
+  <data key="d0">0.0484783916642</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.32684958132</data>
+  <data key="d3">BTK</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PPP2R5C">
+  <data key="d0">0.0316231528941</data>
+  <data key="d1">0</data>
+  <data key="d2">1.19573135073</data>
+  <data key="d3">PPP2R5C</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="NCF2">
+  <data key="d0">0.031542507649</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.628478900666</data>
+  <data key="d3">NCF2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="MAP3K1">
+  <data key="d0">0.250349768457</data>
+  <data key="d1">0</data>
+  <data key="d2">2.69344145267</data>
+  <data key="d3">MAP3K1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="SESN2">
+  <data key="d0">0.123298740417</data>
+  <data key="d1">0</data>
+  <data key="d2">0.50136152626</data>
+  <data key="d3">SESN2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="MKNK2">
+  <data key="d0">0.0314730434475</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.438187632272</data>
+  <data key="d3">MKNK2</data>
+  <data key="d4">LSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">Both</data>
+</node>
+<node id="RPS6KB1">
+  <data key="d0">0.0424068420198</data>
+  <data key="d1">0</data>
+  <data key="d2">0.273435517004</data>
+  <data key="d3">RPS6KB1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="MAP3K7_MAP3K5">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="RPS6KB1_PDPK1">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="RPS6">
+  <data key="d0">0.0314730252775</data>
+  <data key="d1">0</data>
+  <data key="d2">0.102673158344</data>
+  <data key="d3">RPS6</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="XIAP">
+  <data key="d0">0.0315201707402</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.158634685107</data>
+  <data key="d3">XIAP</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="ITPR3">
+  <data key="d0">0.0314815673536</data>
+  <data key="d1">0</data>
+  <data key="d2">-1.12356118928</data>
+  <data key="d3">ITPR3</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="MIOS">
+  <data key="d0">0.0549712269725</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.655419599969</data>
+  <data key="d3">MIOS</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="NFATC4">
+  <data key="d0">0.0314757403949</data>
+  <data key="d1">0</data>
+  <data key="d2">1.20425678065</data>
+  <data key="d3">NFATC4</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ARHGEF1">
+  <data key="d0">0.0315704477673</data>
+  <data key="d1">0</data>
+  <data key="d2">0.115314625372</data>
+  <data key="d3">ARHGEF1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="RAF1">
+  <data key="d0">0.150937260835</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.391124265193</data>
+  <data key="d3">RAF1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="CAMK2D_EP300">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="TSC1">
+  <data key="d0">0.0361574557821</data>
+  <data key="d1">0</data>
+  <data key="d2">0.555913460067</data>
+  <data key="d3">TSC1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="STAT3">
+  <data key="d0">0.513495286365</data>
+  <data key="d1">0</data>
+  <data key="d2">0.239990616362</data>
+  <data key="d3">STAT3</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ARHGAP35_CRKL">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ITGA4_ITGB7">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="HSP90AB1_RIPK1_ ~PPP2R5D">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="CD19">
+  <data key="d0">0.343248594975</data>
+  <data key="d1">0</data>
+  <data key="d2">1.12980711478</data>
+  <data key="d3">CD19</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="WDR24">
+  <data key="d0">0.055100020796</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.599103113509</data>
+  <data key="d3">WDR24</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="CSF2RB_ ~IFNAR2_ ~EP300">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="ICAM3">
+  <data key="d0">0.031496716591</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">ICAM3</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PPP1R12A">
+  <data key="d0">0.0314830340475</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.85410396931</data>
+  <data key="d3">PPP1R12A</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PPP1R12C">
+  <data key="d0">0.0313963859189</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.306210386881</data>
+  <data key="d3">PPP1R12C</data>
+  <data key="d4">LSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">Both</data>
+</node>
+<node id="NFKB1">
+  <data key="d0">0.0987545880576</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.679988364504</data>
+  <data key="d3">NFKB1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="~NF1_LSP1">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">LSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">LSP1</data>
+</node>
+<node id="PLCG2_EZR">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="RRAS2">
+  <data key="d0">0.18376679723</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0480107392474</data>
+  <data key="d3">RRAS2</data>
+  <data key="d4">LSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">Both</data>
+</node>
+<node id="RBL2">
+  <data key="d0">0.0314989227088</data>
+  <data key="d1">0</data>
+  <data key="d2">0.331634770648</data>
+  <data key="d3">RBL2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="RPS6KA1">
+  <data key="d0">0.0767435294948</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.0226256758769</data>
+  <data key="d3">RPS6KA1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="SIPA1">
+  <data key="d0">0.0314849932364</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.419171763652</data>
+  <data key="d3">SIPA1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ENO1">
+  <data key="d0">0.0315593707879</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.463816380058</data>
+  <data key="d3">ENO1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="MTOR">
+  <data key="d0">0.298100167839</data>
+  <data key="d1">0</data>
+  <data key="d2">-1.21407121667</data>
+  <data key="d3">MTOR</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PHLPP2">
+  <data key="d0">0.0848938153772</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.146853419185</data>
+  <data key="d3">PHLPP2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="SHC1">
+  <data key="d0">0.0314117357224</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.0898456404112</data>
+  <data key="d3">SHC1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="EP300">
+  <data key="d0">0.126547286557</data>
+  <data key="d1">0</data>
+  <data key="d2">3.58766312871</data>
+  <data key="d3">EP300</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="WAS">
+  <data key="d0">0.0314141412745</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0322465301733</data>
+  <data key="d3">WAS</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="MYC">
+  <data key="d0">0.0314535268384</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.567573373874</data>
+  <data key="d3">MYC</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="LYN_CXCR4">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="MYL12B">
+  <data key="d0">0.0314681187217</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.266560860358</data>
+  <data key="d3">MYL12B</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="SOS1">
+  <data key="d0">0.0317197181577</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">SOS1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="ARNT">
+  <data key="d0">0.23625551141</data>
+  <data key="d1">0</data>
+  <data key="d2">3.72298682671</data>
+  <data key="d3">ARNT</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PRKCG_PDPK1">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="LSP1">
+  <data key="d0">0.263602537258</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.619896037933</data>
+  <data key="d3">LSP1</data>
+  <data key="d4">LSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">LSP1</data>
+</node>
+<node id="AFDN">
+  <data key="d0">0.0314510859593</data>
+  <data key="d1">0</data>
+  <data key="d2">0.12410447143</data>
+  <data key="d3">AFDN</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="IRS1">
+  <data key="d0">0.122457261084</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.560856151471</data>
+  <data key="d3">IRS1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="STAT5B">
+  <data key="d0">0.0315240807875</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">STAT5B</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="STAT5A">
+  <data key="d0">0.21488585964</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.351497407038</data>
+  <data key="d3">STAT5A</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="NFKB1_ARAF">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">LSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="HSP90AA1">
+  <data key="d0">0.0316349134654</data>
+  <data key="d1">0</data>
+  <data key="d2">3.65329941101</data>
+  <data key="d3">HSP90AA1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="ARPC5L">
+  <data key="d0">0.0315465384418</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.646747047923</data>
+  <data key="d3">ARPC5L</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CSNK2B">
+  <data key="d0">0.294266283283</data>
+  <data key="d1">0</data>
+  <data key="d2">0.673483215423</data>
+  <data key="d3">CSNK2B</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="MAP4K1">
+  <data key="d0">0.166291289061</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0489365775759</data>
+  <data key="d3">MAP4K1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="SPHK2">
+  <data key="d0">0.0314461842093</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">SPHK2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PTK2">
+  <data key="d0">0.201808862027</data>
+  <data key="d1">0</data>
+  <data key="d2">0.535282797928</data>
+  <data key="d3">PTK2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="MAP4K4">
+  <data key="d0">0.249521166296</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.375298221382</data>
+  <data key="d3">MAP4K4</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="TGFBR2">
+  <data key="d0">0.0620581131882</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">TGFBR2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="LIMK1">
+  <data key="d0">0.0314822763652</data>
+  <data key="d1">0</data>
+  <data key="d2">0.173354408868</data>
+  <data key="d3">LIMK1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="BIRC2">
+  <data key="d0">0.152604557224</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.513319529123</data>
+  <data key="d3">BIRC2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PRKAA1">
+  <data key="d0">0.0315298722254</data>
+  <data key="d1">0</data>
+  <data key="d2">2.05153979086</data>
+  <data key="d3">PRKAA1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="RIPK1">
+  <data key="d0">0.175937043264</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.830839736928</data>
+  <data key="d3">RIPK1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="MAP2K2">
+  <data key="d0">0.26500000887</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.00478658863308</data>
+  <data key="d3">MAP2K2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="BAD">
+  <data key="d0">0.0314602927573</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.583329198668</data>
+  <data key="d3">BAD</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PDHA1">
+  <data key="d0">0.0314748524166</data>
+  <data key="d1">0</data>
+  <data key="d2">0.626354496753</data>
+  <data key="d3">PDHA1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="APC_CRKL_ITGA4">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="BLNK">
+  <data key="d0">0.329825627677</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.130930003064</data>
+  <data key="d3">BLNK</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="HSP90AB1_RIPK1">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="MTOR_EZR">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="IQGAP1">
+  <data key="d0">0.0314358793333</data>
+  <data key="d1">0</data>
+  <data key="d2">2.09903002085</data>
+  <data key="d3">IQGAP1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="IQGAP3">
+  <data key="d0">0.0314927772393</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.414313998158</data>
+  <data key="d3">IQGAP3</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="RPTOR">
+  <data key="d0">0.0423934459603</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.485681782127</data>
+  <data key="d3">RPTOR</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="CEBPB">
+  <data key="d0">0.031507540238</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.382180798307</data>
+  <data key="d3">CEBPB</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="LPIN2">
+  <data key="d0">0.0314811443639</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.0325220139459</data>
+  <data key="d3">LPIN2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="FGD3">
+  <data key="d0">0.0855636872347</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.552952586895</data>
+  <data key="d3">FGD3</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="IL4R_CSF2RB">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="LPIN1">
+  <data key="d0">0.0314621892589</data>
+  <data key="d1">0</data>
+  <data key="d2">0.463220935113</data>
+  <data key="d3">LPIN1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="GRK2_LYN_CXCR4">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="EGLN1_STAT3_ARNT">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PFKP">
+  <data key="d0">0.0314573125376</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.923595618947</data>
+  <data key="d3">PFKP</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="MAPKAP1">
+  <data key="d0">0.0314821878879</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">MAPKAP1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CLIP1">
+  <data key="d0">0.0314633755253</data>
+  <data key="d1">0</data>
+  <data key="d2">0.0</data>
+  <data key="d3">CLIP1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PFKL">
+  <data key="d0">0.0314493531265</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.78351931165</data>
+  <data key="d3">PFKL</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PXN">
+  <data key="d0">0.0315279597325</data>
+  <data key="d1">0</data>
+  <data key="d2">0.504414764813</data>
+  <data key="d3">PXN</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CXCR4">
+  <data key="d0">0.828872038332</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.788703941061</data>
+  <data key="d3">CXCR4</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PTPRC">
+  <data key="d0">0.062072037865</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.167308435546</data>
+  <data key="d3">PTPRC</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="MAP3K5_ ~PTPN7_MAP3K7">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="LDHA">
+  <data key="d0">0.0314422080011</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.568796865124</data>
+  <data key="d3">LDHA</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="LDHB">
+  <data key="d0">0.0315185391098</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.317747495206</data>
+  <data key="d3">LDHB</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="BRAF">
+  <data key="d0">0.157516679066</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.432552570234</data>
+  <data key="d3">BRAF</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PRKCA_PLCG2_PRKCG">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ULK1">
+  <data key="d0">0.0314566645513</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.604268521749</data>
+  <data key="d3">ULK1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="ITGA4_ARHGAP35_ARHGEF6">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="EZR_PTK2B">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="HSPB1">
+  <data key="d0">0.0315249028667</data>
+  <data key="d1">0</data>
+  <data key="d2">0.173558006181</data>
+  <data key="d3">HSPB1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PKN1">
+  <data key="d0">0.0314644155961</data>
+  <data key="d1">0</data>
+  <data key="d2">1.49699098204</data>
+  <data key="d3">PKN1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CARD11">
+  <data key="d0">0.0315272009864</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.878940172406</data>
+  <data key="d3">CARD11</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PKN2">
+  <data key="d0">0.0314813720353</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.472139581362</data>
+  <data key="d3">PKN2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PRKCD">
+  <data key="d0">0.0314073908099</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.684542300502</data>
+  <data key="d3">PRKCD</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PRKCG">
+  <data key="d0">0.27203235361</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.442687275121</data>
+  <data key="d3">PRKCG</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="LSP1_PRKCG">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">LSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="CFL1">
+  <data key="d0">0.0313980548375</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.217807210768</data>
+  <data key="d3">CFL1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PDPK1">
+  <data key="d0">0.343245906953</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.596463580881</data>
+  <data key="d3">PDPK1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ALDOA">
+  <data key="d0">0.0314334558662</data>
+  <data key="d1">0</data>
+  <data key="d2">0.164038492919</data>
+  <data key="d3">ALDOA</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="EZR_ROCK1">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="MAP3K7_RAF1">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">andNode</data>
+</node>
+<node id="RIPK3">
+  <data key="d0">0.0621349445921</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.97234859612</data>
+  <data key="d3">RIPK3</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="NF1">
+  <data key="d0">0.0403422575081</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.00698588165014</data>
+  <data key="d3">NF1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="EIF4E2">
+  <data key="d0">0.0314872080721</data>
+  <data key="d1">0</data>
+  <data key="d2">1.99152526301</data>
+  <data key="d3">EIF4E2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="ACTN4">
+  <data key="d0">0.0314735493201</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.468952475835</data>
+  <data key="d3">ACTN4</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="TAB2">
+  <data key="d0">0.0315576715624</data>
+  <data key="d1">0</data>
+  <data key="d2">-1.00616209522</data>
+  <data key="d3">TAB2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PFKFB3">
+  <data key="d0">0.0314070019814</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.439236362582</data>
+  <data key="d3">PFKFB3</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="RRAS2_PRKCG">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">LSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="~PTK2_ ~FGD3_ ~CRKL">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ROCK1">
+  <data key="d0">0.0726389389611</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.194060693497</data>
+  <data key="d3">ROCK1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="EZR">
+  <data key="d0">0.222265158705</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.536482958041</data>
+  <data key="d3">EZR</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="MAP3K11">
+  <data key="d0">0.144971782948</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.384876877737</data>
+  <data key="d3">MAP3K11</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="~AKT1_PTK2B">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="SLC9A1">
+  <data key="d0">0.250483624422</data>
+  <data key="d1">0</data>
+  <data key="d2">0.00601840694611</data>
+  <data key="d3">SLC9A1</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PRKCG_MAP4K4">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="PRKCG_PLCG2_EZR">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="DNM1L">
+  <data key="d0">0.0315124076908</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.722439162771</data>
+  <data key="d3">DNM1L</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="PPP3CB">
+  <data key="d0">0.0954077585173</data>
+  <data key="d1">0</data>
+  <data key="d2">1.97583391127</data>
+  <data key="d3">PPP3CB</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="ATF2">
+  <data key="d0">0.0314192832272</data>
+  <data key="d1">0</data>
+  <data key="d2">-0.730862404534</data>
+  <data key="d3">ATF2</data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">notGRK5</data>
+  <data key="d6">None</data>
+</node>
+<node id="CD19_IRS1">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<node id="BLNK_EZR">
+  <data key="d0">0.0</data>
+  <data key="d1">1</data>
+  <data key="d2">0.0</data>
+  <data key="d3"> </data>
+  <data key="d4">notLSP1</data>
+  <data key="d5">GRK5</data>
+  <data key="d6">GRK5</data>
+</node>
+<edge source="HSP90AB1_PTK2" target="BRCA1">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGA4_APC_TIAM1" target="IQGAP1">
+  <data key="d7">a</data>
+</edge>
+<edge source="CRKL" target="APC_CRKL_ITGA4">
+  <data key="d7">a</data>
+</edge>
+<edge source="CRKL" target="~PTK2_ ~FGD3_ ~CRKL">
+  <data key="d7">i</data>
+</edge>
+<edge source="CRKL" target="ARHGAP35_CRKL">
+  <data key="d7">a</data>
+</edge>
+<edge source="PPP2R5C_ ~PTK2_ ~SOS1" target="GSK3B">
+  <data key="d7">a</data>
+</edge>
+<edge source="STK11" target="~STK11_ ~PRKAA1_IKBKB">
+  <data key="d7">i</data>
+</edge>
+<edge source="STK11" target="TELO2">
+  <data key="d7">a</data>
+</edge>
+<edge source="STK11" target="PRKAA1">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGA4_ARHGAP35" target="ARPC5L">
+  <data key="d7">a</data>
+</edge>
+<edge source="IKBKB" target="~STK11_ ~PRKAA1_IKBKB">
+  <data key="d7">a</data>
+</edge>
+<edge source="IKBKB" target="~IKBKB_ ~NFKB1_CSNK2B">
+  <data key="d7">i</data>
+</edge>
+<edge source="AKT1" target="~AKT1_PTK2B">
+  <data key="d7">i</data>
+</edge>
+<edge source="AKT1" target="MAP3K5">
+  <data key="d7">i</data>
+</edge>
+<edge source="AKT1" target="BAD">
+  <data key="d7">i</data>
+</edge>
+<edge source="AKT1" target="AKT1S1">
+  <data key="d7">i</data>
+</edge>
+<edge source="AKT1" target="FLNA">
+  <data key="d7">i</data>
+</edge>
+<edge source="AKT1" target="FLNB">
+  <data key="d7">i</data>
+</edge>
+<edge source="AKT1" target="~AKT1_CXCR4">
+  <data key="d7">i</data>
+</edge>
+<edge source="PTK2B" target="~AKT1_PTK2B">
+  <data key="d7">a</data>
+</edge>
+<edge source="PTK2B" target="EZR_PTK2B">
+  <data key="d7">a</data>
+</edge>
+<edge source="PTK2B" target="PTK2B_CXCR4">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARAF" target="NFKB1_ARAF">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARAF" target="STMN1">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARHGAP35" target="ARHGAP35_ARHGEF6">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARHGAP35" target="ITGA4_ARHGAP35">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARHGAP35" target="ITGA4_ARHGAP35_ARHGEF6">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARHGAP35" target="ARHGAP35_CRKL">
+  <data key="d7">a</data>
+</edge>
+<edge source="~MIOS_ ~WDR24_SESN2" target="DEPDC5">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARHGAP35_ARHGEF6" target="ARPC1B">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARHGEF7" target="~CRK_ ~ARHGEF7">
+  <data key="d7">i</data>
+</edge>
+<edge source="GRK5" target="NFKB1">
+  <data key="d7">a</data>
+</edge>
+<edge source="GRK5" target="LYN">
+  <data key="d7">a</data>
+</edge>
+<edge source="GRK5" target="CXCR4">
+  <data key="d7">a</data>
+</edge>
+<edge source="GRK5" target="SHC1">
+  <data key="d7">a</data>
+</edge>
+<edge source="GRK5" target="~GRK5_ ~GRK2_ ~CXCR4">
+  <data key="d7">i</data>
+</edge>
+<edge source="GRK2" target="LYN_CXCR4_GRK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="GRK2" target="GRK2_LYN_CXCR4">
+  <data key="d7">a</data>
+</edge>
+<edge source="GRK2" target="~GRK5_ ~GRK2_ ~CXCR4">
+  <data key="d7">i</data>
+</edge>
+<edge source="MAP3K7" target="IKBKB">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K7" target="MAP3K7_MAP3K5">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K7" target="MAP3K5_ ~PTPN7_MAP3K7">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K7" target="MAP3K7_RAF1">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K7" target="RIPK1_MAP3K7">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K5" target="MAP3K7_MAP3K5">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K5" target="MAP3K5_ ~PTPN7_MAP3K7">
+  <data key="d7">a</data>
+</edge>
+<edge source="HSP90AB1" target="HSP90AB1_PTK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="HSP90AB1" target="HSP90AB1_RIPK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="HSP90AB1" target="HSP90AB1_RIPK1_ ~PPP2R5D">
+  <data key="d7">a</data>
+</edge>
+<edge source="HSP90AB1" target="HSP90AA1_HSP90AB1">
+  <data key="d7">a</data>
+</edge>
+<edge source="~BIRC2_SYK" target="BTK">
+  <data key="d7">a</data>
+</edge>
+<edge source="RELB" target="MAP3K7">
+  <data key="d7">a</data>
+</edge>
+<edge source="LYN" target="TIAM1">
+  <data key="d7">a</data>
+</edge>
+<edge source="LYN" target="LYN_CXCR4_GRK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="LYN" target="WAS">
+  <data key="d7">a</data>
+</edge>
+<edge source="LYN" target="GRK2_LYN_CXCR4">
+  <data key="d7">a</data>
+</edge>
+<edge source="LYN" target="LYN_CXCR4">
+  <data key="d7">a</data>
+</edge>
+<edge source="~IKBKB_ ~NFKB1_CSNK2B" target="IRAK4">
+  <data key="d7">a</data>
+</edge>
+<edge source="HSPA8" target="NFATC1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PTK2B_CXCR4" target="NCF2">
+  <data key="d7">a</data>
+</edge>
+<edge source="CAMK2D" target="PFKFB3">
+  <data key="d7">a</data>
+</edge>
+<edge source="CAMK2D" target="CAMK2D_EP300">
+  <data key="d7">a</data>
+</edge>
+<edge source="CAMK2D" target="EP300_CAMK2D">
+  <data key="d7">a</data>
+</edge>
+<edge source="CAMK2D" target="EP300">
+  <data key="d7">a</data>
+</edge>
+<edge source="CAMK2D" target="LDHA">
+  <data key="d7">a</data>
+</edge>
+<edge source="CAMK2D" target="PGK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PLCG2" target="PLCG2_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="PLCG2" target="NFATC2">
+  <data key="d7">a</data>
+</edge>
+<edge source="PLCG2" target="PRKCD">
+  <data key="d7">a</data>
+</edge>
+<edge source="PLCG2" target="PRKCG_PLCG2_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="PLCG2" target="PRKCA_PLCG2_PRKCG">
+  <data key="d7">a</data>
+</edge>
+<edge source="PLCG2" target="ITPR3">
+  <data key="d7">a</data>
+</edge>
+<edge source="PLCG2" target="PPP3CB">
+  <data key="d7">a</data>
+</edge>
+<edge source="PLCG2" target="ITPR1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PLCG2" target="PLCG2_MTOR_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="TELO2_MTOR" target="TTI1">
+  <data key="d7">a</data>
+</edge>
+<edge source="~STK11_ ~PRKAA1_IKBKB" target="SOS1">
+  <data key="d7">a</data>
+</edge>
+<edge source="IFNAR2" target="CSF2RB_ ~IFNAR2_ ~EP300">
+  <data key="d7">i</data>
+</edge>
+<edge source="SYK" target="~BIRC2_SYK">
+  <data key="d7">a</data>
+</edge>
+<edge source="SYK" target="IL4R_SYK">
+  <data key="d7">a</data>
+</edge>
+<edge source="SYK" target="CD19">
+  <data key="d7">a</data>
+</edge>
+<edge source="PAK4_PAK2" target="ARHGEF6">
+  <data key="d7">a</data>
+</edge>
+<edge source="GSK3B" target="GYS1">
+  <data key="d7">i</data>
+</edge>
+<edge source="PAK4" target="PAK4_PAK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="APC" target="APC_CRKL_ITGA4">
+  <data key="d7">a</data>
+</edge>
+<edge source="APC" target="ITGA4_APC_TIAM1">
+  <data key="d7">a</data>
+</edge>
+<edge source="APC" target="ACTN4">
+  <data key="d7">i</data>
+</edge>
+<edge source="PAK2" target="MAP3K2">
+  <data key="d7">a</data>
+</edge>
+<edge source="PAK2" target="PAK4_PAK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="PAK2" target="PAK2_CRK">
+  <data key="d7">a</data>
+</edge>
+<edge source="CSF2RB" target="IL4R_CSF2RB">
+  <data key="d7">a</data>
+</edge>
+<edge source="CSF2RB" target="STAT5A">
+  <data key="d7">a</data>
+</edge>
+<edge source="CSF2RB" target="CSF2RB_ ~IFNAR2_ ~EP300">
+  <data key="d7">a</data>
+</edge>
+<edge source="EP300_CAMK2D" target="LDHB">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGA4" target="ITGA4_APC_TIAM1">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGA4" target="ITGA4_ARHGAP35_ARHGEF6">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGA4" target="ITGB7">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGA4" target="ITGA4_ARHGAP35">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGA4" target="~PTK2_ ~ITGA4">
+  <data key="d7">i</data>
+</edge>
+<edge source="ITGA4" target="APC_CRKL_ITGA4">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGA4" target="ITGA4_ITGB7">
+  <data key="d7">a</data>
+</edge>
+<edge source="~CRK_ ~ARHGEF7" target="LIMK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="~CRK_ ~ARHGEF7" target="ROCK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="CRTC2" target="IKBKG">
+  <data key="d7">a</data>
+</edge>
+<edge source="~AKT1_CXCR4" target="GSK3A">
+  <data key="d7">a</data>
+</edge>
+<edge source="CRK" target="PAK2_CRK">
+  <data key="d7">a</data>
+</edge>
+<edge source="CRK" target="~CRK_ ~ARHGEF7">
+  <data key="d7">i</data>
+</edge>
+<edge source="RICTOR" target="MAPKAP1">
+  <data key="d7">a</data>
+</edge>
+<edge source="HSP90AA1_HSP90AB1" target="BRCA1">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGB7" target="LIMK1">
+  <data key="d7">i</data>
+</edge>
+<edge source="ITGB7" target="ITGA4_ITGB7">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGB7" target="ITGB7_MAP3K11">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGB7" target="PAK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="IL4R_SYK" target="PTPN11">
+  <data key="d7">a</data>
+</edge>
+<edge source="RIPK1_MAP3K7" target="CEBPB">
+  <data key="d7">a</data>
+</edge>
+<edge source="TIAM1" target="ITGA4_APC_TIAM1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCQ" target="CARD11">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGB7_MAP3K11" target="CRK">
+  <data key="d7">a</data>
+</edge>
+<edge source="~BIRC2_BTK_RIPK1" target="TAB2">
+  <data key="d7">a</data>
+</edge>
+<edge source="LYN_CXCR4_GRK2" target="DOCK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="IL4R" target="IL4R_CSF2RB">
+  <data key="d7">a</data>
+</edge>
+<edge source="IL4R" target="IL4R_SYK">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K1_MAP3K11" target="CRK">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCA" target="EGLN1">
+  <data key="d7">i</data>
+</edge>
+<edge source="PRKCA" target="PRKCA_PLCG2_PRKCG">
+  <data key="d7">a</data>
+</edge>
+<edge source="~GRK5_ ~GRK2_ ~CXCR4" target="GNG5">
+  <data key="d7">a</data>
+</edge>
+<edge source="TELO2" target="TELO2_MTOR">
+  <data key="d7">a</data>
+</edge>
+<edge source="PTPN7" target="MAP3K5_ ~PTPN7_MAP3K7">
+  <data key="d7">i</data>
+</edge>
+<edge source="PLCG2_MTOR_EZR" target="PRKCA">
+  <data key="d7">a</data>
+</edge>
+<edge source="F11R" target="ICAM3">
+  <data key="d7">a</data>
+</edge>
+<edge source="EGLN1" target="ALDOA">
+  <data key="d7">a</data>
+</edge>
+<edge source="EGLN1" target="PDHA1">
+  <data key="d7">i</data>
+</edge>
+<edge source="EGLN1" target="EGLN1_STAT3_ARNT">
+  <data key="d7">a</data>
+</edge>
+<edge source="EGLN1" target="SLC2A1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PAK2_CRK" target="ARHGEF7">
+  <data key="d7">a</data>
+</edge>
+<edge source="PHLPP1" target="RAF1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PHLPP1" target="TP53">
+  <data key="d7">a</data>
+</edge>
+<edge source="PHLPP1" target="TSC2">
+  <data key="d7">a</data>
+</edge>
+<edge source="~BIRC2_CSNK2B" target="BTK">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARHGEF6" target="ITGA4_ARHGAP35_ARHGEF6">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARHGEF6" target="ARHGAP35_ARHGEF6">
+  <data key="d7">a</data>
+</edge>
+<edge source="~PTK2_ ~ITGA4" target="ACTN4">
+  <data key="d7">a</data>
+</edge>
+<edge source="PPP2R5D" target="HSP90AB1_RIPK1_ ~PPP2R5D">
+  <data key="d7">i</data>
+</edge>
+<edge source="BTK" target="~BIRC2_BTK_RIPK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PPP2R5C" target="PPP2R5C_ ~PTK2_ ~SOS1">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K1" target="MAP3K1_MAP3K11">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K1" target="NFATC3">
+  <data key="d7">i</data>
+</edge>
+<edge source="SESN2" target="MIOS">
+  <data key="d7">i</data>
+</edge>
+<edge source="SESN2" target="WDR24">
+  <data key="d7">i</data>
+</edge>
+<edge source="SESN2" target="~MIOS_ ~WDR24_SESN2">
+  <data key="d7">a</data>
+</edge>
+<edge source="RPS6KB1" target="RPS6KB1_PDPK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K7_MAP3K5" target="MEF2C">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K7_MAP3K5" target="HSPB1">
+  <data key="d7">a</data>
+</edge>
+<edge source="RPS6KB1_PDPK1" target="RPS6">
+  <data key="d7">a</data>
+</edge>
+<edge source="MIOS" target="~MIOS_ ~WDR24_SESN2">
+  <data key="d7">i</data>
+</edge>
+<edge source="RAF1" target="MAP3K7_RAF1">
+  <data key="d7">a</data>
+</edge>
+<edge source="CAMK2D_EP300" target="ENO1">
+  <data key="d7">a</data>
+</edge>
+<edge source="CAMK2D_EP300" target="PFKL">
+  <data key="d7">a</data>
+</edge>
+<edge source="STAT3" target="MAP2K2">
+  <data key="d7">a</data>
+</edge>
+<edge source="STAT3" target="EGLN1_STAT3_ARNT">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARHGAP35_CRKL" target="GIT1">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGA4_ITGB7" target="ARHGAP35">
+  <data key="d7">a</data>
+</edge>
+<edge source="HSP90AB1_RIPK1_ ~PPP2R5D" target="ATF2">
+  <data key="d7">a</data>
+</edge>
+<edge source="CD19" target="CD19_IRS1">
+  <data key="d7">a</data>
+</edge>
+<edge source="WDR24" target="~MIOS_ ~WDR24_SESN2">
+  <data key="d7">i</data>
+</edge>
+<edge source="CSF2RB_ ~IFNAR2_ ~EP300" target="STAT5B">
+  <data key="d7">a</data>
+</edge>
+<edge source="NFKB1" target="NFKB1_ARAF">
+  <data key="d7">a</data>
+</edge>
+<edge source="NFKB1" target="PDHA1">
+  <data key="d7">i</data>
+</edge>
+<edge source="NFKB1" target="~IKBKB_ ~NFKB1_CSNK2B">
+  <data key="d7">i</data>
+</edge>
+<edge source="NFKB1" target="PFKP">
+  <data key="d7">a</data>
+</edge>
+<edge source="~NF1_LSP1" target="RRAS2">
+  <data key="d7">a</data>
+</edge>
+<edge source="PLCG2_EZR" target="PRKCG">
+  <data key="d7">a</data>
+</edge>
+<edge source="RRAS2" target="RRAS2_PRKCG">
+  <data key="d7">a</data>
+</edge>
+<edge source="RRAS2" target="PPP1R12C">
+  <data key="d7">a</data>
+</edge>
+<edge source="RPS6KA1" target="EIF4B">
+  <data key="d7">a</data>
+</edge>
+<edge source="MTOR" target="RPTOR">
+  <data key="d7">a</data>
+</edge>
+<edge source="MTOR" target="ULK1">
+  <data key="d7">i</data>
+</edge>
+<edge source="MTOR" target="LPIN2">
+  <data key="d7">a</data>
+</edge>
+<edge source="MTOR" target="TELO2_MTOR">
+  <data key="d7">a</data>
+</edge>
+<edge source="MTOR" target="LPIN1">
+  <data key="d7">a</data>
+</edge>
+<edge source="MTOR" target="CLIP1">
+  <data key="d7">a</data>
+</edge>
+<edge source="MTOR" target="MTOR_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="MTOR" target="PLCG2_MTOR_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="PHLPP2" target="RBL2">
+  <data key="d7">a</data>
+</edge>
+<edge source="PHLPP2" target="TSC1">
+  <data key="d7">a</data>
+</edge>
+<edge source="EP300" target="CSF2RB_ ~IFNAR2_ ~EP300">
+  <data key="d7">i</data>
+</edge>
+<edge source="EP300" target="MTOR">
+  <data key="d7">i</data>
+</edge>
+<edge source="EP300" target="CAMK2D_EP300">
+  <data key="d7">a</data>
+</edge>
+<edge source="EP300" target="EP300_CAMK2D">
+  <data key="d7">a</data>
+</edge>
+<edge source="LYN_CXCR4" target="PTK2B">
+  <data key="d7">a</data>
+</edge>
+<edge source="SOS1" target="PPP2R5C_ ~PTK2_ ~SOS1">
+  <data key="d7">i</data>
+</edge>
+<edge source="ARNT" target="EIF4E2">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARNT" target="PFKFB3">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARNT" target="EGLN1_STAT3_ARNT">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARNT" target="SLC2A1">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARNT" target="MTOR">
+  <data key="d7">a</data>
+</edge>
+<edge source="ARNT" target="ALDOA">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCG_PDPK1" target="BRAF">
+  <data key="d7">a</data>
+</edge>
+<edge source="LSP1" target="CYLD">
+  <data key="d7">a</data>
+</edge>
+<edge source="LSP1" target="~NF1_LSP1">
+  <data key="d7">a</data>
+</edge>
+<edge source="LSP1" target="LSP1_PRKCG">
+  <data key="d7">a</data>
+</edge>
+<edge source="LSP1" target="IKBKE">
+  <data key="d7">a</data>
+</edge>
+<edge source="IRS1" target="RICTOR">
+  <data key="d7">a</data>
+</edge>
+<edge source="IRS1" target="CD19_IRS1">
+  <data key="d7">a</data>
+</edge>
+<edge source="NFKB1_ARAF" target="MKNK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="HSP90AA1" target="HSP90AA1_HSP90AB1">
+  <data key="d7">a</data>
+</edge>
+<edge source="CSNK2B" target="RIPK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="CSNK2B" target="XIAP">
+  <data key="d7">a</data>
+</edge>
+<edge source="CSNK2B" target="~BIRC2_CSNK2B">
+  <data key="d7">a</data>
+</edge>
+<edge source="CSNK2B" target="BIRC2">
+  <data key="d7">a</data>
+</edge>
+<edge source="CSNK2B" target="~IKBKB_ ~NFKB1_CSNK2B">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP4K1" target="MAP3K11">
+  <data key="d7">a</data>
+</edge>
+<edge source="PTK2" target="HSP90AB1_PTK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="PTK2" target="~PTK2_ ~ITGA4">
+  <data key="d7">i</data>
+</edge>
+<edge source="PTK2" target="PPP2R5C_ ~PTK2_ ~SOS1">
+  <data key="d7">i</data>
+</edge>
+<edge source="PTK2" target="~PTK2_ ~FGD3_ ~CRKL">
+  <data key="d7">i</data>
+</edge>
+<edge source="MAP4K4" target="PRKCG_MAP4K4">
+  <data key="d7">a</data>
+</edge>
+<edge source="TGFBR2" target="DAXX">
+  <data key="d7">a</data>
+</edge>
+<edge source="BIRC2" target="~BIRC2_SYK">
+  <data key="d7">i</data>
+</edge>
+<edge source="BIRC2" target="~BIRC2_BTK_RIPK1">
+  <data key="d7">i</data>
+</edge>
+<edge source="BIRC2" target="~BIRC2_CSNK2B">
+  <data key="d7">i</data>
+</edge>
+<edge source="PRKAA1" target="~STK11_ ~PRKAA1_IKBKB">
+  <data key="d7">i</data>
+</edge>
+<edge source="RIPK1" target="RIPK1_MAP3K7">
+  <data key="d7">a</data>
+</edge>
+<edge source="RIPK1" target="HSP90AB1_RIPK1_ ~PPP2R5D">
+  <data key="d7">a</data>
+</edge>
+<edge source="RIPK1" target="CREB1">
+  <data key="d7">a</data>
+</edge>
+<edge source="RIPK1" target="RIPK3">
+  <data key="d7">a</data>
+</edge>
+<edge source="RIPK1" target="~BIRC2_BTK_RIPK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="RIPK1" target="HSP90AB1_RIPK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP2K2" target="SLC9A1">
+  <data key="d7">i</data>
+</edge>
+<edge source="MAP2K2" target="MYL12B">
+  <data key="d7">i</data>
+</edge>
+<edge source="APC_CRKL_ITGA4" target="PPP1R12A">
+  <data key="d7">a</data>
+</edge>
+<edge source="BLNK" target="BLNK_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="HSP90AB1_RIPK1" target="ATF2">
+  <data key="d7">a</data>
+</edge>
+<edge source="MTOR_EZR" target="PRKCG">
+  <data key="d7">a</data>
+</edge>
+<edge source="RPTOR" target="EIF4EBP1">
+  <data key="d7">i</data>
+</edge>
+<edge source="FGD3" target="~PTK2_ ~FGD3_ ~CRKL">
+  <data key="d7">i</data>
+</edge>
+<edge source="FGD3" target="CFL1">
+  <data key="d7">a</data>
+</edge>
+<edge source="FGD3" target="IQGAP3">
+  <data key="d7">a</data>
+</edge>
+<edge source="IL4R_CSF2RB" target="PTPN11">
+  <data key="d7">a</data>
+</edge>
+<edge source="GRK2_LYN_CXCR4" target="ELMO1">
+  <data key="d7">a</data>
+</edge>
+<edge source="EGLN1_STAT3_ARNT" target="TFRC">
+  <data key="d7">a</data>
+</edge>
+<edge source="EGLN1_STAT3_ARNT" target="GAPDH">
+  <data key="d7">a</data>
+</edge>
+<edge source="CXCR4" target="PTK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="CXCR4" target="STAT3">
+  <data key="d7">a</data>
+</edge>
+<edge source="CXCR4" target="PTK2B_CXCR4">
+  <data key="d7">a</data>
+</edge>
+<edge source="CXCR4" target="AFDN">
+  <data key="d7">a</data>
+</edge>
+<edge source="CXCR4" target="ITGA4">
+  <data key="d7">a</data>
+</edge>
+<edge source="CXCR4" target="ARHGEF1">
+  <data key="d7">a</data>
+</edge>
+<edge source="CXCR4" target="SIPA1">
+  <data key="d7">i</data>
+</edge>
+<edge source="CXCR4" target="GRK2_LYN_CXCR4">
+  <data key="d7">a</data>
+</edge>
+<edge source="CXCR4" target="~GRK5_ ~GRK2_ ~CXCR4">
+  <data key="d7">i</data>
+</edge>
+<edge source="CXCR4" target="~AKT1_CXCR4">
+  <data key="d7">a</data>
+</edge>
+<edge source="CXCR4" target="LYN_CXCR4_GRK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="CXCR4" target="LYN_CXCR4">
+  <data key="d7">a</data>
+</edge>
+<edge source="PTPRC" target="CD22">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K5_ ~PTPN7_MAP3K7" target="CDC25B">
+  <data key="d7">a</data>
+</edge>
+<edge source="BRAF" target="RPS6KA1">
+  <data key="d7">a</data>
+</edge>
+<edge source="BRAF" target="PIKFYVE">
+  <data key="d7">i</data>
+</edge>
+<edge source="BRAF" target="ROCK1">
+  <data key="d7">i</data>
+</edge>
+<edge source="BRAF" target="IRS1">
+  <data key="d7">a</data>
+</edge>
+<edge source="BRAF" target="MAP2K2">
+  <data key="d7">a</data>
+</edge>
+<edge source="BRAF" target="MYC">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCA_PLCG2_PRKCG" target="SPHK2">
+  <data key="d7">a</data>
+</edge>
+<edge source="ITGA4_ARHGAP35_ARHGEF6" target="PAK4">
+  <data key="d7">a</data>
+</edge>
+<edge source="EZR_PTK2B" target="ACTB">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCG" target="PRKCG_PDPK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCG" target="LSP1_PRKCG">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCG" target="RRAS2_PRKCG">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCG" target="PRKCG_PLCG2_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCG" target="PRKCA_PLCG2_PRKCG">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCG" target="PRKCG_MAP4K4">
+  <data key="d7">a</data>
+</edge>
+<edge source="LSP1_PRKCG" target="RRAS2">
+  <data key="d7">a</data>
+</edge>
+<edge source="PDPK1" target="PKN1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PDPK1" target="PRKCG_PDPK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PDPK1" target="PKN2">
+  <data key="d7">a</data>
+</edge>
+<edge source="PDPK1" target="RPS6KB1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PDPK1" target="RPS6KB1_PDPK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PDPK1" target="AKT1">
+  <data key="d7">a</data>
+</edge>
+<edge source="EZR_ROCK1" target="ACTB">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K7_RAF1" target="RELB">
+  <data key="d7">a</data>
+</edge>
+<edge source="RIPK3" target="DNM1L">
+  <data key="d7">a</data>
+</edge>
+<edge source="NF1" target="~NF1_LSP1">
+  <data key="d7">i</data>
+</edge>
+<edge source="RRAS2_PRKCG" target="ARAF">
+  <data key="d7">a</data>
+</edge>
+<edge source="~PTK2_ ~FGD3_ ~CRKL" target="DIAPH1">
+  <data key="d7">a</data>
+</edge>
+<edge source="ROCK1" target="EZR_ROCK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="EZR" target="PLCG2_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="EZR" target="EZR_PTK2B">
+  <data key="d7">a</data>
+</edge>
+<edge source="EZR" target="PRKCG_PLCG2_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="EZR" target="EZR_ROCK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="EZR" target="MTOR_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="EZR" target="PLCG2_MTOR_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="EZR" target="BLNK_EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K11" target="MAP3K1_MAP3K11">
+  <data key="d7">a</data>
+</edge>
+<edge source="MAP3K11" target="ITGB7_MAP3K11">
+  <data key="d7">a</data>
+</edge>
+<edge source="~AKT1_PTK2B" target="CRKL">
+  <data key="d7">a</data>
+</edge>
+<edge source="SLC9A1" target="EZR">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCG_MAP4K4" target="MAP3K1">
+  <data key="d7">a</data>
+</edge>
+<edge source="PRKCG_PLCG2_EZR" target="PXN">
+  <data key="d7">a</data>
+</edge>
+<edge source="PPP3CB" target="NFATC3">
+  <data key="d7">a</data>
+</edge>
+<edge source="PPP3CB" target="NFATC4">
+  <data key="d7">a</data>
+</edge>
+<edge source="CD19_IRS1" target="PDPK1">
+  <data key="d7">a</data>
+</edge>
+<edge source="BLNK_EZR" target="PLCG2">
+  <data key="d7">a</data>
+</edge>
+</graph></graphml>

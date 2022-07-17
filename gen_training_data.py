@@ -1,9 +1,14 @@
+from math import floor
+from re import L
 import pandas as pd
 from random import random
 import networkx as nx
+from sklearn.metrics import explained_variance_score
 from tensorflow.keras import models, layers, utils, backend as K
 import tensorflow.keras
 import matplotlib.pyplot as plt
+import matplotlib.cm as cmap
+import shap
 
 
 def readData(datafiles={}):
@@ -130,103 +135,214 @@ def experimentPartOneWrapper():
     #print(inputdata)
     # generate target data
     targetdata = makeFSCdataset(splitDF["target"], numberOfCells=10)
+    #targetdata = pd.concat([targetdata, makeFSCdataset(splitDF["target"], numberOfCells=5)])
     #print(targetdata)
     return concatDF, splitDF, inputdata, targetdata
 
+'''
+Use shap to build an explainer.
+:parameter
+    :param model: model instance (after fitting)
+    :param X_names: list
+    :param X_instance: array of size n x 1 (n,)
+    :param X_train: array - if None the model is simple machine learning, if not None then it's a deep learning model
+    :param task: string - "classification", "regression"
+    :param top: num - top features to display
+:return
+    dtf with explanations
+'''
+def explainer_shap(model, X_names, X_instance, X_train=None, task="classification", top=10):
+    ## create explainer
+    ### machine learning
+    if X_train is None:
+        explainer = shap.TreeExplainer(model)
+        shap_values = explainer.shap_values(X_instance)
+    ### deep learning
+    else:
+        explainer = shap.DeepExplainer(model, data=X_train[:100])
+        shap_values = explainer.shap_values(X_instance.reshape(1,-1))[0].reshape(-1)
+
+    ## plot
+    ### classification
+    if task == "classification":
+        shap.decision_plot(explainer.expected_value, shap_values, link='logit', feature_order='importance',
+                           features=X_instance, feature_names=X_names, feature_display_range=slice(-1,-top-1,-1))
+    ### regression
+    else:
+        shap.waterfall_plot(explainer.expected_value[0], shap_values, 
+                            features=X_instance, feature_names=X_names, max_display=top)
+
+# define metrics
+def R2(y, y_hat):
+    ss_res = K.sum(K.square(y - y_hat))
+    ss_tot = K.sum(K.square(y - K.mean(y)))
+    return 1 - ss_res / (ss_tot + K.epsilon())
 
 if __name__ == "__main__":
     # prepare data
     concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
     # prepare network
-    testNet = nx.read_graphml("consensus_net.graphml")
+    testNet = nx.read_graphml("large_hif1Agraph.graphml")
     # get node
     testNode = dict(
         filter(
-            lambda elem: elem[1] == max(dict(testNet.in_degree).values()),
+            #lambda elem: elem[1] == max(dict(testNet.in_degree).values()),
+            lambda elem: elem[1] >= 3,
             dict(testNet.in_degree).items(),
         )
     )
-    testNode = list(testNode.keys())[0]
-    # get upstream nodes
-    upstream = testNet.in_edges(testNode)
-    upstream = [i[0] for i in upstream]
-    # subset input data
-    testInput = inputdata.iloc[
-        inputdata.index.get_level_values("Entity").isin(upstream)
-    ].T.astype('int')
-    print(testInput.shape)
-    # subset target data
-    testTarget = targetdata.iloc[
-        targetdata.index.get_level_values("Entity").isin([testNode])
-    ].T.astype('int')
-    print(testTarget.shape)
-    print(testTarget)
-    print(testInput)
-    
-    model = models.Sequential(
-        name="Perceptron",
-        layers=[
-            layers.Dense(  # a fully connected layer
-                name="dense",
-                input_dim=len(
-                    testInput.columns
-                ),  # number of features = number of upstream nodes from the PKN
-                units=1,  # and 1 node because we want 1 output
-                activation="relu",  # f(x)=x
-            )
-        ],
-    )
-    model.summary()
+    import random
+    answers = {}
+    testNodes = list(testNode.keys())
+    #testNode = testNode[random.sample(range(0, len(testNode)), 1)[0]]
+    for testNode in testNodes:
+        print(testNode)
+        # get upstream nodes
+        upstream = testNet.in_edges(testNode, data = True)
+        print(upstream)
+        signal = [i[2]['signal'] for i in upstream]
+        signal = [-1 if x == "i" else 1 for x in signal]
+        signal.extend(signal)
+        upstream = [i[0] for i in upstream]
+        # subset input data
+        testInput = inputdata.iloc[
+            inputdata.index.get_level_values("Entity").isin(upstream)
+        ].T.astype('int').mul(signal)
+        print(testInput.shape)
+        # subset target data
+        testTarget = targetdata.iloc[
+            targetdata.index.get_level_values("Entity").isin([testNode])
+        ].T.astype('int')
+        print(testTarget.shape)
+        print(testTarget)
+        print(testInput)
+        """
+        model = models.Sequential(
+            name="Perceptron",
+            layers=[
+                layers.Dense(  # a fully connected layer
+                    name="dense",
+                    input_dim=len(
+                        testInput.columns
+                    ),  # number of features = number of upstream nodes from the PKN
+                    units=1,  # and 1 node because we want 1 output
+                    activation="linear",  # f(x)=x
+                )
+            ],
+        )
+        model.summary()
+        """
+        model = models.Sequential(name="DeepNN", layers=[
+        ### hidden layer 1
+        layers.Dense(name="h1", input_dim=len(
+                        testInput.columns
+                    ),
+                    units=int(round((len(
+                        testInput.columns
+                    )+1)/2)), 
+                    activation='linear'),
+        layers.Dropout(name="drop1", rate=0.2),
+        
+        ### hidden layer 2
+        layers.Dense(name="h2", units=int(round((len(
+                        testInput.columns
+                    )+1)/4)), 
+                    activation='relu'),
+        layers.Dropout(name="drop2", rate=0.2),
+        
+        ### layer output
+        layers.Dense(name="output", units=1, activation='sigmoid')
+        ])
+        model.summary()
+        
 
-    # define metrics
-    def R2(y, y_hat):
-        ss_res = K.sum(K.square(y - y_hat))
-        ss_tot = K.sum(K.square(y - K.mean(y)))
-        return 1 - ss_res / (ss_tot + K.epsilon())
 
-    # compile the neural network
-    model.compile(
-        optimizer="adam",
-        loss="mean_absolute_error",
-        metrics=[
-            tensorflow.keras.metrics.AUC(),
-            tensorflow.keras.metrics.FalsePositives(),
-            tensorflow.keras.metrics.FalseNegatives(),
-            tensorflow.keras.metrics.Accuracy(),
-        ],
-    )
+        # compile the neural network
+        model.compile(
+            optimizer="adam",
+            loss="mean_absolute_error",
+            metrics=[
+                #tensorflow.keras.metrics.AUC(),
+                #tensorflow.keras.metrics.FalsePositives(),
+                #tensorflow.keras.metrics.FalseNegatives(),
+                tensorflow.keras.metrics.BinaryAccuracy(),
+                R2,
+                #tensorflow.keras.metrics.Recall(),
+            ],
+        )
 
-    X = testInput
-    y = testTarget
-    training = model.fit(
-        x=X, y=y, batch_size=2, epochs=10, shuffle=True, verbose=0, validation_split=0.3
-    )
+        n_samples = len(testInput.index)
+        trainingSamples = random.sample(range(0, n_samples), floor(3*n_samples/4))
+        testSamples = list(set(range(0,n_samples)).difference(set(trainingSamples)))
+        X = testInput.iloc[trainingSamples]
+        y = testTarget.iloc[trainingSamples]
+        training = model.fit(
+            x=X, y=y, batch_size=2, epochs=16, shuffle=True, verbose=0, validation_split=0.3
+        )
 
-    # plot
-    metrics = [
-        k for k in training.history.keys() if ("loss" not in k) and ("val" not in k)
-    ]
-    fig, ax = plt.subplots(nrows=1, ncols=2, sharey=True, figsize=(15, 3))
+        # plot
+        metrics = [
+            k for k in training.history.keys() if ("loss" not in k) and ("val" not in k)
+        ]
+        fig, ax = plt.subplots(nrows=1, ncols=2, sharey=True, figsize=(15, 3))
 
-    ## training
-    ax[0].set(title="Training")
-    ax11 = ax[0].twinx()
-    ax[0].plot(training.history["loss"], color="black")
-    ax[0].set_xlabel("Epochs")
-    ax[0].set_ylabel("Loss", color="black")
-    for metric in metrics:
-        ax11.plot(training.history[metric], label=metric)
-    ax11.set_ylabel("Score", color="steelblue")
-    ax11.legend()
+        ## training
+        ax[0].set(title="Training")
+        ax11 = ax[0].twinx()
+        ax[0].plot(training.history["loss"], color="black")
+        ax[0].set_xlabel("Epochs")
+        ax[0].set_ylabel("Loss", color="black")
+        colors = ["blue", "red", "orange"]
+        i = 0
+        for metric in metrics:
+            color = colors[i]
+            i = i + 1
+            ax11.plot(training.history[metric], label=metric, color = color)
+        ax11.set_ylabel("Score", color="red")
+        ax11.legend()
 
-    ## validation
-    ax[1].set(title="Validation")
-    ax22 = ax[1].twinx()
-    ax[1].plot(training.history["val_loss"], color="black")
-    ax[1].set_xlabel("Epochs")
-    ax[1].set_ylabel("Loss", color="black")
-    for metric in metrics:
-        ax22.plot(training.history["val_" + metric], label=metric)
-    ax22.set_ylabel("Score", color="steelblue")
-    plt.savefig("temp.png")
-    
+        ## validation
+        i = 0
+        ax[1].set(title="Validation")
+        ax22 = ax[1].twinx()
+        ax[1].plot(training.history["val_loss"], color="black")
+        ax[1].set_xlabel("Epochs")
+        ax[1].set_ylabel("Loss", color="black")
+        for metric in metrics:
+            ax22.plot(training.history["val_" + metric], label=metric, color=colors[i])
+            i = i + 1
+        ax22.set_ylabel("Score", color="red")
+        ax11.legend()
+        plt.savefig("temp.png")
+        plt.close()
+
+        ## explainer_shap(model, upstream, X, X_train=X, task="regression", top=10)
+        from numpy import argmax
+        test_predictions = argmax(model.predict(testInput.iloc[testSamples]),axis=-1).flatten()
+
+        a = plt.axes(aspect='equal')
+        plt.scatter(testTarget.iloc[testSamples], test_predictions)
+        plt.xlabel('True Values')
+        plt.ylabel('Predictions')
+        lims = [0, 1]
+        plt.xlim(lims)
+        plt.ylim(lims)
+        plt.savefig('temp2.png')
+
+        print(test_predictions)
+        #print(testTarget.iloc[testSamples])
+        #print(len(testTarget.iloc[testSamples]))
+        answer = testTarget.iloc[testSamples]
+        answer = answer.iloc[:,0]
+        answer = answer.to_list()
+        print(answer)
+        print(len(answer))
+        print(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)]))
+
+        answers[testNode] = [sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer), test_predictions, answer]
+
+    #print(answers)
+
+    for tn in answers.keys():
+        if sum(answers[tn][2]) > 0:
+            print(answers[tn])
