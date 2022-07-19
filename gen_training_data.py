@@ -614,7 +614,7 @@ def five_vars_gateDeepNN(i):
     test_predictions = model.predict(X1.iloc[testSamples]) #argmax(model.predict(X1.iloc[testSamples]),axis=-1).flatten()
     test_predictions = np.round(test_predictions)
     #plt.axes(aspect='equal')
-    plt.title("Proportion true predictions: " + str(round(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer)), 2))
+    plt.title("Proportion true predictions: " + str(round(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer),2)))
     #plt.scatter(Y1.iloc[testSamples], test_predictions)
     plt.hist([int(int(i) == int(j)) for i,j in zip(answer, test_predictions)])
     plt.xlabel('True Values')
