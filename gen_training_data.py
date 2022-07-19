@@ -886,7 +886,7 @@ def experimentPartThreeWrapper():
 
         answers[testNode] = [sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer), len(upstream)]
         answers = pd.DataFrame(answers)
-        answers.to_csv("answers.csv")
+        answers.T.to_csv("answers.csv")
 
     answers = pd.DataFrame(answers)
     answers.to_csv("answers.csv")
