@@ -871,12 +871,12 @@ def experimentPartThreeWrapper():
 
         test_predictions = np.round(model.predict(testInput.iloc[testSamples]))
         plt.title("Proportion true predictions: " + str(round(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer),2)))
-        plt.axes(aspect='equal')
+        #plt.axes(aspect='equal')
         plt.hist([int(int(i) == int(j)) for i,j in zip(answer, test_predictions)])
         plt.xlabel('True Values')
         plt.ylabel('Predictions')
-        lims = [0, 1]
-        plt.xlim(lims)
+        #lims = [0, 1]
+        #plt.xlim(lims)
         plt.savefig(str(testNode)+"_predictions.png")
         plt.close()
         print(test_predictions)
@@ -884,13 +884,12 @@ def experimentPartThreeWrapper():
         print(len(answer))
         print(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)]))
 
-        answers[testNode] = [sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer), test_predictions, answer]
+        answers[testNode] = [sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer), len(upstream)]
+        answers = pd.DataFrame(answers)
+        answers.to_csv("answers.csv")
 
-    #print(answers)
-
-    for tn in answers.keys():
-        if sum(answers[tn][2]) > 0:
-            print(answers[tn])
+    answers = pd.DataFrame(answers)
+    answers.to_csv("answers.csv")
 
 if __name__ == "__main__":
     # prepare data
