@@ -12,6 +12,7 @@ import matplotlib.cm as cmap
 import shap
 #import random
 from random import random, sample, seed
+import numpy as np
 
 def readData(datafiles={}):
     """
@@ -62,7 +63,6 @@ def fakeSingleCells(column, numberOfCells=10):
     fsc.index = column.index
     return fsc
 
-
 def makeFSCdataset(df, numberOfCells):
     """
     Apply fakeSingleCells over all samples in the given dataset
@@ -84,7 +84,6 @@ def makeFSCdataset(df, numberOfCells):
             alldata = pd.concat([alldata, fsc], axis=1).fillna(0)
         alldata.columns = [str(i) for i in range(0, len(alldata.columns))]
     return alldata
-
 
 def experimentPartOneWrapper():
     concatDF = readData(
@@ -140,7 +139,6 @@ def experimentPartOneWrapper():
     #targetdata = pd.concat([targetdata, makeFSCdataset(splitDF["target"], numberOfCells=5)])
     #print(targetdata)
     return concatDF, splitDF, inputdata, targetdata
-
 
 def explainer_shap(model, X_names, X_instance, X_train=None, task="classification", top=10):
     '''
@@ -392,7 +390,6 @@ def xorTutorial():
     
     print ("Complete")
 
-
 def three_vars_gateDeepNN(i):
     seed(i)
     import numpy as np
@@ -494,7 +491,7 @@ def three_vars_gateDeepNN(i):
     test_predictions = model.predict(X1.iloc[testSamples]) #argmax(model.predict(X1.iloc[testSamples]),axis=-1).flatten()
     test_predictions = np.round(test_predictions)
     plt.axes(aspect='equal')
-    plt.title("Proportion true predictions: " + str(round(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer)),2))
+    plt.title("Proportion true predictions: " + str(round(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer), 2)))
     #plt.scatter(Y1.iloc[testSamples], test_predictions)
     plt.hist([int(int(i) == int(j)) for i,j in zip(answer, test_predictions)])
     plt.xlabel('True Values')
@@ -631,6 +628,124 @@ def five_vars_gateDeepNN(i):
     print(len(answer))
     print(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer))
 
+def ten_vars_gateDeepNN(i):
+    seed(i)
+    import numpy as np
+    # input X vector
+    cols = [chr(x) for x in range(97, 123)]
+    cols = cols[0:10]
+    data = {}
+    for letter in cols:
+        print(letter)
+        randomData = np.hstack((np.ones(150), np.zeros(150)))
+        np.random.shuffle(randomData)
+        data[letter] = randomData
+        X1 = pd.DataFrame(data)
+    print(X1.columns)
+    z = [ int(int(a1) & int(b1) | int(c1) | int(d1) & int(e1) | (not int(f1)) | int (g1) | int(h1) | int(i1) & int(j1) ) for a1, b1, c1, d1, e1, f1, g1, h1, i1, j1 in zip(X1['a'], X1['b'], X1['c'], X1['d'], X1['e'], X1['f'], X1['g'], X1['h'], X1['i'], X1['j'])] # B & A | D
+            
+    print(X1)
+    # output Y vector
+    #Y1 = pd.DataFrame(np.repeat(np.array([[0], [1], [1], [0]]), 100, axis =  0))
+    Y1 = pd.DataFrame({'Z': z})
+    print(Y1)
+    model = models.Sequential(name="DeepNN", layers=[
+    ### hidden layer 1
+    layers.Dense(name="h1", input_dim=10,
+                units=int(3), 
+                activation='tanh'),
+    layers.Dropout(name="drop1", rate=0.2),
+    ### hidden layer 2
+    layers.Dense(name="h2", units=int(2), 
+                activation='sigmoid'),
+    layers.Dropout(name="drop2", rate=0.2),
+    ### layer output
+    layers.Dense(name="output", units=1, activation='sigmoid')
+    ])
+    model.summary()
+
+    # compile the neural network
+    model.compile(
+        optimizer="adam",
+        loss="mean_absolute_error",
+        metrics=[
+            #tensorflow.keras.metrics.AUC(),
+            #tensorflow.keras.metrics.FalsePositives(),
+            #tensorflow.keras.metrics.FalseNegatives(),
+            tensorflow.keras.metrics.BinaryAccuracy(),
+            #R2,
+            #tensorflow.keras.metrics.Recall(),
+        ],
+    )
+    n_samples = len(X1)
+    trainingSamples = sample(range(0, n_samples), floor(3*n_samples/4))
+    testSamples = list(set(range(0,n_samples)).difference(set(trainingSamples)))
+    X = X1#.iloc[trainingSamples]
+    y = Y1#.iloc[trainingSamples]
+    training = model.fit(
+        x=X, y=y, batch_size=10, epochs=1000, shuffle=False, verbose=0, validation_split=0.3
+    )
+
+    # plot
+    metrics = [
+        k for k in training.history.keys() if ("loss" not in k) and ("val" not in k)
+    ]
+    fig, ax = plt.subplots(nrows=1, ncols=2, sharey=True, figsize=(15, 3))
+
+    ## training
+    ax[0].set(title="Training")
+    ax11 = ax[0].twinx()
+    ax[0].plot(training.history["loss"], color="black")
+    ax[0].set_xlabel("Epochs")
+    ax[0].set_ylabel("Loss", color="black")
+    colors = ["blue", "red", "orange"]
+    i = 0
+    for metric in metrics:
+        color = colors[i]
+        i = i + 1
+        ax11.plot(training.history[metric], label=metric, color = color)
+    ax11.set_ylabel("Score", color="red")
+    ax11.legend()
+
+    ## validation
+    i = 0
+    ax[1].set(title="Validation")
+    ax22 = ax[1].twinx()
+    ax[1].plot(training.history["val_loss"], color="black")
+    ax[1].set_xlabel("Epochs")
+    ax[1].set_ylabel("Loss", color="black")
+    for metric in metrics:
+        ax22.plot(training.history["val_" + metric], label=metric, color=colors[i])
+        i = i + 1
+    ax22.set_ylabel("Score", color="red")
+    ax11.legend()
+    plt.savefig("10_variable_gate_"+str(i)+".png")
+
+    plt.close()
+
+    ## explainer_shap(model, upstream, X, X_train=X, task="regression", top=10)
+    answer = Y1.iloc[testSamples]
+    answer = answer.iloc[:,0]
+    answer = answer.to_list()
+    test_predictions = model.predict(X1.iloc[testSamples]) #argmax(model.predict(X1.iloc[testSamples]),axis=-1).flatten()
+    test_predictions = np.round(test_predictions)
+    #plt.axes(aspect='equal')
+    plt.title("Proportion true predictions: " + str(round(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer),2)))
+    #plt.scatter(Y1.iloc[testSamples], test_predictions)
+    plt.hist([int(int(i) == int(j)) for i,j in zip(answer, test_predictions)])
+    plt.xlabel('True Values')
+    plt.ylabel('Predictions')
+    lims = [0, 1]
+    plt.xlim(lims)
+    #plt.ylim(lims)
+    plt.savefig("10_variable_gate_predictions_"+str(i)+".png")
+
+    print(test_predictions)
+    #print(testTarget.iloc[testSamples])
+    #print(len(testTarget.iloc[testSamples]))
+    print(answer)
+    print(len(answer))
+    print(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer))
 
 if __name__ == "__main__":
     # prepare data
@@ -640,5 +755,6 @@ if __name__ == "__main__":
     #experimentPartTwoWrapper()
     for i in range(0,3):
         print(i)
+        ten_vars_gateDeepNN(i)
         five_vars_gateDeepNN(i)
         three_vars_gateDeepNN(i)
