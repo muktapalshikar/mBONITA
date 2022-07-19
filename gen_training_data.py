@@ -746,7 +746,6 @@ def ten_vars_gateDeepNN(i):
     print(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer))
 
 def experimentPartThreeWrapper():
-    """Simple perceptron"""
     # prepare data
     concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
     # prepare network
@@ -759,7 +758,6 @@ def experimentPartThreeWrapper():
             dict(testNet.in_degree).items(),
         )
     )
-    import random
     answers = {}
     testNodes = list(testNode.keys())
     #testNode = testNode[random.sample(range(0, len(testNode)), 1)[0]]
@@ -784,22 +782,7 @@ def experimentPartThreeWrapper():
         print(testTarget.shape)
         print(testTarget)
         print(testInput)
-        """
-        model = models.Sequential(
-            name="Perceptron",
-            layers=[
-                layers.Dense(  # a fully connected layer
-                    name="dense",
-                    input_dim=len(
-                        testInput.columns
-                    ),  # number of features = number of upstream nodes from the PKN
-                    units=1,  # and 1 node because we want 1 output
-                    activation="linear",  # f(x)=x
-                )
-            ],
-        )
-        model.summary()
-        """
+
         model = models.Sequential(name="DeepNN", layers=[
         ### hidden layer 1
         layers.Dense(name="h1", input_dim=len(
@@ -808,14 +791,14 @@ def experimentPartThreeWrapper():
                     units=int(round((len(
                         testInput.columns
                     )+1)/2)), 
-                    activation='linear'),
+                    activation='tanh'),
         layers.Dropout(name="drop1", rate=0.2),
         
         ### hidden layer 2
         layers.Dense(name="h2", units=int(round((len(
                         testInput.columns
                     )+1)/4)), 
-                    activation='relu'),
+                    activation='sigmoid'),
         layers.Dropout(name="drop2", rate=0.2),
         
         ### layer output
@@ -832,18 +815,17 @@ def experimentPartThreeWrapper():
                 #tensorflow.keras.metrics.FalsePositives(),
                 #tensorflow.keras.metrics.FalseNegatives(),
                 tensorflow.keras.metrics.BinaryAccuracy(),
-                R2,
                 #tensorflow.keras.metrics.Recall(),
             ],
         )
 
         n_samples = len(testInput.index)
-        trainingSamples = random.sample(range(0, n_samples), floor(3*n_samples/4))
+        trainingSamples = sample(range(0, n_samples), floor(3*n_samples/4))
         testSamples = list(set(range(0,n_samples)).difference(set(trainingSamples)))
-        X = testInput.iloc[trainingSamples]
-        y = testTarget.iloc[trainingSamples]
+        X = testInput#.iloc[trainingSamples]
+        y = testTarget#.iloc[trainingSamples]
         training = model.fit(
-            x=X, y=y, batch_size=2, epochs=16, shuffle=True, verbose=0, validation_split=0.3
+            x=X, y=y, batch_size=10, epochs=1000, shuffle=True, verbose=0, validation_split=0.3
         )
 
         # plot
@@ -879,28 +861,25 @@ def experimentPartThreeWrapper():
             i = i + 1
         ax22.set_ylabel("Score", color="red")
         ax11.legend()
-        plt.savefig("temp.png")
+        plt.savefig(str(testNode)+"_training.png")
         plt.close()
 
         ## explainer_shap(model, upstream, X, X_train=X, task="regression", top=10)
-        from numpy import argmax
-        test_predictions = argmax(model.predict(testInput.iloc[testSamples]),axis=-1).flatten()
+        answer = testTarget.iloc[testSamples]
+        answer = answer.iloc[:,0]
+        answer = answer.to_list()
 
-        a = plt.axes(aspect='equal')
-        plt.scatter(testTarget.iloc[testSamples], test_predictions)
+        test_predictions = np.round(model.predict(testInput.iloc[testSamples]))
+        plt.title("Proportion true predictions: " + str(round(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer),2)))
+        plt.axes(aspect='equal')
+        plt.hist([int(int(i) == int(j)) for i,j in zip(answer, test_predictions)])
         plt.xlabel('True Values')
         plt.ylabel('Predictions')
         lims = [0, 1]
         plt.xlim(lims)
-        plt.ylim(lims)
-        plt.savefig('temp2.png')
-
+        plt.savefig(str(testNode)+"_predictions.png")
+        plt.close()
         print(test_predictions)
-        #print(testTarget.iloc[testSamples])
-        #print(len(testTarget.iloc[testSamples]))
-        answer = testTarget.iloc[testSamples]
-        answer = answer.iloc[:,0]
-        answer = answer.to_list()
         print(answer)
         print(len(answer))
         print(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)]))
@@ -919,6 +898,8 @@ if __name__ == "__main__":
     # prepare network
     #testNet = nx.read_graphml("large_hif1Agraph.graphml")
     #experimentPartTwoWrapper()
+
+    """
     for i in range(0,3):
         print(i)
         ten_vars_gateDeepNN(i)
@@ -927,3 +908,5 @@ if __name__ == "__main__":
         plt.close()
         three_vars_gateDeepNN(i)
         plt.close()
+    """
+    experimentPartThreeWrapper()
