@@ -10,7 +10,8 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import matplotlib.cm as cmap
 import shap
-import random
+#import random
+from random import random, sample, seed
 
 def readData(datafiles={}):
     """
@@ -209,7 +210,7 @@ def experimentPartTwoWrapper():
         # subset input data
         testInput = inputdata.iloc[
             inputdata.index.get_level_values("Entity").isin(upstream)
-        ].T.astype('int').mul(signal)
+        ].T.astype('int')#.mul(signal)
         print(testInput.shape)
         # subset target data
         testTarget = targetdata.iloc[
@@ -392,30 +393,41 @@ def xorTutorial():
     print ("Complete")
 
 
-def xorDeepNN():
+def three_vars_gateDeepNN(i):
+    seed(i)
     import numpy as np
     # input X vector
-    X1 = pd.DataFrame(np.repeat(np.array([[0, 0], [0, 1], [1, 0], [1, 1]]), 100, axis = 0))
+    #X1 = pd.DataFrame(np.repeat(np.array([[0, 0], [0, 1], [1, 0], [1, 1]]), 100, axis = 0))
+    a = np.hstack((np.ones(150), np.zeros(150)))
+    np.random.shuffle(a)
+    b = np.hstack((np.ones(150), np.zeros(150)))
+    np.random.shuffle(b)
+    d = np.hstack((np.ones(150), np.zeros(150)))
+    np.random.shuffle(d)
+    b = np.hstack((np.ones(150), np.zeros(150)))
+    np.random.shuffle(b)
+    c = [ int(int(j) & int(i) | int(k)) for i,j,k in zip(a, b, d)] # B & A | D
+    X1 = pd.DataFrame({'A': a, 'B': b, 'D': d})
     print(X1)
     # output Y vector
-    Y1 = pd.DataFrame(np.repeat(np.array([[0], [1], [1], [0]]), 100, axis =  0))
+    #Y1 = pd.DataFrame(np.repeat(np.array([[0], [1], [1], [0]]), 100, axis =  0))
+    Y1 = pd.DataFrame({'C': c})
     print(Y1)
     model = models.Sequential(name="DeepNN", layers=[
     ### hidden layer 1
-    layers.Dense(name="h1", input_dim=2,
+    layers.Dense(name="h1", input_dim=3,
                 units=int(2), 
-                activation='relu'),
+                activation='tanh'),
     layers.Dropout(name="drop1", rate=0.2),
     ### hidden layer 2
-    layers.Dense(name="h2", units=int(1), 
-                activation='linear'),
+    layers.Dense(name="h2", units=int(2), 
+                activation='sigmoid'),
     layers.Dropout(name="drop2", rate=0.2),
-    
     ### layer output
     layers.Dense(name="output", units=1, activation='sigmoid')
     ])
     model.summary()
-    
+
     # compile the neural network
     model.compile(
         optimizer="adam",
@@ -425,17 +437,17 @@ def xorDeepNN():
             #tensorflow.keras.metrics.FalsePositives(),
             #tensorflow.keras.metrics.FalseNegatives(),
             tensorflow.keras.metrics.BinaryAccuracy(),
-            R2,
+            #R2,
             #tensorflow.keras.metrics.Recall(),
         ],
     )
     n_samples = len(X1)
-    trainingSamples = random.sample(range(0, n_samples), floor(3*n_samples/4))
+    trainingSamples = sample(range(0, n_samples), floor(3*n_samples/4))
     testSamples = list(set(range(0,n_samples)).difference(set(trainingSamples)))
-    X = X1.iloc[trainingSamples]
-    y = Y1.iloc[trainingSamples]
+    X = X1#.iloc[trainingSamples]
+    y = Y1#.iloc[trainingSamples]
     training = model.fit(
-        x=X, y=y, batch_size=10, epochs=64, shuffle=False, verbose=0, validation_split=0.3
+        x=X, y=y, batch_size=10, epochs=1000, shuffle=False, verbose=0, validation_split=0.3
     )
 
     # plot
@@ -471,36 +483,162 @@ def xorDeepNN():
         i = i + 1
     ax22.set_ylabel("Score", color="red")
     ax11.legend()
-    plt.savefig("temp.png")
+    plt.savefig("3_variable_gate_"+str(i)+".png")
     plt.close()
 
     ## explainer_shap(model, upstream, X, X_train=X, task="regression", top=10)
+    answer = Y1.iloc[testSamples]
+    answer = answer.iloc[:,0]
+    answer = answer.to_list()
     from numpy import argmax
-    test_predictions = argmax(model.predict(X1.iloc[testSamples]),axis=-1).flatten()
-
-    a = plt.axes(aspect='equal')
-    plt.scatter(Y1.iloc[testSamples], test_predictions)
+    test_predictions = model.predict(X1.iloc[testSamples]) #argmax(model.predict(X1.iloc[testSamples]),axis=-1).flatten()
+    test_predictions = np.round(test_predictions)
+    plt.axes(aspect='equal')
+    plt.title("Proportion true predictions: " + str(round(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer)),2))
+    #plt.scatter(Y1.iloc[testSamples], test_predictions)
+    plt.hist([int(int(i) == int(j)) for i,j in zip(answer, test_predictions)])
     plt.xlabel('True Values')
     plt.ylabel('Predictions')
     lims = [0, 1]
     plt.xlim(lims)
-    plt.ylim(lims)
-    plt.savefig('temp2.png')
+    #plt.ylim(lims)
+    plt.savefig("3_variable_gate_predictions_"+str(i)+".png")
 
     print(test_predictions)
     #print(testTarget.iloc[testSamples])
     #print(len(testTarget.iloc[testSamples]))
+    print(answer)
+    print(len(answer))
+    print(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer))
+
+def five_vars_gateDeepNN(i):
+    seed(i)
+    import numpy as np
+    # input X vector
+    #X1 = pd.DataFrame(np.repeat(np.array([[0, 0], [0, 1], [1, 0], [1, 1]]), 100, axis = 0))
+    a = np.hstack((np.ones(150), np.zeros(150)))
+    np.random.shuffle(a)
+    b = np.hstack((np.ones(150), np.zeros(150)))
+    np.random.shuffle(b)
+    d = np.hstack((np.ones(150), np.zeros(150)))
+    np.random.shuffle(d)
+    e = np.hstack((np.ones(150), np.zeros(150)))
+    np.random.shuffle(e)
+    f = np.hstack((np.ones(150), np.zeros(150)))
+    np.random.shuffle(f)
+    c = [ int(int(j) & int(i) | int(k) | int(l) & int(m)) for i,j,k,l,m in zip(a, b, d, e, f)] # B & A | D
+    X1 = pd.DataFrame({'A': a, 'B': b, 'D': d, 'E' : e, 'F': f})
+    print(X1)
+    # output Y vector
+    #Y1 = pd.DataFrame(np.repeat(np.array([[0], [1], [1], [0]]), 100, axis =  0))
+    Y1 = pd.DataFrame({'C': c})
+    print(Y1)
+    model = models.Sequential(name="DeepNN", layers=[
+    ### hidden layer 1
+    layers.Dense(name="h1", input_dim=5,
+                units=int(3), 
+                activation='tanh'),
+    layers.Dropout(name="drop1", rate=0.2),
+    ### hidden layer 2
+    layers.Dense(name="h2", units=int(2), 
+                activation='sigmoid'),
+    layers.Dropout(name="drop2", rate=0.2),
+    ### layer output
+    layers.Dense(name="output", units=1, activation='sigmoid')
+    ])
+    model.summary()
+
+    # compile the neural network
+    model.compile(
+        optimizer="adam",
+        loss="mean_absolute_error",
+        metrics=[
+            #tensorflow.keras.metrics.AUC(),
+            #tensorflow.keras.metrics.FalsePositives(),
+            #tensorflow.keras.metrics.FalseNegatives(),
+            tensorflow.keras.metrics.BinaryAccuracy(),
+            #R2,
+            #tensorflow.keras.metrics.Recall(),
+        ],
+    )
+    n_samples = len(X1)
+    trainingSamples = sample(range(0, n_samples), floor(3*n_samples/4))
+    testSamples = list(set(range(0,n_samples)).difference(set(trainingSamples)))
+    X = X1#.iloc[trainingSamples]
+    y = Y1#.iloc[trainingSamples]
+    training = model.fit(
+        x=X, y=y, batch_size=10, epochs=1000, shuffle=False, verbose=0, validation_split=0.3
+    )
+
+    # plot
+    metrics = [
+        k for k in training.history.keys() if ("loss" not in k) and ("val" not in k)
+    ]
+    fig, ax = plt.subplots(nrows=1, ncols=2, sharey=True, figsize=(15, 3))
+
+    ## training
+    ax[0].set(title="Training")
+    ax11 = ax[0].twinx()
+    ax[0].plot(training.history["loss"], color="black")
+    ax[0].set_xlabel("Epochs")
+    ax[0].set_ylabel("Loss", color="black")
+    colors = ["blue", "red", "orange"]
+    i = 0
+    for metric in metrics:
+        color = colors[i]
+        i = i + 1
+        ax11.plot(training.history[metric], label=metric, color = color)
+    ax11.set_ylabel("Score", color="red")
+    ax11.legend()
+
+    ## validation
+    i = 0
+    ax[1].set(title="Validation")
+    ax22 = ax[1].twinx()
+    ax[1].plot(training.history["val_loss"], color="black")
+    ax[1].set_xlabel("Epochs")
+    ax[1].set_ylabel("Loss", color="black")
+    for metric in metrics:
+        ax22.plot(training.history["val_" + metric], label=metric, color=colors[i])
+        i = i + 1
+    ax22.set_ylabel("Score", color="red")
+    ax11.legend()
+    plt.savefig("5_variable_gate_"+str(i)+".png")
+
+    plt.close()
+
+    ## explainer_shap(model, upstream, X, X_train=X, task="regression", top=10)
     answer = Y1.iloc[testSamples]
     answer = answer.iloc[:,0]
     answer = answer.to_list()
+    test_predictions = model.predict(X1.iloc[testSamples]) #argmax(model.predict(X1.iloc[testSamples]),axis=-1).flatten()
+    test_predictions = np.round(test_predictions)
+    #plt.axes(aspect='equal')
+    plt.title("Proportion true predictions: " + str(round(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer)), 2))
+    #plt.scatter(Y1.iloc[testSamples], test_predictions)
+    plt.hist([int(int(i) == int(j)) for i,j in zip(answer, test_predictions)])
+    plt.xlabel('True Values')
+    plt.ylabel('Predictions')
+    lims = [0, 1]
+    plt.xlim(lims)
+    #plt.ylim(lims)
+    plt.savefig("5_variable_gate_predictions_"+str(i)+".png")
+
+    print(test_predictions)
+    #print(testTarget.iloc[testSamples])
+    #print(len(testTarget.iloc[testSamples]))
     print(answer)
     print(len(answer))
-    print(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)]))
+    print(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer))
 
 
 if __name__ == "__main__":
     # prepare data
-    concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
+    #concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
     # prepare network
-    testNet = nx.read_graphml("large_hif1Agraph.graphml")
-    
+    #testNet = nx.read_graphml("large_hif1Agraph.graphml")
+    #experimentPartTwoWrapper()
+    for i in range(0,3):
+        print(i)
+        five_vars_gateDeepNN(i)
+        three_vars_gateDeepNN(i)
