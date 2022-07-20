@@ -9,7 +9,7 @@ import tensorflow.keras
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import matplotlib.cm as cmap
-import shap
+#import shap
 
 # import random
 from random import random, sample, seed
@@ -1182,7 +1182,7 @@ def experimentPartFourWrapper():
     print(len(answer))
     print(sum([1 if i == j else 0 for i, j in zip(test_predictions, answer)]))
 
-
+"""
 if __name__ == "__main__":
     # prepare data
     # concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
@@ -1190,7 +1190,6 @@ if __name__ == "__main__":
     # testNet = nx.read_graphml("large_hif1Agraph.graphml")
     # experimentPartTwoWrapper()
 
-    """
     for i in range(0,3):
         print(i)
         ten_vars_gateDeepNN(i)
@@ -1203,4 +1202,197 @@ if __name__ == "__main__":
     experimentPartThreeWrapper()
 
     experimentPartFourWrapper()
-    """
+    
+"""
+
+# prepare data
+concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
+# prepare network
+testNet = nx.read_graphml("large_hif1Agraph.graphml")
+testAdj = nx.to_pandas_adjacency(testNet)
+inputdata = inputdata.loc[
+    inputdata.index.get_level_values("Entity").isin(testNet.nodes())
+]
+origindex = inputdata.index
+inputdata.reset_index(inplace=True)
+inputdata.set_index("Entity", inplace=True)
+inputdata.loc[list(testNet.nodes())]
+testAdj = np.kron(testAdj, np.ones((2, 2), dtype=testAdj.dtype))
+testInput = pd.DataFrame(np.dot(inputdata.iloc[:, 1:91].T, testAdj))
+testInput.columns = np.repeat(testNet.nodes(), 2)
+testTarget = targetdata
+
+testNodes = list(testNode.keys())
+# testNode = testNode[random.sample(range(0, len(testNode)), 1)[0]]
+testNode = "CRKL"
+#for testNode in testNodes:
+print(testNode)
+# get upstream nodes
+upstream = testNet.in_edges(testNode, data=True)
+print(upstream)
+signal = [i[2]["signal"] for i in upstream]
+signal = [-1 if x == "i" else 1 for x in signal]
+signal.extend(signal)
+upstream = [i[0] for i in upstream]
+# subset input data
+testInput = inputdata.iloc[
+    inputdata.index.get_level_values("Entity").isin(upstream)
+].T.astype(
+    "int"
+)  # .mul(signal)
+print(testInput.shape)
+# subset target data
+testTarget = targetdata.iloc[
+    targetdata.index.get_level_values("Entity").isin([testNode])
+].T.astype("int")
+
+####
+testNet = nx.read_graphml("large_hif1Agraph.graphml")
+testAdj = nx.to_pandas_adjacency(testNet)
+concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
+inputdata = inputdata.loc[
+    inputdata.index.get_level_values("Entity").isin(testNet.nodes())
+]
+
+for i in testAdj.index:
+    a = testAdj.loc[i]
+    b = inputdata.loc[inputdata.index.get_level_values("Entity").isin([i])]
+
+testAdj
+
+mrnadata = inputdata.loc[
+    inputdata.index.get_level_values("Type").isin(['mRNA'])
+]
+mrnadata.reset_index(inplace=True)
+mrnadata.set_index("Entity", inplace=True)
+mrnadata.drop('Type', axis = 1, inplace=True)
+mrnadata = mrnadata.loc[testAdj.index]
+testInput = pd.DataFrame(np.dot(mrnadata.T, testAdj))
+testInput.columns = testAdj.index
+# protein data
+testTarget = targetdata.iloc[
+    targetdata.index.get_level_values("Entity").isin(testNet.nodes())
+].astype("int")
+testTarget.reset_index(inplace=True)
+testTarget.set_index("Entity", inplace=True)
+testTarget.drop('Type', axis = 1, inplace=True)
+testTarget = testTarget.loc[testAdj.index]
+testTarget = testTarget.T
+#testInput = np.dot(mrnadata.T, testAdj)
+
+model = models.Sequential(
+    name="DeepNN",
+    layers=[
+        ### hidden layer 1
+        layers.Dense(
+            name="h1",
+            input_dim=len(testInput.columns),
+            units=int(round((len(testInput.columns) + 1) / 2)),
+            activation="tanh",
+        ),
+        layers.Dropout(name="drop1", rate=0.2),
+        ### hidden layer 2
+        layers.Dense(
+            name="h2",
+            units=int(round((len(testInput.columns) + 1) / 4)),
+            activation="sigmoid",
+        ),
+        layers.Dropout(name="drop2", rate=0.2),
+        ### layer output
+        layers.Dense(name="output", units=1, activation="sigmoid"),
+    ],
+)
+model.summary()
+
+# compile the neural network
+model.compile(
+    optimizer="adam",
+    loss="mean_absolute_error",
+    metrics=[
+        # tensorflow.keras.metrics.AUC(),
+        # tensorflow.keras.metrics.FalsePositives(),
+        # tensorflow.keras.metrics.FalseNegatives(),
+        tensorflow.keras.metrics.BinaryAccuracy(),
+        # tensorflow.keras.metrics.Recall(),
+    ],
+)
+
+n_samples = len(testInput.index)
+trainingSamples = sample(range(0, n_samples), floor(3 * n_samples / 4))
+testSamples = list(set(range(0, n_samples)).difference(set(trainingSamples)))
+X = pd.DataFrame(testInput.astype(np.float32)).iloc[trainingSamples]
+y = testTarget.iloc[trainingSamples]
+training = model.fit(
+    x=X,
+    y=y,
+    batch_size=10,
+    epochs=1000,
+    shuffle=True,
+    verbose=0,
+    validation_split=0.3,
+)
+
+# plot
+metrics = [
+    k for k in training.history.keys() if ("loss" not in k) and ("val" not in k)
+]
+fig, ax = plt.subplots(nrows=1, ncols=2, sharey=True, figsize=(15, 3))
+
+## training
+ax[0].set(title="Training")
+ax11 = ax[0].twinx()
+ax[0].plot(training.history["loss"], color="black")
+ax[0].set_xlabel("Epochs")
+ax[0].set_ylabel("Loss", color="black")
+colors = ["blue", "red", "orange"]
+i = 0
+for metric in metrics:
+    color = colors[i]
+    i = i + 1
+    ax11.plot(training.history[metric], label=metric, color=color)
+ax11.set_ylabel("Score", color="red")
+ax11.legend()
+
+## validation
+i = 0
+ax[1].set(title="Validation")
+ax22 = ax[1].twinx()
+ax[1].plot(training.history["val_loss"], color="black")
+ax[1].set_xlabel("Epochs")
+ax[1].set_ylabel("Loss", color="black")
+for metric in metrics:
+    ax22.plot(training.history["val_" + metric], label=metric, color=colors[i])
+    i = i + 1
+ax22.set_ylabel("Score", color="red")
+ax11.legend()
+plt.savefig("testnet_training.png")
+plt.close()
+
+## explainer_shap(model, upstream, X, X_train=X, task="regression", top=10)
+answer = testTarget.iloc[testSamples]
+answer = answer.iloc[:, 0]
+answer = answer.to_list()
+
+test_predictions = np.round(model.predict(testInput.iloc[testSamples]))
+plt.title(
+    "Proportion true predictions: "
+    + str(
+        round(
+            sum([1 if i == j else 0 for i, j in zip(test_predictions, answer)])
+            / len(answer),
+            2,
+        )
+    )
+)
+# plt.axes(aspect='equal')
+plt.hist([int(int(i) == int(j)) for i, j in zip(answer, test_predictions)])
+plt.xlabel("True Values")
+plt.ylabel("Predictions")
+# lims = [0, 1]
+# plt.xlim(lims)
+plt.savefig("testnet_predictions.png")
+plt.close()
+print(test_predictions)
+print(answer)
+print(len(answer))
+print(sum([1 if i == j else 0 for i, j in zip(test_predictions, answer)]))
