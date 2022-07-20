@@ -896,8 +896,15 @@ def experimentPartFourWrapper():
     concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
     # prepare network
     testNet = nx.read_graphml("large_hif1Agraph.graphml")
-    testAdj = nx.adjacency_matrix(nx.read_graphml("large_hif1Agraph.graphml")).todense()
-    testInput = targetdata*testAdj
+    testAdj = nx.adjacency_matrix(testNet).todense()    
+    inputdata = inputdata.loc[inputdata.index.get_level_values('Entity').isin(testNet.nodes())]
+    origindex = inputdata.index 
+    inputdata.reset_index(inplace=True)
+    inputdata.set_index('Entity', inplace=True)
+    inputdata.loc[list(testNet.nodes())]
+    testAdj = np.kron(testAdj, np.ones((2,2), dtype=testAdj.dtype))
+    testInput = pd.DataFrame(np.dot(inputdata.iloc[:,1:91].T, testAdj))
+    testInput.columns = np.repeat(testNet.nodes(), 2)
     testTarget = targetdata
     model = models.Sequential(name="DeepNN", layers=[
     ### hidden layer 1
@@ -909,19 +916,19 @@ def experimentPartFourWrapper():
                 )+1)/2)), 
                 activation='tanh'),
     layers.Dropout(name="drop1", rate=0.2),
-    
+
     ### hidden layer 2
     layers.Dense(name="h2", units=int(round((len(
                     testInput.columns
                 )+1)/4)), 
                 activation='sigmoid'),
     layers.Dropout(name="drop2", rate=0.2),
-    
+
     ### layer output
     layers.Dense(name="output", units=1, activation='sigmoid')
     ])
     model.summary()
-    
+
     # compile the neural network
     model.compile(
         optimizer="adam",
@@ -938,11 +945,9 @@ def experimentPartFourWrapper():
     n_samples = len(testInput.index)
     trainingSamples = sample(range(0, n_samples), floor(3*n_samples/4))
     testSamples = list(set(range(0,n_samples)).difference(set(trainingSamples)))
-    X = testInput#.iloc[trainingSamples]
+    X = pd.DataFrame(testInput.astype(np.float32))#.iloc[trainingSamples]
     y = testTarget#.iloc[trainingSamples]
-    training = model.fit(
-        x=X, y=y, batch_size=10, epochs=1000, shuffle=True, verbose=0, validation_split=0.3
-    )
+    training = model.fit(x=X, y=y, batch_size=10, epochs=1000, shuffle=True, verbose=0, validation_split=0.3)
 
     # plot
     metrics = [
@@ -977,7 +982,7 @@ def experimentPartFourWrapper():
         i = i + 1
     ax22.set_ylabel("Score", color="red")
     ax11.legend()
-    plt.savefig(str(testNode)+"_training.png")
+    plt.savefig("testnet_training.png")
     plt.close()
 
     ## explainer_shap(model, upstream, X, X_train=X, task="regression", top=10)
@@ -993,16 +998,16 @@ def experimentPartFourWrapper():
     plt.ylabel('Predictions')
     #lims = [0, 1]
     #plt.xlim(lims)
-    plt.savefig(str(testNode)+"_predictions.png")
+    plt.savefig("testnet_predictions.png")
     plt.close()
     print(test_predictions)
     print(answer)
     print(len(answer))
     print(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)]))
 
-    answers[testNode] = [sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer), len(upstream)]
-    answers = pd.DataFrame(answers)
-    answers.T.to_csv("answers.csv")
+    #answers[testNode] = [sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer), len(upstream)]
+    #answers = pd.DataFrame(answers)
+    #answers.T.to_csv("answers.csv")
 
 
 if __name__ == "__main__":
