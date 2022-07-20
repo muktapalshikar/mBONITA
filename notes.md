@@ -13,3 +13,10 @@ Multiply input features by the adjacency matrix?
 
 ## Strategy 3:
 Use tensorflow.gnn package to learn node/edge features and built-in simulation
+
+Perturbation-based feature weighting:
+Design an importance score calculation function - 
+    - Generate (random start states, random start states with node knocked in, random start states with node knocked out):
+        - Use model to predict end states
+        - Store states
+    - Compare KO - KI

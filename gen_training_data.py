@@ -138,10 +138,10 @@ def experimentPartOneWrapper():
     # print("input", splitDF["input"].shape)
     # print("target", splitDF["target"].shape)
     # generate input data
-    inputdata = makeFSCdataset(splitDF["input"], numberOfCells=5)
+    inputdata = makeFSCdataset(splitDF["input"], numberOfCells=50)
     # print(inputdata)
     # generate target data
-    targetdata = makeFSCdataset(splitDF["target"], numberOfCells=10)
+    targetdata = makeFSCdataset(splitDF["target"], numberOfCells=100)
     # targetdata = pd.concat([targetdata, makeFSCdataset(splitDF["target"], numberOfCells=5)])
     # print(targetdata)
     return concatDF, splitDF, inputdata, targetdata
@@ -1189,30 +1189,21 @@ def experimentPartFiveWrapper():
 
     testNet = nx.read_graphml("large_hif1Agraph.graphml")
     for n in testNet.nodes():
-        testNet.add_edge(n, n)
+        upstream = testNet.in_edges(n, data=True)
+        upstream = [i[0] for i in upstream]
+        if len(upstream) == 0:
+            testNet.add_edge(n, n)
     testAdj = nx.to_pandas_adjacency(testNet)
 
     inputdata = inputdata.loc[
         inputdata.index.get_level_values("Entity").isin(testNet.nodes())
     ]
-    """
-    mrnadata = inputdata.loc[
-        inputdata.index.get_level_values("Type").isin(['mRNA'])
-    ]
-    mrnadata.reset_index(inplace=True)
-    mrnadata.set_index("Entity", inplace=True)
-    mrnadata.drop('Type', axis = 1, inplace=True)
-    mrnadata = mrnadata.loc[testAdj.index]
-    testInput = pd.DataFrame(np.dot(mrnadata.T, testAdj))
-    testInput.columns = testAdj.index
 
-    """
-
-    testNodes = list(testNet.nodes())
+    testNodes = sample(list(testNet.nodes()), 20)
 
     finalInput = pd.DataFrame()
     finalTarget = pd.DataFrame()
-    for testNode in testNodes[0:5]:
+    for testNode in testNodes:
         print(testNode)
         # get upstream nodes
         upstream = testNet.in_edges(testNode, data=True)
@@ -1242,8 +1233,6 @@ def experimentPartFiveWrapper():
 
     print(finalInput.shape)
     print(finalTarget.shape)
-        
-    """
 
     model = models.Sequential(
         name="DeepNN",
@@ -1252,14 +1241,14 @@ def experimentPartFiveWrapper():
             layers.Dense(
                 name="h1",
                 input_dim=len(testInput.columns),
-                units=int(round((len(testInput.columns) + 1) / 2)),
+                units=int((len(testInput.columns))),
                 activation="tanh",
             ),
             layers.Dropout(name="drop1", rate=0.2),
             ### hidden layer 2
             layers.Dense(
                 name="h2",
-                units=int(round((len(testInput.columns) + 1) / 4)),
+                units=int(round((len(testInput.columns) + 1) / 2)),
                 activation="sigmoid",
             ),
             layers.Dropout(name="drop2", rate=0.2),
@@ -1274,8 +1263,8 @@ def experimentPartFiveWrapper():
         optimizer="adam",
         loss="mean_absolute_error",
         metrics=[
-            # tensorflow.keras.metrics.AUC(),
-            # tensorflow.keras.metrics.FalsePositives(),
+            tensorflow.keras.metrics.AUC(),
+            tensorflow.keras.metrics.FalsePositives(),
             # tensorflow.keras.metrics.FalseNegatives(),
             tensorflow.keras.metrics.BinaryAccuracy(),
             # tensorflow.keras.metrics.Recall(),
@@ -1360,9 +1349,8 @@ def experimentPartFiveWrapper():
     plt.close()
     print(test_predictions)
     print(answer)
-    print(len(answer))
-    print(sum([1 if i == j else 0 for i, j in zip(test_predictions, answer)]))
-    """
+    print(sum([1 if i == j else 0 for i, j in zip(test_predictions, answer)])/len(answer))
+
 
 
 if __name__ == "__main__":
