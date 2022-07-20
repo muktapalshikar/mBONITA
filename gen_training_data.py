@@ -891,6 +891,120 @@ def experimentPartThreeWrapper():
     answers = pd.DataFrame(answers)
     answers.to_csv("answers.csv")
 
+def experimentPartFourWrapper():
+    # prepare data
+    concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
+    # prepare network
+    testNet = nx.read_graphml("large_hif1Agraph.graphml")
+    testAdj = nx.adjacency_matrix(nx.read_graphml("large_hif1Agraph.graphml")).todense()
+    testInput = targetdata*testAdj
+    testTarget = targetdata
+    model = models.Sequential(name="DeepNN", layers=[
+    ### hidden layer 1
+    layers.Dense(name="h1", input_dim=len(
+                    testInput.columns
+                ),
+                units=int(round((len(
+                    testInput.columns
+                )+1)/2)), 
+                activation='tanh'),
+    layers.Dropout(name="drop1", rate=0.2),
+    
+    ### hidden layer 2
+    layers.Dense(name="h2", units=int(round((len(
+                    testInput.columns
+                )+1)/4)), 
+                activation='sigmoid'),
+    layers.Dropout(name="drop2", rate=0.2),
+    
+    ### layer output
+    layers.Dense(name="output", units=1, activation='sigmoid')
+    ])
+    model.summary()
+    
+    # compile the neural network
+    model.compile(
+        optimizer="adam",
+        loss="mean_absolute_error",
+        metrics=[
+            #tensorflow.keras.metrics.AUC(),
+            #tensorflow.keras.metrics.FalsePositives(),
+            #tensorflow.keras.metrics.FalseNegatives(),
+            tensorflow.keras.metrics.BinaryAccuracy(),
+            #tensorflow.keras.metrics.Recall(),
+        ],
+    )
+
+    n_samples = len(testInput.index)
+    trainingSamples = sample(range(0, n_samples), floor(3*n_samples/4))
+    testSamples = list(set(range(0,n_samples)).difference(set(trainingSamples)))
+    X = testInput#.iloc[trainingSamples]
+    y = testTarget#.iloc[trainingSamples]
+    training = model.fit(
+        x=X, y=y, batch_size=10, epochs=1000, shuffle=True, verbose=0, validation_split=0.3
+    )
+
+    # plot
+    metrics = [
+        k for k in training.history.keys() if ("loss" not in k) and ("val" not in k)
+    ]
+    fig, ax = plt.subplots(nrows=1, ncols=2, sharey=True, figsize=(15, 3))
+
+    ## training
+    ax[0].set(title="Training")
+    ax11 = ax[0].twinx()
+    ax[0].plot(training.history["loss"], color="black")
+    ax[0].set_xlabel("Epochs")
+    ax[0].set_ylabel("Loss", color="black")
+    colors = ["blue", "red", "orange"]
+    i = 0
+    for metric in metrics:
+        color = colors[i]
+        i = i + 1
+        ax11.plot(training.history[metric], label=metric, color = color)
+    ax11.set_ylabel("Score", color="red")
+    ax11.legend()
+
+    ## validation
+    i = 0
+    ax[1].set(title="Validation")
+    ax22 = ax[1].twinx()
+    ax[1].plot(training.history["val_loss"], color="black")
+    ax[1].set_xlabel("Epochs")
+    ax[1].set_ylabel("Loss", color="black")
+    for metric in metrics:
+        ax22.plot(training.history["val_" + metric], label=metric, color=colors[i])
+        i = i + 1
+    ax22.set_ylabel("Score", color="red")
+    ax11.legend()
+    plt.savefig(str(testNode)+"_training.png")
+    plt.close()
+
+    ## explainer_shap(model, upstream, X, X_train=X, task="regression", top=10)
+    answer = testTarget.iloc[testSamples]
+    answer = answer.iloc[:,0]
+    answer = answer.to_list()
+
+    test_predictions = np.round(model.predict(testInput.iloc[testSamples]))
+    plt.title("Proportion true predictions: " + str(round(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer),2)))
+    #plt.axes(aspect='equal')
+    plt.hist([int(int(i) == int(j)) for i,j in zip(answer, test_predictions)])
+    plt.xlabel('True Values')
+    plt.ylabel('Predictions')
+    #lims = [0, 1]
+    #plt.xlim(lims)
+    plt.savefig(str(testNode)+"_predictions.png")
+    plt.close()
+    print(test_predictions)
+    print(answer)
+    print(len(answer))
+    print(sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)]))
+
+    answers[testNode] = [sum([1 if i == j else 0 for i, j in zip(test_predictions,answer)])/len(answer), len(upstream)]
+    answers = pd.DataFrame(answers)
+    answers.T.to_csv("answers.csv")
+
+
 if __name__ == "__main__":
     # prepare data
     #concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
@@ -907,5 +1021,9 @@ if __name__ == "__main__":
         plt.close()
         three_vars_gateDeepNN(i)
         plt.close()
-    """
+    
     experimentPartThreeWrapper()
+
+    """
+
+    experimentPartFourWrapper()
