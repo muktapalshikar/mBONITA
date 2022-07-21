@@ -138,10 +138,10 @@ def experimentPartOneWrapper():
     # print("input", splitDF["input"].shape)
     # print("target", splitDF["target"].shape)
     # generate input data
-    inputdata = makeFSCdataset(splitDF["input"], numberOfCells=50)
+    inputdata = makeFSCdataset(splitDF["input"], numberOfCells=5)
     # print(inputdata)
     # generate target data
-    targetdata = makeFSCdataset(splitDF["target"], numberOfCells=100)
+    targetdata = makeFSCdataset(splitDF["target"], numberOfCells=10)
     # targetdata = pd.concat([targetdata, makeFSCdataset(splitDF["target"], numberOfCells=5)])
     # print(targetdata)
     return concatDF, splitDF, inputdata, targetdata
@@ -1197,31 +1197,33 @@ def experimentPartFiveWrapper():
 
     inputdata = inputdata.loc[
         inputdata.index.get_level_values("Entity").isin(testNet.nodes())
-    ]
+    ] # rows = genes, cols = samples
 
     testNodes = sample(list(testNet.nodes()), 20)
 
     finalInput = pd.DataFrame()
     finalTarget = pd.DataFrame()
-    for testNode in testNodes:
+    for testNode in testNodes: #inputdata.index.get_level_values("Entity"):
         print(testNode)
         # get upstream nodes
         upstream = testNet.in_edges(testNode, data=True)
         upstream = [i[0] for i in upstream]
         print(upstream)
         # subset input data
-        testInput = inputdata.iloc[
-            inputdata.index.get_level_values("Entity").isin(upstream)
-        ].T.astype(
-            "int"
-        )
+        #testInput = inputdata.iloc[
+        #    inputdata.index.get_level_values("Entity").isin(upstream)
+        #].T.astype(
+        #    "int"
+        #) # rows = samples, cols = genes
+        testInput = inputdata.T
         # subset target data
         testTarget = targetdata.iloc[
             targetdata.index.get_level_values("Entity").isin([testNode])
-        ].T.astype("int")
+        ].T.astype("int") # rows = samples, cols = genes
         adj = testAdj[testNode]
-        for i in range(len(testInput.index)):
-            testInput.iloc[i] = [j*k for j,k in zip(adj, testInput.iloc[i])]
+        for i in testInput.columns.get_level_values('Entity'): 
+            for l in testInput.columns.get_level_values('Type'): 
+                testInput[l, i] = [j*k for j,k in zip(adj, testInput[l, i])]
         if finalInput.shape == (0,0):
             finalInput = testInput
             finalTarget = testTarget
@@ -1263,8 +1265,8 @@ def experimentPartFiveWrapper():
         optimizer="adam",
         loss="mean_absolute_error",
         metrics=[
-            tensorflow.keras.metrics.AUC(),
-            tensorflow.keras.metrics.FalsePositives(),
+            #tensorflow.keras.metrics.AUC(),
+            #tensorflow.keras.metrics.FalsePositives(),
             # tensorflow.keras.metrics.FalseNegatives(),
             tensorflow.keras.metrics.BinaryAccuracy(),
             # tensorflow.keras.metrics.Recall(),
@@ -1274,8 +1276,8 @@ def experimentPartFiveWrapper():
     n_samples = len(testInput.index)
     trainingSamples = sample(range(0, n_samples), floor(3 * n_samples / 4))
     testSamples = list(set(range(0, n_samples)).difference(set(trainingSamples)))
-    X = pd.DataFrame(testInput.astype(np.float32))#.iloc[trainingSamples]
-    y = pd.DataFrame(testTarget.astype(np.float32))#.iloc[trainingSamples]
+    X = pd.DataFrame(testInput.astype(np.float32)).iloc[trainingSamples]
+    y = pd.DataFrame(testTarget.astype(np.float32)).iloc[trainingSamples]
     training = model.fit(
         x=X,
         y=y,
@@ -1351,7 +1353,13 @@ def experimentPartFiveWrapper():
     print(answer)
     print(sum([1 if i == j else 0 for i, j in zip(test_predictions, answer)])/len(answer))
 
+def importanceScore():
+    # generate fake input data
+    # generate fake target data
+    return None
 
+def simulation():
+    return None
 
 if __name__ == "__main__":
     """
@@ -1373,6 +1381,179 @@ if __name__ == "__main__":
     experimentPartThreeWrapper()
 
     experimentPartFourWrapper()
-    
-    """
+
     experimentPartFiveWrapper()
+    """
+
+    # prepare data
+    concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
+    # prepare network
+
+    testNet = nx.read_graphml("large_hif1Agraph.graphml")
+    for n in testNet.nodes():
+        upstream = testNet.in_edges(n, data=True)
+        upstream = [i[0] for i in upstream]
+        #if len(upstream) == 0:
+        testNet.add_edge(n, n)
+    testAdj = nx.to_pandas_adjacency(testNet)
+    testAdj.sort_index(axis = 0, inplace =True)
+    testAdj.sort_index(axis = 1, inplace =True)
+    inputdata = inputdata.loc[
+        inputdata.index.get_level_values("Entity").isin(testNet.nodes())
+    ] # rows = genes, cols = samples
+
+    #testNodes = list(testNet.nodes())
+    testNodes = sample(list(testNet.nodes()), 10)
+
+    finalInput = pd.DataFrame()
+    finalTarget = pd.DataFrame()
+
+
+    for testNode in testNodes: #inputdata.index.get_level_values("Entity"):
+        #testNode = "CRKL"
+        #print(testNode)
+        # get upstream nodes
+        upstream = testNet.in_edges(testNode, data=True)
+        upstream = [i[0] for i in upstream]
+        print(upstream)
+        testInput = inputdata.T
+        # subset target data
+        testTarget = targetdata.iloc[
+            targetdata.index.get_level_values("Entity").isin([testNode])
+        ].T.astype("int") # rows = samples, cols = genes
+        adj = testAdj[testNode]
+        for i in set(testInput.columns.get_level_values('Entity')):
+            for l in set(testInput.columns.get_level_values('Type')):
+                testInput[l, i] = [adj[i]*k for k in testInput[l, i]]
+        if finalInput.shape == (0,0):
+            finalInput = testInput
+            finalTarget = testTarget
+            finalTarget.columns = ['Target']
+        else:
+            finalInput = pd.concat([testInput, finalInput], axis = 0)
+            testTarget.columns = ['Target']
+            finalTarget = pd.concat([testTarget, finalTarget], axis = 0)
+
+    print(finalInput.shape)
+    print(finalTarget.shape)
+
+    model = models.Sequential(
+        name="DeepNN",
+        layers=[
+            ### hidden layer 1
+            layers.Dense(
+                name="h1",
+                input_dim=len(finalInput.columns),
+                units=int((len(finalInput.columns))),
+                activation="tanh",
+            ),
+            layers.Dropout(name="drop1", rate=0.2),
+            ### hidden layer 2
+            layers.Dense(
+                name="h2",
+                units=int(round((len(finalInput.columns) + 1) / 2)),
+                activation="sigmoid",
+            ),
+            layers.Dropout(name="drop2", rate=0.2),
+            ### layer output
+            layers.Dense(name="output", units=1, activation="sigmoid"),
+        ],
+    )
+    model.summary()
+
+    # compile the neural network
+    model.compile(
+        optimizer="adam",
+        loss="mean_absolute_error",
+        metrics=[
+            #tensorflow.keras.metrics.AUC(),
+            #tensorflow.keras.metrics.FalsePositives(),
+            # tensorflow.keras.metrics.FalseNegatives(),
+            tensorflow.keras.metrics.BinaryAccuracy(),
+            # tensorflow.keras.metrics.Recall(),
+        ],
+    )
+
+    n_samples = len(finalInput.index)
+    trainingSamples = sample(range(0, n_samples), floor(3 * n_samples / 4))
+    testSamples = list(set(range(0, n_samples)).difference(set(trainingSamples)))
+    X = pd.DataFrame(finalInput.astype(np.float32)).iloc[trainingSamples]
+    y = pd.DataFrame(finalTarget.astype(np.float32)).iloc[trainingSamples]
+    training = model.fit(
+        x=X,
+        y=y,
+        batch_size=10,
+        epochs=1000,
+        shuffle=True,
+        verbose=0,
+        validation_split=0.3,
+    )
+
+    # plot
+    metrics = [
+        k for k in training.history.keys() if ("loss" not in k) and ("val" not in k)
+    ]
+    fig, ax = plt.subplots(nrows=1, ncols=2, sharey=True, figsize=(15, 3))
+
+    ## training
+    ax[0].set(title="Training")
+    ax11 = ax[0].twinx()
+    ax[0].plot(training.history["loss"], color="black")
+    ax[0].set_xlabel("Epochs")
+
+    ax[0].set_ylabel("Loss", color="black")
+    colors = ["blue", "red", "orange"]
+    i = 0
+    for metric in metrics:
+        color = colors[i]
+        i = i + 1
+        ax11.plot(training.history[metric], label=metric, color=color)
+    ax11.set_ylabel("Score", color="red")
+    ax11.legend()
+
+    ## validation
+    i = 0
+    ax[1].set(title="Validation")
+    ax22 = ax[1].twinx()
+    ax[1].plot(training.history["val_loss"], color="black")
+    ax[1].set_xlabel("Epochs")
+    ax[1].set_ylabel("Loss", color="black")
+    for metric in metrics:
+        ax22.plot(training.history["val_" + metric], label=metric, color=colors[i])
+        i = i + 1
+    ax22.set_ylabel("Score", color="red")
+    ax11.legend()
+    plt.savefig("testnet_training.png")
+    plt.close()
+
+    ## explainer_shap(model, upstream, X, X_train=X, task="regression", top=10)
+
+    answer = finalTarget.iloc[testSamples]
+    answer = answer.iloc[:, 0]
+    answer = answer.to_list()
+
+    test_predictions = np.round(model.predict(np.asarray(finalInput.iloc[testSamples]).astype('float32')))
+    plt.title(
+        "Proportion true predictions: "
+        + str(
+            round(
+                sum([1 if i == j else 0 for i, j in zip(test_predictions, answer)])
+                / len(answer),
+                2,
+            )
+        )
+    )
+    # plt.axes(aspect='equal')
+    plt.hist([int(int(i) == int(j)) for i, j in zip(answer, test_predictions)])
+    plt.xlabel("True Values")
+    plt.ylabel("Predictions")
+    # lims = [0, 1]
+    # plt.xlim(lims)
+    plt.savefig("testnet_predictions.png")
+    plt.close()
+    print(test_predictions)
+    print(answer)
+    print(sum([True if i == j else False for i, j in zip(test_predictions, answer)])/len(answer))
+
+    # test simulation
+    
