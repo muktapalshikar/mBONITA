@@ -1183,59 +1183,58 @@ def experimentPartFourWrapper():
     print(sum([1 if i == j else 0 for i, j in zip(test_predictions, answer)]))
 
 def experimentPartFiveWrapper():
-# prepare data
-concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
-# prepare network
+    # prepare data
+    concatDF, splitDF, inputdata, targetdata = experimentPartOneWrapper()
+    # prepare network
 
-testNet = nx.read_graphml("large_hif1Agraph.graphml")
-for n in testNet.nodes():
-    upstream = testNet.in_edges(n, data=True)
-    upstream = [i[0] for i in upstream]
-    #if len(upstream) == 0:
-    testNet.add_edge(n, n)
-testAdj = nx.to_pandas_adjacency(testNet)
-testAdj.sort_index(axis = 0, inplace =True)
-testAdj.sort_index(axis = 1, inplace =True)
-inputdata = inputdata.loc[
-    inputdata.index.get_level_values("Entity").isin(testNet.nodes())
-] # rows = genes, cols = samples
+    testNet = nx.read_graphml("large_hif1Agraph.graphml")
+    for n in testNet.nodes():
+        upstream = testNet.in_edges(n, data=True)
+        upstream = [i[0] for i in upstream]
+        #if len(upstream) == 0:
+        testNet.add_edge(n, n)
+    testAdj = nx.to_pandas_adjacency(testNet)
+    testAdj.sort_index(axis = 0, inplace =True)
+    testAdj.sort_index(axis = 1, inplace =True)
+    inputdata = inputdata.loc[
+        inputdata.index.get_level_values("Entity").isin(testNet.nodes())
+    ] # rows = genes, cols = samples
 
-#testNodes = list(testNet.nodes())
-testNodes = sample(list(testNet.nodes()), 10)
+    #testNodes = list(testNet.nodes())
+    testNodes = sample(list(testNet.nodes()), 5)
 
-finalInput = pd.DataFrame()
-finalTarget = pd.DataFrame()
+    finalInput = pd.DataFrame()
+    finalTarget = pd.DataFrame()
 
+    for testNode in testNodes: 
+        # get upstream nodes
+        upstream = testNet.in_edges(testNode, data=True)
+        upstream = [i[0] for i in upstream]
+        print(upstream)
+        testInput = inputdata.T
+        # subset target data
+        testTarget = targetdata.iloc[
+            targetdata.index.get_level_values("Entity").isin([testNode])
+        ].T.astype("int") # rows = samples, cols = genes
+        adj = testAdj[testNode]
+        for i in set(testInput.columns.get_level_values('Entity')):
+            for l in set(testInput.columns.get_level_values('Type')):
+                testInput[l, i] = [adj[i]*k for k in testInput[l, i]]
+        if finalInput.shape == (0,0):
+            finalInput = testInput
+            testTarget.index = [testNode for i in range(0, len(testTarget))]
+            finalTarget = testTarget
+            finalTarget.columns = ['Target']
+        else:
+            finalInput = pd.concat([testInput, finalInput], axis = 0)
+            testTarget.index = [testNode for i in range(0, len(testTarget))]
+            testTarget.columns = ['Target']
+            finalTarget = pd.concat([testTarget, finalTarget], axis = 0)
 
-for testNode in testNodes: #inputdata.index.get_level_values("Entity"):
-    #testNode = "CRKL"
-    #print(testNode)
-    # get upstream nodes
-    upstream = testNet.in_edges(testNode, data=True)
-    upstream = [i[0] for i in upstream]
-    print(upstream)
-    testInput = inputdata.T
-    # subset target data
-    testTarget = targetdata.iloc[
-        targetdata.index.get_level_values("Entity").isin([testNode])
-    ].T.astype("int") # rows = samples, cols = genes
-    adj = testAdj[testNode]
-    for i in set(testInput.columns.get_level_values('Entity')):
-        for l in set(testInput.columns.get_level_values('Type')):
-            testInput[l, i] = [adj[i]*k for k in testInput[l, i]]
-    if finalInput.shape == (0,0):
-        finalInput = testInput
-        finalTarget = testTarget
-        finalTarget.columns = ['Target']
-    else:
-        finalInput = pd.concat([testInput, finalInput], axis = 0)
-        testTarget.columns = ['Target']
-        testTarget.index = [testNode for i in range(0, len(testTarget))]
-        finalTarget = pd.concat([testTarget, finalTarget], axis = 0)
-
-print(finalInput.shape)
-print(finalTarget.shape)
-
+    print(finalInput.shape)
+    print(finalTarget.shape)
+    finalInput.to_csv("finalInput.csv")
+    finalTarget.to_csv("finalTarget.csv")
     model = models.Sequential(
         name="DeepNN",
         layers=[
@@ -1353,7 +1352,7 @@ print(finalTarget.shape)
     print(test_predictions)
     print(answer)
     print(sum([True if i == j else False for i, j in zip(test_predictions, answer)])/len(answer))
-
+    model.save('testmodel.h5')
     return model
 
 def importanceScore():
@@ -1385,9 +1384,8 @@ if __name__ == "__main__":
 
     experimentPartFourWrapper()
     """
-
     model = experimentPartFiveWrapper()
+    
     
 
 
-[1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1]
