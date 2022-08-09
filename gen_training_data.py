@@ -138,10 +138,10 @@ def experimentPartOneWrapper():
     # print("input", splitDF["input"].shape)
     # print("target", splitDF["target"].shape)
     # generate input data
-    inputdata = makeFSCdataset(splitDF["input"], numberOfCells=5)
+    inputdata = makeFSCdataset(splitDF["input"], numberOfCells=50)
     # print(inputdata)
     # generate target data
-    targetdata = makeFSCdataset(splitDF["target"], numberOfCells=10)
+    targetdata = makeFSCdataset(splitDF["target"], numberOfCells=100)
     # targetdata = pd.concat([targetdata, makeFSCdataset(splitDF["target"], numberOfCells=5)])
     # print(targetdata)
     return concatDF, splitDF, inputdata, targetdata
@@ -1352,7 +1352,7 @@ def experimentPartFiveWrapper():
     print(test_predictions)
     print(answer)
     print(sum([True if i == j else False for i, j in zip(test_predictions, answer)])/len(answer))
-    model.save('testmodel.h5')
+    model.save('testmodel2.h5')
     return model
 
 def importanceScore():
@@ -1384,8 +1384,45 @@ if __name__ == "__main__":
 
     experimentPartFourWrapper()
     """
-    model = experimentPartFiveWrapper()
-    
-    
-
-
+    #tf.random.set_seed(1)
+    #model = experimentPartFiveWrapper()
+    model = tf.keras.models.load_model('testmodel.h5')
+    # Check its architecture
+    model.summary()
+    """
+    finalInput = pd.read_csv("finalInput.csv", header = [0,1], index_col = 0)
+    # calculate importance scores 
+    n_samples = len(finalInput.index)
+    #trainingSamples = sample(range(0, n_samples), floor(3 * n_samples / 4))
+    #testSamples = list(set(range(0, n_samples)).difference(set(trainingSamples)))
+    testSamples = list(range(0, n_samples))
+    results = {}
+    testNet = nx.read_graphml("large_hif1Agraph.graphml")
+    for n in testNet.nodes():
+        upstream = testNet.in_edges(n, data=True)
+        upstream = [i[0] for i in upstream]
+        #if len(upstream) == 0:
+        testNet.add_edge(n, n)
+    outdegreeCentrality = nx.out_degree_centrality(testNet)
+    for node in set(finalInput.columns.get_level_values('Entity')):
+        results[node] = {}
+        finalInput.loc[:,pd.IndexSlice[:,node]] = 0
+        i = 0
+        IS = 0
+        while i < 10:
+            test_predictions_ko = np.round(model.predict(np.asarray(finalInput.iloc[testSamples]).astype('float32')))
+            #print(test_predictions_ko)
+            finalInput.loc[:,pd.IndexSlice[:,node]] = 1
+            test_predictions_ki = np.round(model.predict(np.asarray(finalInput.iloc[testSamples]).astype('float32')))
+            #print(list(test_predictions_ki))
+            #print(test_predictions_ki == test_predictions_ko)
+            #print(t1 == t2)
+            ki_val = np.sum(list(test_predictions_ki))
+            ko_val = np.sum(list(test_predictions_ko))
+            IS = IS + abs(ki_val - ko_val)
+            i = 1 + i
+        results[node] = {"Node": node, "Knockout": ki_val, "Knockin": ko_val, "IS": IS/10, "indegree": testNet.in_degree(node), "outdegree": testNet.out_degree(node), "outdegreeCentrality": outdegreeCentrality[node] }
+    results = pd.DataFrame(results).T
+    print(results)
+    results.to_csv("tempResults.csv")
+    """
