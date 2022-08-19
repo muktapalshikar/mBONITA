@@ -1,0 +1,281 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+require(limma)
+proteomics <- read.csv("bonita_proteomics.csv", row.names = 1, check.names = 1)
+phosphoproteomics <- read.csv("bonita_phosphoproteomics.csv", row.names = 1, check.names = 0)
+transcriptomics <- read.csv("bonita_transcriptomics.csv", row.names = 1, check.names =1)
+contrasts <- read.csv("concatenated_conditions_CAMERA.csv", row.names = 1, check.names = FALSE)
+prot_contrast <- contrasts[colnames(proteomics),]
+mrna_contrast <- contrasts[colnames(transcriptomics),]
+phosph_contrast <- contrasts[colnames(phosphoproteomics),]
+kegg <- clusterProfiler::read.gmt('c2.cp.kegg.v7.5.1.symbols.gmt')
+keggList <- setNames(lapply(unique(kegg$term), function(x){return(kegg$gene[kegg$term == x])}), unique(kegg$term))
+```
+
+# Contrast - 19O2NoCyA vs 1O2NoCyA
+
+```{r}
+require(readxl)
+
+excel_sheets(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""))
+
+de_mrna <- read_excel(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 2)
+de_prot <- read_excel(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 3)
+de_phospho <- read_excel(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 4)
+
+
+```
+
+# Proteomics
+
+
+```{r}
+colnames(prot_contrast) <- make.names(colnames(prot_contrast))
+camera_prot1 <- camera(y=proteomics, index = ids2indices(keggList, rownames(proteomics)),design=prot_contrast, contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2NoCyA"), levels = make.names(colnames(prot_contrast))))
+camera_prot1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
+camera_prot2 <- camera(y=proteomics, index = ids2indices(keggList, rownames(proteomics)),design=prot_contrast, contrast = makeContrasts(contrasts = c("X1O2PlusCyA - X19O2NoCyA"), levels = make.names(colnames(prot_contrast))))
+camera_prot2$Contrast <- "X1O2PlusCyA - X19O2NoCyA"
+camera_prot3 <- camera(y=proteomics, index = ids2indices(keggList, rownames(proteomics)),design=prot_contrast, contrast = makeContrasts(contrasts = c("X1O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(prot_contrast)))) 
+camera_prot3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
+
+camera_prot1$GeneSet <- rownames(camera_prot1)
+rownames(camera_prot1) <- NULL
+camera_prot2$GeneSet <- rownames(camera_prot2)
+rownames(camera_prot2) <- NULL
+camera_prot3$GeneSet <- rownames(camera_prot3)
+rownames(camera_prot3) <- NULL
+
+camera_prot <- rbind(camera_prot1, camera_prot2, camera_prot3)
+camera_prot$Method <- 'Proteomics'
+head(camera_prot)
+```
+
+# Phosphoproteomics
+
+```{r}
+
+colnames(phosph_contrast) <- make.names(colnames(phosph_contrast))
+camera_phosph1 <- camera(y=phosphoproteomics, index = ids2indices(keggList, rownames(phosphoproteomics)),design=phosph_contrast, contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2NoCyA"), levels = make.names(colnames(phosph_contrast))))
+camera_phosph1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
+camera_phosph2 <- camera(y=phosphoproteomics, index = ids2indices(keggList, rownames(phosphoproteomics)),design=phosph_contrast,  contrast = makeContrasts(contrasts = c("X1O2PlusCyA - X19O2NoCyA"), levels = make.names(colnames(phosph_contrast))))
+camera_phosph2$Contrast <- "X1O2PlusCyA - X19O2NoCyA"
+camera_phosph3 <- camera(y=phosphoproteomics, index = ids2indices(keggList, rownames(phosphoproteomics)),design=phosph_contrast,  contrast = makeContrasts(contrasts = c("X1O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(phosph_contrast))))
+camera_phosph3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
+
+camera_phosph1$GeneSet <- rownames(camera_phosph1)
+rownames(camera_prot1) <- NULL
+camera_phosph2$GeneSet <- rownames(camera_phosph2)
+rownames(camera_phosph2) <- NULL
+camera_phosph3$GeneSet <- rownames(camera_phosph3)
+rownames(camera_phosph3) <- NULL
+
+
+camera_phosph <- rbind(camera_phosph1, camera_phosph2, camera_phosph3)
+camera_phosph$Method <- 'Phosphoproteomics'
+head(camera_phosph)
+
+```
+
+# Transcriptomics
+
+```{r}
+colnames(mrna_contrast) <- make.names(colnames(mrna_contrast))
+camera_mrna1 <- camera(y=transcriptomics, index = ids2indices(keggList, rownames(transcriptomics)),design=mrna_contrast, contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2NoCyA"), levels = make.names(colnames(mrna_contrast))))
+camera_mrna1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
+camera_mrna2 <- camera(y=transcriptomics, index = ids2indices(keggList, rownames(transcriptomics)),design=mrna_contrast,  contrast = makeContrasts(contrasts = c("X1O2PlusCyA - X19O2NoCyA"), levels = make.names(colnames(mrna_contrast))))
+camera_mrna2$Contrast <- "X1O2PlusCyA - X19O2NoCyA"
+camera_mrna3 <- camera(y=transcriptomics, index = ids2indices(keggList, rownames(transcriptomics)),design=mrna_contrast,  contrast = makeContrasts(contrasts = c("X1O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(mrna_contrast)))) 
+camera_mrna3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
+
+camera_mrna1$GeneSet <- rownames(camera_mrna1)
+rownames(camera_mrna1) <- NULL
+camera_mrna2$GeneSet <- rownames(camera_mrna2)
+rownames(camera_mrna2) <- NULL
+camera_mrna3$GeneSet <- rownames(camera_mrna3)
+rownames(camera_mrna3) <- NULL
+
+
+camera_mrna <- rbind(camera_mrna1, camera_mrna2, camera_mrna3)
+camera_mrna$Method <- 'Transcriptomics'
+head(camera_mrna)
+```
+
+# All results, FDR-p < 0.05
+```{r}
+
+camera_allResults <- rbind(camera_prot, camera_phosph, camera_mrna)
+camera_allResults$negativelog10FDR <- -1*log10(camera_allResults$FDR)
+write.csv(camera_allResults, file = 'camera_allResults.csv')
+temp <- camera_allResults$FDR < 0.05 #PValue < 0.01
+camera_allResults <- camera_allResults[temp,]
+camera_allResults$GeneSet <- gsub("KEGG|_|\\d+$", " ", camera_allResults$GeneSet)
+camera_allResults
+```
+# Plot
+
+```{r}
+require(ggplot2)
+
+ggplot(camera_allResults) + geom_point(aes(x=negativelog10FDR, y=GeneSet, color=Contrast)) + facet_wrap(facets = 'Method') + theme_bw()
+ggsave(filename = "camera_allResults.svg", width = 12, height = 10, units = 'in')
+```
+# LeapR
+
+
+### Figure 2
+We will compare the ability of transcriptomics, proteomics, and phosphoproteomics to inform about
+differences between short and long surviving patient groups.
+
+This spans the multiple enrichment methods in leapR and also includes multi-omics
+
+The resulting heatmap is presented as Figure 2 in the paper.
+
+``` {r figure_2, echo=TRUE, warning=FALSE, message=FALSE}
+#load the single omic and multi-omic pathway databases
+data("krbpaths")
+data("mo_krbpaths")
+
+shortlist <- rownames(contrasts)[contrasts$`19O2NoCyA` == 1]
+longlist <- rownames(contrasts)[contrasts$`1O2NoCyA` == 1]
+
+
+# comparison enrichment in transcriptional data
+transdata.comp.enrichment.svl = leapR(
+  geneset = krbpaths,
+  enrichment_method = 'enrichment_comparison',
+  datamatrix = transcriptomics,
+  primary_columns = intersect(colnames(transcriptomics), shortlist),
+  secondary_columns = intersect(colnames(transcriptomics), longlist)
+)
+# comparison enrichment in proteomics data
+# this is the same code used above, just repeated here for clarity
+protdata.comp.enrichment.svl = leapR(
+  geneset = krbpaths,
+  enrichment_method = 'enrichment_comparison',
+  datamatrix = proteomics,
+  primary_columns = intersect(colnames(proteomics), shortlist),
+  secondary_columns = intersect(colnames(proteomics), longlist)
+)
+# comparison enrichment in phosphoproteomics data
+phosphodata.comp.enrichment.svl = leapR(
+  geneset = krbpaths,
+  enrichment_method = 'enrichment_comparison',
+  datamatrix = phosphoproteomics,
+  primary_columns = intersect(colnames(phosphoproteomics), shortlist),
+  secondary_columns = intersect(colnames(phosphoproteomics), longlist)
+)
+
+#combine the omics data into one with prefix tags
+#proteomics$Gene <- rownames(proteomics)
+#transcriptomics$Gene <- rownames(transcriptomics)
+#phosphoproteomics$Gene <- rownames(phosphoproteomics)
+
+
+#combodata <- dplyr::full_join(proteomics, transcriptomics, by = 'Gene')
+#combodata <- dplyr::full_join(combodata, phosphoproteomics, by = 'Gene')
+#combodata <- as.data.frame(combodata)
+#rownames(combodata) <- combodata$Gene
+#combodata <- combodata[, !colnames(combodata) %in% 'Gene']
+#combodata[is.na(combodata)] <- 0
+
+prot2 <- proteomics
+colnames(prot2) <- unlist(lapply(colnames(prot2), function(x){return(names(as.list(contrasts[x,])[as.list(contrasts[x,]) == 1]))}))
+mrna2 <- transcriptomics
+colnames(mrna2) <- unlist(lapply(colnames(mrna2), function(x){return(names(as.list(contrasts[x,])[as.list(contrasts[x,]) == 1]))}))
+
+phosph2 <- phosphoproteomics
+colnames(phosph2) <- unlist(lapply(colnames(phosph2), function(x){return(names(as.list(contrasts[x,])[as.list(contrasts[x,]) == 1]))}))
+
+
+combodata <- combine_omics(proteomics = prot2, transcriptomics = mrna2, phospho = phosph2, id_column = 1)
+
+# comparison enrichment for combodata
+combodata.enrichment.svl = leapR(geneset=mo_krbpaths,
+                                 enrichment_method='enrichment_comparison',
+                                 datamatrix=combodata, primary_columns=c('19O2NoCyA'),
+                                 secondary_columns=c('1O2NoCyA'), id_column=1)
+combodata.enrichment.svl$pvalue[is.na(combodata.enrichment.svl$pvalue)] <- 1
+#combodata.enrichment.svl <- combodata.enrichment.svl[combodata.enrichment.svl$pvalue < 1,]
+head(combodata.enrichment.svl)
+min(combodata.enrichment.svl$pvalue)
+max(combodata.enrichment.svl$pvalue)
+
+combodata.enrichment.svl = leapR(geneset=mo_krbpaths,
+                                 enrichment_method='enrichment_comparison',
+                                 datamatrix=combodata, primary_columns=c('19O2NoCyA'),
+                                 secondary_columns=c('1O2PlusCyA'), id_column=1)
+combodata.enrichment.svl$pvalue[is.na(combodata.enrichment.svl$pvalue)] <- 1
+#combodata.enrichment.svl <- combodata.enrichment.svl[combodata.enrichment.svl$pvalue < 1,]
+head(combodata.enrichment.svl)
+min(combodata.enrichment.svl$pvalue)
+max(combodata.enrichment.svl$pvalue)
+
+combodata.enrichment.svl = leapR(geneset=mo_krbpaths,
+                                 enrichment_method='enrichment_comparison',
+                                 datamatrix=combodata, primary_columns=c('1O2NoCyA'),
+                                 secondary_columns=c('1O2PlusCyA'), id_column=1)
+combodata.enrichment.svl$pvalue[is.na(combodata.enrichment.svl$pvalue)] <- 1
+#combodata.enrichment.svl <- combodata.enrichment.svl[combodata.enrichment.svl$pvalue < 1,]
+head(combodata.enrichment.svl)
+min(combodata.enrichment.svl$pvalue)
+max(combodata.enrichment.svl$pvalue)
+```
+
+```{r}
+require(pathwayPCA)
+kegg <- pathwayPCA::read_gmt('c2.cp.kegg.v7.5.1.symbols.gmt')
+
+
+```
+
+
+```{r, eval=FALSE}
+
+prot3 <- as.data.frame(t(prot2))
+prot3 <- cbind(make.unique(colnames(prot2)), prot3)
+colnames(prot3)[1] <- 'Sample'
+resp <- data.frame('Sample ID' = prot3$Sample, 'Response' = colnames(prot2))
+
+prot4 <- CreateOmics(
+  assayData_df = prot3,
+  response = resp,
+  respType = 'regression',
+  pathwayCollection_ls = kegg,
+  minPathSize = 5
+)
+
+prot_aespcOut <- AESPCA_pVals(
+  object = prot4,
+  numPCs = 1,
+  parallel = FALSE,
+  numReps = 0,
+  adjustment = "BH"
+)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

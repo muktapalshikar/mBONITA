@@ -1,0 +1,58 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+Make lists of relevant genes for each contrast to test PaintOmics 
+
+
+```{r}
+wd <- "C:\\Users\\Mukta Palshikar\\Box\\multiomics integration manuscript\\data\\paintomics\\"
+setwd(wd)
+```
+
+# 
+
+```{r}
+
+makePaintOmics <- function(contrast){
+  # proteomics
+  proteomics <- read.csv(paste(wd, "proteomics/", contrast, sep = ""))
+  colnames(proteomics) <- c('Gene','proteomics')
+  # phosphoproteomics
+  phosphoproteomics <- read.csv(paste(wd, "phosphoproteomics/", contrast, sep = ""))
+  colnames(phosphoproteomics) <- c('Gene','phosphoproteomics')
+  # transcriptomics
+  transcriptomics <- read.csv(paste(wd, "transcriptomics/", contrast, sep = ""))
+  colnames(transcriptomics) <- c('Gene','transcriptomics')
+  
+  temp1 <- merge(transcriptomics, phosphoproteomics, by = 'Gene', all = TRUE)
+  temp2 <- merge(temp1, proteomics, by = 'Gene', all=TRUE)
+  
+  rownames(temp2) <- temp2$Gene
+  
+  temp2 <- temp2[, c("transcriptomics", "proteomics", "phosphoproteomics")]
+  
+  temp2[is.na(temp2)] <- 0
+  
+  write.table(unique(rownames(temp2)[temp2$transcriptomics>quantile(temp2$transcriptomics)[4]|temp2$phosphoproteomics>quantile(temp2$phosphoproteomics)[4]|temp2$proteomics>quantile(temp2$proteomics)[4]]), file = paste(contrast, "_relevant.csv"), row.names = FALSE, col.names = FALSE)
+  
+  write.table(unique(rownames(temp2)[temp2$transcriptomics>quantile(temp2$transcriptomics)[4]]), file = paste(contrast, "_transcriptomics_relevant.csv"), row.names = FALSE, col.names = FALSE)
+  
+  write.table(unique(rownames(temp2)[temp2$proteomics>quantile(temp2$proteomics)[4]]), file = paste(contrast, "_proteomics_relevant.csv"), row.names = FALSE, col.names = FALSE)
+  
+  write.table(unique(rownames(temp2)[temp2$phosphoproteomics>quantile(temp2$phosphoproteomics)[4]]), file = paste(contrast, "_phosphoproteomics_relevant.csv"), row.names = FALSE, col.names = FALSE)
+}
+
+```
+
+
+```{r}
+makePaintOmics("1% O2, CyA-_vs_19% O2, CyA-.csv")
+makePaintOmics("1% O2, CyA+_vs_1% O2, CyA-.csv")
+makePaintOmics("19% O2, CyA-_vs_1% O2, CyA+.csv")
+```
+
+
+
