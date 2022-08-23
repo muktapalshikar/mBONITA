@@ -53,6 +53,38 @@ makePaintOmics("1% O2, CyA-_vs_19% O2, CyA-.csv")
 makePaintOmics("1% O2, CyA+_vs_1% O2, CyA-.csv")
 makePaintOmics("19% O2, CyA-_vs_1% O2, CyA+.csv")
 ```
+# Plot paintomics results
+
+```{r}
+
+results1 <- read.csv("Paintomics_pathways_1% O2, CyA-_vs_19% O2, CyA-.csv")
+results1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
+results2 <- read.csv("Paintomics_pathways_1% O2, CyA+_vs_1% O2, CyA-.csv")
+results2$Contrast <- "X1O2PlusCyA - X1O2NoCyA"
+results3 <- read.csv("Paintomics_pathways_19% O2, CyA-_vs_1% O2, CyA+.csv")
+results3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
+
+results <- rbind(results1, results2, results3)
+head(results)
+```
+
+
+```{r}
+melt_results <- reshape2::melt(results, id.vars = c("Pathway.name", "Contrast"), measure.vars = c("Geneexpression.FDR.BH.", "Proteomics.FDR.BH.", "Proteomics.FDR.BH..1", "Combined.pValue.Fisher..FDR.BH."))
+colnames(melt_results) <- c("Pathway", "Contrast", "Method", "FDR")
+melt_results$negativelog10FDR <- -1*log10(melt_results$FDR)
+levels(melt_results$Method) <- c("Transcriptomics", "Proteomics", "Phosphoproteomics", "Combined")
+head(melt_results)
+```
+```{r}
+require(ggplot2)
+temp <- melt_results$FDR < 0.05
+melt_results <- na.omit(melt_results[temp,])
+melt_results <- melt_results[order(melt_results$negativelog10FDR),]
+ggplot(melt_results) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast, shape=Contrast), size=3) + facet_wrap(facets = 'Method', nrow = 1) + theme_bw() + scale_color_brewer(palette = 'Set2')
+ggsave(filename = "paintomics_allResults.svg", width = 12, height = 10, units = 'in')
+ggsave(filename = "paintomics_allResults.png", width = 12, height = 10, units = 'in')
+```
 
 
 

@@ -113,7 +113,7 @@ camera_allResults$negativelog10FDR <- -1*log10(camera_allResults$FDR)
 write.csv(camera_allResults, file = 'camera_allResults.csv')
 temp <- camera_allResults$FDR < 0.05 #PValue < 0.01
 camera_allResults <- camera_allResults[temp,]
-camera_allResults$GeneSet <- gsub("KEGG|_|\\d+$", " ", camera_allResults$GeneSet)
+camera_allResults$Pathway <- gsub("KEGG|_|\\d+$", " ", camera_allResults$Pathway)
 camera_allResults
 ```
 # Plot
@@ -121,109 +121,9 @@ camera_allResults
 ```{r}
 require(ggplot2)
 
-ggplot(camera_allResults) + geom_point(aes(x=negativelog10FDR, y=GeneSet, color=Contrast)) + facet_wrap(facets = 'Method') + theme_bw()
+ggplot(camera_allResults) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method') + theme_bw()
 ggsave(filename = "camera_allResults.svg", width = 12, height = 10, units = 'in')
-```
-# LeapR
-
-
-### Figure 2
-We will compare the ability of transcriptomics, proteomics, and phosphoproteomics to inform about
-differences between short and long surviving patient groups.
-
-This spans the multiple enrichment methods in leapR and also includes multi-omics
-
-The resulting heatmap is presented as Figure 2 in the paper.
-
-``` {r figure_2, echo=TRUE, warning=FALSE, message=FALSE}
-#load the single omic and multi-omic pathway databases
-data("krbpaths")
-data("mo_krbpaths")
-
-shortlist <- rownames(contrasts)[contrasts$`19O2NoCyA` == 1]
-longlist <- rownames(contrasts)[contrasts$`1O2NoCyA` == 1]
-
-
-# comparison enrichment in transcriptional data
-transdata.comp.enrichment.svl = leapR(
-  geneset = krbpaths,
-  enrichment_method = 'enrichment_comparison',
-  datamatrix = transcriptomics,
-  primary_columns = intersect(colnames(transcriptomics), shortlist),
-  secondary_columns = intersect(colnames(transcriptomics), longlist)
-)
-# comparison enrichment in proteomics data
-# this is the same code used above, just repeated here for clarity
-protdata.comp.enrichment.svl = leapR(
-  geneset = krbpaths,
-  enrichment_method = 'enrichment_comparison',
-  datamatrix = proteomics,
-  primary_columns = intersect(colnames(proteomics), shortlist),
-  secondary_columns = intersect(colnames(proteomics), longlist)
-)
-# comparison enrichment in phosphoproteomics data
-phosphodata.comp.enrichment.svl = leapR(
-  geneset = krbpaths,
-  enrichment_method = 'enrichment_comparison',
-  datamatrix = phosphoproteomics,
-  primary_columns = intersect(colnames(phosphoproteomics), shortlist),
-  secondary_columns = intersect(colnames(phosphoproteomics), longlist)
-)
-
-#combine the omics data into one with prefix tags
-#proteomics$Gene <- rownames(proteomics)
-#transcriptomics$Gene <- rownames(transcriptomics)
-#phosphoproteomics$Gene <- rownames(phosphoproteomics)
-
-
-#combodata <- dplyr::full_join(proteomics, transcriptomics, by = 'Gene')
-#combodata <- dplyr::full_join(combodata, phosphoproteomics, by = 'Gene')
-#combodata <- as.data.frame(combodata)
-#rownames(combodata) <- combodata$Gene
-#combodata <- combodata[, !colnames(combodata) %in% 'Gene']
-#combodata[is.na(combodata)] <- 0
-
-prot2 <- proteomics
-colnames(prot2) <- unlist(lapply(colnames(prot2), function(x){return(names(as.list(contrasts[x,])[as.list(contrasts[x,]) == 1]))}))
-mrna2 <- transcriptomics
-colnames(mrna2) <- unlist(lapply(colnames(mrna2), function(x){return(names(as.list(contrasts[x,])[as.list(contrasts[x,]) == 1]))}))
-
-phosph2 <- phosphoproteomics
-colnames(phosph2) <- unlist(lapply(colnames(phosph2), function(x){return(names(as.list(contrasts[x,])[as.list(contrasts[x,]) == 1]))}))
-
-
-combodata <- combine_omics(proteomics = prot2, transcriptomics = mrna2, phospho = phosph2, id_column = 1)
-
-# comparison enrichment for combodata
-combodata.enrichment.svl = leapR(geneset=mo_krbpaths,
-                                 enrichment_method='enrichment_comparison',
-                                 datamatrix=combodata, primary_columns=c('19O2NoCyA'),
-                                 secondary_columns=c('1O2NoCyA'), id_column=1)
-combodata.enrichment.svl$pvalue[is.na(combodata.enrichment.svl$pvalue)] <- 1
-#combodata.enrichment.svl <- combodata.enrichment.svl[combodata.enrichment.svl$pvalue < 1,]
-head(combodata.enrichment.svl)
-min(combodata.enrichment.svl$pvalue)
-max(combodata.enrichment.svl$pvalue)
-
-combodata.enrichment.svl = leapR(geneset=mo_krbpaths,
-                                 enrichment_method='enrichment_comparison',
-                                 datamatrix=combodata, primary_columns=c('19O2NoCyA'),
-                                 secondary_columns=c('1O2PlusCyA'), id_column=1)
-combodata.enrichment.svl$pvalue[is.na(combodata.enrichment.svl$pvalue)] <- 1
-#combodata.enrichment.svl <- combodata.enrichment.svl[combodata.enrichment.svl$pvalue < 1,]
-head(combodata.enrichment.svl)
-min(combodata.enrichment.svl$pvalue)
-max(combodata.enrichment.svl$pvalue)
-
-combodata.enrichment.svl = leapR(geneset=mo_krbpaths,
-                                 enrichment_method='enrichment_comparison',
-                                 datamatrix=combodata, primary_columns=c('1O2NoCyA'),
-                                 secondary_columns=c('1O2PlusCyA'), id_column=1)
-combodata.enrichment.svl$pvalue[is.na(combodata.enrichment.svl$pvalue)] <- 1
-#combodata.enrichment.svl <- combodata.enrichment.svl[combodata.enrichment.svl$pvalue < 1,]
-head(combodata.enrichment.svl)
-min(combodata.enrichment.svl$pvalue)
-max(combodata.enrichment.svl$pvalue)
+ggsave(filename = 'camera_allResults.png', width = 12, height =10, units = 'in')
 ```
 
 ```{r}
