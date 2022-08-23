@@ -3,11 +3,66 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+```{r}
+
+reshapePvals <- function(mBonita_PA) {
+  allPA <-
+    reshape2::melt(
+      mBonita_PA,
+      id.vars = c("Pathway", "Method"),
+      measure.vars =  c(
+        "X1O2PlusCyA - X1O2NoCyA",
+        "X1O2NoCyA - X19O2NoCyA",
+        "X19O2NoCyA - X1O2PlusCyA"
+      )
+    )
+  colnames(allPA) <-
+    c("Pathway", "Method", "Contrast", "negativelog10pvalue")
+  allPA$pvalue <- 10 ^ (-1 * allPA$negativelog10pvalue)
+  allPA$FDR <- p.adjust(allPA$pvalue, method = "BH")
+  allPA$negativelog10FDR <- (-1)*log10(allPA$FDR)
+  temp <- allPA$pvalue < 0.05
+  allPA <- allPA[temp,]
+  return(allPA)
+}
+```
 
 ```{r}
-concat_PA <- read.csv("pvalues_concatenated_20220816.csv")
-prot_PA <- read.csv("pvalues_proteomics_20220816.csv")
-trans_PA <- read.csv("pvalues_transcriptomics_20220816.csv")
-phosph_PA <- read.csv("pvalues_phosphoproteomics_20220816.csv")
+require(reshape2)
+concat_PA <- read.csv("pvalues_concatenated_20220816.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE)
+concat_PA$Method <- "Concatenated"
+concat_PA <- reshapePvals(concat_PA)
+prot_PA <- read.csv("pvalues_proteomics_20220816.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE)
+prot_PA$Method <- "Proteomics"
+prot_PA <- reshapePvals(prot_PA)
+trans_PA <- read.csv("pvalues_transcriptomics_20220816.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE)
+trans_PA$Method <- "Transcriptomics"
+trans_PA <- reshapePvals(trans_PA)
+phosph_PA <- read.csv("pvalues_phosphoproteomics_20220816.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE)
+phosph_PA$Method <- "Phosphoproteomics"
+phosph_PA <- reshapePvals(phosph_PA)
 
 ```
+
+```{r}
+mBonita_PA <- rbind(concat_PA, prot_PA, trans_PA, phosph_PA)
+temp <- mBonita_PA$FDR < 0.01
+mBonita_PA <- mBonita_PA[temp,]
+head(mBonita_PA)
+```
+
+```{r}
+require(ggplot2)
+
+ggplot(mBonita_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
+ggsave(filename = "mBonita_allResults.svg", width = 12, height = 10, units = 'in')
+ggsave(filename = 'mBonita_allResults.png', width = 12, height =10, units = 'in')
+```
+
+
+```{r}
+ggplot(trans_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
+ggsave(filename = "mBonita_trans_allResults.svg", width = 12, height = 10, units = 'in')
+ggsave(filename = 'mBonita_trans_allResults.png', width = 12, height =10, units = 'in')
+```
+
