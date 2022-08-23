@@ -1,0 +1,13 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+concat_PA <- read.csv("pvalues_concatenated_20220816.csv")
+prot_PA <- read.csv("pvalues_proteomics_20220816.csv")
+trans_PA <- read.csv("pvalues_transcriptomics_20220816.csv")
+phosph_PA <- read.csv("pvalues_phosphoproteomics_20220816.csv")
+
+```
