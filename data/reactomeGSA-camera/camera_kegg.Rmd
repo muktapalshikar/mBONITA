@@ -14,7 +14,7 @@ prot_contrast <- contrasts[colnames(proteomics),]
 mrna_contrast <- contrasts[colnames(transcriptomics),]
 phosph_contrast <- contrasts[colnames(phosphoproteomics),]
 kegg <- clusterProfiler::read.gmt('c2.cp.kegg.v7.5.1.symbols.gmt')
-keggList <- setNames(lapply(unique(kegg$term), function(x){return(kegg$gene[kegg$term == x])}), unique(kegg$term))
+keggList <- setNames(lapply(unique(kegg$ont), function(x){return(kegg$gene[kegg$ont == x])}), unique(kegg$ont))
 ```
 
 # Contrast - 19O2NoCyA vs 1O2NoCyA
@@ -110,12 +110,35 @@ head(camera_mrna)
 
 camera_allResults <- rbind(camera_prot, camera_phosph, camera_mrna)
 camera_allResults$negativelog10FDR <- -1*log10(camera_allResults$FDR)
+camera_allResults$Pathway <- gsub("KEGG|_|\\d+$", " ", camera_allResults$GeneSet)
 write.csv(camera_allResults, file = 'camera_allResults.csv')
+head(camera_allResults)
+
+```
+# Combine p-values
+
+```{r}
+as.data.frame(reshape2::acast(data = camera_allResults, Contrast ~ Pathway , value.var = 'FDR'))
+```
+
+```{r}
+require(metap)
+temp <- as.data.frame(reshape2::acast(data = camera_allResults, Contrast ~ Pathway , value.var = 'FDR', fun.aggregate = function(x){return(metap::sumz(x)$p)}))
+temp <- as.data.frame(reshape2::melt(as.matrix(temp)))
+temp$Method <- "Combined"
+colnames(temp) <- c("Contrast", "Pathway", "FDR", "Method")
+temp
+hist(temp$FDR)
+write.csv(temp, "camera_combinedPvalues.csv")
+```
+
+
+```{r}
 temp <- camera_allResults$FDR < 0.05 #PValue < 0.01
 camera_allResults <- camera_allResults[temp,]
-camera_allResults$Pathway <- gsub("KEGG|_|\\d+$", " ", camera_allResults$Pathway)
 camera_allResults
 ```
+
 # Plot
 
 ```{r}
