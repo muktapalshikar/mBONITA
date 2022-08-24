@@ -9,10 +9,9 @@ cwd <- getwd()
 methods <- c("CAMERA", "LeapR", "PaintOmics", "mBONITA")
 PAlist <- vector(mode = "list", length = length(methods))
 names(PAlist) <- c("CAMERA", "LeapR", "PaintOmics", "mBONITA")
-PAlist[["CAMERA"]] <- read.csv(paste0(cwd, "/reactomeGSA-camera/camera_allResults.csv"), row.names = 1)
+PAlist[["CAMERA"]] <- read.csv(paste0(cwd, "/reactomeGSA-camera/camera_combinedPvalues.csv"), row.names = 1)
 temp <- PAlist[["CAMERA"]]$FDR < 0.05 #PValue < 0.01
-PAlist[["CAMERA"]] <- PAlist[["CAMERA"]][temp,]
-PAlist[["CAMERA"]]$Pathway <- trimws(gsub("KEGG|_|\\d+$", " ", PAlist[["CAMERA"]]$GeneSet))
+PAlist[["CAMERA"]] <- na.omit(PAlist[["CAMERA"]][temp,])
 
 PAlist[["LeapR"]] <- read.csv(paste0(cwd, "/leapR/leapR_allResults.csv"))
 temp <- PAlist[["LeapR"]]$BH_pvalue < 0.05
@@ -42,7 +41,7 @@ makeVisList <- function(tempPAlist, contrast) {
       return(x[x$Contrast == contrast, ])
     })
   visList[["CAMERA"]] <-
-    unique(str_to_title(as.vector(tempPAlist[["CAMERA"]]$Pathway[tempPAlist[["CAMERA"]]$Method == "Proteomics"]))) #CHANGE
+    unique(str_to_title(trimws(as.vector(tempPAlist[["CAMERA"]]$Pathway[tempPAlist[["CAMERA"]]$Method == "Combined"]))))
   visList[["LeapR"]] <-
     unique(str_to_title(as.vector(tempPAlist[["LeapR"]]$Pathway[tempPAlist[["LeapR"]]$Method == "Phosphoproteomics"]))) #NO COMBINED RESULTS
   visList[["PaintOmics"]] <-
