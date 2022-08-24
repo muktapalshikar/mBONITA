@@ -14,8 +14,6 @@ This spans the multiple enrichment methods in leapR and also includes multi-omic
 
 The resulting heatmap is presented as Figure 2 in the paper.
 
-"Many applications of enrichment compare one group of samples (case) against another group (control) with the goal of identifying pathways that have significantly different abundance in this comparison. The leapR package accomplishes this in the enrichment_comparison (see Figure 1 and Table 1) using a t test in which the overall abundance of the pathway members is summarized in distributions for the case and control groups and then compared. Output from this analysis will yield p-values for each input pathway that indicate the significance of enrichment. Examining the mean abundance from each condition will provide an idea of the effect size and the direction of enrichment—that is, is the pathway more abundant in the case or control condition? A small effect size can still yield very significant p-values, but these kinds of results must be treated with caution."
-
 ```{r}
 proteomics <- read.csv("bonita_proteomics.csv", row.names = 1, check.names = 1)
 phosphoproteomics <- read.csv("bonita_phosphoproteomics.csv", row.names = 1, check.names = 0)
@@ -31,9 +29,11 @@ phosph_contrast <- contrasts[colnames(phosphoproteomics),]
 
 require(leapR)
 
-data("krbpaths")
-data("mo_krbpaths")
-data('msigdb')
+#data("krbpaths")
+#data("mo_krbpaths")
+#data('msigdb')
+krbpaths <- leapR::read_gene_sets("c2.cp.kegg.v7.5.1.symbols.gmt")
+mo_krbpaths <- leapR::read_gene_sets("c2.cp.kegg.v7.5.1.symbols.gmt")
 #msigdb$names <- msigdb$names[grepl("KEGG", msigdb$names)]
 #msigdb$desc <- msigdb$desc[grepl("KEGG", msigdb$names)]
 #msigdb$sizes <- msigdb$sizes[grepl("KEGG", msigdb$names)]
@@ -150,6 +150,11 @@ run_leapR <- function(shortlist, longlist, contrast1, contrast2) {
   
   combodata.enrichment.svl$BH_pvalue <- p.adjust(combodata.enrichment.svl$pvalue, "BH")
   
+  transdata.comp.enrichment.svl$Pathway <- rownames(transdata.comp.enrichment.svl)
+  protdata.comp.enrichment.svl$Pathway <- rownames(protdata.comp.enrichment.svl)
+  phosphodata.comp.enrichment.svl$Pathway <- rownames(phosphodata.comp.enrichment.svl)
+  combodata.enrichment.svl$Pathway <- rownames(combodata.enrichment.svl)
+  
   results1 <-
     rbind(
       transdata.comp.enrichment.svl,
@@ -200,12 +205,12 @@ head(results3)
 ```{r}
 results <- rbind(results1, results2, results3)
 
-results$Pathway <- rownames(results)
+
 results$negativelog10pvalue <- (-1)*log10(results$pvalue)
 results$negativelog10FDR <- (-1)*log10(results$BH_pvalue)
 temp <- !is.na(results$BH_pvalue) #PValue < 0.01
 results <- results[temp,]
-
+write.csv(results, "leapR_allResults.csv")
 
 print(c(min(results$BH_pvalue[results$Method == "Transcriptomics"]), max(results$BH_pvalue[results$Method == "Transcriptomics"])))
 print(c(min(results$BH_pvalue[results$Method == "Proteomics"]), max(results$BH_pvalue[results$Method == "Proteomics"])))
@@ -222,7 +227,6 @@ dim(results)
 
 ```{r}
 require(ggplot2)
-
 ggplot(results) + geom_point(aes(x=negativelog10pvalue, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', nrow = 1) + theme_bw() + xlab("-log10(UNCORRECTED P-VALUE)")
 ggsave(filename = "leapR_allResults.svg", width = 12, height = 10, units = 'in')
 ggsave(filename = "leapR_allResults.png", width = 12, height = 10, units = 'in')

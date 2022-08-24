@@ -3,9 +3,58 @@ title: "Compare CAMERA + some pvalue combination method, leapR, paintomics, mBON
 output: html_notebook
 ---
 
-# Venn diagram
+# Load data
+```{r}
+cwd <- getwd()
+methods <- c("CAMERA", "LeapR", "PaintOmics", "mBONITA")
+PAlist <- vector(mode = "list", length = length(methods))
+names(PAlist) <- c("CAMERA", "LeapR", "PaintOmics", "mBONITA")
+PAlist[["CAMERA"]] <- read.csv(paste0(cwd, "/reactomeGSA-camera/camera_allResults.csv"), row.names = 1)
+temp <- PAlist[["CAMERA"]]$FDR < 0.05 #PValue < 0.01
+PAlist[["CAMERA"]] <- PAlist[["CAMERA"]][temp,]
+PAlist[["CAMERA"]]$Pathway <- trimws(gsub("KEGG|_|\\d+$", " ", PAlist[["CAMERA"]]$GeneSet))
+
+PAlist[["LeapR"]] <- read.csv(paste0(cwd, "/leapR/leapR_allResults.csv"))
+temp <- PAlist[["LeapR"]]$BH_pvalue < 0.05
+PAlist[["LeapR"]] <- PAlist[["LeapR"]][temp,]
+PAlist[["LeapR"]]$Pathway <- trimws(gsub("KEGG|_|\\d+$", " ", PAlist[["LeapR"]]$Pathway))
+
+PAlist[["PaintOmics"]]<- read.csv(paste0(cwd, "/paintomics/paintomics_allResults.csv"), row.names = 1)
+temp <- PAlist[["PaintOmics"]]$Combined.pValue.Fisher..FDR.BH < 0.05
+PAlist[["PaintOmics"]] <- PAlist[["PaintOmics"]][temp,]
+
+PAlist[["mBONITA"]]<- read.csv(paste0(cwd, "/mBonita_pvalues/mBonita_allResults.csv"), row.names = 1)
+temp <- PAlist[["mBONITA"]]$FDR < 0.05
+PAlist[["mBONITA"]] <- PAlist[["mBONITA"]][temp,]
+levels(PAlist$mBONITA$Contrast) <- c("X19O2NoCyA - X1O2PlusCyA", "X19O2NoCyA - X1O2NoCyA", "X1O2PlusCyA - X1O2NoCyA" )
+#PAlist[[""]]<- read.csv(paste0(cwd, ""))
+```
+
+# UpSet plot
 
 ```{r}
+require(stringr)
+
+makeVisList <- function(tempPAlist, contrast) {
+  visList <- tempPAlist
+  tempPAlist <-
+    lapply(tempPAlist, function(x) {
+      return(x[x$Contrast == contrast, ])
+    })
+  visList[["CAMERA"]] <-
+    unique(str_to_title(as.vector(tempPAlist[["CAMERA"]]$Pathway[tempPAlist[["CAMERA"]]$Method == "Proteomics"]))) #CHANGE
+  visList[["LeapR"]] <-
+    unique(str_to_title(as.vector(tempPAlist[["LeapR"]]$Pathway[tempPAlist[["LeapR"]]$Method == "Phosphoproteomics"]))) #NO COMBINED RESULTS
+  visList[["PaintOmics"]] <-
+    unique(str_to_title(trimws(as.vector(
+      tempPAlist[["PaintOmics"]]$Pathway.name
+    )))) #ALREADY FILTERED TO COMBINED PVALS IN PREVIOUS STEP
+  visList[["mBONITA"]] <-
+    unique(str_to_title(trimws(as.vector(tempPAlist[["mBONITA"]]$Pathway[tempPAlist[["mBONITA"]]$Method == "Concatenated"]))))
+  print(visList)
+  return(visList)
+}
+
 
 ```
 
@@ -13,6 +62,19 @@ output: html_notebook
 
 
 ```{r}
+require(UpSetR)
+#pdf(file = "upset_all_methods.pdf", width = 8, height = 4, pointsize = 14)
+visList <- makeVisList(PAlist, "X19O2NoCyA - X1O2PlusCyA")
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = "off", point.size = 2, line.size = 1)#, mainbar.y.label = "Intersections", sets.x.label = "DA Phosphopeptides", text.scale = c(2,2, 1.75, 2, 2, 1.5), number.angles = 0, queries = list(list(query = intersects, params = list("CyA+CXCL12+ Vs CyA-CXCL12-", "CyA-CXCL12+ Vs CyA-CXCL12-", "CyA+CXCL12- Vs CyA-CXCL12-"), color = "royalblue", active = T), list(query = intersects, params = list("CyA+CXCL12+ Vs CyA-CXCL12-"), color = "firebrick1", active = T)), nsets = length(visList))
+#dev.off()
+```
+```{r}
+visList <- makeVisList(PAlist, "X19O2NoCyA - X1O2NoCyA")
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = "off", point.size = 2, line.size = 1)
+```
 
+```{r}
+visList <- makeVisList(PAlist, "X1O2PlusCyA - X1O2NoCyA")
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = "off", point.size = 2, line.size = 1)
 ```
 

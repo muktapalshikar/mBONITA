@@ -8,8 +8,10 @@ Make lists of relevant genes for each contrast to test PaintOmics
 
 
 ```{r}
-wd <- "C:\\Users\\Mukta Palshikar\\Box\\multiomics integration manuscript\\data\\paintomics\\"
+wd <- getwd() #"C:\\Users\\Mukta Palshikar\\Box\\multiomics integration manuscript\\data\\paintomics\\"
 setwd(wd)
+wd <- paste0(wd, "/")
+print(wd)
 ```
 
 # 
@@ -65,6 +67,7 @@ results3 <- read.csv("Paintomics_pathways_19% O2, CyA-_vs_1% O2, CyA+.csv")
 results3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
 
 results <- rbind(results1, results2, results3)
+write.csv(results, "paintomics_allResults.csv")
 head(results)
 ```
 

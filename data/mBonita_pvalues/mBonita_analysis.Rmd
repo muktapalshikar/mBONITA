@@ -46,7 +46,8 @@ phosph_PA <- reshapePvals(phosph_PA)
 
 ```{r}
 mBonita_PA <- rbind(concat_PA, prot_PA, trans_PA, phosph_PA)
-temp <- mBonita_PA$FDR < 0.01
+write.csv(mBonita_PA, "mBonita_allResults.csv")
+temp <- mBonita_PA$FDR < 0.05
 mBonita_PA <- mBonita_PA[temp,]
 head(mBonita_PA)
 ```
