@@ -6,9 +6,9 @@ output: html_notebook
 # Load data
 ```{r}
 cwd <- getwd()
-methods <- c("CAMERA", "LeapR", "PaintOmics", "mBONITA")
+methods <- c("CAMERA", "LeapR", "PaintOmics", "ActivePathways", "mBONITA")
 PAlist <- vector(mode = "list", length = length(methods))
-names(PAlist) <- c("CAMERA", "LeapR", "PaintOmics", "mBONITA")
+names(PAlist) <- methods
 PAlist[["CAMERA"]] <- read.csv(paste0(cwd, "/reactomeGSA-camera/camera_combinedPvalues.csv"), row.names = 1)
 temp <- PAlist[["CAMERA"]]$FDR < 0.05 #PValue < 0.01
 PAlist[["CAMERA"]] <- na.omit(PAlist[["CAMERA"]][temp,])
@@ -21,6 +21,10 @@ PAlist[["LeapR"]]$Pathway <- trimws(gsub("KEGG|_|\\d+$", " ", PAlist[["LeapR"]]$
 PAlist[["PaintOmics"]]<- read.csv(paste0(cwd, "/paintomics/paintomics_allResults.csv"), row.names = 1)
 temp <- PAlist[["PaintOmics"]]$Combined.pValue.Fisher..FDR.BH < 0.05
 PAlist[["PaintOmics"]] <- PAlist[["PaintOmics"]][temp,]
+
+PAlist[["ActivePathways"]]<- read.csv(paste0(cwd, "/ActivePathways/activePathways_allResults.csv"), row.names = NULL)
+temp <- PAlist[["ActivePathways"]]$adjusted.p.val < 0.05
+PAlist[["ActivePathways"]] <- PAlist[["ActivePathways"]][temp,]
 
 PAlist[["mBONITA"]]<- read.csv(paste0(cwd, "/mBonita_pvalues/mBonita_allResults.csv"), row.names = 1)
 temp <- PAlist[["mBONITA"]]$FDR < 0.05
@@ -43,17 +47,20 @@ makeVisList <- function(tempPAlist, contrast) {
   visList[["CAMERA"]] <-
     unique(str_to_title(trimws(as.vector(tempPAlist[["CAMERA"]]$Pathway[tempPAlist[["CAMERA"]]$Method == "Combined"]))))
   visList[["LeapR"]] <-
-    unique(str_to_title(as.vector(tempPAlist[["LeapR"]]$Pathway[tempPAlist[["LeapR"]]$Method == "Phosphoproteomics"]))) #NO COMBINED RESULTS
+    unique(str_to_title(as.vector(tempPAlist[["LeapR"]]$Pathway[tempPAlist[["LeapR"]]$Method == "Phosphoproteomics"]))) #NO COMBINED RESULTS YET
   visList[["PaintOmics"]] <-
     unique(str_to_title(trimws(as.vector(
       tempPAlist[["PaintOmics"]]$Pathway.name
     )))) #ALREADY FILTERED TO COMBINED PVALS IN PREVIOUS STEP
   visList[["mBONITA"]] <-
     unique(str_to_title(trimws(as.vector(tempPAlist[["mBONITA"]]$Pathway[tempPAlist[["mBONITA"]]$Method == "Concatenated"]))))
+  visList[["ActivePathways"]] <-
+    unique(str_to_title(trimws(as.vector(
+      tempPAlist[["ActivePathways"]]$Pathway
+    ))))
   print(visList)
   return(visList)
 }
-
 
 ```
 
@@ -69,11 +76,11 @@ upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45
 ```
 ```{r}
 visList <- makeVisList(PAlist, "X19O2NoCyA - X1O2NoCyA")
-upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = "off", point.size = 2, line.size = 1)
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 2, line.size = 1)
 ```
 
 ```{r}
 visList <- makeVisList(PAlist, "X1O2PlusCyA - X1O2NoCyA")
-upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = "off", point.size = 2, line.size = 1)
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 2, line.size = 1)
 ```
 
