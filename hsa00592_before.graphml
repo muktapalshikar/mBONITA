@@ -1,0 +1,614 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="MFP2">
+  <data key="d0">MFP2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="HPL">
+  <data key="d0">HPL</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="E1.3.3.6">
+  <data key="d0">E1.3.3.6</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="AOS">
+  <data key="d0">AOS</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="LOX2S">
+  <data key="d0">LOX2S</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C11512">
+  <data key="d0">cpd:C11512</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16318">
+  <data key="d0">cpd:C16318</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C08491">
+  <data key="d0">cpd:C08491</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16317">
+  <data key="d0">cpd:C16317</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16339">
+  <data key="d0">cpd:C16339</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16338">
+  <data key="d0">cpd:C16338</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16336">
+  <data key="d0">cpd:C16336</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16335">
+  <data key="d0">cpd:C16335</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16334">
+  <data key="d0">cpd:C16334</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16332">
+  <data key="d0">cpd:C16332</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16331">
+  <data key="d0">cpd:C16331</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16330">
+  <data key="d0">cpd:C16330</data>
+  <data key="d1">compound</data>
+</node>
+<node id="OPR">
+  <data key="d0">OPR</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="E2.1.1.141">
+  <data key="d0">E2.1.1.141</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C16325">
+  <data key="d0">cpd:C16325</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16327">
+  <data key="d0">cpd:C16327</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16328">
+  <data key="d0">cpd:C16328</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16300">
+  <data key="d0">cpd:C16300</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16309">
+  <data key="d0">cpd:C16309</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16326">
+  <data key="d0">cpd:C16326</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04672">
+  <data key="d0">cpd:C04672</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01226">
+  <data key="d0">cpd:C01226</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16319">
+  <data key="d0">cpd:C16319</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04780">
+  <data key="d0">cpd:C04780</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16311">
+  <data key="d0">cpd:C16311</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16316">
+  <data key="d0">cpd:C16316</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16322">
+  <data key="d0">cpd:C16322</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko00592">
+  <data key="d0">path:ko00592</data>
+  <data key="d1">path</data>
+</node>
+<node id="AOC">
+  <data key="d0">AOC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="OPCL1">
+  <data key="d0">OPCL1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FADS2">
+  <data key="d0">FADS2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="DOX">
+  <data key="d0">DOX</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C16345">
+  <data key="d0">cpd:C16345</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00157">
+  <data key="d0">cpd:C00157</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16344">
+  <data key="d0">cpd:C16344</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16323">
+  <data key="d0">cpd:C16323</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16324">
+  <data key="d0">cpd:C16324</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16321">
+  <data key="d0">cpd:C16321</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16342">
+  <data key="d0">cpd:C16342</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16341">
+  <data key="d0">cpd:C16341</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16308">
+  <data key="d0">cpd:C16308</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16320">
+  <data key="d0">cpd:C16320</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06427">
+  <data key="d0">cpd:C06427</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16343">
+  <data key="d0">cpd:C16343</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16346">
+  <data key="d0">cpd:C16346</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16310">
+  <data key="d0">cpd:C16310</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04785">
+  <data key="d0">cpd:C04785</data>
+  <data key="d1">compound</data>
+</node>
+<node id="ADH1">
+  <data key="d0">ADH1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C08492">
+  <data key="d0">cpd:C08492</data>
+  <data key="d1">compound</data>
+</node>
+<node id="CHAT">
+  <data key="d0">CHAT</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C19757">
+  <data key="d0">cpd:C19757</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C21923">
+  <data key="d0">cpd:C21923</data>
+  <data key="d1">compound</data>
+</node>
+<node id="CEQORH">
+  <data key="d0">CEQORH</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C21924">
+  <data key="d0">cpd:C21924</data>
+  <data key="d1">compound</data>
+</node>
+<node id="ACAA1">
+  <data key="d0">ACAA1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa00592">
+  <data key="d0">path:hsa00592</data>
+  <data key="d1">path</data>
+</node>
+<node id="PLAAT3">
+  <data key="d0">PLAAT3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="FADA"/>
+<node id="PLA2G"/>
+<node id="PLA2G4"/>
+<node id="PLA2G6"/>
+<node id="PLB1"/>
+<node id="TGL4"/>
+<node id="PLA2G16"/>
+<node id="PLDA"/>
+<node id="DAD1"/>
+<node id="LCAT3"/>
+<node id="CAPV"/>
+<node id="ACOX1"/>
+<node id="ACOX3"/>
+<node id="PLA2G4B"/>
+<node id="PLA2G4E"/>
+<node id="PLA2G4F"/>
+<node id="PLA2G2D"/>
+<node id="PLA2G4D"/>
+<node id="PLA2G2E"/>
+<node id="PLA2G2C"/>
+<node id="PLA2G3"/>
+<node id="PLA2G1B"/>
+<node id="PLA2G2A"/>
+<node id="PLA2G4A"/>
+<node id="PLA2G5"/>
+<node id="PLA2G2F"/>
+<node id="PLA2G12A"/>
+<node id="PLA2G10"/>
+<node id="PLA2G12B"/>
+<node id="PLA2G4C"/>
+<node id="JMJD7"/>
+<edge source="MFP2" target="E1.3.3.6">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MFP2" target="FADA">
+  <data key="d5">a</data>
+</edge>
+<edge source="MFP2" target="ACAA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="HPL" target="LOX2S">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HPL" target="AOS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HPL" target="ADH1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="E1.3.3.6" target="OPCL1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="E1.3.3.6" target="FADA">
+  <data key="d5">a</data>
+</edge>
+<edge source="E1.3.3.6" target="ACAA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="AOS" target="LOX2S">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="AOS" target="HPL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="AOS" target="AOC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="LOX2S" target="FADS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="LOX2S" target="DOX">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="LOX2S" target="PLA2G">
+  <data key="d5">a</data>
+</edge>
+<edge source="LOX2S" target="PLA2G4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LOX2S" target="PLA2G6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LOX2S" target="PLB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LOX2S" target="TGL4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LOX2S" target="PLA2G16">
+  <data key="d5">a</data>
+</edge>
+<edge source="LOX2S" target="PLDA">
+  <data key="d5">a</data>
+</edge>
+<edge source="LOX2S" target="DAD1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LOX2S" target="LCAT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LOX2S" target="CAPV">
+  <data key="d5">a</data>
+</edge>
+<edge source="OPR" target="AOC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="OPR" target="OPCL1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FADS2" target="LOX2S">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FADS2" target="DOX">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FADS2" target="PLAAT3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FADS2" target="PLA2G16">
+  <data key="d5">a</data>
+</edge>
+<edge source="FADS2" target="DAD1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FADS2" target="LCAT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FADS2" target="PLDA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FADS2" target="CAPV">
+  <data key="d5">a</data>
+</edge>
+<edge source="DOX" target="LOX2S">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DOX" target="PLA2G16">
+  <data key="d5">a</data>
+</edge>
+<edge source="DOX" target="DAD1">
+  <data key="d5">a</data>
+</edge>
+<edge source="DOX" target="LCAT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="DOX" target="PLDA">
+  <data key="d5">a</data>
+</edge>
+<edge source="DOX" target="CAPV">
+  <data key="d5">a</data>
+</edge>
+<edge source="ADH1" target="CHAT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PLAAT3" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G" target="LOX2S">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G" target="DOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G4" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G4" target="LOX2S">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G4" target="DOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G6" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G6" target="LOX2S">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G6" target="DOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLB1" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLB1" target="LOX2S">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLB1" target="DOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="TGL4" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="TGL4" target="LOX2S">
+  <data key="d5">a</data>
+</edge>
+<edge source="TGL4" target="DOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G16" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G16" target="LOX2S">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G16" target="DOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLDA" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLDA" target="LOX2S">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLDA" target="DOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="DAD1" target="LOX2S">
+  <data key="d5">a</data>
+</edge>
+<edge source="LCAT3" target="LOX2S">
+  <data key="d5">a</data>
+</edge>
+<edge source="CAPV" target="LOX2S">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACOX1" target="ACAA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACOX3" target="ACAA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G4B" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G4E" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G4F" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G2D" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G4D" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G2E" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G2C" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G3" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G1B" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G2A" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G4A" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G5" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G2F" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G12A" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G10" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G12B" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLA2G4C" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="JMJD7" target="FADS2">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

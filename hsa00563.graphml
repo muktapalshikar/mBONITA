@@ -1,0 +1,591 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="DPM2">
+  <data key="d0">DPM2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGQ">
+  <data key="d0">PIGQ</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGP">
+  <data key="d0">PIGP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGH">
+  <data key="d0">PIGH</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGC">
+  <data key="d0">PIGC</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGX">
+  <data key="d0">PIGX</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G13150">
+  <data key="d0">gl:G13150</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PIGU">
+  <data key="d0">PIGU</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGT">
+  <data key="d0">PIGT</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGS">
+  <data key="d0">PIGS</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G12396">
+  <data key="d0">gl:G12396</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PIGM">
+  <data key="d0">PIGM</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G00145">
+  <data key="d0">gl:G00145</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00143">
+  <data key="d0">gl:G00143</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00144">
+  <data key="d0">gl:G00144</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00146">
+  <data key="d0">gl:G00146</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13151">
+  <data key="d0">gl:G13151</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13128">
+  <data key="d0">gl:G13128</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00350">
+  <data key="d0">cpd:C00350</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13152">
+  <data key="d0">gl:G13152</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00149">
+  <data key="d0">gl:G00149</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00148">
+  <data key="d0">gl:G00148</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PIGF">
+  <data key="d0">PIGF</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGL">
+  <data key="d0">PIGL</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGK">
+  <data key="d0">PIGK</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGB">
+  <data key="d0">PIGB</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GAA1">
+  <data key="d0">GAA1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PGAP1">
+  <data key="d0">PGAP1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGN">
+  <data key="d0">PIGN</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGA">
+  <data key="d0">PIGA</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GPLD1">
+  <data key="d0">GPLD1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGO">
+  <data key="d0">PIGO</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGW">
+  <data key="d0">PIGW</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGV">
+  <data key="d0">PIGV</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko00564">
+  <data key="d0">path:ko00564</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00563">
+  <data key="d0">path:ko00563</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00510">
+  <data key="d0">path:ko00510</data>
+  <data key="d1">path</data>
+</node>
+<node id="gl:G10617">
+  <data key="d0">gl:G10617</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00154">
+  <data key="d0">cpd:C00154</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G10610">
+  <data key="d0">gl:G10610</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01194">
+  <data key="d0">cpd:C01194</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PIGZ">
+  <data key="d0">PIGZ</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PIGG">
+  <data key="d0">PIGG</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G13044">
+  <data key="d0">gl:G13044</data>
+  <data key="d1">compound</data>
+</node>
+<node id="MPPE1">
+  <data key="d0">MPPE1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G13046">
+  <data key="d0">gl:G13046</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00346">
+  <data key="d0">cpd:C00346</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PIGY">
+  <data key="d0">PIGY</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GPAA1">
+  <data key="d0">GPAA1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa00564">
+  <data key="d0">path:hsa00564</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00563">
+  <data key="d0">path:hsa00563</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00510">
+  <data key="d0">path:hsa00510</data>
+  <data key="d1">path</data>
+</node>
+<node id="ERI1"/>
+<edge source="DPM2" target="path:ko00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DPM2" target="path:hsa00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGQ" target="path:ko00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGQ" target="path:hsa00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGP" target="path:ko00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGP" target="path:hsa00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGH" target="path:ko00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGH" target="path:hsa00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGC" target="path:ko00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGC" target="path:hsa00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGX" target="PIGW">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGX" target="path:ko00510">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGX" target="PIGB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGX" target="path:hsa00510">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGU" target="PGAP1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGT" target="PGAP1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGS" target="PGAP1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGM" target="PIGW">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGM" target="path:ko00510">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGM" target="PIGB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGM" target="path:hsa00510">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGF" target="PIGG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGL" target="GPLD1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGL" target="PIGW">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGL" target="DPM2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGL" target="PIGQ">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGL" target="PIGP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGL" target="PIGH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGL" target="PIGC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGL" target="PIGA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGL" target="PIGY">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGL" target="ERI1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PIGK" target="PGAP1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGB" target="PIGF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGB" target="PIGO">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGB" target="path:ko00510">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGB" target="path:hsa00510">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GAA1" target="PGAP1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGN" target="PIGV">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGN" target="PIGB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGA" target="path:ko00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGA" target="path:hsa00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GPLD1" target="PIGW">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGO" target="PIGG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGO" target="PIGF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGV" target="path:ko00510">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGV" target="PIGX">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGV" target="PIGM">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGV" target="PIGB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGV" target="path:hsa00510">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MPPE1" target="PGAP1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGY" target="path:hsa00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PIGY" target="path:ko00564">
+  <data key="d5">a</data>
+</edge>
+<edge source="GPAA1" target="PGAP1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ERI1" target="path:ko00564">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

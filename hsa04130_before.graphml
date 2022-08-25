@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="SEC20">
+  <data key="d0">SEC20</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="USE1">
+  <data key="d0">USE1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="STX18">
+  <data key="d0">STX18</data>
+  <data key="d1">gene</data>
+</node>
+<node id="STX17">
+  <data key="d0">STX17</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BET1">
+  <data key="d0">BET1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="YKT6">
+  <data key="d0">YKT6</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GOSR1">
+  <data key="d0">GOSR1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="STX5">
+  <data key="d0">STX5</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SEC22">
+  <data key="d0">SEC22</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="GOSR2">
+  <data key="d0">GOSR2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SNAP29">
+  <data key="d0">SNAP29</data>
+  <data key="d1">gene</data>
+</node>
+<node id="STX16">
+  <data key="d0">STX16</data>
+  <data key="d1">gene</data>
+</node>
+<node id="STX11">
+  <data key="d0">STX11</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="VTI1">
+  <data key="d0">VTI1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="VAMP4">
+  <data key="d0">VAMP4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="VAMP5">
+  <data key="d0">VAMP5</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SNAP23">
+  <data key="d0">SNAP23</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SYP7">
+  <data key="d0">SYP7</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko04130">
+  <data key="d0">path:ko04130</data>
+  <data key="d1">path</data>
+</node>
+<node id="SFT1">
+  <data key="d0">SFT1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="VAMP8">
+  <data key="d0">VAMP8</data>
+  <data key="d1">gene</data>
+</node>
+<node id="VAMP7">
+  <data key="d0">VAMP7</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BNIP1">
+  <data key="d0">BNIP1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SEC22B">
+  <data key="d0">SEC22B</data>
+  <data key="d1">gene</data>
+</node>
+<node id="STX6">
+  <data key="d0">STX6</data>
+  <data key="d1">gene</data>
+</node>
+<node id="STX8">
+  <data key="d0">STX8</data>
+  <data key="d1">gene</data>
+</node>
+<node id="STX7">
+  <data key="d0">STX7</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04130">
+  <data key="d0">path:hsa04130</data>
+  <data key="d1">path</data>
+</node>
+<node id="TLG1"/>
+<node id="SYP6"/>
+<node id="VAM7"/>
+<node id="SYP5"/>
+<node id="VAM3"/>
+<node id="STX1A"/>
+<node id="STX1B_2_3"/>
+<node id="STX4"/>
+<node id="VAMP1"/>
+<node id="VAMP2"/>
+<node id="VAMP3"/>
+<node id="BET1L"/>
+<node id="VTI1B"/>
+<node id="VTI1A"/>
+<node id="STX1B"/>
+<node id="STX2"/>
+<node id="STX3"/>
+<edge source="BET1" target="SEC22">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BET1" target="GOSR2">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BET1" target="STX5">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BET1" target="SEC22B">
+  <data key="d5">a</data>
+</edge>
+<edge source="YKT6" target="VTI1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="YKT6" target="STX8">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="YKT6" target="STX7">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="YKT6" target="VAM7">
+  <data key="d5">a</data>
+</edge>
+<edge source="YKT6" target="SYP5">
+  <data key="d5">a</data>
+</edge>
+<edge source="YKT6" target="VAM3">
+  <data key="d5">a</data>
+</edge>
+<edge source="YKT6" target="VTI1B">
+  <data key="d5">a</data>
+</edge>
+<edge source="YKT6" target="VTI1A">
+  <data key="d5">a</data>
+</edge>
+<edge source="SEC22" target="SEC20">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SEC22" target="USE1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SEC22" target="STX18">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VAMP4" target="SNAP23">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VAMP4" target="STX16">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VAMP4" target="VTI1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VAMP4" target="STX6">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VAMP4" target="TLG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP4" target="SYP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP4" target="STX1A">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP4" target="STX1B_2_3">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP4" target="STX4">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP4" target="VTI1B">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP4" target="VTI1A">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP4" target="STX1B">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP4" target="STX2">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP4" target="STX3">
+  <data key="d5">a</data>
+</edge>
+<edge source="SFT1" target="YKT6">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SFT1" target="GOSR1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SFT1" target="STX5">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SEC22B" target="BNIP1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SEC22B" target="USE1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SEC22B" target="STX18">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VAMP1" target="SNAP23">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP1" target="STX1A">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP1" target="STX1B_2_3">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP1" target="STX4">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP1" target="STX1B">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP1" target="STX2">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP1" target="STX3">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="SNAP23">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="STX1A">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="STX1B_2_3">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="STX4">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="STX1B">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="STX2">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="STX3">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP3" target="SNAP23">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP3" target="STX1A">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP3" target="STX1B_2_3">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP3" target="STX4">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP3" target="STX1B">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP3" target="STX2">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP3" target="STX3">
+  <data key="d5">a</data>
+</edge>
+<edge source="BET1L" target="SEC22B">
+  <data key="d5">a</data>
+</edge>
+<edge source="BET1L" target="GOSR2">
+  <data key="d5">a</data>
+</edge>
+<edge source="BET1L" target="STX5">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

@@ -1,0 +1,2468 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="DAG1">
+  <data key="d0">DAG1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="TN">
+  <data key="d0">TN</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="GP6">
+  <data key="d0">GP6</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GP9">
+  <data key="d0">GP9</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GP1BB">
+  <data key="d0">GP1BB</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GP1BA">
+  <data key="d0">GP1BA</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GP5">
+  <data key="d0">GP5</data>
+  <data key="d1">gene</data>
+</node>
+<node id="VWF">
+  <data key="d0">VWF</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G10505">
+  <data key="d0">gl:G10505</data>
+  <data key="d1">compound</data>
+</node>
+<node id="IBSP">
+  <data key="d0">IBSP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="VTN">
+  <data key="d0">VTN</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SPP1">
+  <data key="d0">SPP1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="FN1">
+  <data key="d0">FN1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGB3">
+  <data key="d0">ITGB3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGB1">
+  <data key="d0">ITGB1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGA6">
+  <data key="d0">ITGA6</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGAV">
+  <data key="d0">ITGAV</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGA4">
+  <data key="d0">ITGA4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="HMMR">
+  <data key="d0">HMMR</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CD47">
+  <data key="d0">CD47</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CD36">
+  <data key="d0">CD36</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SV2">
+  <data key="d0">SV2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="HSPG2">
+  <data key="d0">HSPG2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGB4">
+  <data key="d0">ITGB4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGB8">
+  <data key="d0">ITGB8</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGB6">
+  <data key="d0">ITGB6</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGB5">
+  <data key="d0">ITGB5</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGA2B">
+  <data key="d0">ITGA2B</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGB7">
+  <data key="d0">ITGB7</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGA11">
+  <data key="d0">ITGA11</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGA10">
+  <data key="d0">ITGA10</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGA9">
+  <data key="d0">ITGA9</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGA8">
+  <data key="d0">ITGA8</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGA7">
+  <data key="d0">ITGA7</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGA5">
+  <data key="d0">ITGA5</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGA3">
+  <data key="d0">ITGA3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko04510">
+  <data key="d0">path:ko04510</data>
+  <data key="d1">path</data>
+</node>
+<node id="ITGA1">
+  <data key="d0">ITGA1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="NPNT">
+  <data key="d0">NPNT</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CHAD">
+  <data key="d0">CHAD</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RELN">
+  <data key="d0">RELN</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko04512">
+  <data key="d0">path:ko04512</data>
+  <data key="d1">path</data>
+</node>
+<node id="CD44">
+  <data key="d0">CD44</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ITGA2">
+  <data key="d0">ITGA2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="AGRN">
+  <data key="d0">AGRN</data>
+  <data key="d1">gene</data>
+</node>
+<node id="FREM1_2">
+  <data key="d0">FREM1_2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FRAS1">
+  <data key="d0">FRAS1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="DSPP">
+  <data key="d0">DSPP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="DMP1">
+  <data key="d0">DMP1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04510">
+  <data key="d0">path:hsa04510</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04512">
+  <data key="d0">path:hsa04512</data>
+  <data key="d1">path</data>
+</node>
+<node id="LAMC1"/>
+<node id="LAMB1"/>
+<node id="LAMA1_2"/>
+<node id="LAMA3_5"/>
+<node id="LAMA4"/>
+<node id="LAMB2"/>
+<node id="LAMB3"/>
+<node id="LAMB4"/>
+<node id="LAMC2"/>
+<node id="LAMC3"/>
+<node id="COL1A"/>
+<node id="COL2A"/>
+<node id="COL4A"/>
+<node id="COL6A"/>
+<node id="COL9A"/>
+<node id="THBS1"/>
+<node id="THBS2S"/>
+<node id="SDC1"/>
+<node id="SDC4"/>
+<node id="LAMA1"/>
+<node id="LAMA2"/>
+<node id="LAMA3"/>
+<node id="LAMA5"/>
+<node id="COL1A1"/>
+<node id="COL1A2"/>
+<node id="COL2A1"/>
+<node id="COL4A1"/>
+<node id="COL4A2"/>
+<node id="COL4A3"/>
+<node id="COL4A4"/>
+<node id="COL4A5"/>
+<node id="COL4A6"/>
+<node id="COL6A1"/>
+<node id="COL6A2"/>
+<node id="COL6A3"/>
+<node id="COL9A1"/>
+<node id="COL9A2"/>
+<node id="COL9A3"/>
+<node id="COL6A6"/>
+<node id="COL6A5"/>
+<node id="TNC"/>
+<node id="TNN"/>
+<node id="TNR"/>
+<node id="TNXB"/>
+<node id="COMP"/>
+<node id="THBS2"/>
+<node id="THBS3"/>
+<node id="THBS4"/>
+<node id="SV2C"/>
+<node id="SV2B"/>
+<node id="SV2A"/>
+<node id="FREM1"/>
+<node id="FREM2"/>
+<edge source="TN" target="ITGA8">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TN" target="ITGB1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TN" target="ITGA9">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TN" target="ITGAV">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TN" target="ITGB3">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TN" target="ITGB6">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TN" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TN" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="VWF" target="ITGAV">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VWF" target="ITGB3">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VWF" target="ITGA2B">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VWF" target="GP9">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VWF" target="GP1BB">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VWF" target="GP1BA">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VWF" target="GP5">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="IBSP" target="ITGAV">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="IBSP" target="ITGB3">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="IBSP" target="ITGB5">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VTN" target="ITGA8">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VTN" target="ITGB1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VTN" target="ITGAV">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VTN" target="ITGB3">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VTN" target="ITGA2B">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VTN" target="ITGB5">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VTN" target="ITGB8">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SPP1" target="ITGA4">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SPP1" target="ITGB1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SPP1" target="ITGA9">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SPP1" target="ITGAV">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SPP1" target="ITGB3">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SPP1" target="ITGB5">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="ITGA3">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="ITGB1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="ITGA4">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="ITGA5">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="ITGA8">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="ITGAV">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="ITGB7">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="ITGB3">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="ITGA2B">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="ITGB6">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="ITGB8">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="CD44">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FN1" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FN1" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="HMMR" target="gl:G10505">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSPG2" target="DAG1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NPNT" target="ITGA8">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NPNT" target="ITGB1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CHAD" target="ITGA2">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CHAD" target="ITGB1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="RELN" target="ITGA3">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="RELN" target="ITGB1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CD44" target="gl:G10505">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="AGRN" target="DAG1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FREM1_2" target="ITGA8">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FREM1_2" target="ITGB1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FRAS1" target="ITGA8">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FRAS1" target="ITGB1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DSPP" target="ITGB6">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DSPP" target="ITGAV">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DSPP" target="ITGB1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DMP1" target="ITGAV">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DMP1" target="ITGB3">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="LAMC1" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="SV2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC1" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="SV2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB1" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="SV2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1_2" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="SV2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3_5" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="SV2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA4" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="SV2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB2" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="SV2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB3" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="SV2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMB4" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="SV2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC2" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="SV2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMC3" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS1" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS1" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS1" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS1" target="ITGB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS1" target="ITGA2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS1" target="CD36">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS1" target="CD47">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS1" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS1" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2S" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2S" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2S" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2S" target="ITGB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2S" target="ITGA2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2S" target="CD36">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2S" target="CD47">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2S" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2S" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA3" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="ITGA6">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="ITGA7">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="ITGB4">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="SV2C">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="SV2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA5" target="SV2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A1" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL1A2" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL2A1" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A1" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A2" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A3" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A4" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A5" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL4A6" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A1" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A2" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A3" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A1" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A2" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL9A3" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A6" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="ITGA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="ITGA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="ITGA10">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="ITGA11">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="ITGB8">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="CD44">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="GP6">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COL6A5" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNC" target="ITGA8">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNC" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNC" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNC" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNC" target="ITGB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNC" target="ITGB6">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNC" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNC" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNN" target="ITGA8">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNN" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNN" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNN" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNN" target="ITGB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNN" target="ITGB6">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNN" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNN" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNR" target="ITGA8">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNR" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNR" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNR" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNR" target="ITGB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNR" target="ITGB6">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNR" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNR" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNXB" target="ITGA8">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNXB" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNXB" target="ITGA9">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNXB" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNXB" target="ITGB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNXB" target="ITGB6">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNXB" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNXB" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="COMP" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COMP" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COMP" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="COMP" target="ITGB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="COMP" target="ITGA2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="COMP" target="CD36">
+  <data key="d5">a</data>
+</edge>
+<edge source="COMP" target="CD47">
+  <data key="d5">a</data>
+</edge>
+<edge source="COMP" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="COMP" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2" target="ITGB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2" target="ITGA2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2" target="CD36">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2" target="CD47">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS2" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS3" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS3" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS3" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS3" target="ITGB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS3" target="ITGA2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS3" target="CD36">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS3" target="CD47">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS3" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS3" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS4" target="ITGA3">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS4" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS4" target="ITGAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS4" target="ITGB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS4" target="ITGA2B">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS4" target="CD36">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS4" target="CD47">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS4" target="SDC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="THBS4" target="SDC4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FREM1" target="ITGA8">
+  <data key="d5">a</data>
+</edge>
+<edge source="FREM1" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FREM2" target="ITGA8">
+  <data key="d5">a</data>
+</edge>
+<edge source="FREM2" target="ITGB1">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="ACE2">
+  <data key="d0">ACE2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ACE">
+  <data key="d0">ACE</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C02135">
+  <data key="d0">cpd:C02135</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C15849">
+  <data key="d0">cpd:C15849</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C15848">
+  <data key="d0">cpd:C15848</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C15850">
+  <data key="d0">cpd:C15850</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C15852">
+  <data key="d0">cpd:C15852</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C15851">
+  <data key="d0">cpd:C15851</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00873">
+  <data key="d0">cpd:C00873</data>
+  <data key="d1">compound</data>
+</node>
+<node id="AGTR1">
+  <data key="d0">AGTR1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="AGTR2">
+  <data key="d0">AGTR2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="NLN">
+  <data key="d0">NLN</data>
+  <data key="d1">gene</data>
+</node>
+<node id="THOP1">
+  <data key="d0">THOP1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MME">
+  <data key="d0">MME</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ANPEP">
+  <data key="d0">ANPEP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ENPEP">
+  <data key="d0">ENPEP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CTSA">
+  <data key="d0">CTSA</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CPA3">
+  <data key="d0">CPA3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MAS1">
+  <data key="d0">MAS1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="LNPEP">
+  <data key="d0">LNPEP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CMA1">
+  <data key="d0">CMA1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CTSG">
+  <data key="d0">CTSG</data>
+  <data key="d1">gene</data>
+</node>
+<node id="AGT">
+  <data key="d0">AGT</data>
+  <data key="d1">gene</data>
+</node>
+<node id="REN">
+  <data key="d0">REN</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko04614">
+  <data key="d0">path:ko04614</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04610">
+  <data key="d0">path:ko04610</data>
+  <data key="d1">path</data>
+</node>
+<node id="ATP6AP2">
+  <data key="d0">ATP6AP2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="KLK1_2">
+  <data key="d0">KLK1_2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko04270">
+  <data key="d0">path:ko04270</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04924">
+  <data key="d0">path:ko04924</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C20972">
+  <data key="d0">cpd:C20972</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C20973">
+  <data key="d0">cpd:C20973</data>
+  <data key="d1">compound</data>
+</node>
+<node id="MRGPRD">
+  <data key="d0">MRGPRD</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C20971">
+  <data key="d0">cpd:C20971</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C20970">
+  <data key="d0">cpd:C20970</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko04925">
+  <data key="d0">path:ko04925</data>
+  <data key="d1">path</data>
+</node>
+<node id="PREP">
+  <data key="d0">PREP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PRCP">
+  <data key="d0">PRCP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04614">
+  <data key="d0">path:hsa04614</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04610">
+  <data key="d0">path:hsa04610</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04270">
+  <data key="d0">path:hsa04270</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04924">
+  <data key="d0">path:hsa04924</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04925">
+  <data key="d0">path:hsa04925</data>
+  <data key="d1">path</data>
+</node>
+<node id="KLK1"/>
+<node id="KLK2"/>
+<edge source="ACE2" target="ACE">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACE2" target="MME">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACE" target="ENPEP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACE" target="PRCP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C02135" target="AGTR2">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C02135" target="AGTR1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C15849" target="LNPEP">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C15848" target="AGTR2">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C15848" target="AGTR1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C15850" target="MAS1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NLN" target="ACE">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="THOP1" target="ACE">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MME" target="ACE">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ANPEP" target="PREP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ENPEP" target="ANPEP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CTSA" target="ACE">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CTSA" target="MME">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CPA3" target="ACE">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CPA3" target="MME">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CMA1" target="ENPEP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CMA1" target="ACE2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CMA1" target="PRCP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CTSG" target="ENPEP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CTSG" target="ACE2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CTSG" target="PRCP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="REN" target="ATP6AP2">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="REN" target="CMA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="REN" target="CTSG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="REN" target="ACE">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="REN" target="ACE2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="REN" target="CTSA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="REN" target="CPA3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="REN" target="THOP1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="REN" target="NLN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="REN" target="MME">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="KLK1_2" target="PRCP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="KLK1_2" target="ACE2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="KLK1_2" target="ENPEP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C20971" target="MRGPRD">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C20970" target="AGTR2">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C20970" target="AGTR1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PRCP" target="ACE">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="KLK1" target="PRCP">
+  <data key="d5">a</data>
+</edge>
+<edge source="KLK1" target="ACE2">
+  <data key="d5">a</data>
+</edge>
+<edge source="KLK1" target="ENPEP">
+  <data key="d5">a</data>
+</edge>
+<edge source="KLK2" target="PRCP">
+  <data key="d5">a</data>
+</edge>
+<edge source="KLK2" target="ACE2">
+  <data key="d5">a</data>
+</edge>
+<edge source="KLK2" target="ENPEP">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

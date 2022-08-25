@@ -1,0 +1,480 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="5SRRNA">
+  <data key="d0">5SRRNA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="LSURRNA">
+  <data key="d0">LSURRNA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="23SRRNA">
+  <data key="d0">23SRRNA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="LSU5S">
+  <data key="d0">LSU5S</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="LSU5.8S">
+  <data key="d0">LSU5.8S</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="16SRRNA">
+  <data key="d0">16SRRNA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="SSURRNA">
+  <data key="d0">SSURRNA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko03010">
+  <data key="d0">path:ko03010</data>
+  <data key="d1">path</data>
+</node>
+<node id="FAU">
+  <data key="d0">FAU</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL13">
+  <data key="d0">RPL13</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL28">
+  <data key="d0">RPL28</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS14">
+  <data key="d0">RPS14</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS23">
+  <data key="d0">RPS23</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS18">
+  <data key="d0">RPS18</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS29">
+  <data key="d0">RPS29</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS13">
+  <data key="d0">RPS13</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS11">
+  <data key="d0">RPS11</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS15">
+  <data key="d0">RPS15</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS6">
+  <data key="d0">RPS6</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS8">
+  <data key="d0">RPS8</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS17">
+  <data key="d0">RPS17</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS19">
+  <data key="d0">RPS19</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS24">
+  <data key="d0">RPS24</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS27A">
+  <data key="d0">RPS27A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS7">
+  <data key="d0">RPS7</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS12">
+  <data key="d0">RPS12</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS21">
+  <data key="d0">RPS21</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS25">
+  <data key="d0">RPS25</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS26">
+  <data key="d0">RPS26</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS28">
+  <data key="d0">RPS28</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS3A">
+  <data key="d0">RPS3A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RNR2">
+  <data key="d0">RNR2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL10">
+  <data key="d0">MRPL10</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL11">
+  <data key="d0">MRPL11</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL11">
+  <data key="d0">RPL11</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL9">
+  <data key="d0">RPL9</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPLP0">
+  <data key="d0">RPLP0</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL12">
+  <data key="d0">RPL12</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL13A">
+  <data key="d0">RPL13A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL13">
+  <data key="d0">MRPL13</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL2">
+  <data key="d0">MRPL2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL3">
+  <data key="d0">MRPL3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL10A">
+  <data key="d0">RPL10A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL8">
+  <data key="d0">RPL8</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL14">
+  <data key="d0">MRPL14</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL23">
+  <data key="d0">RPL23</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL27A">
+  <data key="d0">RPL27A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL15">
+  <data key="d0">MRPL15</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL5">
+  <data key="d0">RPL5</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL18">
+  <data key="d0">MRPL18</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL22">
+  <data key="d0">MRPL22</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL23A">
+  <data key="d0">RPL23A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL23">
+  <data key="d0">MRPL23</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL24">
+  <data key="d0">MRPL24</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL35">
+  <data key="d0">RPL35</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL30">
+  <data key="d0">MRPL30</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL7">
+  <data key="d0">RPL7</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL15">
+  <data key="d0">RPL15</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL18">
+  <data key="d0">RPL18</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL19">
+  <data key="d0">RPL19</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL21">
+  <data key="d0">RPL21</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL30">
+  <data key="d0">RPL30</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL39">
+  <data key="d0">RPL39</data>
+  <data key="d1">gene</data>
+</node>
+<node id="UBA52">
+  <data key="d0">UBA52</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL41">
+  <data key="d0">RPL41</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL31">
+  <data key="d0">RPL31</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL32">
+  <data key="d0">RPL32</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL34">
+  <data key="d0">RPL34</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL35A">
+  <data key="d0">RPL35A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL37">
+  <data key="d0">RPL37</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL37A">
+  <data key="d0">RPL37A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL6">
+  <data key="d0">RPL6</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL18A">
+  <data key="d0">RPL18A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL27">
+  <data key="d0">RPL27</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL29">
+  <data key="d0">RPL29</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL36">
+  <data key="d0">RPL36</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL38">
+  <data key="d0">RPL38</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL4">
+  <data key="d0">RPL4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL7A">
+  <data key="d0">RPL7A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPL14">
+  <data key="d0">RPL14</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL4">
+  <data key="d0">MRPL4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL9">
+  <data key="d0">MRPL9</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL12">
+  <data key="d0">MRPL12</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL16">
+  <data key="d0">MRPL16</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL17">
+  <data key="d0">MRPL17</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL19">
+  <data key="d0">MRPL19</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL20">
+  <data key="d0">MRPL20</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL21">
+  <data key="d0">MRPL21</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL27">
+  <data key="d0">MRPL27</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL28">
+  <data key="d0">MRPL28</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL32">
+  <data key="d0">MRPL32</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL33">
+  <data key="d0">MRPL33</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL34">
+  <data key="d0">MRPL34</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL35">
+  <data key="d0">MRPL35</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL36">
+  <data key="d0">MRPL36</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RNR1">
+  <data key="d0">RNR1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS5">
+  <data key="d0">MRPS5</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS7">
+  <data key="d0">MRPS7</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS9">
+  <data key="d0">MRPS9</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS10">
+  <data key="d0">MRPS10</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS2">
+  <data key="d0">RPS2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS5">
+  <data key="d0">RPS5</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS15A">
+  <data key="d0">RPS15A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS16">
+  <data key="d0">RPS16</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS20">
+  <data key="d0">RPS20</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPSA">
+  <data key="d0">RPSA</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS3">
+  <data key="d0">RPS3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS11">
+  <data key="d0">MRPS11</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS12">
+  <data key="d0">MRPS12</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS14">
+  <data key="d0">MRPS14</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS15">
+  <data key="d0">MRPS15</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS17">
+  <data key="d0">MRPS17</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS6">
+  <data key="d0">MRPS6</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS16">
+  <data key="d0">MRPS16</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS21">
+  <data key="d0">MRPS21</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RPS9">
+  <data key="d0">RPS9</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPS2">
+  <data key="d0">MRPS2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRPL1">
+  <data key="d0">MRPL1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa03010">
+  <data key="d0">path:hsa03010</data>
+  <data key="d1">path</data>
+</node>
+</graph></graphml>

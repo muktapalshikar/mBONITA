@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="type" attr.type="string"/>
+<key id="d4" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d3" for="edge" attr.name="color" attr.type="string"/>
+<key id="d2" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="path:ko05033">
+  <data key="d0">path:ko05033</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C00334">
+  <data key="d0">cpd:C00334</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01330 cpd:C00076">
+  <data key="d0">cpd:C01330 cpd:C00076</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00076">
+  <data key="d0">cpd:C00076</data>
+  <data key="d1">compound</data>
+</node>
+<node id="CHRNA6">
+  <data key="d0">CHRNA6</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CHRNA7">
+  <data key="d0">CHRNA7</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00025">
+  <data key="d0">cpd:C00025</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01996">
+  <data key="d0">cpd:C01996</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00745">
+  <data key="d0">cpd:C00745</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko04727">
+  <data key="d0">path:ko04727</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04724">
+  <data key="d0">path:ko04724</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C00698">
+  <data key="d0">cpd:C00698</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01330">
+  <data key="d0">cpd:C01330</data>
+  <data key="d1">compound</data>
+</node>
+<node id="SLC32A">
+  <data key="d0">SLC32A</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="SLC17A6_7_8">
+  <data key="d0">SLC17A6_7_8</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko04728">
+  <data key="d0">path:ko04728</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa05033">
+  <data key="d0">path:hsa05033</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04727">
+  <data key="d0">path:hsa04727</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04724">
+  <data key="d0">path:hsa04724</data>
+  <data key="d1">path</data>
+</node>
+<node id="SLC32A1">
+  <data key="d0">SLC32A1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04728">
+  <data key="d0">path:hsa04728</data>
+  <data key="d1">path</data>
+</node>
+<node id="CHRNA4"/>
+<node id="CHRNB2"/>
+<node id="GABRA"/>
+<node id="GABRB"/>
+<node id="GABRG"/>
+<node id="GABRD"/>
+<node id="GABRE"/>
+<node id="GABRQ"/>
+<node id="GABRP"/>
+<node id="GABRR"/>
+<node id="GRIN1"/>
+<node id="GRIN2A"/>
+<node id="GRIN2B"/>
+<node id="GRIN2C"/>
+<node id="GRIN2D"/>
+<node id="GRIN3A"/>
+<node id="GRIN3B"/>
+<node id="GRIA1"/>
+<node id="GRIA2"/>
+<node id="GRIA3"/>
+<node id="GRIA4"/>
+<node id="GABRR3"/>
+<node id="GABRA1"/>
+<node id="GABRA2"/>
+<node id="GABRA3"/>
+<node id="GABRA4"/>
+<node id="GABRA5"/>
+<node id="GABRA6"/>
+<node id="GABRB1"/>
+<node id="GABRB2"/>
+<node id="GABRB3"/>
+<node id="GABRG1"/>
+<node id="GABRG2"/>
+<node id="GABRG3"/>
+<node id="GABRR1"/>
+<node id="GABRR2"/>
+<edge source="cpd:C00334" target="GABRA">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRB">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRG">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRD">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRE">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRQ">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRP">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRR">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRR3">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRA1">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRA2">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRA3">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRA4">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRA5">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRA6">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRB1">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRB2">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRB3">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRG1">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRG2">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRG3">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRR1">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00334" target="GABRR2">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00025" target="GRIN1">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00025" target="GRIN2A">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00025" target="GRIN2B">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00025" target="GRIN2C">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00025" target="GRIN2D">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00025" target="GRIN3A">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00025" target="GRIN3B">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00025" target="GRIA1">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00025" target="GRIA2">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00025" target="GRIA3">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00025" target="GRIA4">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C01996" target="CHRNA7">
+  <data key="d3">red</data>
+  <data key="d4">activation</data>
+  <data key="d5">PCrel</data>
+  <data key="d2">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C01996" target="CHRNA6">
+  <data key="d3">red</data>
+  <data key="d4">activation</data>
+  <data key="d5">PCrel</data>
+  <data key="d2">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C01996" target="CHRNA4">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C01996" target="CHRNB2">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00745" target="CHRNA7">
+  <data key="d3">red</data>
+  <data key="d4">activation</data>
+  <data key="d5">PCrel</data>
+  <data key="d2">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C00745" target="CHRNA6">
+  <data key="d3">red</data>
+  <data key="d4">binding/association</data>
+  <data key="d5">PCrel</data>
+  <data key="d2">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C00745" target="CHRNA4">
+  <data key="d2">a</data>
+</edge>
+<edge source="cpd:C00745" target="CHRNB2">
+  <data key="d2">a</data>
+</edge>
+</graph></graphml>

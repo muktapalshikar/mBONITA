@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="path:ko04721">
+  <data key="d0">path:ko04721</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C00076">
+  <data key="d0">cpd:C00076</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko04724">
+  <data key="d0">path:ko04724</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04725">
+  <data key="d0">path:ko04725</data>
+  <data key="d1">path</data>
+</node>
+<node id="RIMS1">
+  <data key="d0">RIMS1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RAB3A">
+  <data key="d0">RAB3A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="VAMP2">
+  <data key="d0">VAMP2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SNAP25">
+  <data key="d0">SNAP25</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00080">
+  <data key="d0">cpd:C00080</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko04726">
+  <data key="d0">path:ko04726</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04727">
+  <data key="d0">path:ko04727</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04728">
+  <data key="d0">path:ko04728</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04144">
+  <data key="d0">path:ko04144</data>
+  <data key="d1">path</data>
+</node>
+<node id="NAPA">
+  <data key="d0">NAPA</data>
+  <data key="d1">gene</data>
+</node>
+<node id="NSF">
+  <data key="d0">NSF</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SYT1">
+  <data key="d0">SYT1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="STXBP1">
+  <data key="d0">STXBP1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="UNC13A_B_C">
+  <data key="d0">UNC13A_B_C</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C03758 cpd:C01996 cpd:C00334 cpd:C00025 cpd:C16041 cpd:C00037 cpd:C00547 cpd:C00780 cpd:C00002 cpd:C00388">
+  <data key="d0">cpd:C03758 cpd:C01996 cpd:C00334 cpd:C00025 cpd:C16041 cpd:C00037 cpd:C00547 cpd:C00780 cpd:C00002 cpd:C00388</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:hsa04721">
+  <data key="d0">path:hsa04721</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04724">
+  <data key="d0">path:hsa04724</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04725">
+  <data key="d0">path:hsa04725</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04726">
+  <data key="d0">path:hsa04726</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04727">
+  <data key="d0">path:hsa04727</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04728">
+  <data key="d0">path:hsa04728</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04144">
+  <data key="d0">path:hsa04144</data>
+  <data key="d1">path</data>
+</node>
+<node id="STX1A"/>
+<node id="STX1B_2_3"/>
+<node id="CLTA"/>
+<node id="CLTB"/>
+<node id="CLTC"/>
+<node id="AP2A"/>
+<node id="AP2B1"/>
+<node id="AP2M1"/>
+<node id="AP2S1"/>
+<node id="STX1B"/>
+<node id="STX2"/>
+<node id="STX3"/>
+<node id="CLTCL1"/>
+<node id="AP2A1"/>
+<node id="AP2A2"/>
+<edge source="cpd:C00076" target="SYT1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="RAB3A" target="RIMS1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VAMP2" target="STX1A">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="STX1B_2_3">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="STX1B">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="STX2">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="STX3">
+  <data key="d5">a</data>
+</edge>
+<edge source="STXBP1" target="STX1A">
+  <data key="d5">a</data>
+</edge>
+<edge source="STXBP1" target="STX1B_2_3">
+  <data key="d5">a</data>
+</edge>
+<edge source="STXBP1" target="STX1B">
+  <data key="d5">a</data>
+</edge>
+<edge source="STXBP1" target="STX2">
+  <data key="d5">a</data>
+</edge>
+<edge source="STXBP1" target="STX3">
+  <data key="d5">a</data>
+</edge>
+<edge source="STX1A" target="SNAP25">
+  <data key="d5">a</data>
+</edge>
+<edge source="STX1A" target="VAMP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="STX1B_2_3" target="SNAP25">
+  <data key="d5">a</data>
+</edge>
+<edge source="STX1B_2_3" target="VAMP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTA" target="AP2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTA" target="AP2B1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTA" target="AP2M1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTA" target="AP2S1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTA" target="AP2A1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTA" target="AP2A2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTB" target="AP2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTB" target="AP2B1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTB" target="AP2M1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTB" target="AP2S1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTB" target="AP2A1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTB" target="AP2A2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTC" target="AP2A">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTC" target="AP2B1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTC" target="AP2M1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTC" target="AP2S1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTC" target="AP2A1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTC" target="AP2A2">
+  <data key="d5">a</data>
+</edge>
+<edge source="STX1B" target="SNAP25">
+  <data key="d5">a</data>
+</edge>
+<edge source="STX1B" target="VAMP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="STX2" target="SNAP25">
+  <data key="d5">a</data>
+</edge>
+<edge source="STX2" target="VAMP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="STX3" target="SNAP25">
+  <data key="d5">a</data>
+</edge>
+<edge source="STX3" target="VAMP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTCL1" target="AP2M1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTCL1" target="AP2S1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTCL1" target="AP2A1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTCL1" target="AP2A2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CLTCL1" target="AP2B1">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

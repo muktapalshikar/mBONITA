@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="SGSH">
+  <data key="d0">SGSH</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G01391">
+  <data key="d0">gl:G01391</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13074">
+  <data key="d0">gl:G13074</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13073">
+  <data key="d0">gl:G13073</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G01977">
+  <data key="d0">gl:G01977</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G01945">
+  <data key="d0">gl:G01945</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G02632">
+  <data key="d0">gl:G02632</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G09660">
+  <data key="d0">gl:G09660</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13040">
+  <data key="d0">gl:G13040</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13039">
+  <data key="d0">gl:G13039</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13038">
+  <data key="d0">gl:G13038</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13037">
+  <data key="d0">gl:G13037</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13036">
+  <data key="d0">gl:G13036</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13035">
+  <data key="d0">gl:G13035</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13034">
+  <data key="d0">gl:G13034</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00872">
+  <data key="d0">gl:G00872</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13043">
+  <data key="d0">gl:G13043</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G12336">
+  <data key="d0">gl:G12336</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13042">
+  <data key="d0">gl:G13042</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G13041">
+  <data key="d0">gl:G13041</data>
+  <data key="d1">compound</data>
+</node>
+<node id="HPSE2">
+  <data key="d0">HPSE2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="HPSE">
+  <data key="d0">HPSE</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko00534">
+  <data key="d0">path:ko00534</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00533">
+  <data key="d0">path:ko00533</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00532">
+  <data key="d0">path:ko00532</data>
+  <data key="d1">path</data>
+</node>
+<node id="GNS">
+  <data key="d0">GNS</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko00531">
+  <data key="d0">path:ko00531</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C00925">
+  <data key="d0">cpd:C00925</data>
+  <data key="d1">compound</data>
+</node>
+<node id="IDS">
+  <data key="d0">IDS</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GALNS">
+  <data key="d0">GALNS</data>
+  <data key="d1">gene</data>
+</node>
+<node id="IDUA">
+  <data key="d0">IDUA</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ARSB">
+  <data key="d0">ARSB</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GLB1">
+  <data key="d0">GLB1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="HYA">
+  <data key="d0">HYA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="HGSNAT">
+  <data key="d0">HGSNAT</data>
+  <data key="d1">gene</data>
+</node>
+<node id="HEXA_B">
+  <data key="d0">HEXA_B</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="NAGLU">
+  <data key="d0">NAGLU</data>
+  <data key="d1">gene</data>
+</node>
+<node id="UIDA">
+  <data key="d0">UIDA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C00426">
+  <data key="d0">cpd:C00426</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00634">
+  <data key="d0">cpd:C00634</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00573">
+  <data key="d0">cpd:C00573</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G10505">
+  <data key="d0">gl:G10505</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00526">
+  <data key="d0">gl:G00526</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00711">
+  <data key="d0">gl:G00711</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G10008">
+  <data key="d0">gl:G10008</data>
+  <data key="d1">compound</data>
+</node>
+<node id="NAGZ">
+  <data key="d0">NAGZ</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:hsa00534">
+  <data key="d0">path:hsa00534</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00533">
+  <data key="d0">path:hsa00533</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00532">
+  <data key="d0">path:hsa00532</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00531">
+  <data key="d0">path:hsa00531</data>
+  <data key="d1">path</data>
+</node>
+<node id="GUSB">
+  <data key="d0">GUSB</data>
+  <data key="d1">gene</data>
+</node>
+<node id="HYAL4"/>
+<node id="HYAL1"/>
+<node id="SPAM1"/>
+<node id="HYAL3"/>
+<node id="HYAL2"/>
+<node id="HEXA"/>
+<node id="HEXB"/>
+<edge source="SGSH" target="HGSNAT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HPSE2" target="IDS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HPSE2" target="path:ko00534">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HPSE2" target="path:hsa00534">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HPSE" target="IDS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HPSE" target="path:ko00534">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HPSE" target="path:hsa00534">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GNS" target="HEXA_B">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GNS" target="GLB1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GNS" target="HEXA">
+  <data key="d5">a</data>
+</edge>
+<edge source="GNS" target="HEXB">
+  <data key="d5">a</data>
+</edge>
+<edge source="IDS" target="IDUA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GALNS" target="GLB1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="IDUA" target="ARSB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="IDUA" target="HYA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="IDUA" target="SGSH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="IDUA" target="HYAL4">
+  <data key="d5">a</data>
+</edge>
+<edge source="IDUA" target="HYAL1">
+  <data key="d5">a</data>
+</edge>
+<edge source="IDUA" target="SPAM1">
+  <data key="d5">a</data>
+</edge>
+<edge source="IDUA" target="HYAL3">
+  <data key="d5">a</data>
+</edge>
+<edge source="IDUA" target="HYAL2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ARSB" target="HYA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ARSB" target="HYAL4">
+  <data key="d5">a</data>
+</edge>
+<edge source="ARSB" target="HYAL1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ARSB" target="SPAM1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ARSB" target="HYAL3">
+  <data key="d5">a</data>
+</edge>
+<edge source="ARSB" target="HYAL2">
+  <data key="d5">a</data>
+</edge>
+<edge source="GLB1" target="HEXA_B">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GLB1" target="HEXA">
+  <data key="d5">a</data>
+</edge>
+<edge source="GLB1" target="HEXB">
+  <data key="d5">a</data>
+</edge>
+<edge source="HYA" target="UIDA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HGSNAT" target="NAGLU">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="UIDA" target="GNS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="UIDA" target="NAGZ">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GUSB" target="GNS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HYAL4" target="GUSB">
+  <data key="d5">a</data>
+</edge>
+<edge source="HYAL1" target="GUSB">
+  <data key="d5">a</data>
+</edge>
+<edge source="SPAM1" target="GUSB">
+  <data key="d5">a</data>
+</edge>
+<edge source="HYAL3" target="GUSB">
+  <data key="d5">a</data>
+</edge>
+<edge source="HYAL2" target="GUSB">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

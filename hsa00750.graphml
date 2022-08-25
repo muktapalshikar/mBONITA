@@ -1,0 +1,714 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="cpd:C00118">
+  <data key="d0">cpd:C00118</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00117">
+  <data key="d0">cpd:C00117</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko00010">
+  <data key="d0">path:ko00010</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00030">
+  <data key="d0">path:ko00030</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C07335">
+  <data key="d0">cpd:C07335</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko00750">
+  <data key="d0">path:ko00750</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00630">
+  <data key="d0">path:ko00630</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00650">
+  <data key="d0">path:ko00650</data>
+  <data key="d1">path</data>
+</node>
+<node id="PPAT">
+  <data key="d0">PPAT</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="AOX">
+  <data key="d0">AOX</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C00232">
+  <data key="d0">cpd:C00232</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01215">
+  <data key="d0">cpd:C01215</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01270">
+  <data key="d0">cpd:C01270</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04604">
+  <data key="d0">cpd:C04604</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06050">
+  <data key="d0">cpd:C06050</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00971">
+  <data key="d0">cpd:C00971</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00250">
+  <data key="d0">cpd:C00250</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00534">
+  <data key="d0">cpd:C00534</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00647">
+  <data key="d0">cpd:C00647</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00018">
+  <data key="d0">cpd:C00018</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00627">
+  <data key="d0">cpd:C00627</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00266">
+  <data key="d0">cpd:C00266</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00314">
+  <data key="d0">cpd:C00314</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04773">
+  <data key="d0">cpd:C04773</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04690">
+  <data key="d0">cpd:C04690</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C03393">
+  <data key="d0">cpd:C03393</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00279">
+  <data key="d0">cpd:C00279</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06051">
+  <data key="d0">cpd:C06051</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06052">
+  <data key="d0">cpd:C06052</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04106">
+  <data key="d0">cpd:C04106</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06054">
+  <data key="d0">cpd:C06054</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06055">
+  <data key="d0">cpd:C06055</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PDXK">
+  <data key="d0">PDXK</data>
+  <data key="d1">gene</data>
+</node>
+<node id="THRC">
+  <data key="d0">THRC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PDXA">
+  <data key="d0">PDXA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="SERC">
+  <data key="d0">SERC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PDXB">
+  <data key="d0">PDXB</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="EPD">
+  <data key="d0">EPD</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PNO">
+  <data key="d0">PNO</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="E1.1.1.65">
+  <data key="d0">E1.1.1.65</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PDXJ">
+  <data key="d0">PDXJ</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="K18613">
+  <data key="d0">K18613</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="MHPCO">
+  <data key="d0">MHPCO</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="K18614">
+  <data key="d0">K18614</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PLDH">
+  <data key="d0">PLDH</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PDLA">
+  <data key="d0">PDLA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C00847">
+  <data key="d0">cpd:C00847</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C11638">
+  <data key="d0">cpd:C11638</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06056">
+  <data key="d0">cpd:C06056</data>
+  <data key="d1">compound</data>
+</node>
+<node id="K18611">
+  <data key="d0">K18611</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="E1.2.1.100">
+  <data key="d0">E1.2.1.100</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C00064">
+  <data key="d0">cpd:C00064</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko00730">
+  <data key="d0">path:ko00730</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00010">
+  <data key="d0">path:hsa00010</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00030">
+  <data key="d0">path:hsa00030</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00750">
+  <data key="d0">path:hsa00750</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00630">
+  <data key="d0">path:hsa00630</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00650">
+  <data key="d0">path:hsa00650</data>
+  <data key="d1">path</data>
+</node>
+<node id="AOX1">
+  <data key="d0">AOX1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PNPO">
+  <data key="d0">PNPO</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PSAT1">
+  <data key="d0">PSAT1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa00730">
+  <data key="d0">path:hsa00730</data>
+  <data key="d1">path</data>
+</node>
+<node id="PDXS"/>
+<node id="PDXT"/>
+<node id="PDXH"/>
+<node id="PPOX"/>
+<node id="PDXP"/>
+<node id="PHOSPHO2"/>
+<edge source="PPAT" target="AOX">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PPAT" target="PLDH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PPAT" target="PDXH">
+  <data key="d5">a</data>
+</edge>
+<edge source="PPAT" target="PPOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="AOX" target="PDLA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="AOX" target="PLDH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="AOX" target="PDXH">
+  <data key="d5">a</data>
+</edge>
+<edge source="AOX" target="PPOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXK" target="AOX">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PDXK" target="PPAT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PDXK" target="PLDH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PDXK" target="E1.1.1.65">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PDXK" target="PNO">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PDXK" target="AOX1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PDXK" target="PNPO">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PDXK" target="PDXS">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXK" target="PDXT">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXK" target="PDXH">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXK" target="PPOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="THRC" target="SERC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PDXA" target="SERC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PDXA" target="THRC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SERC" target="PDXB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PDXB" target="EPD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="EPD" target="path:ko00030">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PNO" target="AOX">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PNO" target="PPAT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PNO" target="PLDH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PNO" target="PDXH">
+  <data key="d5">a</data>
+</edge>
+<edge source="PNO" target="PPOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="E1.1.1.65" target="AOX">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="E1.1.1.65" target="PPAT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="E1.1.1.65" target="PLDH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="E1.1.1.65" target="PDXH">
+  <data key="d5">a</data>
+</edge>
+<edge source="E1.1.1.65" target="PPOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXJ" target="PDXK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PDXJ" target="PDXH">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXJ" target="PPOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXJ" target="PDXP">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXJ" target="PHOSPHO2">
+  <data key="d5">a</data>
+</edge>
+<edge source="K18613" target="MHPCO">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="K18613" target="E1.2.1.100">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MHPCO" target="K18614">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="K18614" target="path:ko00650">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PLDH" target="PDLA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PLDH" target="PDXH">
+  <data key="d5">a</data>
+</edge>
+<edge source="PLDH" target="PPOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="K18611" target="PDLA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="K18611" target="AOX">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="E1.2.1.100" target="K18611">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00730" target="PDXK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00730" target="PDXS">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00730" target="PDXT">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00730" target="PDXH">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00730" target="PPOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00730" target="PDXP">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00730" target="PHOSPHO2">
+  <data key="d5">a</data>
+</edge>
+<edge source="AOX1" target="PNPO">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PNPO" target="PDXK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PNPO" target="PHOSPHO2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PNPO" target="PDXP">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00730" target="PNPO">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00730" target="PDXK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00730" target="PHOSPHO2">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00730" target="PDXP">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXS" target="path:ko00030">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXS" target="path:ko00010">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXT" target="path:ko00030">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXT" target="path:ko00010">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXH" target="PDXK">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXH" target="PDXS">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXH" target="PDXT">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXH" target="PDXP">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXH" target="PHOSPHO2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PPOX" target="PDXK">
+  <data key="d5">a</data>
+</edge>
+<edge source="PPOX" target="PDXS">
+  <data key="d5">a</data>
+</edge>
+<edge source="PPOX" target="PDXT">
+  <data key="d5">a</data>
+</edge>
+<edge source="PPOX" target="PDXP">
+  <data key="d5">a</data>
+</edge>
+<edge source="PPOX" target="PHOSPHO2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXP" target="AOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXP" target="PPAT">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXP" target="PLDH">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXP" target="E1.1.1.65">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXP" target="PNO">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXP" target="PDXS">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXP" target="PDXT">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXP" target="PDXH">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXP" target="PPOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXP" target="AOX1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PDXP" target="PNPO">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHOSPHO2" target="AOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHOSPHO2" target="PPAT">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHOSPHO2" target="PLDH">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHOSPHO2" target="E1.1.1.65">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHOSPHO2" target="PNO">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHOSPHO2" target="PDXS">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHOSPHO2" target="PDXT">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHOSPHO2" target="PDXH">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHOSPHO2" target="PPOX">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHOSPHO2" target="AOX1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHOSPHO2" target="PNPO">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

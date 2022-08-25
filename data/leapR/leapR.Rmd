@@ -32,8 +32,10 @@ require(leapR)
 #data("krbpaths")
 #data("mo_krbpaths")
 #data('msigdb')
-krbpaths <- leapR::read_gene_sets("c2.cp.kegg.v7.5.1.symbols.gmt")
-mo_krbpaths <- leapR::read_gene_sets("c2.cp.kegg.v7.5.1.symbols.gmt")
+krbpaths <- leapR::read_gene_sets("kegg_networks_edited.gmt")#("c2.cp.kegg.v7.5.1.symbols.gmt")
+krbpaths$names <- str_to_title(trimws(gsub("\\s\\-\\sHomo\\sSapiens\\s\\(Human\\)", "", krbpaths$names)))
+mo_krbpaths <- leapR::read_gene_sets("kegg_networks_edited.gmt")#("c2.cp.kegg.v7.5.1.symbols.gmt")
+mo_krbpaths$names <- str_to_title(trimws(gsub("\\s\\-\\sHomo\\sSapiens\\s\\(Human\\)", "", mo_krbpaths$names)))
 #msigdb$names <- msigdb$names[grepl("KEGG", msigdb$names)]
 #msigdb$desc <- msigdb$desc[grepl("KEGG", msigdb$names)]
 #msigdb$sizes <- msigdb$sizes[grepl("KEGG", msigdb$names)]
@@ -54,7 +56,7 @@ run_leapR <- function(shortlist, longlist, contrast1, contrast2) {
     enrichment_method = 'enrichment_comparison',
     datamatrix = transcriptomics,
     primary_columns = intersect(colnames(transcriptomics), shortlist),
-    secondary_columns = intersect(colnames(transcriptomics), longlist)
+    secondary_columns = intersect(colnames(transcriptomics), longlist), min_p_threshold=1
   )
   transdata.comp.enrichment.svl$Method <- "Transcriptomics"
   
@@ -66,7 +68,7 @@ run_leapR <- function(shortlist, longlist, contrast1, contrast2) {
     enrichment_method = 'enrichment_comparison',
     datamatrix = proteomics,
     primary_columns = intersect(colnames(proteomics), shortlist),
-    secondary_columns = intersect(colnames(proteomics), longlist)
+    secondary_columns = intersect(colnames(proteomics), longlist), min_p_threshold=1
   )
   protdata.comp.enrichment.svl$Method <- "Proteomics"
   
@@ -76,7 +78,7 @@ run_leapR <- function(shortlist, longlist, contrast1, contrast2) {
     enrichment_method = 'enrichment_comparison',
     datamatrix = phosphoproteomics,
     primary_columns = intersect(colnames(phosphoproteomics), shortlist),
-    secondary_columns = intersect(colnames(phosphoproteomics), longlist)
+    secondary_columns = intersect(colnames(phosphoproteomics), longlist), min_p_threshold=1
   )
   phosphodata.comp.enrichment.svl$Method <- "Phosphoproteomics"
   
@@ -113,7 +115,7 @@ run_leapR <- function(shortlist, longlist, contrast1, contrast2) {
     datamatrix = combodata,
     primary_columns = c(contrast1),
     secondary_columns = c(contrast2),
-    id_column = 1
+    id_column = 1, min_p_threshold=1
   )
   combodata.enrichment.svl$pvalue[is.na(combodata.enrichment.svl$pvalue)] <-
     1

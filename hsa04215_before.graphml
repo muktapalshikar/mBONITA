@@ -1,0 +1,527 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="path:ko04215">
+  <data key="d0">path:ko04215</data>
+  <data key="d1">path</data>
+</node>
+<node id="BIRC7_8">
+  <data key="d0">BIRC7_8</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="DRONC">
+  <data key="d0">DRONC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CASP7">
+  <data key="d0">CASP7</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GRIM">
+  <data key="d0">GRIM</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RPR">
+  <data key="d0">RPR</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="HID">
+  <data key="d0">HID</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="APAF1">
+  <data key="d0">APAF1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="DCP1">
+  <data key="d0">DCP1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BOK">
+  <data key="d0">BOK</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CYC">
+  <data key="d0">CYC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CASP9">
+  <data key="d0">CASP9</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CASP3">
+  <data key="d0">CASP3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="DIABLO">
+  <data key="d0">DIABLO</data>
+  <data key="d1">gene</data>
+</node>
+<node id="HTRA2">
+  <data key="d0">HTRA2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SEPT4">
+  <data key="d0">SEPT4</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="EGL1">
+  <data key="d0">EGL1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko04210">
+  <data key="d0">path:ko04210</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04214">
+  <data key="d0">path:ko04214</data>
+  <data key="d1">path</data>
+</node>
+<node id="BAX">
+  <data key="d0">BAX</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BAK">
+  <data key="d0">BAK</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CASP3A">
+  <data key="d0">CASP3A</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BCL2L1">
+  <data key="d0">BCL2L1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BECN">
+  <data key="d0">BECN</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BIRC5">
+  <data key="d0">BIRC5</data>
+  <data key="d1">gene</data>
+</node>
+<node id="FADD">
+  <data key="d0">FADD</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CASP8">
+  <data key="d0">CASP8</data>
+  <data key="d1">gene</data>
+</node>
+<node id="TNFRSF1A">
+  <data key="d0">TNFRSF1A</data>
+  <data key="d1">gene</data>
+</node>
+<node id="WGN">
+  <data key="d0">WGN</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="JNK">
+  <data key="d0">JNK</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="NGFR">
+  <data key="d0">NGFR</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BUFFY">
+  <data key="d0">BUFFY</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:hsa04215">
+  <data key="d0">path:hsa04215</data>
+  <data key="d1">path</data>
+</node>
+<node id="BIRC7">
+  <data key="d0">BIRC7</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CYCS">
+  <data key="d0">CYCS</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SEPTIN4">
+  <data key="d0">SEPTIN4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04210">
+  <data key="d0">path:hsa04210</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:map04214">
+  <data key="d0">path:map04214</data>
+  <data key="d1">path</data>
+</node>
+<node id="BAK1">
+  <data key="d0">BAK1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BIRC2_3"/>
+<node id="XIAP"/>
+<node id="CED"/>
+<node id="4"/>
+<node id="3"/>
+<node id="BCL2"/>
+<node id="9"/>
+<node id="BID"/>
+<node id="BCL2L11"/>
+<node id="PMAIP1"/>
+<node id="BBC3"/>
+<node id="BIRC2"/>
+<node id="BIRC3"/>
+<node id="MAPK8"/>
+<node id="MAPK9"/>
+<node id="MAPK10"/>
+<edge source="BIRC7_8" target="CASP7">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="BIRC7_8" target="DCP1">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="BIRC7_8" target="DRONC">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition/ubiquitination</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="DRONC" target="CASP7">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DRONC" target="DCP1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GRIM" target="BIRC7_8">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="RPR" target="BIRC7_8">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="HID" target="BIRC7_8">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="APAF1" target="CASP9">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="APAF1" target="DRONC">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BOK" target="BUFFY">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="CYC" target="APAF1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CASP9" target="CASP7">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CASP9" target="CASP3">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DIABLO" target="BIRC2_3">
+  <data key="d5">i</data>
+</edge>
+<edge source="DIABLO" target="XIAP">
+  <data key="d5">i</data>
+</edge>
+<edge source="DIABLO" target="BIRC5">
+  <data key="d5">i</data>
+</edge>
+<edge source="DIABLO" target="BIRC2">
+  <data key="d5">i</data>
+</edge>
+<edge source="DIABLO" target="BIRC3">
+  <data key="d5">i</data>
+</edge>
+<edge source="HTRA2" target="BIRC2_3">
+  <data key="d5">i</data>
+</edge>
+<edge source="HTRA2" target="XIAP">
+  <data key="d5">i</data>
+</edge>
+<edge source="HTRA2" target="BIRC5">
+  <data key="d5">i</data>
+</edge>
+<edge source="HTRA2" target="BIRC2">
+  <data key="d5">i</data>
+</edge>
+<edge source="HTRA2" target="BIRC3">
+  <data key="d5">i</data>
+</edge>
+<edge source="SEPT4" target="BIRC2_3">
+  <data key="d5">i</data>
+</edge>
+<edge source="SEPT4" target="XIAP">
+  <data key="d5">i</data>
+</edge>
+<edge source="SEPT4" target="BIRC5">
+  <data key="d5">i</data>
+</edge>
+<edge source="EGL1" target="CED">
+  <data key="d5">i</data>
+</edge>
+<edge source="EGL1" target="9">
+  <data key="d5">i</data>
+</edge>
+<edge source="BCL2L1" target="BAK">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="BCL2L1" target="BAK1">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="BCL2L1" target="BAX">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC5" target="CASP9">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC5" target="CASP7">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC5" target="CASP3">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC5" target="CED">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC5" target="4">
+  <data key="d5">i</data>
+</edge>
+<edge source="FADD" target="CASP8">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CASP8" target="CASP7">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TNFRSF1A" target="FADD">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="WGN" target="JNK">
+  <data key="d2">red</data>
+  <data key="d3">activation/indirect effect</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="JNK" target="APAF1">
+  <data key="d2">red</data>
+  <data key="d3">activation/indirect effect</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NGFR" target="FADD">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BUFFY" target="APAF1">
+  <data key="d2">red</data>
+  <data key="d3">inhibition/indirect effect</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIRC7" target="CASP7">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="CYCS" target="APAF1">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SEPTIN4" target="BIRC2">
+  <data key="d5">i</data>
+</edge>
+<edge source="SEPTIN4" target="BIRC3">
+  <data key="d5">i</data>
+</edge>
+<edge source="SEPTIN4" target="XIAP">
+  <data key="d5">i</data>
+</edge>
+<edge source="SEPTIN4" target="BIRC5">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC2_3" target="CASP9">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC2_3" target="CASP7">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC2_3" target="CASP3">
+  <data key="d5">i</data>
+</edge>
+<edge source="XIAP" target="CASP9">
+  <data key="d5">i</data>
+</edge>
+<edge source="XIAP" target="CASP7">
+  <data key="d5">i</data>
+</edge>
+<edge source="XIAP" target="CASP3">
+  <data key="d5">i</data>
+</edge>
+<edge source="CED" target="3">
+  <data key="d5">a</data>
+</edge>
+<edge source="CED" target="4">
+  <data key="d5">i</data>
+</edge>
+<edge source="4" target="CED">
+  <data key="d5">a</data>
+</edge>
+<edge source="4" target="3">
+  <data key="d5">a</data>
+</edge>
+<edge source="BCL2" target="BAX">
+  <data key="d5">i</data>
+</edge>
+<edge source="BCL2" target="BAK">
+  <data key="d5">i</data>
+</edge>
+<edge source="BCL2" target="BAK1">
+  <data key="d5">i</data>
+</edge>
+<edge source="9" target="CED">
+  <data key="d5">i</data>
+</edge>
+<edge source="9" target="4">
+  <data key="d5">i</data>
+</edge>
+<edge source="BID" target="BCL2">
+  <data key="d5">i</data>
+</edge>
+<edge source="BID" target="BCL2L1">
+  <data key="d5">i</data>
+</edge>
+<edge source="BCL2L11" target="BCL2">
+  <data key="d5">i</data>
+</edge>
+<edge source="BCL2L11" target="BCL2L1">
+  <data key="d5">i</data>
+</edge>
+<edge source="PMAIP1" target="BCL2">
+  <data key="d5">i</data>
+</edge>
+<edge source="PMAIP1" target="BCL2L1">
+  <data key="d5">i</data>
+</edge>
+<edge source="BBC3" target="BCL2">
+  <data key="d5">i</data>
+</edge>
+<edge source="BBC3" target="BCL2L1">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC2" target="CASP9">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC2" target="CASP7">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC2" target="CASP3">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC3" target="CASP9">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC3" target="CASP7">
+  <data key="d5">i</data>
+</edge>
+<edge source="BIRC3" target="CASP3">
+  <data key="d5">i</data>
+</edge>
+<edge source="MAPK8" target="APAF1">
+  <data key="d5">a</data>
+</edge>
+<edge source="MAPK9" target="APAF1">
+  <data key="d5">a</data>
+</edge>
+<edge source="MAPK10" target="APAF1">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

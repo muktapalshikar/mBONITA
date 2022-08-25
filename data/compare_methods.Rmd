@@ -58,6 +58,8 @@ makeVisList <- function(tempPAlist, contrast) {
     unique(str_to_title(trimws(as.vector(
       tempPAlist[["ActivePathways"]]$Pathway
     ))))
+  visList <- lapply(visList, function(x){if(length(x) > 0){return(x)}else{return(NA)}})
+  visList <- visList[!is.na(visList???)]
   print(visList)
   return(visList)
 }
@@ -71,7 +73,7 @@ makeVisList <- function(tempPAlist, contrast) {
 require(UpSetR)
 #pdf(file = "upset_all_methods.pdf", width = 8, height = 4, pointsize = 14)
 visList <- makeVisList(PAlist, "X19O2NoCyA - X1O2PlusCyA")
-upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = "off", point.size = 2, line.size = 1)#, mainbar.y.label = "Intersections", sets.x.label = "DA Phosphopeptides", text.scale = c(2,2, 1.75, 2, 2, 1.5), number.angles = 0, queries = list(list(query = intersects, params = list("CyA+CXCL12+ Vs CyA-CXCL12-", "CyA-CXCL12+ Vs CyA-CXCL12-", "CyA+CXCL12- Vs CyA-CXCL12-"), color = "royalblue", active = T), list(query = intersects, params = list("CyA+CXCL12+ Vs CyA-CXCL12-"), color = "firebrick1", active = T)), nsets = length(visList))
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 2, line.size = 1)#, mainbar.y.label = "Intersections", sets.x.label = "DA Phosphopeptides", text.scale = c(2,2, 1.75, 2, 2, 1.5), number.angles = 0, queries = list(list(query = intersects, params = list("CyA+CXCL12+ Vs CyA-CXCL12-", "CyA-CXCL12+ Vs CyA-CXCL12-", "CyA+CXCL12- Vs CyA-CXCL12-"), color = "royalblue", active = T), list(query = intersects, params = list("CyA+CXCL12+ Vs CyA-CXCL12-"), color = "firebrick1", active = T)), nsets = length(visList))
 #dev.off()
 ```
 ```{r}

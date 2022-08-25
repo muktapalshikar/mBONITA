@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="path:ko04216">
+  <data key="d0">path:ko04216</data>
+  <data key="d1">path</data>
+</node>
+<node id="SLC7A11">
+  <data key="d0">SLC7A11</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00025">
+  <data key="d0">cpd:C00025</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00491">
+  <data key="d0">cpd:C00491</data>
+  <data key="d1">compound</data>
+</node>
+<node id="TP53">
+  <data key="d0">TP53</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GPX4">
+  <data key="d0">GPX4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00051">
+  <data key="d0">cpd:C00051</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C21478">
+  <data key="d0">cpd:C21478</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00097">
+  <data key="d0">cpd:C00097</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00669">
+  <data key="d0">cpd:C00669</data>
+  <data key="d1">compound</data>
+</node>
+<node id="SLC3A2">
+  <data key="d0">SLC3A2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00418">
+  <data key="d0">cpd:C00418</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C11378">
+  <data key="d0">cpd:C11378</data>
+  <data key="d1">compound</data>
+</node>
+<node id="TFRC">
+  <data key="d0">TFRC</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C14819">
+  <data key="d0">cpd:C14819</data>
+  <data key="d1">compound</data>
+</node>
+<node id="TF">
+  <data key="d0">TF</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C14818">
+  <data key="d0">cpd:C14818</data>
+  <data key="d1">compound</data>
+</node>
+<node id="CP">
+  <data key="d0">CP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="STEAP3">
+  <data key="d0">STEAP3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00127">
+  <data key="d0">cpd:C00127</data>
+  <data key="d1">compound</data>
+</node>
+<node id="GSS">
+  <data key="d0">GSS</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SLC40A1">
+  <data key="d0">SLC40A1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PCBP2">
+  <data key="d0">PCBP2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SLC11A2">
+  <data key="d0">SLC11A2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MAP1LC">
+  <data key="d0">MAP1LC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="NCOA4">
+  <data key="d0">NCOA4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PRNP">
+  <data key="d0">PRNP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="HMOX1">
+  <data key="d0">HMOX1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00032">
+  <data key="d0">cpd:C00032</data>
+  <data key="d1">compound</data>
+</node>
+<node id="NOX2">
+  <data key="d0">NOX2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="dr:D08524">
+  <data key="d0">dr:D08524</data>
+  <data key="d1">compound</data>
+</node>
+<node id="dr:D00448">
+  <data key="d0">dr:D00448</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16844 cpd:C00027">
+  <data key="d0">cpd:C16844 cpd:C00027</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C21479">
+  <data key="d0">cpd:C21479</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00129">
+  <data key="d0">cpd:C00129</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko00480">
+  <data key="d0">path:ko00480</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00900">
+  <data key="d0">path:ko00900</data>
+  <data key="d1">path</data>
+</node>
+<node id="FTMT">
+  <data key="d0">FTMT</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C21483">
+  <data key="d0">cpd:C21483</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C21482">
+  <data key="d0">cpd:C21482</data>
+  <data key="d1">compound</data>
+</node>
+<node id="SPEG">
+  <data key="d0">SPEG</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C21480 cpd:C21481">
+  <data key="d0">cpd:C21480 cpd:C21481</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02249 cpd:C16170">
+  <data key="d0">cpd:C02249 cpd:C16170</data>
+  <data key="d1">compound</data>
+</node>
+<node id="ACSL">
+  <data key="d0">ACSL</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="LPCAT3">
+  <data key="d0">LPCAT3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ALOX15">
+  <data key="d0">ALOX15</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00219 cpd:C16527">
+  <data key="d0">cpd:C00219 cpd:C16527</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00010">
+  <data key="d0">cpd:C00010</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02477">
+  <data key="d0">cpd:C02477</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C21484">
+  <data key="d0">cpd:C21484</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00024">
+  <data key="d0">cpd:C00024</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00356">
+  <data key="d0">cpd:C00356</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:hsa04216">
+  <data key="d0">path:hsa04216</data>
+  <data key="d1">path</data>
+</node>
+<node id="CYBB">
+  <data key="d0">CYBB</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa00480">
+  <data key="d0">path:hsa00480</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00900">
+  <data key="d0">path:hsa00900</data>
+  <data key="d1">path</data>
+</node>
+<node id="VDAC2"/>
+<node id="VDAC3"/>
+<node id="FTH1"/>
+<node id="FTL"/>
+<edge source="cpd:C00025" target="SLC7A11">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="cpd:C00025" target="SLC3A2">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="TP53" target="SLC7A11">
+  <data key="d2">blue</data>
+  <data key="d3">repression</data>
+  <data key="d4">GErel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="cpd:C21478" target="SLC7A11">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="cpd:C21478" target="SLC3A2">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="SLC3A2" target="SLC7A11">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C11378" target="cpd:C16844 cpd:C00027">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="TFRC" target="TF">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C14819" target="TF">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C14819" target="FTH1">
+  <data key="d5">a</data>
+</edge>
+<edge source="cpd:C14819" target="FTL">
+  <data key="d5">a</data>
+</edge>
+<edge source="TF" target="TFRC">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C14818" target="FTMT">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PCBP2" target="cpd:C14818">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NCOA4" target="FTH1">
+  <data key="d5">a</data>
+</edge>
+<edge source="NCOA4" target="FTL">
+  <data key="d5">a</data>
+</edge>
+<edge source="NOX2" target="cpd:C16844 cpd:C00027">
+  <data key="d2">red</data>
+  <data key="d3">activation/indirect effect</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="dr:D08524" target="SLC7A11">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="dr:D08524" target="SLC3A2">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="dr:D00448" target="SLC7A11">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="dr:D00448" target="SLC3A2">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="cpd:C21479" target="GPX4">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="cpd:C21483" target="cpd:C16844 cpd:C00027">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYBB" target="cpd:C16844 cpd:C00027">
+  <data key="d2">red</data>
+  <data key="d3">activation/indirect effect</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="VDAC2" target="cpd:C16844 cpd:C00027">
+  <data key="d5">a</data>
+</edge>
+<edge source="VDAC3" target="cpd:C16844 cpd:C00027">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

@@ -369,14 +369,15 @@ def find_pathways_kegg(
                 str(len(graph.edges())),
             )
             pathwayDict[code] = graph
-            # save the removed nodes and omics data values for just those nodes in the particular pathway
-            pathwaySampleList = [
-                {} for q in range(len(geneDict[list(graph.nodes())[0]]))
-            ]
-            for noder in list(graph.nodes()):
-                for jn in range(len(pathwaySampleList)):
-                    pathwaySampleList[jn][noder] = geneDict[noder][jn]
-                pickle.dump(pathwaySampleList, open(coder + "_sss.pickle", "wb"))
+            if len(geneList) > 0:
+                # save the removed nodes and omics data values for just those nodes in the particular pathway
+                pathwaySampleList = [
+                    {} for q in range(len(geneDict[list(graph.nodes())[0]]))
+                ]
+                for noder in list(graph.nodes()):
+                    for jn in range(len(pathwaySampleList)):
+                        pathwaySampleList[jn][noder] = geneDict[noder][jn]
+                    pickle.dump(pathwaySampleList, open(coder + "_sss.pickle", "wb"))
     return pathwayDict
 
 

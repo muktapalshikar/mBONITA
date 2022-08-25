@@ -13,7 +13,7 @@ contrasts <- read.csv("concatenated_conditions_CAMERA.csv", row.names = 1, check
 prot_contrast <- contrasts[colnames(proteomics),]
 mrna_contrast <- contrasts[colnames(transcriptomics),]
 phosph_contrast <- contrasts[colnames(phosphoproteomics),]
-kegg <- clusterProfiler::read.gmt('c2.cp.kegg.v7.5.1.symbols.gmt')
+kegg <- clusterProfiler::read.gmt('kegg_networks.gmt')
 keggList <- setNames(lapply(unique(kegg$ont), function(x){return(kegg$gene[kegg$ont == x])}), unique(kegg$ont))
 ```
 
@@ -104,38 +104,40 @@ camera_mrna <- rbind(camera_mrna1, camera_mrna2, camera_mrna3)
 camera_mrna$Method <- 'Transcriptomics'
 head(camera_mrna)
 ```
-
-# All results, FDR-p < 0.05
 ```{r}
-
 camera_allResults <- rbind(camera_prot, camera_phosph, camera_mrna)
 camera_allResults$negativelog10FDR <- -1*log10(camera_allResults$FDR)
-camera_allResults$Pathway <- gsub("KEGG|_|\\d+$", " ", camera_allResults$GeneSet)
-write.csv(camera_allResults, file = 'camera_allResults.csv')
-head(camera_allResults)
-
+#camera_allResults$Pathway <- gsub("KEGG|_|\\d+$", " ", camera_allResults$Pathway)
+camera_allResults$Pathway <- camera_allResults$GeneSet
 ```
+
+
 # Combine p-values
 
 ```{r}
-as.data.frame(reshape2::acast(data = camera_allResults, Contrast ~ Pathway , value.var = 'FDR'))
-```
 
-```{r}
 require(metap)
 temp <- as.data.frame(reshape2::acast(data = camera_allResults, Contrast ~ Pathway , value.var = 'FDR', fun.aggregate = function(x){return(metap::sumz(x)$p)}))
 temp <- as.data.frame(reshape2::melt(as.matrix(temp)))
 temp$Method <- "Combined"
 colnames(temp) <- c("Contrast", "Pathway", "FDR", "Method")
-temp
+temp$negativelog10FDR <- (-1)*log10(temp$FDR)
 hist(temp$FDR)
 write.csv(temp, "camera_combinedPvalues.csv")
+
 ```
 
+```{r}
+
+camera_allResults <- rbind(camera_allResults[,colnames(temp)], temp)
+write.csv(camera_allResults, file = 'camera_allResults.csv')
+head(camera_allResults)
+
+```
 
 ```{r}
 temp <- camera_allResults$FDR < 0.05 #PValue < 0.01
-camera_allResults <- camera_allResults[temp,]
+camera_allResults <- na.omit(camera_allResults[temp,])
 camera_allResults
 ```
 
@@ -143,21 +145,15 @@ camera_allResults
 
 ```{r}
 require(ggplot2)
-
+camera_allResults$Pathway <- str_to_title(trimws(gsub("\\s\\-\\sHomo\\sSapiens\\s\\(Human\\)", "", camera_allResults$Pathway)))
 ggplot(camera_allResults) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method') + theme_bw()
 ggsave(filename = "camera_allResults.svg", width = 12, height = 10, units = 'in')
 ggsave(filename = 'camera_allResults.png', width = 12, height =10, units = 'in')
 ```
 
-```{r}
+```{r, eval=FALSE}
 require(pathwayPCA)
 kegg <- pathwayPCA::read_gmt('c2.cp.kegg.v7.5.1.symbols.gmt')
-
-
-```
-
-
-```{r, eval=FALSE}
 
 prot3 <- as.data.frame(t(prot2))
 prot3 <- cbind(make.unique(colnames(prot2)), prot3)

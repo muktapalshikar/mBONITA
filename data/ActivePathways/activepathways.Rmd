@@ -21,7 +21,7 @@ runActivePathways <-
   function(de_mrna,
            de_prot,
            de_phospho,
-           GMT = 'c2.cp.kegg.v7.5.1.symbols.gmt') {
+           GMT = 'kegg_networks.gmt') {
     mrna <-
       data.frame('adj.P.Val' = de_mrna$adj.P.Val,
                  'Identifier' = de_mrna$Identifier)
@@ -62,7 +62,7 @@ de_prot <- read_excel(paste(pathToReactome,"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 
 de_phospho <- read_excel(paste(pathToReactome,"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 4)
 commonGenes <- union(de_mrna$Identifier, union(de_prot$Identifier, de_phospho$Identifier))
 length(commonGenes)
-contrast1 <- runActivePathways(de_mrna,de_prot,de_phospho, GMT = 'c2.cp.kegg.v7.5.1.symbols.gmt')
+contrast1 <- runActivePathways(de_mrna,de_prot,de_phospho)
 contrast1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
 ```
 # Contrast 2: 1O2NoCyA vs 1O2PlusCyA
@@ -72,7 +72,7 @@ de_prot <- read_excel(paste(pathToReactome,"/1O2NoCyA vs 1O2PlusCyA/1O2NoCyA vs 
 de_phospho <- read_excel(paste(pathToReactome,"/1O2NoCyA vs 1O2PlusCyA/1O2NoCyA vs 1O2PlusCyA.xlsx", sep = ""), sheet = 4)
 commonGenes <- union(de_mrna$Identifier, union(de_prot$Identifier, de_phospho$Identifier))
 length(commonGenes)
-contrast2 <- runActivePathways(de_mrna,de_prot,de_phospho, GMT = 'c2.cp.kegg.v7.5.1.symbols.gmt')
+contrast2 <- runActivePathways(de_mrna,de_prot,de_phospho)
 contrast2$Contrast <- "X1O2PlusCyA - X1O2NoCyA"
 contrast2
 ```
@@ -83,7 +83,7 @@ de_prot <- read_excel(paste(pathToReactome,"/1O2PlusCyA vs 19O2NoCyA/1O2PlusCyA 
 de_phospho <- read_excel(paste(pathToReactome,"/1O2PlusCyA vs 19O2NoCyA/1O2PlusCyA vs 19O2NoCyA.xlsx", sep = ""), sheet = 4)
 commonGenes <- union(de_mrna$Identifier, union(de_prot$Identifier, de_phospho$Identifier))
 length(commonGenes)
-contrast3 <- runActivePathways(de_mrna,de_prot,de_phospho, GMT = 'c2.cp.kegg.v7.5.1.symbols.gmt')
+contrast3 <- runActivePathways(de_mrna,de_prot,de_phospho)
 contrast3$Contrast <- "X19O2NoCyA - X1O2PlusCyA"
 contrast3
 ```
@@ -91,6 +91,7 @@ contrast3
 allContrasts <- rbind(contrast1, contrast2, contrast3)
 allContrasts$negativelog10FDR <- (-1)*log10(allContrasts$adjusted.p.val)
 allContrasts$Pathway <- str_to_title(trimws(gsub("KEGG|_|\\d+$", " ", allContrasts$term.id)))
+allContrasts$Pathway <- str_to_title(trimws(gsub("\\s\\-\\sHomo\\sSapiens\\s\\(Human\\)", " ", allContrasts$Pathway)))
 allContrasts$Method <- "Combined"
 allContrasts_temp <- apply(allContrasts,2,as.character)
 write.csv(as.data.frame(allContrasts_temp), "activePathways_allResults.csv", row.names=FALSE)

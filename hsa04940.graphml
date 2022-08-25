@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="ICA1">
+  <data key="d0">ICA1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00704 cpd:C00027 cpd:C00533">
+  <data key="d0">cpd:C00704 cpd:C00027 cpd:C00533</data>
+  <data key="d1">compound</data>
+</node>
+<node id="CD28">
+  <data key="d0">CD28</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko04210">
+  <data key="d0">path:ko04210</data>
+  <data key="d1">path</data>
+</node>
+<node id="CPE">
+  <data key="d0">CPE</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PTPRN">
+  <data key="d0">PTPRN</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="E4.1.1.15">
+  <data key="d0">E4.1.1.15</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="GROEL">
+  <data key="d0">GROEL</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="IL2">
+  <data key="d0">IL2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko04660">
+  <data key="d0">path:ko04660</data>
+  <data key="d1">path</data>
+</node>
+<node id="INS">
+  <data key="d0">INS</data>
+  <data key="d1">gene</data>
+</node>
+<node id="TNFSF6">
+  <data key="d0">TNFSF6</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="GZMB">
+  <data key="d0">GZMB</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MHC2">
+  <data key="d0">MHC2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="MHC1">
+  <data key="d0">MHC1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="TNFRSF6">
+  <data key="d0">TNFRSF6</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="IFNG">
+  <data key="d0">IFNG</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PRF1">
+  <data key="d0">PRF1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="TNF">
+  <data key="d0">TNF</data>
+  <data key="d1">gene</data>
+</node>
+<node id="LTA">
+  <data key="d0">LTA</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko04940">
+  <data key="d0">path:ko04940</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04210">
+  <data key="d0">path:hsa04210</data>
+  <data key="d1">path</data>
+</node>
+<node id="HSPD1">
+  <data key="d0">HSPD1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04660">
+  <data key="d0">path:hsa04660</data>
+  <data key="d1">path</data>
+</node>
+<node id="FASLG">
+  <data key="d0">FASLG</data>
+  <data key="d1">gene</data>
+</node>
+<node id="FAS">
+  <data key="d0">FAS</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04940">
+  <data key="d0">path:hsa04940</data>
+  <data key="d1">path</data>
+</node>
+<node id="TRAV"/>
+<node id="TRBV"/>
+<node id="CD80"/>
+<node id="CD86"/>
+<edge source="TNFSF6" target="TNFRSF6">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MHC2" target="TRAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="MHC2" target="TRBV">
+  <data key="d5">a</data>
+</edge>
+<edge source="MHC1" target="TRAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="MHC1" target="TRBV">
+  <data key="d5">a</data>
+</edge>
+<edge source="FASLG" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CD80" target="CD28">
+  <data key="d5">a</data>
+</edge>
+<edge source="CD86" target="CD28">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

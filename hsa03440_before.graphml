@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="TOP3">
+  <data key="d0">TOP3</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BLM">
+  <data key="d0">BLM</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SHFM1">
+  <data key="d0">SHFM1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RAD52">
+  <data key="d0">RAD52</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MRE11">
+  <data key="d0">MRE11</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RAD50">
+  <data key="d0">RAD50</data>
+  <data key="d1">gene</data>
+</node>
+<node id="XRCC3">
+  <data key="d0">XRCC3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RAD51L2">
+  <data key="d0">RAD51L2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="XRCC2">
+  <data key="d0">XRCC2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RAD51L3">
+  <data key="d0">RAD51L3</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RAD51L1">
+  <data key="d0">RAD51L1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="DNAT">
+  <data key="d0">DNAT</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PRIB">
+  <data key="d0">PRIB</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PRIC">
+  <data key="d0">PRIC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RECD">
+  <data key="d0">RECD</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RECG">
+  <data key="d0">RECG</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RUVC">
+  <data key="d0">RUVC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RUVB">
+  <data key="d0">RUVB</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RUVA">
+  <data key="d0">RUVA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RECA">
+  <data key="d0">RECA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PRIA">
+  <data key="d0">PRIA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="POLA">
+  <data key="d0">POLA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RAD57">
+  <data key="d0">RAD57</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="MUS81">
+  <data key="d0">MUS81</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RECR">
+  <data key="d0">RECR</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko03440">
+  <data key="d0">path:ko03440</data>
+  <data key="d1">path</data>
+</node>
+<node id="NBN">
+  <data key="d0">NBN</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RAD51">
+  <data key="d0">RAD51</data>
+  <data key="d1">gene</data>
+</node>
+<node id="XRS2">
+  <data key="d0">XRS2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RECJ">
+  <data key="d0">RECJ</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RECF">
+  <data key="d0">RECF</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RECC">
+  <data key="d0">RECC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="EME1">
+  <data key="d0">EME1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RECB">
+  <data key="d0">RECB</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BRCA2">
+  <data key="d0">BRCA2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RAD59">
+  <data key="d0">RAD59</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RAD55">
+  <data key="d0">RAD55</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RECO">
+  <data key="d0">RECO</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="SSB">
+  <data key="d0">SSB</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="SYCP3">
+  <data key="d0">SYCP3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BRCA1">
+  <data key="d0">BRCA1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RBBP8">
+  <data key="d0">RBBP8</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PALB2">
+  <data key="d0">PALB2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="UIMC1">
+  <data key="d0">UIMC1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="FAM175A">
+  <data key="d0">FAM175A</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BRIP1">
+  <data key="d0">BRIP1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BARD1">
+  <data key="d0">BARD1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="TOPBP1">
+  <data key="d0">TOPBP1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ATM">
+  <data key="d0">ATM</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BRE">
+  <data key="d0">BRE</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BABAM">
+  <data key="d0">BABAM</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BRCC3">
+  <data key="d0">BRCC3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SEM1">
+  <data key="d0">SEM1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RAD51C">
+  <data key="d0">RAD51C</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RAD51D">
+  <data key="d0">RAD51D</data>
+  <data key="d1">gene</data>
+</node>
+<node id="RAD51B">
+  <data key="d0">RAD51B</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa03440">
+  <data key="d0">path:hsa03440</data>
+  <data key="d1">path</data>
+</node>
+<node id="SSBP1">
+  <data key="d0">SSBP1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ABRAXAS1">
+  <data key="d0">ABRAXAS1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BABAM2">
+  <data key="d0">BABAM2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BABAM1">
+  <data key="d0">BABAM1</data>
+  <data key="d1">gene</data>
+</node>
+<edge source="RAD50" target="MRE11">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="RAD50" target="NBN">
+  <data key="d2">black</data>
+  <data key="d3"></data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="RAD50" target="RBBP8">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BRCA2" target="SHFM1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BRCA2" target="SEM1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="SYCP3" target="BRCA2">
+  <data key="d2">blue</data>
+  <data key="d3">inhibition</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="BRCA1" target="BRIP1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BRCA1" target="BARD1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BRCA1" target="RBBP8">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BRCA1" target="PALB2">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BRCA1" target="BRCA2">
+  <data key="d2">black</data>
+  <data key="d3"></data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BRCA1" target="SHFM1">
+  <data key="d2">black</data>
+  <data key="d3"></data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BRCA1" target="FAM175A">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BRCA1" target="SEM1">
+  <data key="d2">black</data>
+  <data key="d3"></data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BRCA1" target="ABRAXAS1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="RBBP8" target="MRE11">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PALB2" target="BRCA2">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BRIP1" target="TOPBP1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ATM" target="BRCA1">
+  <data key="d2">red</data>
+  <data key="d3">phosphorylation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BABAM" target="BRE">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BABAM" target="BRCC3">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BABAM" target="FAM175A">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BABAM" target="UIMC1">
+  <data key="d2">black</data>
+  <data key="d3"></data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BABAM1" target="BABAM2">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BABAM1" target="BRCC3">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BABAM1" target="ABRAXAS1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BABAM1" target="UIMC1">
+  <data key="d2">black</data>
+  <data key="d3"></data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+</graph></graphml>

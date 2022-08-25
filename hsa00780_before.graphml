@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="path:ko00960">
+  <data key="d0">path:ko00960</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00780">
+  <data key="d0">path:ko00780</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00310">
+  <data key="d0">path:ko00310</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C02656">
+  <data key="d0">cpd:C02656</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01063">
+  <data key="d0">cpd:C01063</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01092">
+  <data key="d0">cpd:C01092</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01909">
+  <data key="d0">cpd:C01909</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01037">
+  <data key="d0">cpd:C01037</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00120">
+  <data key="d0">cpd:C00120</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00047">
+  <data key="d0">cpd:C00047</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05552">
+  <data key="d0">cpd:C05552</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01894">
+  <data key="d0">cpd:C01894</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05921">
+  <data key="d0">cpd:C05921</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06250">
+  <data key="d0">cpd:C06250</data>
+  <data key="d1">compound</data>
+</node>
+<node id="HLCS">
+  <data key="d0">HLCS</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BIOB">
+  <data key="d0">BIOB</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BIOF">
+  <data key="d0">BIOF</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BIOW">
+  <data key="d0">BIOW</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C19845">
+  <data key="d0">cpd:C19845</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C19846">
+  <data key="d0">cpd:C19846</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01209">
+  <data key="d0">cpd:C01209</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C19673">
+  <data key="d0">cpd:C19673</data>
+  <data key="d1">compound</data>
+</node>
+<node id="BIOC">
+  <data key="d0">BIOC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C20372">
+  <data key="d0">cpd:C20372</data>
+  <data key="d1">compound</data>
+</node>
+<node id="FABG">
+  <data key="d0">FABG</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C20373">
+  <data key="d0">cpd:C20373</data>
+  <data key="d1">compound</data>
+</node>
+<node id="FABZ">
+  <data key="d0">FABZ</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C20374">
+  <data key="d0">cpd:C20374</data>
+  <data key="d1">compound</data>
+</node>
+<node id="FABI">
+  <data key="d0">FABI</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C20375">
+  <data key="d0">cpd:C20375</data>
+  <data key="d1">compound</data>
+</node>
+<node id="FABB">
+  <data key="d0">FABB</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C20376">
+  <data key="d0">cpd:C20376</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C20377">
+  <data key="d0">cpd:C20377</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C20378">
+  <data key="d0">cpd:C20378</data>
+  <data key="d1">compound</data>
+</node>
+<node id="FABF">
+  <data key="d0">FABF</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BIOI">
+  <data key="d0">BIOI</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C20683">
+  <data key="d0">cpd:C20683</data>
+  <data key="d1">compound</data>
+</node>
+<node id="BTD">
+  <data key="d0">BTD</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C20384">
+  <data key="d0">cpd:C20384</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C20385">
+  <data key="d0">cpd:C20385</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko00061">
+  <data key="d0">path:ko00061</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C20386">
+  <data key="d0">cpd:C20386</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C20387">
+  <data key="d0">cpd:C20387</data>
+  <data key="d1">compound</data>
+</node>
+<node id="BISC">
+  <data key="d0">BISC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C00086">
+  <data key="d0">cpd:C00086</data>
+  <data key="d1">compound</data>
+</node>
+<node id="BIOA">
+  <data key="d0">BIOA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C22458">
+  <data key="d0">cpd:C22458</data>
+  <data key="d1">compound</data>
+</node>
+<node id="BIOD">
+  <data key="d0">BIOD</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BIOU">
+  <data key="d0">BIOU</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:map00960">
+  <data key="d0">path:map00960</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00780">
+  <data key="d0">path:hsa00780</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00310">
+  <data key="d0">path:hsa00310</data>
+  <data key="d1">path</data>
+</node>
+<node id="OXSM">
+  <data key="d0">OXSM</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa00061">
+  <data key="d0">path:hsa00061</data>
+  <data key="d1">path</data>
+</node>
+<node id="BIRA"/>
+<node id="COAX"/>
+<node id="BIO3"/>
+<node id="BIO1"/>
+<node id="BIOH"/>
+<node id="BIOG"/>
+<node id="BIOK"/>
+<node id="BIOJ"/>
+<edge source="path:ko00310" target="path:ko00960">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HLCS" target="BTD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HLCS" target="path:ko00061">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HLCS" target="path:hsa00061">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HLCS" target="BIRA">
+  <data key="d5">a</data>
+</edge>
+<edge source="HLCS" target="COAX">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOB" target="BISC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOB" target="HLCS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOB" target="BTD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOB" target="BIRA">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOB" target="COAX">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOF" target="BIOW">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOF" target="BIOA">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOF" target="BIO3">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOF" target="BIO1">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOC" target="path:ko00061">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOC" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOC" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABG" target="FABZ">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABZ" target="FABI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABI" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABI" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABI" target="BIOH">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABI" target="BIOG">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABI" target="BIOK">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABI" target="BIOJ">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABB" target="FABG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FABG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOI" target="BIOF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOI" target="path:ko00061">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOI" target="BIOH">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOI" target="BIOG">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOI" target="BIOK">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOI" target="BIOJ">
+  <data key="d5">a</data>
+</edge>
+<edge source="BTD" target="path:ko00310">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BTD" target="path:ko00960">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BTD" target="path:hsa00310">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BTD" target="path:map00960">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BISC" target="HLCS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BISC" target="BTD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BISC" target="BIRA">
+  <data key="d5">a</data>
+</edge>
+<edge source="BISC" target="COAX">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOA" target="BIOF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOA" target="BIOU">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOA" target="BIOD">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOA" target="BIO3">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOA" target="BIO1">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOD" target="BIOU">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOD" target="BIOB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIOU" target="BIOF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00310" target="path:map00960">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BIRA" target="BTD">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIRA" target="HLCS">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIRA" target="path:ko00061">
+  <data key="d5">a</data>
+</edge>
+<edge source="COAX" target="BTD">
+  <data key="d5">a</data>
+</edge>
+<edge source="COAX" target="HLCS">
+  <data key="d5">a</data>
+</edge>
+<edge source="COAX" target="path:ko00061">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIO3" target="BIOB">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIO3" target="BIOF">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIO3" target="BIOU">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIO3" target="BIOD">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIO3" target="BIO1">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIO1" target="BIOB">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIO1" target="BIOF">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIO1" target="BIOU">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIO1" target="BIOD">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIO1" target="BIO3">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOH" target="BIOF">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOG" target="BIOF">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOK" target="BIOF">
+  <data key="d5">a</data>
+</edge>
+<edge source="BIOJ" target="BIOF">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

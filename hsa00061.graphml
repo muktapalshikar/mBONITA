@@ -1,0 +1,3238 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="FABK">
+  <data key="d0">FABK</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FABL">
+  <data key="d0">FABL</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C04088">
+  <data key="d0">cpd:C04088</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16221">
+  <data key="d0">cpd:C16221</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16220">
+  <data key="d0">cpd:C16220</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16219">
+  <data key="d0">cpd:C16219</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00712">
+  <data key="d0">cpd:C00712</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01530">
+  <data key="d0">cpd:C01530</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C08362">
+  <data key="d0">cpd:C08362</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01203">
+  <data key="d0">cpd:C01203</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16520">
+  <data key="d0">cpd:C16520</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06424">
+  <data key="d0">cpd:C06424</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02679">
+  <data key="d0">cpd:C02679</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01571">
+  <data key="d0">cpd:C01571</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06423">
+  <data key="d0">cpd:C06423</data>
+  <data key="d1">compound</data>
+</node>
+<node id="FASN">
+  <data key="d0">FASN</data>
+  <data key="d1">gene</data>
+</node>
+<node id="FATA">
+  <data key="d0">FATA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FABI">
+  <data key="d0">FABI</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FABZ">
+  <data key="d0">FABZ</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FABF">
+  <data key="d0">FABF</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FABG">
+  <data key="d0">FABG</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FATB">
+  <data key="d0">FATB</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko00071">
+  <data key="d0">path:ko00071</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00061">
+  <data key="d0">path:ko00061</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00620">
+  <data key="d0">path:ko00620</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00020">
+  <data key="d0">path:ko00020</data>
+  <data key="d1">path</data>
+</node>
+<node id="FAS1">
+  <data key="d0">FAS1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FAS2">
+  <data key="d0">FAS2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FABB">
+  <data key="d0">FABB</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FABA">
+  <data key="d0">FABA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FABD">
+  <data key="d0">FABD</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FAS">
+  <data key="d0">FAS</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko00410">
+  <data key="d0">path:ko00410</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C00024">
+  <data key="d0">cpd:C00024</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00083">
+  <data key="d0">cpd:C00083</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01209">
+  <data key="d0">cpd:C01209</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C03939">
+  <data key="d0">cpd:C03939</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05744">
+  <data key="d0">cpd:C05744</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04618">
+  <data key="d0">cpd:C04618</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04246">
+  <data key="d0">cpd:C04246</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05745">
+  <data key="d0">cpd:C05745</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00229">
+  <data key="d0">cpd:C00229</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05746">
+  <data key="d0">cpd:C05746</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05747">
+  <data key="d0">cpd:C05747</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05748">
+  <data key="d0">cpd:C05748</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05749">
+  <data key="d0">cpd:C05749</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05752">
+  <data key="d0">cpd:C05752</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05751">
+  <data key="d0">cpd:C05751</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04620">
+  <data key="d0">cpd:C04620</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05750">
+  <data key="d0">cpd:C05750</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05753">
+  <data key="d0">cpd:C05753</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04619">
+  <data key="d0">cpd:C04619</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05754">
+  <data key="d0">cpd:C05754</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05755">
+  <data key="d0">cpd:C05755</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05223">
+  <data key="d0">cpd:C05223</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05758">
+  <data key="d0">cpd:C05758</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05757">
+  <data key="d0">cpd:C05757</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05756">
+  <data key="d0">cpd:C05756</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05759">
+  <data key="d0">cpd:C05759</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04688">
+  <data key="d0">cpd:C04688</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05760">
+  <data key="d0">cpd:C05760</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05761">
+  <data key="d0">cpd:C05761</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00249">
+  <data key="d0">cpd:C00249</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05764">
+  <data key="d0">cpd:C05764</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05763">
+  <data key="d0">cpd:C05763</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04633">
+  <data key="d0">cpd:C04633</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05762">
+  <data key="d0">cpd:C05762</data>
+  <data key="d1">compound</data>
+</node>
+<node id="FABH">
+  <data key="d0">FABH</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FABV">
+  <data key="d0">FABV</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko00785">
+  <data key="d0">path:ko00785</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C04180">
+  <data key="d0">cpd:C04180</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C20794">
+  <data key="d0">cpd:C20794</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00154">
+  <data key="d0">cpd:C00154</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko00564">
+  <data key="d0">path:ko00564</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00561">
+  <data key="d0">path:ko00561</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00062">
+  <data key="d0">path:ko00062</data>
+  <data key="d1">path</data>
+</node>
+<node id="FABY">
+  <data key="d0">FABY</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C00383">
+  <data key="d0">cpd:C00383</data>
+  <data key="d1">compound</data>
+</node>
+<node id="ACSF3">
+  <data key="d0">ACSF3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MECR">
+  <data key="d0">MECR</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CBR4">
+  <data key="d0">CBR4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="HSD17B8">
+  <data key="d0">HSD17B8</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C05744 cpd:C00685">
+  <data key="d0">cpd:C05744 cpd:C00685</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01271">
+  <data key="d0">cpd:C01271</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00693">
+  <data key="d0">cpd:C00693</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00173">
+  <data key="d0">cpd:C00173</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00173 cpd:C20683">
+  <data key="d0">cpd:C00173 cpd:C20683</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00638">
+  <data key="d0">cpd:C00638</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02843">
+  <data key="d0">cpd:C02843</data>
+  <data key="d1">compound</data>
+</node>
+<node id="ACSL">
+  <data key="d0">ACSL</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ACACA">
+  <data key="d0">ACACA</data>
+  <data key="d1">gene</data>
+</node>
+<node id="OLAH">
+  <data key="d0">OLAH</data>
+  <data key="d1">gene</data>
+</node>
+<node id="OXSM">
+  <data key="d0">OXSM</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa00071">
+  <data key="d0">path:hsa00071</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00061">
+  <data key="d0">path:hsa00061</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00620">
+  <data key="d0">path:hsa00620</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00020">
+  <data key="d0">path:hsa00020</data>
+  <data key="d1">path</data>
+</node>
+<node id="MCAT">
+  <data key="d0">MCAT</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa00410">
+  <data key="d0">path:hsa00410</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00785">
+  <data key="d0">path:hsa00785</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00564">
+  <data key="d0">path:hsa00564</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00561">
+  <data key="d0">path:hsa00561</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00062">
+  <data key="d0">path:hsa00062</data>
+  <data key="d1">path</data>
+</node>
+<node id="HTD2">
+  <data key="d0">HTD2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MCH"/>
+<node id="FAB2"/>
+<node id="DESA2"/>
+<node id="ACACB"/>
+<node id="ACCA"/>
+<node id="ACCB"/>
+<node id="ACCC"/>
+<node id="ACCD"/>
+<node id="BCCA"/>
+<node id="ACCD6"/>
+<node id="LPXC"/>
+<node id="FABM"/>
+<node id="ACSBG"/>
+<node id="ACSL1"/>
+<node id="ACSL3"/>
+<node id="ACSL4"/>
+<node id="ACSBG1"/>
+<node id="ACSL6"/>
+<node id="ACSL5"/>
+<node id="ACSBG2"/>
+<edge source="FABK" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABK" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABK" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABK" target="FATA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABK" target="FABA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABK" target="FAB2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABK" target="DESA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABK" target="FABZ">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABK" target="LPXC">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABK" target="FATB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABL" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABL" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABL" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABL" target="FATB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABL" target="FATA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FASN" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="FABG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="FABA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="FABI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="FABD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="FABL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="path:ko00020">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="path:ko00620">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="path:ko00410">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="path:ko00071">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="CBR4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="HSD17B8">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="MCAT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="OXSM">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="path:hsa00020">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="path:hsa00620">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="path:hsa00410">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="path:hsa00071">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="HTD2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FASN" target="ACACA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FASN" target="ACACB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FASN" target="ACCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FASN" target="ACCB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FASN" target="ACCC">
+  <data key="d5">a</data>
+</edge>
+<edge source="FASN" target="ACCD">
+  <data key="d5">a</data>
+</edge>
+<edge source="FASN" target="BCCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FASN" target="ACCD6">
+  <data key="d5">a</data>
+</edge>
+<edge source="FATA" target="FAB2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FATA" target="DESA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FATA" target="ACSL">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABI" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABI" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABI" target="FABA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABI" target="FABZ">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABI" target="FATA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABI" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABI" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABI" target="FATB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABZ" target="FABG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABZ" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABZ" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABZ" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABZ" target="FAS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABZ" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABZ" target="FABI">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABZ" target="FABL">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABZ" target="FABV">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABZ" target="MECR">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABF" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FABI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FABD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FABG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FATB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FABL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="CBR4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="HSD17B8">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABF" target="FAB2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABF" target="DESA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABG" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABG" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABG" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABG" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABG" target="HTD2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABG" target="FABA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABG" target="FABZ">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABG" target="LPXC">
+  <data key="d5">a</data>
+</edge>
+<edge source="FATB" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FATB" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FATB" target="FABI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FATB" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FATB" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FATB" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FATB" target="FABL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FATB" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FATB" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FATB" target="path:ko00071">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FATB" target="ACSL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FATB" target="MECR">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00620" target="path:ko00410">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FABG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FABA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FABL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="path:ko00020">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="path:ko00620">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="path:ko00410">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FABV">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FATB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS1" target="FAB2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS1" target="DESA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS1" target="ACACA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS1" target="ACACB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS1" target="ACCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS1" target="ACCB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS1" target="ACCC">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS1" target="ACCD">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS1" target="BCCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS1" target="ACCD6">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS2" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS2" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS2" target="FABI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS2" target="FABD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS2" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS2" target="FABL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS2" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS2" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS2" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS2" target="CBR4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS2" target="HSD17B8">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS2" target="HTD2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABB" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="FABI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="FABD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="FABL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="FABG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="CBR4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABB" target="HSD17B8">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABA" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABA" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABA" target="FABG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABA" target="FABL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABA" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABA" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABA" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABA" target="FABI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABA" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABA" target="FABV">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABA" target="FABZ">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABA" target="LPXC">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABD" target="path:ko00620">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABD" target="path:ko00410">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABD" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABD" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABD" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABD" target="ACACA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABD" target="ACACB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABD" target="ACCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABD" target="ACCB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABD" target="ACCC">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABD" target="ACCD">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABD" target="BCCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABD" target="ACCD6">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABD" target="FABH">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABD" target="FABY">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="path:ko00020">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FABG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FABA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FABL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FABI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FATB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FABZ">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FATA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="path:ko00620">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="path:ko00410">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="FABV">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="CBR4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="HSD17B8">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FAS" target="MCH">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="FAB2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="DESA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="ACACA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="ACACB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="ACCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="ACCB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="ACCC">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="ACCD">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="BCCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="ACCD6">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAS" target="HTD2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABH" target="path:ko00020">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABH" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABH" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABH" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABH" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABH" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABH" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABH" target="FABG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABH" target="FABD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABH" target="ACACA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABH" target="ACACB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABH" target="ACCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABH" target="ACCB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABH" target="ACCC">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABH" target="ACCD">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABH" target="BCCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABH" target="ACCD6">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABV" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABV" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABV" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABV" target="FABA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABV" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABV" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABV" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABV" target="FATB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABV" target="MCH">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABV" target="FAB2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABV" target="DESA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABV" target="FABZ">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABV" target="LPXC">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABV" target="FATA">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00785" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00785" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00785" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00785" target="FABI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00785" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00785" target="FABL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00785" target="FABV">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00785" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00785" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00785" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00785" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00785" target="MCH">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00785" target="FATB">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00564" target="path:ko00561">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00564" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00564" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00564" target="FATB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00564" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00564" target="FABI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00564" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00564" target="FABL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00564" target="FABV">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00564" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00564" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00564" target="FAB2">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00564" target="DESA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00564" target="ACSL">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00564" target="ACSBG">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00561" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00561" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00561" target="FATB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00561" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00561" target="FABI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00561" target="FABK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00561" target="FABL">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00561" target="FABV">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00561" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00561" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00561" target="FAB2">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00561" target="DESA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00561" target="ACSL">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00561" target="ACSBG">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00062" target="path:ko00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00062" target="path:ko00561">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00062" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00062" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00062" target="ACSL">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00062" target="ACSBG">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABY" target="path:ko00020">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABY" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABY" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABY" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABY" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABY" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABY" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABY" target="FABG">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABY" target="FABD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FABY" target="ACACA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABY" target="ACACB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABY" target="ACCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABY" target="ACCB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABY" target="ACCC">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABY" target="ACCD">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABY" target="BCCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABY" target="ACCD6">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSF3" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACSF3" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACSF3" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACSF3" target="FABD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACSF3" target="path:ko00620">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACSF3" target="path:ko00410">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACSF3" target="MCAT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACSF3" target="path:hsa00620">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACSF3" target="path:hsa00410">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACSF3" target="ACACA">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSF3" target="ACACB">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSF3" target="ACCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSF3" target="ACCB">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSF3" target="ACCC">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSF3" target="ACCD">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSF3" target="BCCA">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSF3" target="ACCD6">
+  <data key="d5">a</data>
+</edge>
+<edge source="MECR" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MECR" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MECR" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MECR" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MECR" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MECR" target="FATB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MECR" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MECR" target="OXSM">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MECR" target="OLAH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MECR" target="MCH">
+  <data key="d5">a</data>
+</edge>
+<edge source="MECR" target="FAB2">
+  <data key="d5">a</data>
+</edge>
+<edge source="MECR" target="DESA2">
+  <data key="d5">a</data>
+</edge>
+<edge source="MECR" target="FABA">
+  <data key="d5">a</data>
+</edge>
+<edge source="MECR" target="FABM">
+  <data key="d5">a</data>
+</edge>
+<edge source="CBR4" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CBR4" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CBR4" target="FABY">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CBR4" target="FABH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CBR4" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CBR4" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CBR4" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CBR4" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CBR4" target="FABA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CBR4" target="OXSM">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CBR4" target="HTD2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CBR4" target="FABZ">
+  <data key="d5">a</data>
+</edge>
+<edge source="CBR4" target="LPXC">
+  <data key="d5">a</data>
+</edge>
+<edge source="HSD17B8" target="FABF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSD17B8" target="FAS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSD17B8" target="FABY">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSD17B8" target="FABH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSD17B8" target="FABB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSD17B8" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSD17B8" target="FAS2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSD17B8" target="FAS1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSD17B8" target="FABA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSD17B8" target="OXSM">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSD17B8" target="HTD2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HSD17B8" target="FABZ">
+  <data key="d5">a</data>
+</edge>
+<edge source="HSD17B8" target="LPXC">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL" target="FATB">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL" target="path:ko00071">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL" target="FAS">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL" target="FAS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACA" target="ACSF3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACACA" target="FABD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACACA" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACACA" target="MCAT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ACACA" target="path:ko00020">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACA" target="path:ko00620">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACA" target="path:ko00410">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACA" target="FAS">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACA" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACA" target="FAS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACA" target="FABH">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACA" target="FABY">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACA" target="path:hsa00020">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACA" target="path:hsa00620">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACA" target="path:hsa00410">
+  <data key="d5">a</data>
+</edge>
+<edge source="OLAH" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="OLAH" target="OXSM">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="OLAH" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="OXSM" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="OXSM" target="MCAT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="OXSM" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="OXSM" target="CBR4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="OXSM" target="HSD17B8">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00620" target="path:hsa00410">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MCAT" target="path:hsa00620">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MCAT" target="path:hsa00410">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MCAT" target="OXSM">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MCAT" target="ACACA">
+  <data key="d5">a</data>
+</edge>
+<edge source="MCAT" target="ACACB">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00785" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00785" target="OLAH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00785" target="OXSM">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00785" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00564" target="path:hsa00561">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00564" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00564" target="OXSM">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00564" target="ACSL1">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00564" target="ACSL3">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00564" target="ACSL4">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00564" target="ACSBG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00564" target="ACSL6">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00564" target="ACSL5">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00564" target="ACSBG2">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00561" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00561" target="OXSM">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00561" target="ACSL1">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00561" target="ACSL3">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00561" target="ACSL4">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00561" target="ACSBG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00561" target="ACSL6">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00561" target="ACSL5">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00561" target="ACSBG2">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00062" target="path:hsa00564">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00062" target="path:hsa00561">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:hsa00062" target="ACSL1">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00062" target="ACSL3">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00062" target="ACSL4">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00062" target="ACSBG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00062" target="ACSL6">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00062" target="ACSL5">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:hsa00062" target="ACSBG2">
+  <data key="d5">a</data>
+</edge>
+<edge source="HTD2" target="FASN">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HTD2" target="MECR">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HTD2" target="FAS">
+  <data key="d5">a</data>
+</edge>
+<edge source="HTD2" target="FAS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="HTD2" target="FABG">
+  <data key="d5">a</data>
+</edge>
+<edge source="HTD2" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="HTD2" target="FABV">
+  <data key="d5">a</data>
+</edge>
+<edge source="HTD2" target="FABL">
+  <data key="d5">a</data>
+</edge>
+<edge source="HTD2" target="FABK">
+  <data key="d5">a</data>
+</edge>
+<edge source="HTD2" target="FABI">
+  <data key="d5">a</data>
+</edge>
+<edge source="HTD2" target="FABA">
+  <data key="d5">a</data>
+</edge>
+<edge source="HTD2" target="FABM">
+  <data key="d5">a</data>
+</edge>
+<edge source="MCH" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="MCH" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="MCH" target="FABI">
+  <data key="d5">a</data>
+</edge>
+<edge source="MCH" target="FABB">
+  <data key="d5">a</data>
+</edge>
+<edge source="MCH" target="FAS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="MCH" target="FABF">
+  <data key="d5">a</data>
+</edge>
+<edge source="MCH" target="FABL">
+  <data key="d5">a</data>
+</edge>
+<edge source="MCH" target="FABK">
+  <data key="d5">a</data>
+</edge>
+<edge source="MCH" target="FAS">
+  <data key="d5">a</data>
+</edge>
+<edge source="MCH" target="MECR">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAB2" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAB2" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAB2" target="FABI">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAB2" target="FATB">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAB2" target="FABL">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAB2" target="FABK">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAB2" target="FATA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAB2" target="FAS">
+  <data key="d5">a</data>
+</edge>
+<edge source="FAB2" target="FABB">
+  <data key="d5">a</data>
+</edge>
+<edge source="DESA2" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="DESA2" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="DESA2" target="FABI">
+  <data key="d5">a</data>
+</edge>
+<edge source="DESA2" target="FATB">
+  <data key="d5">a</data>
+</edge>
+<edge source="DESA2" target="FABL">
+  <data key="d5">a</data>
+</edge>
+<edge source="DESA2" target="FABK">
+  <data key="d5">a</data>
+</edge>
+<edge source="DESA2" target="FATA">
+  <data key="d5">a</data>
+</edge>
+<edge source="DESA2" target="FAS">
+  <data key="d5">a</data>
+</edge>
+<edge source="DESA2" target="FABB">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACB" target="path:ko00020">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACB" target="path:ko00620">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACB" target="path:ko00410">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACB" target="path:hsa00020">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACB" target="path:hsa00620">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACACB" target="path:hsa00410">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCA" target="path:ko00020">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCA" target="path:ko00620">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCA" target="path:ko00410">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCA" target="FABD">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCA" target="FABH">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCA" target="FABY">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCB" target="path:ko00020">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCB" target="path:ko00620">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCB" target="path:ko00410">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCB" target="FABD">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCB" target="FABH">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCB" target="FABY">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCC" target="path:ko00020">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCC" target="path:ko00620">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCC" target="path:ko00410">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCC" target="FABD">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCC" target="FABH">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCC" target="FABY">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD" target="path:ko00020">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD" target="path:ko00620">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD" target="path:ko00410">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD" target="FABD">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD" target="FABH">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD" target="FABY">
+  <data key="d5">a</data>
+</edge>
+<edge source="BCCA" target="path:ko00020">
+  <data key="d5">a</data>
+</edge>
+<edge source="BCCA" target="path:ko00620">
+  <data key="d5">a</data>
+</edge>
+<edge source="BCCA" target="path:ko00410">
+  <data key="d5">a</data>
+</edge>
+<edge source="BCCA" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="BCCA" target="FAS">
+  <data key="d5">a</data>
+</edge>
+<edge source="BCCA" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="BCCA" target="FAS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD6" target="path:ko00020">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD6" target="path:ko00620">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD6" target="path:ko00410">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD6" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD6" target="FAS">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD6" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACCD6" target="FAS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LPXC" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="LPXC" target="FAS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="LPXC" target="FAS">
+  <data key="d5">a</data>
+</edge>
+<edge source="LPXC" target="FABG">
+  <data key="d5">a</data>
+</edge>
+<edge source="LPXC" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LPXC" target="FABI">
+  <data key="d5">a</data>
+</edge>
+<edge source="LPXC" target="FABK">
+  <data key="d5">a</data>
+</edge>
+<edge source="LPXC" target="FABL">
+  <data key="d5">a</data>
+</edge>
+<edge source="LPXC" target="FABV">
+  <data key="d5">a</data>
+</edge>
+<edge source="LPXC" target="MECR">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABM" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABM" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABM" target="FAS">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABM" target="FABA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABM" target="FABI">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABM" target="FABK">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABM" target="FABL">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABM" target="FABV">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABM" target="FABZ">
+  <data key="d5">a</data>
+</edge>
+<edge source="FABM" target="LPXC">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSBG" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSBG" target="FATB">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSBG" target="path:ko00071">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSBG" target="FAS1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSBG" target="FAS">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSBG" target="FAS2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL1" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL1" target="path:hsa00071">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL3" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL3" target="path:hsa00071">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL4" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL4" target="path:hsa00071">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSBG1" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSBG1" target="path:hsa00071">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL6" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL6" target="path:hsa00071">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL5" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSL5" target="path:hsa00071">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSBG2" target="FASN">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACSBG2" target="path:hsa00071">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

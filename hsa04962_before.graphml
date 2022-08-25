@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="path:ko04962">
+  <data key="d0">path:ko04962</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04530">
+  <data key="d0">path:ko04530</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C00575">
+  <data key="d0">cpd:C00575</data>
+  <data key="d1">compound</data>
+</node>
+<node id="AVP">
+  <data key="d0">AVP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="AVPR2">
+  <data key="d0">AVPR2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GNAS">
+  <data key="d0">GNAS</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PKA">
+  <data key="d0">PKA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="AQP2">
+  <data key="d0">AQP2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00001">
+  <data key="d0">cpd:C00001</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko04144">
+  <data key="d0">path:ko04144</data>
+  <data key="d1">path</data>
+</node>
+<node id="AQP4">
+  <data key="d0">AQP4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="AQP3">
+  <data key="d0">AQP3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ARHGDI">
+  <data key="d0">ARHGDI</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="STX4">
+  <data key="d0">STX4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="VAMP2">
+  <data key="d0">VAMP2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="NSF">
+  <data key="d0">NSF</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04962">
+  <data key="d0">path:hsa04962</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04530">
+  <data key="d0">path:hsa04530</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04144">
+  <data key="d0">path:hsa04144</data>
+  <data key="d1">path</data>
+</node>
+<node id="ADCY6"/>
+<node id="ADCY3"/>
+<node id="ADCY9"/>
+<node id="CREB1"/>
+<node id="CREB3"/>
+<node id="CREB5"/>
+<node id="PRKACA"/>
+<node id="PRKACB"/>
+<node id="PRKACG"/>
+<node id="CREB3L4"/>
+<node id="CREB3L2"/>
+<node id="CREB3L3"/>
+<node id="CREB3L1"/>
+<node id="ARHGDIA"/>
+<node id="ARHGDIB"/>
+<node id="ARHGDIG"/>
+<edge source="cpd:C00575" target="PKA">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C00575" target="PRKACA">
+  <data key="d5">a</data>
+</edge>
+<edge source="cpd:C00575" target="PRKACB">
+  <data key="d5">a</data>
+</edge>
+<edge source="cpd:C00575" target="PRKACG">
+  <data key="d5">a</data>
+</edge>
+<edge source="AVP" target="AVPR2">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="AVPR2" target="GNAS">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GNAS" target="ADCY6">
+  <data key="d5">a</data>
+</edge>
+<edge source="GNAS" target="ADCY3">
+  <data key="d5">a</data>
+</edge>
+<edge source="GNAS" target="ADCY9">
+  <data key="d5">a</data>
+</edge>
+<edge source="PKA" target="ARHGDI">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PKA" target="AQP2">
+  <data key="d2">red</data>
+  <data key="d3">activation/phosphorylation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PKA" target="CREB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PKA" target="CREB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="PKA" target="CREB5">
+  <data key="d5">a</data>
+</edge>
+<edge source="VAMP2" target="STX4">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ADCY6" target="cpd:C00575">
+  <data key="d5">a</data>
+</edge>
+<edge source="ADCY3" target="cpd:C00575">
+  <data key="d5">a</data>
+</edge>
+<edge source="ADCY9" target="cpd:C00575">
+  <data key="d5">a</data>
+</edge>
+<edge source="CREB1" target="AQP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CREB3" target="AQP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CREB5" target="AQP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACA" target="AQP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACA" target="CREB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACA" target="CREB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACA" target="CREB3L4">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACA" target="CREB3L2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACA" target="CREB3L3">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACA" target="CREB3L1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACA" target="CREB5">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACA" target="ARHGDIA">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACA" target="ARHGDIB">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACA" target="ARHGDIG">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACB" target="AQP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACB" target="CREB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACB" target="CREB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACB" target="CREB3L4">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACB" target="CREB3L2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACB" target="CREB3L3">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACB" target="CREB3L1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACB" target="CREB5">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACB" target="ARHGDIA">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACB" target="ARHGDIB">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACB" target="ARHGDIG">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACG" target="AQP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACG" target="CREB3">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACG" target="CREB1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACG" target="CREB3L4">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACG" target="CREB3L2">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACG" target="CREB3L3">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACG" target="CREB3L1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACG" target="CREB5">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACG" target="ARHGDIA">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACG" target="ARHGDIB">
+  <data key="d5">a</data>
+</edge>
+<edge source="PRKACG" target="ARHGDIG">
+  <data key="d5">a</data>
+</edge>
+<edge source="CREB3L4" target="AQP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CREB3L2" target="AQP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CREB3L3" target="AQP2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CREB3L1" target="AQP2">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

@@ -1,0 +1,562 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="cpd:C00385">
+  <data key="d0">cpd:C00385</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C13747">
+  <data key="d0">cpd:C13747</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16362">
+  <data key="d0">cpd:C16362</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16363">
+  <data key="d0">cpd:C16363</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00048">
+  <data key="d0">cpd:C00048</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16364">
+  <data key="d0">cpd:C16364</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16359">
+  <data key="d0">cpd:C16359</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16357">
+  <data key="d0">cpd:C16357</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16355">
+  <data key="d0">cpd:C16355</data>
+  <data key="d1">compound</data>
+</node>
+<node id="CYP1A2">
+  <data key="d0">CYP1A2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="XDH">
+  <data key="d0">XDH</data>
+  <data key="d1">gene</data>
+</node>
+<node id="NDMA">
+  <data key="d0">NDMA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="NDMB">
+  <data key="d0">NDMB</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="MXMT">
+  <data key="d0">MXMT</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="DXMT">
+  <data key="d0">DXMT</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="NAT">
+  <data key="d0">NAT</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="XMT">
+  <data key="d0">XMT</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="NDMC">
+  <data key="d0">NDMC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C07481">
+  <data key="d0">cpd:C07481</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko00230">
+  <data key="d0">path:ko00230</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00232">
+  <data key="d0">path:ko00232</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00630">
+  <data key="d0">path:ko00630</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C16358">
+  <data key="d0">cpd:C16358</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16356">
+  <data key="d0">cpd:C16356</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16366">
+  <data key="d0">cpd:C16366</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C07480">
+  <data key="d0">cpd:C07480</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C07130">
+  <data key="d0">cpd:C07130</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16352">
+  <data key="d0">cpd:C16352</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01762">
+  <data key="d0">cpd:C01762</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16365">
+  <data key="d0">cpd:C16365</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16353">
+  <data key="d0">cpd:C16353</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16360">
+  <data key="d0">cpd:C16360</data>
+  <data key="d1">compound</data>
+</node>
+<node id="CYP2A6">
+  <data key="d0">CYP2A6</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="TMUM">
+  <data key="d0">TMUM</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C21144">
+  <data key="d0">cpd:C21144</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C16361">
+  <data key="d0">cpd:C16361</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:hsa00230">
+  <data key="d0">path:hsa00230</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00232">
+  <data key="d0">path:hsa00232</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00630">
+  <data key="d0">path:hsa00630</data>
+  <data key="d1">path</data>
+</node>
+<node id="UAZ"/>
+<node id="PUCL"/>
+<node id="CDHA"/>
+<node id="CDHB"/>
+<node id="CDHC"/>
+<node id="NAT2"/>
+<node id="NAT1"/>
+<node id="CYP2A7"/>
+<edge source="CYP1A2" target="NDMA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYP1A2" target="NAT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYP1A2" target="NDMB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYP1A2" target="XDH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYP1A2" target="NAT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CYP1A2" target="NAT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="XDH" target="NDMA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="XDH" target="NDMC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="XDH" target="NDMB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="XDH" target="DXMT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="XDH" target="MXMT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMA" target="NDMB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMA" target="CYP1A2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMA" target="XDH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMA" target="MXMT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMA" target="DXMT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMA" target="NDMC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMA" target="path:ko00230">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMB" target="NDMA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMB" target="XDH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMB" target="NDMC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMB" target="DXMT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMB" target="path:ko00230">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MXMT" target="NDMA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MXMT" target="XDH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MXMT" target="NDMC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MXMT" target="DXMT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DXMT" target="NDMA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DXMT" target="XDH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DXMT" target="NDMC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DXMT" target="CYP1A2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DXMT" target="NDMB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NAT" target="NDMA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NAT" target="NDMB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NAT" target="CYP1A2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NAT" target="XDH">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="XMT" target="path:ko00230">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMC" target="NDMA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="NDMC" target="path:ko00230">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYP2A6" target="NAT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYP2A6" target="NDMB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYP2A6" target="CYP1A2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYP2A6" target="NDMA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYP2A6" target="NAT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CYP2A6" target="NAT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="UAZ" target="TMUM">
+  <data key="d5">a</data>
+</edge>
+<edge source="UAZ" target="CDHA">
+  <data key="d5">a</data>
+</edge>
+<edge source="UAZ" target="CDHB">
+  <data key="d5">a</data>
+</edge>
+<edge source="UAZ" target="CDHC">
+  <data key="d5">a</data>
+</edge>
+<edge source="PUCL" target="TMUM">
+  <data key="d5">a</data>
+</edge>
+<edge source="PUCL" target="CDHA">
+  <data key="d5">a</data>
+</edge>
+<edge source="PUCL" target="CDHB">
+  <data key="d5">a</data>
+</edge>
+<edge source="PUCL" target="CDHC">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHA" target="CYP1A2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHA" target="NDMB">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHA" target="NDMA">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHA" target="DXMT">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHA" target="TMUM">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHB" target="CYP1A2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHB" target="NDMB">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHB" target="NDMA">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHB" target="DXMT">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHB" target="TMUM">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHC" target="CYP1A2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHC" target="NDMB">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHC" target="NDMA">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHC" target="DXMT">
+  <data key="d5">a</data>
+</edge>
+<edge source="CDHC" target="TMUM">
+  <data key="d5">a</data>
+</edge>
+<edge source="NAT2" target="CYP1A2">
+  <data key="d5">a</data>
+</edge>
+<edge source="NAT2" target="XDH">
+  <data key="d5">a</data>
+</edge>
+<edge source="NAT1" target="CYP1A2">
+  <data key="d5">a</data>
+</edge>
+<edge source="NAT1" target="XDH">
+  <data key="d5">a</data>
+</edge>
+<edge source="CYP2A7" target="CYP1A2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CYP2A7" target="NAT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CYP2A7" target="NAT1">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

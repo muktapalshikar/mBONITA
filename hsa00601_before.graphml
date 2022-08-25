@@ -1,0 +1,1466 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="FUT9">
+  <data key="d0">FUT9</data>
+  <data key="d1">gene</data>
+</node>
+<node id="FUT4">
+  <data key="d0">FUT4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="B4GALT4">
+  <data key="d0">B4GALT4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="B4GALT3">
+  <data key="d0">B4GALT3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="B4GALT2">
+  <data key="d0">B4GALT2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G00078">
+  <data key="d0">gl:G00078</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00057">
+  <data key="d0">gl:G00057</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00090">
+  <data key="d0">gl:G00090</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00091">
+  <data key="d0">gl:G00091</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00089">
+  <data key="d0">gl:G00089</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00088">
+  <data key="d0">gl:G00088</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00087">
+  <data key="d0">gl:G00087</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00086">
+  <data key="d0">gl:G00086</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00067">
+  <data key="d0">gl:G00067</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00085">
+  <data key="d0">gl:G00085</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00084">
+  <data key="d0">gl:G00084</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00069">
+  <data key="d0">gl:G00069</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00064">
+  <data key="d0">gl:G00064</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00062">
+  <data key="d0">gl:G00062</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00063">
+  <data key="d0">gl:G00063</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00066">
+  <data key="d0">gl:G00066</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00061">
+  <data key="d0">gl:G00061</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00060">
+  <data key="d0">gl:G00060</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00083">
+  <data key="d0">gl:G00083</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00080">
+  <data key="d0">gl:G00080</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00075">
+  <data key="d0">gl:G00075</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00074">
+  <data key="d0">gl:G00074</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00073">
+  <data key="d0">gl:G00073</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00072">
+  <data key="d0">gl:G00072</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00071">
+  <data key="d0">gl:G00071</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00082">
+  <data key="d0">gl:G00082</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00081">
+  <data key="d0">gl:G00081</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00079">
+  <data key="d0">gl:G00079</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00092">
+  <data key="d0">gl:G00092</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00077">
+  <data key="d0">gl:G00077</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00068">
+  <data key="d0">gl:G00068</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00076">
+  <data key="d0">gl:G00076</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00056">
+  <data key="d0">gl:G00056</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00055">
+  <data key="d0">gl:G00055</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00052">
+  <data key="d0">gl:G00052</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00051">
+  <data key="d0">gl:G00051</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00050">
+  <data key="d0">gl:G00050</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00036">
+  <data key="d0">gl:G00036</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00054">
+  <data key="d0">gl:G00054</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00059">
+  <data key="d0">gl:G00059</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00058">
+  <data key="d0">gl:G00058</data>
+  <data key="d1">compound</data>
+</node>
+<node id="ABO">
+  <data key="d0">ABO</data>
+  <data key="d1">gene</data>
+</node>
+<node id="FUT1_2">
+  <data key="d0">FUT1_2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ST3GAL6">
+  <data key="d0">ST3GAL6</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GCNT2">
+  <data key="d0">GCNT2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ST8SIA1">
+  <data key="d0">ST8SIA1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="B4GALT1">
+  <data key="d0">B4GALT1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="GGTA1">
+  <data key="d0">GGTA1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="B3GNT5">
+  <data key="d0">B3GNT5</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko00600">
+  <data key="d0">path:ko00600</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00601">
+  <data key="d0">path:ko00601</data>
+  <data key="d1">path</data>
+</node>
+<node id="gl:G00037">
+  <data key="d0">gl:G00037</data>
+  <data key="d1">compound</data>
+</node>
+<node id="B3GALT1">
+  <data key="d0">B3GALT1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="B3GALT2">
+  <data key="d0">B3GALT2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="B3GALT5">
+  <data key="d0">B3GALT5</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G00038">
+  <data key="d0">gl:G00038</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00039">
+  <data key="d0">gl:G00039</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00044">
+  <data key="d0">gl:G00044</data>
+  <data key="d1">compound</data>
+</node>
+<node id="FUT3">
+  <data key="d0">FUT3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G00040">
+  <data key="d0">gl:G00040</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00045">
+  <data key="d0">gl:G00045</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00042">
+  <data key="d0">gl:G00042</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00043">
+  <data key="d0">gl:G00043</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00046">
+  <data key="d0">gl:G00046</data>
+  <data key="d1">compound</data>
+</node>
+<node id="ST3GAL3">
+  <data key="d0">ST3GAL3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ST3GAL4">
+  <data key="d0">ST3GAL4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G00047">
+  <data key="d0">gl:G00047</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00048">
+  <data key="d0">gl:G00048</data>
+  <data key="d1">compound</data>
+</node>
+<node id="gl:G00428">
+  <data key="d0">gl:G00428</data>
+  <data key="d1">compound</data>
+</node>
+<node id="A4GALT">
+  <data key="d0">A4GALT</data>
+  <data key="d1">gene</data>
+</node>
+<node id="gl:G00889">
+  <data key="d0">gl:G00889</data>
+  <data key="d1">compound</data>
+</node>
+<node id="B3GALNT1">
+  <data key="d0">B3GALNT1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa00600">
+  <data key="d0">path:hsa00600</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00601">
+  <data key="d0">path:hsa00601</data>
+  <data key="d1">path</data>
+</node>
+<node id="FUT5"/>
+<node id="FUT6"/>
+<node id="FUT7"/>
+<node id="B3GNT2"/>
+<node id="B3GNT3"/>
+<node id="B3GNT4"/>
+<node id="FUT1"/>
+<node id="FUT2"/>
+<edge source="FUT9" target="B4GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT9" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT9" target="GGTA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT9" target="ABO">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT9" target="B4GALT3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT9" target="B4GALT4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT9" target="ST3GAL6">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT9" target="GCNT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT9" target="FUT4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT9" target="FUT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT9" target="FUT5">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT9" target="FUT6">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT9" target="B3GNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT9" target="B3GNT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT9" target="B3GNT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT9" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT9" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT4" target="B4GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT4" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT4" target="GGTA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT4" target="ST3GAL6">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT4" target="ABO">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT4" target="GCNT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT4" target="FUT9">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT4" target="FUT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT4" target="FUT5">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT4" target="FUT6">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT4" target="ST8SIA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT4" target="B3GNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT4" target="B3GNT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT4" target="B3GNT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT4" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT4" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT4" target="B3GNT5">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="FUT9">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="FUT4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="GGTA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="ST3GAL6">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="GCNT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="B3GALT5">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="B3GALT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="B3GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="A4GALT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="B3GALNT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT4" target="FUT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT4" target="FUT5">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT4" target="FUT6">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT4" target="B3GNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT4" target="B3GNT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT4" target="B3GNT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT4" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT4" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT3" target="B3GNT5">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="FUT9">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="FUT4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="GGTA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="ST3GAL6">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="GCNT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="B3GALT5">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="B3GALT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="B3GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="A4GALT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="B3GALNT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT3" target="FUT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT3" target="FUT5">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT3" target="FUT6">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT3" target="B3GNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT3" target="B3GNT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT3" target="B3GNT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT3" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT3" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT2" target="B3GNT5">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT2" target="FUT9">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT2" target="FUT4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT2" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT2" target="GGTA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT2" target="ST3GAL6">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT2" target="B3GALT5">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT2" target="B3GALT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT2" target="B3GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT2" target="A4GALT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT2" target="B3GALNT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT2" target="FUT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT2" target="FUT5">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT2" target="FUT6">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT2" target="B3GNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT2" target="B3GNT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT2" target="B3GNT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT2" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT2" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ABO" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ABO" target="FUT9">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ABO" target="FUT3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ABO" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ABO" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT1_2" target="B4GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT1_2" target="ABO">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT1_2" target="FUT9">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT1_2" target="FUT3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL6" target="B4GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL6" target="FUT9">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL6" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL6" target="GGTA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL6" target="GCNT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL6" target="B3GNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ST3GAL6" target="B3GNT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="ST3GAL6" target="B3GNT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="ST3GAL6" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ST3GAL6" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="GCNT2" target="B4GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GCNT2" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GCNT2" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="GCNT2" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ST8SIA1" target="ST3GAL6">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST8SIA1" target="FUT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="ST8SIA1" target="FUT5">
+  <data key="d5">a</data>
+</edge>
+<edge source="ST8SIA1" target="FUT6">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT1" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT1" target="B3GALT5">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT1" target="B3GALT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT1" target="B3GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT1" target="A4GALT">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT1" target="B3GALNT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B4GALT1" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B4GALT1" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="GGTA1" target="B4GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GGTA1" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="GGTA1" target="FUT3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GNT5" target="B4GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GNT5" target="path:ko00600">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GNT5" target="B3GALT5">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GNT5" target="B3GALT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GNT5" target="B3GALT1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GNT5" target="path:hsa00600">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT1" target="ST3GAL3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT1" target="ST3GAL4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT1" target="GGTA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT1" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT1" target="FUT3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT1" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GALT1" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GALT2" target="ST3GAL3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT2" target="ST3GAL4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT2" target="GGTA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT2" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT2" target="FUT3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT2" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GALT2" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GALT5" target="ST3GAL3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT5" target="ST3GAL4">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT5" target="GGTA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT5" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT5" target="FUT3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="B3GALT5" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GALT5" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="ABO">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT3" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FUT3" target="B4GALT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="GGTA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="ST3GAL6">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="B4GALT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="B4GALT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="GCNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="FUT9">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="FUT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="B3GNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="B3GNT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="B3GNT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT3" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ST3GAL3" target="GGTA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL3" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL3" target="FUT3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL3" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ST3GAL3" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ST3GAL4" target="GGTA1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL4" target="FUT1_2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL4" target="FUT3">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ST3GAL4" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ST3GAL4" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="B4GALT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="FUT1_2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="GGTA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="ST3GAL6">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="ABO">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="B4GALT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="B4GALT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="GCNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="FUT9">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="FUT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="B3GNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="B3GNT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="B3GNT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT5" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="B4GALT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="FUT1_2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="GGTA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="ST3GAL6">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="ABO">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="B4GALT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="B4GALT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="GCNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="FUT9">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="FUT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="B3GNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="B3GNT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="B3GNT4">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT6" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT7" target="ST8SIA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT7" target="ST3GAL6">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT2" target="B4GALT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT2" target="FUT1_2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT2" target="GCNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT2" target="GGTA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT2" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT2" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT3" target="B4GALT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT3" target="FUT1_2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT3" target="GCNT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT3" target="GGTA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT3" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT3" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT4" target="B4GALT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT4" target="FUT1_2">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT4" target="GGTA1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT4" target="FUT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="B3GNT4" target="FUT2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT1" target="B4GALT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT1" target="ABO">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT1" target="FUT9">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT1" target="FUT3">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT2" target="B4GALT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT2" target="ABO">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT2" target="FUT9">
+  <data key="d5">a</data>
+</edge>
+<edge source="FUT2" target="FUT3">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

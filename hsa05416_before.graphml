@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="SGCD">
+  <data key="d0">SGCD</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko05416">
+  <data key="d0">path:ko05416</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04260">
+  <data key="d0">path:ko04260</data>
+  <data key="d1">path</data>
+</node>
+<node id="SGCG">
+  <data key="d0">SGCG</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SGCB">
+  <data key="d0">SGCB</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SGCA">
+  <data key="d0">SGCA</data>
+  <data key="d1">gene</data>
+</node>
+<node id="DAG1">
+  <data key="d0">DAG1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="LAMA1_2">
+  <data key="d0">LAMA1_2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko04512">
+  <data key="d0">path:ko04512</data>
+  <data key="d1">path</data>
+</node>
+<node id="DMD">
+  <data key="d0">DMD</data>
+  <data key="d1">gene</data>
+</node>
+<node id="EIF4G">
+  <data key="d0">EIF4G</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CXADR">
+  <data key="d0">CXADR</data>
+  <data key="d1">gene</data>
+</node>
+<node id="DAF">
+  <data key="d0">DAF</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko03050">
+  <data key="d0">path:ko03050</data>
+  <data key="d1">path</data>
+</node>
+<node id="CCND1">
+  <data key="d0">CCND1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko04612">
+  <data key="d0">path:ko04612</data>
+  <data key="d1">path</data>
+</node>
+<node id="TNFRSF5">
+  <data key="d0">TNFRSF5</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="MHC2">
+  <data key="d0">MHC2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="TNFSF5">
+  <data key="d0">TNFSF5</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko04660">
+  <data key="d0">path:ko04660</data>
+  <data key="d1">path</data>
+</node>
+<node id="MHC1">
+  <data key="d0">MHC1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CD28">
+  <data key="d0">CD28</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CASP8">
+  <data key="d0">CASP8</data>
+  <data key="d1">gene</data>
+</node>
+<node id="BID">
+  <data key="d0">BID</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CYC">
+  <data key="d0">CYC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CASP9">
+  <data key="d0">CASP9</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CASP3">
+  <data key="d0">CASP3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PRF1">
+  <data key="d0">PRF1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="IGH">
+  <data key="d0">IGH</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ICAM1">
+  <data key="d0">ICAM1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko04210">
+  <data key="d0">path:ko04210</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04110">
+  <data key="d0">path:ko04110</data>
+  <data key="d1">path</data>
+</node>
+<node id="ACTB_G1">
+  <data key="d0">ACTB_G1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="MYH6_7">
+  <data key="d0">MYH6_7</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko05414">
+  <data key="d0">path:ko05414</data>
+  <data key="d1">path</data>
+</node>
+<node id="FYN">
+  <data key="d0">FYN</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CAV1">
+  <data key="d0">CAV1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa05416">
+  <data key="d0">path:hsa05416</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04260">
+  <data key="d0">path:hsa04260</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04512">
+  <data key="d0">path:hsa04512</data>
+  <data key="d1">path</data>
+</node>
+<node id="CD55">
+  <data key="d0">CD55</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa03050">
+  <data key="d0">path:hsa03050</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04612">
+  <data key="d0">path:hsa04612</data>
+  <data key="d1">path</data>
+</node>
+<node id="CD40">
+  <data key="d0">CD40</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CD40LG">
+  <data key="d0">CD40LG</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04660">
+  <data key="d0">path:hsa04660</data>
+  <data key="d1">path</data>
+</node>
+<node id="CYCS">
+  <data key="d0">CYCS</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04210">
+  <data key="d0">path:hsa04210</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04110">
+  <data key="d0">path:hsa04110</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa05414">
+  <data key="d0">path:hsa05414</data>
+  <data key="d1">path</data>
+</node>
+<node id="TRAV"/>
+<node id="TRBV"/>
+<node id="CD80"/>
+<node id="CD86"/>
+<node id="ITGAL"/>
+<node id="ITGB2"/>
+<node id="ABL1"/>
+<node id="ABL2"/>
+<node id="RAC1"/>
+<node id="RAC2"/>
+<node id="RAC3"/>
+<node id="LAMA1"/>
+<node id="LAMA2"/>
+<node id="ACTB"/>
+<node id="ACTG1"/>
+<edge source="DAG1" target="DMD">
+  <data key="d2">red</data>
+  <data key="d3">binding/association/missing interaction</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="LAMA1_2" target="DAG1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DMD" target="ACTB_G1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association/missing interaction</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DMD" target="ACTB">
+  <data key="d5">a</data>
+</edge>
+<edge source="DMD" target="ACTG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="DAF" target="FYN">
+  <data key="d2">red</data>
+  <data key="d3">activation/indirect effect</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="DAF" target="ABL1">
+  <data key="d5">a</data>
+</edge>
+<edge source="DAF" target="ABL2">
+  <data key="d5">a</data>
+</edge>
+<edge source="MHC2" target="TRAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="MHC2" target="TRBV">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNFSF5" target="TNFRSF5">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MHC1" target="TRAV">
+  <data key="d5">a</data>
+</edge>
+<edge source="MHC1" target="TRBV">
+  <data key="d5">a</data>
+</edge>
+<edge source="CASP8" target="BID">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BID" target="CYC">
+  <data key="d2">red</data>
+  <data key="d3">activation/indirect effect</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="BID" target="CYCS">
+  <data key="d2">red</data>
+  <data key="d3">activation/indirect effect</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYC" target="CASP9">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CASP9" target="CASP3">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ICAM1" target="ITGAL">
+  <data key="d5">a</data>
+</edge>
+<edge source="ICAM1" target="ITGB2">
+  <data key="d5">a</data>
+</edge>
+<edge source="FYN" target="CAV1">
+  <data key="d2">red</data>
+  <data key="d3">activation/phosphorylation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CD55" target="FYN">
+  <data key="d2">red</data>
+  <data key="d3">activation/indirect effect</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CD55" target="ABL1">
+  <data key="d5">a</data>
+</edge>
+<edge source="CD55" target="ABL2">
+  <data key="d5">a</data>
+</edge>
+<edge source="CD40LG" target="CD40">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CYCS" target="CASP9">
+  <data key="d2">red</data>
+  <data key="d3">activation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="CD80" target="CD28">
+  <data key="d5">a</data>
+</edge>
+<edge source="CD86" target="CD28">
+  <data key="d5">a</data>
+</edge>
+<edge source="ABL1" target="RAC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ABL1" target="RAC2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ABL1" target="RAC3">
+  <data key="d5">a</data>
+</edge>
+<edge source="ABL2" target="RAC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="ABL2" target="RAC2">
+  <data key="d5">a</data>
+</edge>
+<edge source="ABL2" target="RAC3">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA1" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+<edge source="LAMA2" target="DAG1">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

@@ -1,0 +1,902 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="path:ko00440">
+  <data key="d0">path:ko00440</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00010">
+  <data key="d0">path:ko00010</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C00074">
+  <data key="d0">cpd:C00074</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02798">
+  <data key="d0">cpd:C02798</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05672">
+  <data key="d0">cpd:C05672</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C17942">
+  <data key="d0">cpd:C17942</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C03167">
+  <data key="d0">cpd:C03167</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C03557">
+  <data key="d0">cpd:C03557</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05682">
+  <data key="d0">cpd:C05682</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00033">
+  <data key="d0">cpd:C00033</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C17940 cpd:C17944 cpd:C17960 cpd:C17961">
+  <data key="d0">cpd:C17940 cpd:C17944 cpd:C17960 cpd:C17961</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06455">
+  <data key="d0">cpd:C06455</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C17943">
+  <data key="d0">cpd:C17943</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05679">
+  <data key="d0">cpd:C05679</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05683">
+  <data key="d0">cpd:C05683</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05678">
+  <data key="d0">cpd:C05678</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05673">
+  <data key="d0">cpd:C05673</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05677">
+  <data key="d0">cpd:C05677</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05681">
+  <data key="d0">cpd:C05681</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05680">
+  <data key="d0">cpd:C05680</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06459">
+  <data key="d0">cpd:C06459</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05676">
+  <data key="d0">cpd:C05676</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06456">
+  <data key="d0">cpd:C06456</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C17945">
+  <data key="d0">cpd:C17945</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06367">
+  <data key="d0">cpd:C06367</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06368">
+  <data key="d0">cpd:C06368</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C17947">
+  <data key="d0">cpd:C17947</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C17948">
+  <data key="d0">cpd:C17948</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C17949">
+  <data key="d0">cpd:C17949</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C17950">
+  <data key="d0">cpd:C17950</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C17952">
+  <data key="d0">cpd:C17952</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C17951">
+  <data key="d0">cpd:C17951</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C04650">
+  <data key="d0">cpd:C04650</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06457">
+  <data key="d0">cpd:C06457</data>
+  <data key="d1">compound</data>
+</node>
+<node id="E4.1.1.82">
+  <data key="d0">E4.1.1.82</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHNA">
+  <data key="d0">PHNA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHNX">
+  <data key="d0">PHNX</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C17962">
+  <data key="d0">cpd:C17962</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PHPK">
+  <data key="d0">PHPK</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="DEA">
+  <data key="d0">DEA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHPE">
+  <data key="d0">PHPE</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHPJ">
+  <data key="d0">PHPJ</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHPF">
+  <data key="d0">PHPF</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PCYT1">
+  <data key="d0">PCYT1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FOMC">
+  <data key="d0">FOMC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHPI">
+  <data key="d0">PHPI</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PMMS">
+  <data key="d0">PMMS</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PAT">
+  <data key="d0">PAT</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHSB">
+  <data key="d0">PHSB</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHSC">
+  <data key="d0">PHSC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHSA">
+  <data key="d0">PHSA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHPC">
+  <data key="d0">PHPC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHNY">
+  <data key="d0">PHNY</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHNW">
+  <data key="d0">PHNW</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHPD">
+  <data key="d0">PHPD</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PCYT2">
+  <data key="d0">PCYT2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C17941">
+  <data key="d0">cpd:C17941</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05674">
+  <data key="d0">cpd:C05674</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05675">
+  <data key="d0">cpd:C05675</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00084">
+  <data key="d0">cpd:C00084</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C06451">
+  <data key="d0">cpd:C06451</data>
+  <data key="d1">compound</data>
+</node>
+<node id="MPNS">
+  <data key="d0">MPNS</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C20396">
+  <data key="d0">cpd:C20396</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C20422">
+  <data key="d0">cpd:C20422</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C20423">
+  <data key="d0">cpd:C20423</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PHNM">
+  <data key="d0">PHNM</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C20440">
+  <data key="d0">cpd:C20440</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PHNJ">
+  <data key="d0">PHNJ</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PPHA">
+  <data key="d0">PPHA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C00022">
+  <data key="d0">cpd:C00022</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01151">
+  <data key="d0">cpd:C01151</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PHNP">
+  <data key="d0">PHNP</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:ko00030">
+  <data key="d0">path:ko00030</data>
+  <data key="d1">path</data>
+</node>
+<node id="PHNPP">
+  <data key="d0">PHNPP</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C20986">
+  <data key="d0">cpd:C20986</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00117">
+  <data key="d0">cpd:C00117</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PMI">
+  <data key="d0">PMI</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C21372">
+  <data key="d0">cpd:C21372</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00037">
+  <data key="d0">cpd:C00037</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko00260">
+  <data key="d0">path:ko00260</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C21403">
+  <data key="d0">cpd:C21403</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PHNO">
+  <data key="d0">PHNO</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C21404">
+  <data key="d0">cpd:C21404</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C01438">
+  <data key="d0">cpd:C01438</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C21613">
+  <data key="d0">cpd:C21613</data>
+  <data key="d1">compound</data>
+</node>
+<node id="FRBC">
+  <data key="d0">FRBC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PHNZ1">
+  <data key="d0">PHNZ1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C00058">
+  <data key="d0">cpd:C00058</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PNTC">
+  <data key="d0">PNTC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="path:hsa00440">
+  <data key="d0">path:hsa00440</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00010">
+  <data key="d0">path:hsa00010</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00030">
+  <data key="d0">path:hsa00030</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa00260">
+  <data key="d0">path:hsa00260</data>
+  <data key="d1">path</data>
+</node>
+<node id="PEPM"/>
+<node id="FOM1"/>
+<node id="EPT1"/>
+<node id="CEPT1"/>
+<node id="CHPT1"/>
+<node id="PHNI"/>
+<node id="PHNL"/>
+<node id="PHNH"/>
+<node id="PHNG"/>
+<node id="PHNZ"/>
+<node id="PCYT1A"/>
+<node id="PCYT1B"/>
+<node id="SELENOI"/>
+<edge source="path:ko00010" target="PHNX">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00010" target="PPHA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00010" target="PHNA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="path:ko00010" target="PEPM">
+  <data key="d5">a</data>
+</edge>
+<edge source="path:ko00010" target="FOM1">
+  <data key="d5">a</data>
+</edge>
+<edge source="E4.1.1.82" target="PHNX">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="E4.1.1.82" target="PHNW">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="E4.1.1.82" target="FOMC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="E4.1.1.82" target="PHPC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="E4.1.1.82" target="PHNY">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNA" target="PHNY">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNX" target="PHNW">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNX" target="FOMC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNX" target="PHPC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNX" target="PHNY">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHPK" target="DEA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHPE" target="PHPJ">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHPJ" target="PHPF">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PCYT1" target="CHPT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PCYT1" target="CEPT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="FOMC" target="PHPD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FOMC" target="MPNS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FOMC" target="PHNY">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHPI" target="PMMS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PMMS" target="PMI">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PAT" target="PHSB">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PAT" target="PHSC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PAT" target="PHSA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PAT" target="PHPK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHSB" target="PHPK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHSC" target="PHPK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHSA" target="PHPK">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHPC" target="PHPD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHPC" target="MPNS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHPC" target="PHNY">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNY" target="PCYT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNY" target="PHPD">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNY" target="PHNZ1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNY" target="PHPE">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNY" target="PNTC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNY" target="PHNZ">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNW" target="FOMC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNW" target="PHPC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNW" target="PHNY">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNW" target="PCYT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNW" target="PNTC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHPD" target="PHPE">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHPD" target="MPNS">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHPD" target="PHNZ1">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PCYT2" target="EPT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PCYT2" target="CEPT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PCYT2" target="SELENOI">
+  <data key="d5">a</data>
+</edge>
+<edge source="MPNS" target="PHNY">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="MPNS" target="PHNI">
+  <data key="d5">a</data>
+</edge>
+<edge source="MPNS" target="PHNL">
+  <data key="d5">a</data>
+</edge>
+<edge source="MPNS" target="PHNH">
+  <data key="d5">a</data>
+</edge>
+<edge source="MPNS" target="PHNG">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNM" target="PHNJ">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNJ" target="PHNP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNJ" target="PHNPP">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PPHA" target="E4.1.1.82">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNP" target="path:ko00030">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNPP" target="path:ko00030">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">maplink</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNO" target="PHNW">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNO" target="PHNY">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNO" target="PCYT2">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNO" target="PNTC">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FRBC" target="PPHA">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FRBC" target="E4.1.1.82">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="FRBC" target="PEPM">
+  <data key="d5">a</data>
+</edge>
+<edge source="FRBC" target="FOM1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNZ1" target="PHPE">
+  <data key="d2">red</data>
+  <data key="d3">compound</data>
+  <data key="d4">ECrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="PHNZ1" target="path:ko00260">
+  <data key="d5">a</data>
+</edge>
+<edge source="PNTC" target="EPT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PNTC" target="CEPT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PEPM" target="E4.1.1.82">
+  <data key="d5">a</data>
+</edge>
+<edge source="PEPM" target="PPHA">
+  <data key="d5">a</data>
+</edge>
+<edge source="FOM1" target="E4.1.1.82">
+  <data key="d5">a</data>
+</edge>
+<edge source="FOM1" target="PPHA">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNI" target="PHNM">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNI" target="PHNY">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNL" target="PHNM">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNL" target="PHNY">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNH" target="PHNM">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNH" target="PHNY">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNG" target="PHNM">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNG" target="PHNY">
+  <data key="d5">a</data>
+</edge>
+<edge source="PHNZ" target="path:ko00260">
+  <data key="d5">a</data>
+</edge>
+<edge source="PCYT1A" target="CEPT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PCYT1A" target="CHPT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PCYT1B" target="CEPT1">
+  <data key="d5">a</data>
+</edge>
+<edge source="PCYT1B" target="CHPT1">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="path:ko04260">
+  <data key="d0">path:ko04260</data>
+  <data key="d1">path</data>
+</node>
+<node id="RYR2">
+  <data key="d0">RYR2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SLC8A">
+  <data key="d0">SLC8A</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C00076">
+  <data key="d0">cpd:C00076</data>
+  <data key="d1">compound</data>
+</node>
+<node id="ATP2A">
+  <data key="d0">ATP2A</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="TNNC1">
+  <data key="d0">TNNC1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C01330">
+  <data key="d0">cpd:C01330</data>
+  <data key="d1">compound</data>
+</node>
+<node id="TNNI3">
+  <data key="d0">TNNI3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="TNNT2">
+  <data key="d0">TNNT2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ACTC1">
+  <data key="d0">ACTC1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko04020">
+  <data key="d0">path:ko04020</data>
+  <data key="d1">path</data>
+</node>
+<node id="SLC9A6_7">
+  <data key="d0">SLC9A6_7</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C00080">
+  <data key="d0">cpd:C00080</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00238">
+  <data key="d0">cpd:C00238</data>
+  <data key="d1">compound</data>
+</node>
+<node id="SLC9A1">
+  <data key="d0">SLC9A1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="TRDN">
+  <data key="d0">TRDN</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ASPH">
+  <data key="d0">ASPH</data>
+  <data key="d1">gene</data>
+</node>
+<node id="CASQ2">
+  <data key="d0">CASQ2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="HRC">
+  <data key="d0">HRC</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04260">
+  <data key="d0">path:hsa04260</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04020">
+  <data key="d0">path:hsa04020</data>
+  <data key="d1">path</data>
+</node>
+<node id="TPM1"/>
+<node id="TPM2"/>
+<node id="TPM3"/>
+<node id="TPM4"/>
+<node id="MYH6_7"/>
+<node id="MYL2"/>
+<node id="MYL3"/>
+<node id="MYL4"/>
+<node id="ATP2A1"/>
+<node id="ATP2A2"/>
+<node id="ATP2A3"/>
+<node id="MYH6"/>
+<node id="MYH7"/>
+<edge source="RYR2" target="CASQ2">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C00076" target="TNNC1">
+  <data key="d2">blue</data>
+  <data key="d3">dissociation</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="TNNC1" target="TNNI3">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TNNC1" target="TNNT2">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TNNI3" target="TNNT2">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TNNI3" target="ACTC1">
+  <data key="d2">blue</data>
+  <data key="d3">dissociation</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">i</data>
+  <data key="d6">i</data>
+</edge>
+<edge source="TNNT2" target="TNNC1">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TNNT2" target="TPM1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNNT2" target="TPM2">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNNT2" target="TPM3">
+  <data key="d5">a</data>
+</edge>
+<edge source="TNNT2" target="TPM4">
+  <data key="d5">a</data>
+</edge>
+<edge source="ACTC1" target="MYH6_7">
+  <data key="d5">i</data>
+</edge>
+<edge source="ACTC1" target="MYL2">
+  <data key="d5">i</data>
+</edge>
+<edge source="ACTC1" target="MYL3">
+  <data key="d5">i</data>
+</edge>
+<edge source="ACTC1" target="MYL4">
+  <data key="d5">i</data>
+</edge>
+<edge source="ACTC1" target="MYH6">
+  <data key="d5">i</data>
+</edge>
+<edge source="ACTC1" target="MYH7">
+  <data key="d5">i</data>
+</edge>
+<edge source="TRDN" target="CASQ2">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="TRDN" target="HRC">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="ASPH" target="CASQ2">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HRC" target="ATP2A">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PPrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="HRC" target="ATP2A1">
+  <data key="d5">a</data>
+</edge>
+<edge source="HRC" target="ATP2A2">
+  <data key="d5">a</data>
+</edge>
+<edge source="HRC" target="ATP2A3">
+  <data key="d5">a</data>
+</edge>
+<edge source="TPM1" target="ACTC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TPM2" target="ACTC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TPM3" target="ACTC1">
+  <data key="d5">a</data>
+</edge>
+<edge source="TPM4" target="ACTC1">
+  <data key="d5">a</data>
+</edge>
+</graph></graphml>

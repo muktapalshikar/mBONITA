@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="interaction" attr.type="string"/>
+<key id="d5" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d4" for="edge" attr.name="type" attr.type="string"/>
+<key id="d3" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d2" for="edge" attr.name="color" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="path:ko04977">
+  <data key="d0">path:ko04977</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00830">
+  <data key="d0">path:ko00830</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04976">
+  <data key="d0">path:ko04976</data>
+  <data key="d1">path</data>
+</node>
+<node id="APOB">
+  <data key="d0">APOB</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00422">
+  <data key="d0">cpd:C00422</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02530">
+  <data key="d0">cpd:C02530</data>
+  <data key="d1">compound</data>
+</node>
+<node id="APOA4">
+  <data key="d0">APOA4</data>
+  <data key="d1">gene</data>
+</node>
+<node id="APOA1">
+  <data key="d0">APOA1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C01558">
+  <data key="d0">cpd:C01558</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02075 cpd:C05443 cpd:C02477 cpd:C02059 cpd:C00828 cpd:C05377">
+  <data key="d0">cpd:C02075 cpd:C05443 cpd:C02477 cpd:C02059 cpd:C00828 cpd:C05377</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02075">
+  <data key="d0">cpd:C02075</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00473">
+  <data key="d0">cpd:C00473</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C13202 cpd:C12981">
+  <data key="d0">cpd:C13202 cpd:C12981</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02477">
+  <data key="d0">cpd:C02477</data>
+  <data key="d1">compound</data>
+</node>
+<node id="CUBN">
+  <data key="d0">CUBN</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C05776">
+  <data key="d0">cpd:C05776</data>
+  <data key="d1">compound</data>
+</node>
+<node id="GIF">
+  <data key="d0">GIF</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="LMBRD1">
+  <data key="d0">LMBRD1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="ABCC1">
+  <data key="d0">ABCC1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="TCN2">
+  <data key="d0">TCN2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="MMACHC">
+  <data key="d0">MMACHC</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:ko04144">
+  <data key="d0">path:ko04144</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko04142">
+  <data key="d0">path:ko04142</data>
+  <data key="d1">path</data>
+</node>
+<node id="RBP2">
+  <data key="d0">RBP2</data>
+  <data key="d1">gene</data>
+</node>
+<node id="LRAT">
+  <data key="d0">LRAT</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SLC5A6">
+  <data key="d0">SLC5A6</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SLC23A1">
+  <data key="d0">SLC23A1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SLC19A1">
+  <data key="d0">SLC19A1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C01330">
+  <data key="d0">cpd:C01330</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00072">
+  <data key="d0">cpd:C00072</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko04975">
+  <data key="d0">path:ko04975</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C00378">
+  <data key="d0">cpd:C00378</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00068">
+  <data key="d0">cpd:C00068</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00061">
+  <data key="d0">cpd:C00061</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00016">
+  <data key="d0">cpd:C00016</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05552">
+  <data key="d0">cpd:C05552</data>
+  <data key="d1">compound</data>
+</node>
+<node id="BTD">
+  <data key="d0">BTD</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00120">
+  <data key="d0">cpd:C00120</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00647">
+  <data key="d0">cpd:C00647</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00534">
+  <data key="d0">cpd:C00534</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00010">
+  <data key="d0">cpd:C00010</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00864">
+  <data key="d0">cpd:C00864</data>
+  <data key="d1">compound</data>
+</node>
+<node id="FOLH1">
+  <data key="d0">FOLH1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00003">
+  <data key="d0">cpd:C00003</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00153">
+  <data key="d0">cpd:C00153</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05443">
+  <data key="d0">cpd:C05443</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02059">
+  <data key="d0">cpd:C02059</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C05377">
+  <data key="d0">cpd:C05377</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00828">
+  <data key="d0">cpd:C00828</data>
+  <data key="d1">compound</data>
+</node>
+<node id="SCARB1">
+  <data key="d0">SCARB1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00681">
+  <data key="d0">cpd:C00681</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02112 cpd:C01885">
+  <data key="d0">cpd:C02112 cpd:C01885</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00473 cpd:C02094 cpd:C05443 cpd:C02477 cpd:C02059 cpd:C00828 cpd:C05377">
+  <data key="d0">cpd:C00473 cpd:C02094 cpd:C05443 cpd:C02477 cpd:C02059 cpd:C00828 cpd:C05377</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00162">
+  <data key="d0">cpd:C00162</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00187">
+  <data key="d0">cpd:C00187</data>
+  <data key="d1">compound</data>
+</node>
+<node id="SLC52A3">
+  <data key="d0">SLC52A3</data>
+  <data key="d1">gene</data>
+</node>
+<node id="cpd:C00255">
+  <data key="d0">cpd:C00255</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00018">
+  <data key="d0">cpd:C00018</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00250">
+  <data key="d0">cpd:C00250</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko00770">
+  <data key="d0">path:ko00770</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00740">
+  <data key="d0">path:ko00740</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00730">
+  <data key="d0">path:ko00730</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00780">
+  <data key="d0">path:ko00780</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00790">
+  <data key="d0">path:ko00790</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:ko00760">
+  <data key="d0">path:ko00760</data>
+  <data key="d1">path</data>
+</node>
+<node id="cpd:C00376">
+  <data key="d0">cpd:C00376</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C02094">
+  <data key="d0">cpd:C02094</data>
+  <data key="d1">compound</data>
+</node>
+<node id="path:ko00750">
+  <data key="d0">path:ko00750</data>
+  <data key="d1">path</data>
+</node>
+<node id="DGAT2L4">
+  <data key="d0">DGAT2L4</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="cpd:C00504">
+  <data key="d0">cpd:C00504</data>
+  <data key="d1">compound</data>
+</node>
+<node id="cpd:C00080">
+  <data key="d0">cpd:C00080</data>
+  <data key="d1">compound</data>
+</node>
+<node id="PNLIP">
+  <data key="d0">PNLIP</data>
+  <data key="d1">gene</data>
+</node>
+<node id="PLB1">
+  <data key="d0">PLB1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="SLC19A2_3">
+  <data key="d0">SLC19A2_3</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="SLC46A1">
+  <data key="d0">SLC46A1</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04977">
+  <data key="d0">path:hsa04977</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04976">
+  <data key="d0">path:hsa04976</data>
+  <data key="d1">path</data>
+</node>
+<node id="CBLIF">
+  <data key="d0">CBLIF</data>
+  <data key="d1">gene</data>
+</node>
+<node id="path:hsa04144">
+  <data key="d0">path:hsa04144</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04142">
+  <data key="d0">path:hsa04142</data>
+  <data key="d1">path</data>
+</node>
+<node id="path:hsa04975">
+  <data key="d0">path:hsa04975</data>
+  <data key="d1">path</data>
+</node>
+<node id="AWAT2">
+  <data key="d0">AWAT2</data>
+  <data key="d1">gene</data>
+</node>
+<edge source="cpd:C00473" target="RBP2">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C05776" target="GIF">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C05776" target="CUBN">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C05776" target="MMACHC">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+<edge source="cpd:C05776" target="CBLIF">
+  <data key="d2">red</data>
+  <data key="d3">binding/association</data>
+  <data key="d4">PCrel</data>
+  <data key="d5">a</data>
+  <data key="d6">a</data>
+</edge>
+</graph></graphml>
