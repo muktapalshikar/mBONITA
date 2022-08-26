@@ -125,7 +125,8 @@ head(mBonita_PA)
 ```
 
 ```{r, eval=TRUE}
-PAlist2 <- reshape2::acast(mBonita_PA, Pathway ~ Method ~ Contrast, value.var = 'negativelog10FDR')
+PAlist2 <- mBonita_PA[mBonita_PA$FDR < 0.05,]
+PAlist2 <- reshape2::acast(PAlist2, Pathway ~ Method ~ Contrast, value.var = 'negativelog10FDR')
 PAlist2[is.na(PAlist2)] <- 0
 PAlist2 <- reshape2::melt(PAlist2)
 colnames(PAlist2) <- c("Pathway", "Method", "Contrast", "negativelog10FDR")
@@ -136,8 +137,8 @@ PAlist2
 require(ggsci)
 require(ggpubr)
 PAlist2$Significant <- as.factor(unlist(lapply(PAlist2$negativelog10FDR, function(x){if(x<1.303){return(FALSE)}else{return(TRUE)}})))
-p1 <- ggplot(PAlist2, aes(Method, Pathway, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + facet_wrap(~Contrast) + theme_pubr() + rotate_x_text(90) + scale_fill_brewer() + xlab("Dataset")
-png(filename = "heatmap_mBonita_HIF1pathways.png", width = 10, height = 10, pointsize = 14, res = 600, units = 'in')
+p1 <- ggplot(PAlist2, aes(Method, Pathway, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + facet_wrap(~Contrast, as.table=FALSE) + theme_pubr(base_size = 16) + rotate_x_text(90) + scale_fill_brewer() + xlab("Dataset")
+png(filename = "heatmap_mBonita_HIF1pathways.png", width = 12, height = 10, pointsize = 14, res = 600, units = 'in')
 p1 
 dev.off()
 print(p1)
@@ -146,7 +147,23 @@ print(p1)
 # Analyze node modulation score
 
 ```{r}
+nodeData <- read.csv("node_table.csv")
+nodeData <- subset(nodeData, select = -c(X))
+nodeData$modScore <- nodeData$IS*nodeData$RA
+colnames(nodeData)
+head(nodeData)
+```
 
+
+```{r}
+nodeData_HIF <- nodeData[nodeData$Network %in% intersect(pathways, as.vector(na.omit(gmt$KEGGID[gmt$Pathway %in% PAlist2$Pathway[PAlist2$Significant]]))),]
+dim(nodeData_HIF)
+head(nodeData_HIF)
+```
+```{r}
+nodeData_HIF$modScore <- as.vector(nodeData_HIF$modScore)
+nodeData_HIF$Display.Name <- as.vector(nodeData_HIF$Display.Name)
+nodeData_HIF$Dataset <- as.vector(nodeData_HIF$Dataset)
 
 
 ```
@@ -158,22 +175,156 @@ print(p1)
 
 
 
+```{r}
+p2 <- ggplot(nodeData_HIF, aes(Display.Name, Dataset,  fill=modScore)) + geom_tile(color = 'black', size = 0) + facet_wrap(~Contrast, as.table=FALSE, nrow=3) + scale_fill_gradient(low = "white", high = "red")  + xlab("Dataset") + theme_pubr(base_size = 16, x.text.angle = 90) 
+png(filename = "heatmap_mBonita_HIF1pathways_modScore.png", width = 20, height = 10, pointsize = 14, res = 600, units = 'in')
+p2 
+dev.off()
+print(p2)
+```
+
+
+```{r}
+
+nodeData_HIF
+colnames(nodeData_HIF)
+```
 
 
 
 
 
+```{r}
+makeNodeModeHeatmaps <- function(nodeData_HIF, network, contrast) {
+  require(ComplexHeatmap)
+  require(circlize)
+  temp <-
+    na.omit(nodeData_HIF[nodeData_HIF$Network == network &
+                           nodeData_HIF$Contrast == contrast, c('Display.Name', 'Contrast', 'modScore', 'Dataset')]) #B cell receptor signaling pathway
+  temp <-
+    reshape2::acast(temp, Display.Name ~ Dataset, value.var = 'modScore')
+  temp[is.na(temp)] <- 0
+  temp <- as.matrix(t(temp))
+  head(temp)
+  f2 = colorRamp2(seq(-1, 1, length = 3), c("blue", "white", "red"), space = "RGB")
+  h1 <-
+    Heatmap(
+      scale(temp),
+      na_col = "lightgrey",
+      cluster_columns = TRUE,
+      cluster_rows = FALSE,
+      col = f2,
+      rect_gp = gpar(col = "lightgrey", lwd = 2),
+      column_title_rot = 0,
+      row_title_rot = 90,
+      column_title = paste0('Genes in ', network),
+      row_title = contrast,
+      column_title_side = "bottom",
+      row_order = c(
+        "Combined",
+        "Transcriptomics",
+        "Proteomics",
+        "Phosphoproteomics"
+      ),
+      border = TRUE,
+      heatmap_legend_param = list(
+        direction = "vertical",
+        title = "Node Modulation Score",
+        title_position = "leftcenter-rot",
+        legend_height = unit(3, 'in')
+      ),
+      column_names_gp = gpar(fontsize = 10)
+    )
+  png(
+    paste0("Heatmap_", make.names(contrast), "_", network, ".png"),
+    width = 12,
+    height = 4,
+    units = "in",
+    res = 600
+  )
+  draw(h1, heatmap_legend_side = "left")
+  dev.off()
+}
+```
 
+```{r}
 
+network = "hsa04662"
+nodeData_HIF$Dataset <- as.factor(nodeData_HIF$Dataset)
+levels(nodeData_HIF$Dataset) <- c("Proteomics", "Combined", "Transcriptomics", "Phosphoproteomics")
+for (contrast in unique(nodeData_HIF$Contrast)){
+  makeNodeModeHeatmaps(nodeData_HIF, network, contrast)
+}
 
+```
 
+```{r}
+require(ComplexHeatmap)
+require(circlize)
+temp <-
+  na.omit(nodeData_HIF[nodeData_HIF$Network == network, c('Display.Name', 'Contrast', 'modScore', 'Dataset')]) #B cell receptor signaling pathway
+temp$Contrast <- as.factor(temp$Contrast)
+levels(temp$Contrast) <-
+  gsub("\\-\\-", "- \u2014\n", levels(temp$Contrast))
+levels(temp$Contrast) <-
+  gsub("\\+\\-", "+ \u2014\n", levels(temp$Contrast))
+temp$DatasetContrast <-
+  paste(temp$Dataset, temp$Contrast, sep = "_")
+temp <-
+  reshape2::acast(temp, Display.Name ~ DatasetContrast, value.var = 'modScore')
+temp[is.na(temp)] <- 0
+temp <- as.matrix(t(temp))
+f2 = colorRamp2(seq(-1, 1, length = 3), c("blue", "white", "red"), space = "RGB")
+h1 <-
+  Heatmap(
+    scale(temp),
+    na_col = "lightgrey",
+    cluster_columns = TRUE,
+    cluster_rows = FALSE,
+    col = f2,
+    rect_gp = gpar(col = "lightgrey", lwd = 2),
+    column_title_rot = 0,
+    row_title_rot = 0,
+    column_title = paste0('Genes in ', network),
+    column_title_side = "bottom",
+    border = TRUE,
+    heatmap_legend_param = list(
+      direction = "horizontal",
+      title = "Scaled Node Modulation Score",
+      title_position = "topcenter",
+      legend_width = unit(5, 'in'),
+      border = 'black'
+    ),
+    column_names_gp = gpar(fontsize = 10),
+    row_names_gp = gpar(fontsize = 10),
+    row_order = order(
+      gsub(
+        "Combined_|Proteomics_|Transcriptomics_|Phosphoproteomics_",
+        "",
+        rownames(temp)
+      )
+    ),
+    row_labels = gsub("\\_.*", "", rownames(temp)),
+    row_split = gsub(
+      "Combined_|Proteomics_|Transcriptomics_|Phosphoproteomics_",
+      "",
+      rownames(temp)
+    ),
+    row_title_gp = gpar(fontsize = 10), row_gap = unit(2, "mm")
+  )
+png(
+  paste0("Heatmap_", "allContrasts_", network, ".png"),
+  width = 12,
+  height = 4,
+  units = "in",
+  res = 600
+)
+draw(h1, heatmap_legend_side = "top")
+dev.off()
+draw(h1, heatmap_legend_side = "top")
+```
 
-
-
-
-
-
-
-
-
+```{r}
+order(gsub("Combined_|Proteomics_|Transcriptomics_|Phosphoproteomics_", "", rownames(temp)))
+```
 
