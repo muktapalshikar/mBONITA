@@ -13,7 +13,7 @@ contrasts <- read.csv("concatenated_conditions_CAMERA.csv", row.names = 1, check
 prot_contrast <- contrasts[colnames(proteomics),]
 mrna_contrast <- contrasts[colnames(transcriptomics),]
 phosph_contrast <- contrasts[colnames(phosphoproteomics),]
-kegg <- clusterProfiler::read.gmt('kegg_networks.gmt')
+kegg <- clusterProfiler::read.gmt('kegg_networks_edited.gmt')
 keggList <- setNames(lapply(unique(kegg$ont), function(x){return(kegg$gene[kegg$ont == x])}), unique(kegg$ont))
 ```
 
@@ -38,8 +38,8 @@ de_phospho <- read_excel(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2N
 colnames(prot_contrast) <- make.names(colnames(prot_contrast))
 camera_prot1 <- camera(y=proteomics, index = ids2indices(keggList, rownames(proteomics)),design=prot_contrast, contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2NoCyA"), levels = make.names(colnames(prot_contrast))))
 camera_prot1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
-camera_prot2 <- camera(y=proteomics, index = ids2indices(keggList, rownames(proteomics)),design=prot_contrast, contrast = makeContrasts(contrasts = c("X1O2PlusCyA - X19O2NoCyA"), levels = make.names(colnames(prot_contrast))))
-camera_prot2$Contrast <- "X1O2PlusCyA - X19O2NoCyA"
+camera_prot2 <- camera(y=proteomics, index = ids2indices(keggList, rownames(proteomics)),design=prot_contrast, contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(prot_contrast))))
+camera_prot2$Contrast <- "X19O2NoCyA - X1O2PlusCyA"
 camera_prot3 <- camera(y=proteomics, index = ids2indices(keggList, rownames(proteomics)),design=prot_contrast, contrast = makeContrasts(contrasts = c("X1O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(prot_contrast)))) 
 camera_prot3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
 
@@ -62,8 +62,8 @@ head(camera_prot)
 colnames(phosph_contrast) <- make.names(colnames(phosph_contrast))
 camera_phosph1 <- camera(y=phosphoproteomics, index = ids2indices(keggList, rownames(phosphoproteomics)),design=phosph_contrast, contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2NoCyA"), levels = make.names(colnames(phosph_contrast))))
 camera_phosph1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
-camera_phosph2 <- camera(y=phosphoproteomics, index = ids2indices(keggList, rownames(phosphoproteomics)),design=phosph_contrast,  contrast = makeContrasts(contrasts = c("X1O2PlusCyA - X19O2NoCyA"), levels = make.names(colnames(phosph_contrast))))
-camera_phosph2$Contrast <- "X1O2PlusCyA - X19O2NoCyA"
+camera_phosph2 <- camera(y=phosphoproteomics, index = ids2indices(keggList, rownames(phosphoproteomics)),design=phosph_contrast,  contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(phosph_contrast))))
+camera_phosph2$Contrast <- "X19O2NoCyA - X1O2PlusCyA"
 camera_phosph3 <- camera(y=phosphoproteomics, index = ids2indices(keggList, rownames(phosphoproteomics)),design=phosph_contrast,  contrast = makeContrasts(contrasts = c("X1O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(phosph_contrast))))
 camera_phosph3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
 
@@ -87,8 +87,8 @@ head(camera_phosph)
 colnames(mrna_contrast) <- make.names(colnames(mrna_contrast))
 camera_mrna1 <- camera(y=transcriptomics, index = ids2indices(keggList, rownames(transcriptomics)),design=mrna_contrast, contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2NoCyA"), levels = make.names(colnames(mrna_contrast))))
 camera_mrna1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
-camera_mrna2 <- camera(y=transcriptomics, index = ids2indices(keggList, rownames(transcriptomics)),design=mrna_contrast,  contrast = makeContrasts(contrasts = c("X1O2PlusCyA - X19O2NoCyA"), levels = make.names(colnames(mrna_contrast))))
-camera_mrna2$Contrast <- "X1O2PlusCyA - X19O2NoCyA"
+camera_mrna2 <- camera(y=transcriptomics, index = ids2indices(keggList, rownames(transcriptomics)),design=mrna_contrast,  contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(mrna_contrast))))
+camera_mrna2$Contrast <- "X19O2NoCyA - X1O2PlusCyA"
 camera_mrna3 <- camera(y=transcriptomics, index = ids2indices(keggList, rownames(transcriptomics)),design=mrna_contrast,  contrast = makeContrasts(contrasts = c("X1O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(mrna_contrast)))) 
 camera_mrna3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
 
@@ -145,7 +145,7 @@ camera_allResults
 
 ```{r}
 require(ggplot2)
-camera_allResults$Pathway <- str_to_title(trimws(gsub("\\s\\-\\sHomo\\sSapiens\\s\\(Human\\)", "", camera_allResults$Pathway)))
+#camera_allResults$Pathway <- str_to_title(trimws(gsub("\\s\\-\\sHomo\\sSapiens\\s\\(Human\\)", "", camera_allResults$Pathway)))
 ggplot(camera_allResults) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method') + theme_bw()
 ggsave(filename = "camera_allResults.svg", width = 12, height = 10, units = 'in')
 ggsave(filename = 'camera_allResults.png', width = 12, height =10, units = 'in')
