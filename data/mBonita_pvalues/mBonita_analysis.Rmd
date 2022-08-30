@@ -62,16 +62,44 @@ head(mBonita_PA)
 ```
 ```{r}
 ggplot(trans_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
-ggsave(filename = "mBonita_trans_allResults.svg", width = 12, height = 10, units = 'in')
-ggsave(filename = 'mBonita_trans_allResults.png', width = 12, height =10, units = 'in')
+ggsave(filename = "mBonita_trans_allResults.svg", width = 12, height = 24, units = 'in')
+ggsave(filename = 'mBonita_trans_allResults.png', width = 12, height =24, units = 'in')
+```
+```{r}
+ggplot(prot_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
+ggsave(filename = "mBonita_prot_allResults.svg", width = 12, height = 24, units = 'in')
+ggsave(filename = 'mBonita_prot_allResults.png', width = 12, height =24, units = 'in')
+```
+```{r}
+ggplot(phosph_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
+ggsave(filename = "mBonita_phosph_allResults.svg", width = 12, height = 24, units = 'in')
+ggsave(filename = 'mBonita_phosph_allResults.png', width = 12, height =24, units = 'in')
+```
+
+```{r}
+ggplot(concat_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
+ggsave(filename = "mBonita_concat_allResults.svg", width = 12, height = 24, units = 'in')
+ggsave(filename = 'mBonita_concat_allResults.png', width = 12, height =24, units = 'in')
+```
+
+# Pathways only in concatenated/multi-omics
+
+```{r}
+unique_concat <- setdiff(concat_PA$Pathway, union(prot_PA$Pathway, union(phosph_PA$Pathway, prot_PA$Pathway)))
+unique_concat <- na.omit(concat_PA[concat_PA$Pathway %in% unique_concat, ])
+#write.csv(file = 'unique_mBONITA.csv', x = unique_concat)
+
+ggplot(unique_concat) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Contrast', drop=TRUE) + theme_pubr() + theme(panel.grid.major = element_line("gray",0.5), panel.grid.minor = element_line("gray",0.25))
+ggsave(filename = "mBonita_uniqueResults.svg", width = 10, height = 6, units = 'in')
+ggsave(filename = 'mBonita_uniqueResults.png', width = 10, height = 6, units = 'in')
 ```
 
 ```{r}
 require(ggplot2)
 
 ggplot(mBonita_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
-ggsave(filename = "mBonita_allResults.svg", width = 12, height = 10, units = 'in')
-ggsave(filename = 'mBonita_allResults.png', width = 12, height =10, units = 'in')
+ggsave(filename = "mBonita_allResults.svg", width = 12, height = 24, units = 'in')
+ggsave(filename = 'mBonita_allResults.png', width = 12, height = 24, units = 'in')
 ```
 
 
