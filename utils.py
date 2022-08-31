@@ -38,25 +38,25 @@ def readFpkmData(dataName, delmited):
 # writes rules as a network
 def Get_expanded_network(rules, equal_sign="*="):
     """
-      The code is written by Gang Yang, Department of Physics, Penn State University if not specified.
+	The code is written by Gang Yang, Department of Physics, Penn State University if not specified.
 
-    Return the expanded network for a given Boolean network model.
-    The Boolean network model is a DiGraph object in the output format of form_network().
-    The Boolean network model can be generated through form_network function by reading a text file in the Booleannet format.
-    The Boolean rules will first be converted to a disjuctive normal form before generating the expanded network.
+  Return the expanded network for a given Boolean network model.
+  The Boolean network model is a DiGraph object in the output format of form_network().
+  The Boolean network model can be generated through form_network function by reading a text file in the Booleannet format.
+  The Boolean rules will first be converted to a disjuctive normal form before generating the expanded network.
 
-    Parameters
-    ----------
-    Gread     : the given Boolean network model
-    prefix='n': prefix to encode the node name to avoid one node's name is a part of another node's name
-    suffix='n': suffix to encode the node name to avoid one node's name is a part of another node's name
-                e.g. node name '1' will become 'n1n' in the returned result
-    equal_sign: the equal sign of the rule in the returned result, whose default value follows the Booleannet format
+  Parameters
+  ----------
+  Gread     : the given Boolean network model
+  prefix='n': prefix to encode the node name to avoid one node's name is a part of another node's name
+  suffix='n': suffix to encode the node name to avoid one node's name is a part of another node's name
+              e.g. node name '1' will become 'n1n' in the returned result
+  equal_sign: the equal sign of the rule in the returned result, whose default value follows the Booleannet format
 
-    Returns
-    -------
-    The expanded network for the given Boolean network model.
-    """
+  Returns
+  -------
+  The expanded network for the given Boolean network model.
+	"""
     composite_nodes = []
     G_expand = nx.DiGraph()
     for line in rules:

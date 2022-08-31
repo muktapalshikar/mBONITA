@@ -141,12 +141,14 @@ def makeRA(data, comparison, groups):
                 )
                 print((data[element]))
                 if mean1 > mean2:
-                    RAdict[element] = math.log(mean1, 2) - math.log(0.1, 2)
+                    RAdict[element] = mean1 - 0.1 #math.log(mean1, 2) - math.log(0.1, 2) # 
                 else:
-                    RAdict[element] = math.log(0.1, 2) - math.log(mean2, 2)
+                    RAdict[element] = 0.1 - mean2 #math.log(0.1, 2) - math.log(mean2, 2) # 
         else:
-            differ = math.log(mean1, 2) - math.log(mean2, 2)
+            differ =  mean1 - mean2 #math.log(mean1, 2) - math.log(mean2, 2)
             RAdict[element] = differ
+    print(RAdict)
+    pd.DataFrame.from_dict(RAdict, orient='index').to_csv(group1+"_vs_"+group2+".csv")
     return RAdict
 
 
@@ -185,7 +187,8 @@ def findPathwayList():
             )
             rules.append(writeModel(bruteOut1, model))
         print(pathVals)
-        graph = nx.read_gpickle("gpickles/" + code + ".gpickle")
+        #graph = nx.read_gpickle("gpickles/" + code + ".gpickle")
+        graph = nx.read_graphml("graphmls/" + code + ".graphml")
         ImportanceVals = {}  # average importance vals over trials
         for node in range(len(storeModel[1])):
             ImportanceVals[storeModel[1][node]] = float(
@@ -277,12 +280,12 @@ def analyze_pathways(diffName, matrixName, dataName, delmited):
             z_scores.append(scorePathway(RAval, pathway[1], CVdict))
         pvals = scipy.stats.norm.sf(z_scores)  # calculate p value
         # store p values
-        tempdict = {"pathway": pathDict[pathway[0][3:]], "code": pathway[0][3:]}
+        tempdict = {"pathway": pathDict[pathway[0][3:]], "code": pathway[0][3:], "nodes": pathway[3].nodes()}
         for i in range(len(comparisonStrings)):
             tempdict[comparisonStrings[i]] = -math.log(pvals[i], 10)
         csvmaker.append(tempdict)
     # output data
-    df = pd.DataFrame(csvmaker, columns=["pathway", "code"].extend(comparisonStrings))
+    df = pd.DataFrame(csvmaker, columns=["pathway", "code", "nodes"].extend(comparisonStrings))
     df.to_csv(path_or_buf="pvalues.csv")
 
 
@@ -345,3 +348,4 @@ if __name__ == "__main__":
     # run pathway analysis
     analyze_pathways(results.diffName, matrixName, results.data, results.sep)
     print(("--- %s seconds ---" % (time.time() - start_time)))
+    

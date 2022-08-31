@@ -4,6 +4,7 @@ import operator
 import networkx as nx
 import pickle
 from ctypes import *
+import glob
 from simulation import paramClass, modelClass, NPsync
 from utils import genInitValueList, setupEmptyKOKI, writeModel
 from GA import GAsearchModel, localSearch
@@ -67,66 +68,67 @@ if __name__ == "__main__":
     iterNum = int(results.iterNum)
     name = graphName[:-8] + "_" + results.iterNum
     graph = nx.read_gpickle(graphName)
+    ruleFiles = glob.glob(name+"_rules.txt")
+    if len(ruleFiles) < 1:
+        # read in C function to run simulations
+        updateBooler = cdll.LoadLibrary("./simulator.so")
+        boolC = updateBooler.syncBool
 
-    # read in C function to run simulations
-    updateBooler = cdll.LoadLibrary("./simulator.so")
-    boolC = updateBooler.syncBool
+        # load data
+        sampleList = pickle.Unpickler(open(graphName[:-8] + "_sss.pickle", "rb")).load()
 
-    # load data
-    sampleList = pickle.Unpickler(open(graphName[:-8] + "_sss.pickle", "rb")).load()
+        # set up parameters of run, model
+        params = paramClass()
+        model = modelClass(graph, sampleList, False)
+        model.updateCpointers()
 
-    # set up parameters of run, model
-    params = paramClass()
-    model = modelClass(graph, sampleList, False)
-    model.updateCpointers()
+        storeModel = [
+            (model.size),
+            list(model.nodeList),
+            list(model.individualParse),
+            list(model.andNodeList),
+            list(model.andNodeInvertList),
+            list(model.andLenList),
+            list(model.nodeList),
+            dict(model.nodeDict),
+            list(model.initValueList),
+        ]
 
-    storeModel = [
-        (model.size),
-        list(model.nodeList),
-        list(model.individualParse),
-        list(model.andNodeList),
-        list(model.andNodeInvertList),
-        list(model.andLenList),
-        list(model.nodeList),
-        dict(model.nodeDict),
-        list(model.initValueList),
-    ]
+        # put lack of KOs, initial values into correct format
+        knockoutLists, knockinLists = setupEmptyKOKI(len(sampleList))
+        newInitValueList = genInitValueList(sampleList, model)
+        model.initValueList = newInitValueList
 
-    # put lack of KOs, initial values into correct format
-    knockoutLists, knockinLists = setupEmptyKOKI(len(sampleList))
-    newInitValueList = genInitValueList(sampleList, model)
-    model.initValueList = newInitValueList
+        # find rules by doing GA then local search
+        model1, dev, bruteOut = GAsearchModel(
+            model, sampleList, params, knockoutLists, knockinLists, name, boolC
+        )  # run GA
+        bruteOut1, equivalents, dev2 = localSearch(
+            model1, bruteOut, sampleList, params, knockoutLists, knockinLists, boolC
+        )  # run local search
 
-    # find rules by doing GA then local search
-    model1, dev, bruteOut = GAsearchModel(
-        model, sampleList, params, knockoutLists, knockinLists, name, boolC
-    )  # run GA
-    bruteOut1, equivalents, dev2 = localSearch(
-        model1, bruteOut, sampleList, params, knockoutLists, knockinLists, boolC
-    )  # run local search
+        # output results
+        storeModel3 = [
+            (model.size),
+            list(model.nodeList),
+            list(model.individualParse),
+            list(model.andNodeList),
+            list(model.andNodeInvertList),
+            list(model.andLenList),
+            list(model.nodeList),
+            dict(model.nodeDict),
+            list(model.initValueList),
+        ]
+        outputList = [bruteOut1, dev, storeModel, storeModel3, equivalents, dev2]
+        pickle.dump(outputList, open(name + "_local1.pickle", "wb"))  # output rules
 
-    # output results
-    storeModel3 = [
-        (model.size),
-        list(model.nodeList),
-        list(model.individualParse),
-        list(model.andNodeList),
-        list(model.andNodeInvertList),
-        list(model.andLenList),
-        list(model.nodeList),
-        dict(model.nodeDict),
-        list(model.initValueList),
-    ]
-    outputList = [bruteOut1, dev, storeModel, storeModel3, equivalents, dev2]
-    pickle.dump(outputList, open(name + "_local1.pickle", "wb"))  # output rules
+        # calculate importance scores and output
+        scores1 = calcImportance(
+            bruteOut1, params, model1, sampleList, knockoutLists, knockinLists, boolC
+        )
+        pickle.dump(scores1, open(name + "_scores1.pickle", "wb"))
 
-    # calculate importance scores and output
-    scores1 = calcImportance(
-        bruteOut1, params, model1, sampleList, knockoutLists, knockinLists, boolC
-    )
-    pickle.dump(scores1, open(name + "_scores1.pickle", "wb"))
-
-    # write rules
-    with open(name + "_rules.txt", "w") as text_file:
-        text_file.write(writeModel(bruteOut1, model1))
-    print(("--- %s seconds ---" % (time.time() - start_time)))
+        # write rules
+        with open(name + "_rules.txt", "w") as text_file:
+            text_file.write(writeModel(bruteOut1, model1))
+        print(("--- %s seconds ---" % (time.time() - start_time)))

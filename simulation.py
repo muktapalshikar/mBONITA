@@ -222,9 +222,7 @@ class modelClass:
 
 
 class paramClass:
-    def __init__(
-        self,
-    ):
+    def __init__(self,):
         self.mutModel = 0.25
         self.cells = 1000
         self.samples = 5

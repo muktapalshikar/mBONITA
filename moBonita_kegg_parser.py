@@ -10,7 +10,6 @@ import pandas as pd
 import csv
 import pickle
 
-
 def parseKEGGdict():
     """makes a dictionary to convert ko numbers from KEGG into real gene names
     #this is all file formatting. it reads a line, parses the string into the gene name and ko # then adds to a dict that identifies the two."""
@@ -193,7 +192,6 @@ def readKEGG(lines, graph, KEGGdict, hsaDict):
     """
     return graph
 
-
 def readFpkmData(dataName, delmited):
     """read rpm or fpkm data into format necessary for simulations and pathway analysis"""
     with open(dataName) as csvfile:
@@ -218,7 +216,6 @@ def readFpkmData(dataName, delmited):
         for j in range(0, len(data[i]) - 1):
             sampleList[j][str.upper(data[i][0])] = float(data[i][j + 1]) / maxdata
     return sampleList, geneDict
-
 
 def find_pathways_kegg(
     geneList=[], preDefList=[], writeGraphml=True, organism="hsa", minimumOverlap=1
@@ -369,22 +366,20 @@ def find_pathways_kegg(
                 str(len(graph.edges())),
             )
             pathwayDict[code] = graph
-            if len(geneList) > 0:
-                # save the removed nodes and omics data values for just those nodes in the particular pathway
-                pathwaySampleList = [
-                    {} for q in range(len(geneDict[list(graph.nodes())[0]]))
-                ]
-                for noder in list(graph.nodes()):
-                    for jn in range(len(pathwaySampleList)):
-                        pathwaySampleList[jn][noder] = geneDict[noder][jn]
-                    pickle.dump(pathwaySampleList, open(coder + "_sss.pickle", "wb"))
+            # save the removed nodes and omics data values for just those nodes in the particular pathway
+            pathwaySampleList = [{} for q in range(len(geneDict[list(graph.nodes())[0]]))]
+            for noder in list(graph.nodes()):
+                for jn in range(len(pathwaySampleList)):
+                    pathwaySampleList[jn][noder] = geneDict[noder][jn]
+                pickle.dump(pathwaySampleList, open(coder + "_sss.pickle", "wb"))
     return pathwayDict
-
 
 if __name__ == "__main__":
     # read in options
     parser = argparse.ArgumentParser()
-    parser.set_defaults(sep=",", org="hsa", pathways="None")
+    parser.set_defaults(
+        sep=",", org="hsa", pathways="None"
+    )
     parser.add_argument(
         "-sep",
         "--sep",
@@ -392,11 +387,7 @@ if __name__ == "__main__":
         help="How are columns in datafile specified",
     )
     parser.add_argument(
-        "-t",
-        action="store_const",
-        const="\t",
-        dest="sep",
-        help="Specify a tab-delimiter",
+        "-t", action="store_const", const="\t", dest="sep", help="Specify a tab-delimiter"
     )
     parser.add_argument(
         "-org", "--org", metavar="org", help="Three-letter organism code to search KEGG"
@@ -407,19 +398,19 @@ if __name__ == "__main__":
         dest="pathways",
         help="File with list of pathways to be considered each on one line",
     )
-    parser.add_argument(
-        "-data",
-        "--data",
-        help="Delimited data file with columns = samples and rows = genes",
-    )
+    parser.add_argument("-data", "--data", help="Delimited data file with columns = samples and rows = genes")
     results = parser.parse_args()
     dataName = results.data
     org = results.org
     paths = results.pathways
     sss, geneDict = readFpkmData(dataName, results.sep)  # read in data
-    pickle.dump(sss, open("sss.pickle", "wb"))  # save data in correct format for runs
+    pickle.dump( sss, open( 'sss.pickle', "wb" ) ) # save data in correct format for runs
     if paths == "None":
-        find_pathways_kegg(geneList=geneDict.keys(), preDefList=[], organism=org)
+        find_pathways_kegg(
+            geneList=geneDict.keys(),
+            preDefList=[],
+            organism=org
+        )
     else:
         with open(paths, "r") as inputfile:
             lines = inputfile.readlines()
@@ -427,8 +418,11 @@ if __name__ == "__main__":
         for line in lines:
             for element in line.split(","):
                 pathList.append(element.strip())
-        find_pathways_kegg(geneList=geneDict.keys(), preDefList=pathList, organism=org)
-
+        find_pathways_kegg(
+            geneList=geneDict.keys(),
+            preDefList=pathList,
+            organism=org
+        )
 
 
 """
