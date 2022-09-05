@@ -107,7 +107,7 @@ score = data.groupby(conditionMatrix['Dataset']).agg(lambda x: np.count_nonzero(
 pvaluesDF = pd.DataFrame()
 pathList = findPathwayList() # identify pathways under consideration
 pathDict = retrievePathKey()
-for j in range(0, len(contrasts)-1): # iterate over contrasts
+for j in range(0, len(contrasts)): # iterate over contrasts
     condition1 = contrasts.iloc[j,0]
     condition2 = contrasts.iloc[j,1]
     #print(condition1)
@@ -157,5 +157,5 @@ for j in range(0, len(contrasts)-1): # iterate over contrasts
     else:
         pvaluesDF = pd.concat([pvaluesDF, temp])
     print(temp)
-pvaluesDF['Pathway Name'] = [pathDict(i[3:]) for i in pvaluesDF.Pathway]
+pvaluesDF['Pathway Name'] = [pathDict[i[3:]] for i in pvaluesDF.Pathway]
 pvaluesDF.to_csv("pvals_temp.csv", index = False)

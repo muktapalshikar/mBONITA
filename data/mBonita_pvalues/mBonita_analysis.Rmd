@@ -359,12 +359,48 @@ order(gsub("Combined_|Proteomics_|Transcriptomics_|Phosphoproteomics_", "", rown
 
 ```{r}
 PAvals <- read.csv("pvals_temp.csv")
-PAvals <- PAvals[PAvals$P.value < 0.05,]
+PAvals$BHpvals <- p.adjust(PAvals$P.value)
+PAvals <- PAvals[PAvals$BHpvals < 0.05,]
+PAvals$negativeLog10_adjpvals <- (-1)*log10(PAvals$BHpvals)
+PAvals <- na.omit(PAvals)
 head(PAvals)
 ```
 
 ```{r}
 require(ggplot2)
-ggplot(PAvals) + geom_point(aes(x=X.log10Pvalue, y=Pathway, color=Contrast)) + theme_bw() + facet_wrap('Contrast')
+require(ggpubr)
+ggplot(PAvals) + geom_point(aes(x=negativeLog10_adjpvals, y=Pathway.Name, color=Contrast)) + theme_bw() + facet_wrap('Contrast') + xlab("-log10 (BH-corrected P value)") + ylab("Pathway Name") + xlim(0, max(PAvals$negativeLog10_adjpvals)) + theme_pubr()
+```
+```{r}
+PAvals <- reshape2::melt(reshape2::acast(PAvals, Pathway.Name ~ Contrast, value.var = 'negativeLog10_adjpvals'))
+PAvals[is.na(PAvals)] <- 0
+colnames(PAvals) <- c("Pathway Name", "Contrast", "negativeLog10_adjpvals")
+```
+
+
+```{r}
+PAvals$Significant <- as.factor(unlist(lapply(PAvals$negativeLog10_adjpvals, function(x){if(x<1.303){return(FALSE)}else{return(TRUE)}})))
+PAvals$Contrast <- gsub(" vs ", "\nvs\n", PAvals$Contrast)
+p1 <- ggplot(PAvals, aes(Contrast, `Pathway Name`, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + scale_x_discrete(position = "top") + theme_pubr(base_size = 16) + rotate_x_text(0) + scale_fill_brewer() + xlab("")
+png(
+  "mBONITA_pvalues.png",
+  width = 12,
+  height = 4,
+  units = "in",
+  res = 600
+)
+p1
+dev.off()
+svg(
+  "mBONITA_pvalues.svg",
+  width = 12,
+  height = 4
+)
+p1
+dev.off()
+```
+
+```{r}
+
 ```
 
