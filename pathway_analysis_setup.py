@@ -446,6 +446,62 @@ def readKEGGorg(lines, graph, orgDict, KEGGdict, organism):
         if graph.degree(node) == 0:
             graph.remove_node(node)
 
+def retrieveGraph_customGraph(geneDict, customNetwork):
+    with open(customNetwork, 'r') as file:
+        data = file.read().replace('\n', '')
+    graph=nx.parse_graphml(data)
+    print(graph.nodes())
+    names=nx.get_node_attributes(graph, "gene_symbol")
+    dicty1={key.encode('ascii'): value.encode('utf-8') for key, value in names}
+    graph=nx.relabel_nodes(graph, dicty1, copy=True)
+    coder=customNetwork[:-8]
+    
+    graph = simplifyNetworkpathwayAnalysis(
+        graph, geneDict, coder
+    )  # simplify graph to nodes in dataset
+    nx.write_graphml(graph, coder + ".graphml")  # write graph out as graphml
+    nx.write_gpickle(graph, coder + ".gpickle")  # write graph out as gpickle
+    print(
+        (
+            "nodes: ",
+            str(len(list(graph.nodes()))),
+            ",   edges:",
+            str(len(list(graph.edges()))),
+        )
+    )
+    if len(list(graph.nodes())) > 0:
+        # save the removed nodes and omics data values for just those nodes in the particular pathway
+        pathwaySampleList = [
+            {} for q in range(len(geneDict[list(graph.nodes())[0]]))
+        ]
+        for noder in list(graph.nodes()):
+            for jn in range(len(pathwaySampleList)):
+                pathwaySampleList[jn][noder] = geneDict[noder][jn]
+        pickle.dump(pathwaySampleList, open(coder + "_sss.pickle", "wb"))
+    nx.write_gpickle(graph,coder+'.gpickle')
+    # save the removed nodes and omics data values for just those nodes in the particular pathway
+    pathwaySampleList=[{} for q in range(len(geneDict[list(graph.nodes())[0]]))]
+    for noder in graph.nodes():
+        for jn in range(len(pathwaySampleList)):
+            pathwaySampleList[jn][noder]=geneDict[noder][jn]
+    pickle.dump(pathwaySampleList, open( coder+"_sss.pickle", "wb" ) )
+    return graph
+
+def makemetaNetwork(pathwayList, geneDict):
+    graphs = [nx.read_graphml(path) for path in pathwayList]
+    metaNetwork = nx.compose_all(graphs)    
+    #largest = max(nx.strongly_connected_components(metaNetwork), key=len)
+    #metaNetwork.remove_nodes_from(
+    #    [n for n in metaNetwork if n not in list(largest)]
+    #)
+    print(
+        "The meta network has ", metaNetwork.number_of_nodes(), " nodes."
+    )
+    nx.write_graphml(metaNetwork, "metaNetwork_before.graphml")
+    nx.write_edgelist(metaNetwork, "metaNetwork_before.sif")
+    metaNetwork = retrieveGraph_customGraph(geneDict,"metaNetwork.graphml")
+    nx.write_graphml(metaNetwork, "metaNetwork.graphml")
+    return metaNetwork
 
 if __name__ == "__main__":
     # read in options
@@ -484,8 +540,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "-gmt", "--gmt", metavar="gmt", help="GMT file with human pathways from msigDB"
     )
+    parser.add_argument("-makeMetaNetwork", metavar='makemetaNetwork', help = "Should the networks in the paths file be composed to make a combined network?")
     parser.add_argument("--data")
-
+    parser.add_argument("-customNetwork", metavar = 'customNetwork', default='False', type=str)
     results = parser.parse_args()
     dataName = results.data
     gmtName = results.gmt
@@ -493,9 +550,11 @@ if __name__ == "__main__":
     mode = results.mode
     org = results.org
     paths = results.pathways
-
+    customNetwork = results.customNetwork
+    makemetaNetwork = results.makeMetaNetwork
     sss, geneDict, cvDict = readFpkmData(dataName, results.sep)  # read in data
-    # pickle.dump( sss, open( 'sss.pickle', "wb" ) ) # save data in correct format for runs
+    pickle.dump( sss, open( 'sss.pickle', "wb" ) ) # save data in correct format for runs
+    """
     if org == "human":
         if gmtName == "None":
             print(
@@ -505,7 +564,6 @@ if __name__ == "__main__":
             findPathwaysHuman(
                 cvDict, gmtName, geneDict
             )  # generate gpickles needed for pathway analysis # checked
-
     else:
         print(org)
         print(paths)
@@ -522,4 +580,9 @@ if __name__ == "__main__":
                     pathList.append(element.strip())
             find_pathways_organism(
                 cvDict, organism=org, preDefList=pathList, writeGraphml=True
-            )  # to be checked
+            )  # checked
+            if makemetaNetwork:
+                makemetaNetwork(pathList, geneDict)
+    """
+    if customNetwork:
+        retrieveGraph_customGraph( geneDict, customNetwork) # generate gpickles needed for pathway analysis

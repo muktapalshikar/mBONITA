@@ -210,11 +210,13 @@ def readFpkmData(dataName, delmited):
         maxdata = max(tempDatalist)
         if maxdata == 0:
             maxdata = 1.0
-        geneDict[str.upper(data[i][0])] = [
+        #geneDict[str.upper(data[i][0])] = [
+        geneDict[str(data[i][0])] = [
             temperDataPoint / maxdata for temperDataPoint in tempDatalist
         ]
         for j in range(0, len(data[i]) - 1):
-            sampleList[j][str.upper(data[i][0])] = float(data[i][j + 1]) / maxdata
+            #sampleList[j][str.upper(data[i][0])] = float(data[i][j + 1]) / maxdata
+            sampleList[j][str(data[i][0])] = float(data[i][j + 1]) / maxdata
     return sampleList, geneDict
 
 def find_pathways_kegg(
@@ -356,7 +358,6 @@ def find_pathways_kegg(
             test > minimumOverlap and len(graph.edges()) > 0
         ):  # if there are at least minimumOverlap genes shared between the network and the genes in the dataset
             # nx.write_graphml(graph,coder+'_processed.graphml') # write graph out
-
             nx.write_graphml(graph, coder + ".graphml")
             nx.write_gpickle(graph, coder + ".gpickle")
             print(
@@ -371,14 +372,135 @@ def find_pathways_kegg(
             for noder in list(graph.nodes()):
                 for jn in range(len(pathwaySampleList)):
                     pathwaySampleList[jn][noder] = geneDict[noder][jn]
-                pickle.dump(pathwaySampleList, open(coder + "_sss.pickle", "wb"))
+            pickle.dump(pathwaySampleList, open(coder + "_sss.pickle", "wb"))
     return pathwayDict
+# collapse unnecessary nodes for easier rule determination
+def simplifyNetworkpathwayAnalysis(graph, ss):
+    # network simplification algorithm.
+    # # 1. remove self edges
+    # # 2. remove complexes and rewire components
+    # # 3. remove nodes with no input data
+    # # 4. remove dependence of nodes on complexes that include that node
+
+    # 1. remove self edges
+    for edge in list(graph.edges()):
+        if edge[0] == edge[1]:
+            graph.remove_edge(edge[0], edge[1])
+
+    # 2.  remove complexes and rewire components
+    removeNodeList = [x for x in list(graph.nodes()) if "|||" in x]
+    for rm in removeNodeList:
+        for start in graph.predecessors(rm):
+            edge1 = graph.get_edge_data(start, rm)["signal"]
+            if edge1 == "i":
+                for element in rm.split("|||"):
+                    graph.add_edge(start, element, signal="i")
+            else:
+                for element in rm.split("|||"):
+                    graph.add_edge(start, element, signal="a")
+        for finish in graph.successors(rm):
+            edge2 = graph.get_edge_data(rm, finish)["signal"]
+            if edge2 == "i":
+                for element in rm.split("|||"):
+                    graph.add_edge(element, finish, signal="i")
+            else:
+                for element in rm.split("|||"):
+                    graph.add_edge(element, finish, signal="a")
+        graph.remove_node(rm)
+
+    # 3. remove nodes with no input data
+    removeNodeList = [x for x in list(graph.nodes()) if not x in list(ss.keys())]
+    for rm in removeNodeList:
+        for start in graph.predecessors(rm):
+            for finish in graph.successors(rm):
+                edge1 = graph.get_edge_data(start, rm)["signal"]
+                edge2 = graph.get_edge_data(rm, finish)["signal"]
+                inhCount = 0
+                if edge1 == "i":
+                    inhCount = inhCount + 1
+                if edge2 == "i":
+                    inhCount = inhCount + 1
+                if inhCount == 1:
+                    graph.add_edge(start, finish, signal="i")
+                else:
+                    graph.add_edge(start, finish, signal="a")
+        graph.remove_node(rm)
+
+    # 4. remove dependence of nodes on complexes that include that node
+    for node in list(graph.nodes()):
+        predlist = graph.predecessors(node)
+        for pred in predlist:
+            if "|||" in pred:
+                genes = pred.split("|||")
+                flag = True
+                for gene in genes:
+                    if not gene in predlist:
+                        flag = False
+                if flag:
+                    graph.remove_edge(pred, node)
+
+    for edge in list(graph.edges()):
+        if edge[0] == edge[1]:
+            graph.remove_edge(edge[0], edge[1])
+    return graph
+
+def retrieveGraph_customGraph(geneDict, customNetwork):
+    with open(customNetwork, 'r') as file:
+        data = file.read().replace('\n', '')
+    graph=nx.parse_graphml(data)
+    print(graph.nodes())
+    names=nx.get_node_attributes(graph, "gene_symbol")
+    dicty1={key.encode('ascii'): value.encode('utf-8') for key, value in names}
+    graph=nx.relabel_nodes(graph, dicty1, copy=True)
+    coder=customNetwork[:-8]
+    
+    graph = simplifyNetworkpathwayAnalysis(
+        graph, geneDict
+    )  # simplify graph to nodes in dataset
+    nx.write_graphml(graph, coder + ".graphml")  # write graph out as graphml
+    nx.write_gpickle(graph, coder + ".gpickle")  # write graph out as gpickle
+    print(
+        (
+            "nodes: ",
+            str(len(list(graph.nodes()))),
+            ",   edges:",
+            str(len(list(graph.edges()))),
+        )
+    )
+    if len(list(graph.nodes())) > 0:
+        # save the removed nodes and omics data values for just those nodes in the particular pathway
+        pathwaySampleList = [
+            {} for q in range(len(geneDict[list(graph.nodes())[0]]))
+        ]
+        for noder in list(graph.nodes()):
+            for jn in range(len(pathwaySampleList)):
+                pathwaySampleList[jn][noder] = geneDict[noder][jn]
+        pickle.dump(pathwaySampleList, open(coder + "_sss.pickle", "wb"))
+        nx.write_gpickle(graph,coder+'.gpickle')
+    return graph
+
+def makemetaNetwork(pathwayList, geneDict):
+    graphs = [nx.read_graphml(path) for path in pathwayList]
+    metaNetwork = nx.compose_all(graphs)    
+    #largest = max(nx.strongly_connected_components(metaNetwork), key=len)
+    #metaNetwork.remove_nodes_from(
+    #    [n for n in metaNetwork if n not in list(largest)]
+    #)
+    print(
+        "The meta network has ", metaNetwork.number_of_nodes(), " nodes."
+    )
+    nx.write_graphml(metaNetwork, "metaNetwork_before.graphml")
+    nx.write_edgelist(metaNetwork, "metaNetwork_before.sif")
+    metaNetwork = retrieveGraph_customGraph(geneDict,"metaNetwork.graphml")
+    nx.write_graphml(metaNetwork, "metaNetwork.graphml")
+    return metaNetwork
 
 if __name__ == "__main__":
+    
     # read in options
     parser = argparse.ArgumentParser()
     parser.set_defaults(
-        sep=",", org="hsa", pathways="None"
+        sep=",", org="hsa", pathways="None", customNetwork='False'
     )
     parser.add_argument(
         "-sep",
@@ -399,12 +521,18 @@ if __name__ == "__main__":
         help="File with list of pathways to be considered each on one line",
     )
     parser.add_argument("-data", "--data", help="Delimited data file with columns = samples and rows = genes")
+    parser.add_argument("--makeMetaNetwork", metavar='makemetaNetwork', help = "Should the networks in the paths file be composed to make a combined network?")
+    parser.add_argument("--customNetwork", metavar='customNetwork')
     results = parser.parse_args()
+    customNetwork = results.customNetwork
+    makemetaNetwork = results.makeMetaNetwork
     dataName = results.data
     org = results.org
     paths = results.pathways
+    sep = results.sep
     sss, geneDict = readFpkmData(dataName, results.sep)  # read in data
     pickle.dump( sss, open( 'sss.pickle', "wb" ) ) # save data in correct format for runs
+    """
     if paths == "None":
         find_pathways_kegg(
             geneList=geneDict.keys(),
@@ -423,7 +551,68 @@ if __name__ == "__main__":
             preDefList=pathList,
             organism=org
         )
-
+        if makemetaNetwork:
+            makemetaNetwork(pathList, geneDict)
+    if customNetwork:
+        retrieveGraph_customGraph( geneDict, customNetwork) # generate gpickles needed for pathway analysis
+    """
+    import pandas as pd
+    import networkx as nx
+    sss, geneDict = readFpkmData(dataName, sep)  # read in data
+    pickle.dump( sss, open( 'sss.pickle', "wb" ) ) # save data in correct format for runs
+    data = pd.read_csv("concatenated_datasets.csv")
+    data.head()
+    geneList = data.Gene.tolist()
+    print("Genes in Dataset: ", len(geneList))
+    graphs = find_pathways_kegg(
+        geneList=geneList,
+        preDefList=[
+            "hsa04010",
+            "hsa04062",
+            "hsa04064",
+            "hsa04066",
+            "hsa04150",
+            "hsa04151",
+            "hsa04370",
+            "hsa04625",
+            "hsa04514",
+            "hsa04630",
+            "hsa04668",
+            "hsa04670",
+            "hsa04810",
+        ],
+        writeGraphml=True,
+        organism="hsa",
+    )
+    metaNetwork = nx.compose_all(list(graphs.values()))
+    # metaNetwork.remove_nodes_from([n for n in metaNetwork if n not in set(geneList)])
+    removeNodeList = [x for x in list(metaNetwork.nodes()) if not x in geneList]
+    for rm in removeNodeList:
+        for start in metaNetwork.predecessors(rm):
+            for finish in metaNetwork.successors(rm):
+                edge1 = metaNetwork.get_edge_data(start, rm)["signal"]
+                edge2 = metaNetwork.get_edge_data(rm, finish)["signal"]
+                inhCount = 0
+                if edge1 == "i":
+                    inhCount = inhCount + 1
+                if edge2 == "i":
+                    inhCount = inhCount + 1
+                if inhCount == 1:
+                    metaNetwork.add_edge(start, finish, signal="i")
+                else:
+                    metaNetwork.add_edge(start, finish, signal="a")
+        metaNetwork.remove_node(rm)
+    metaNetwork.remove_nodes_from(
+        [
+            n
+            for n in metaNetwork
+            if n
+            not in set(max(nx.connected_components(metaNetwork.to_undirected()), key=len))
+        ]
+    )
+    nx.write_graphml(metaNetwork, "metaNetwork.graphml")
+    customNetwork = 'metaNetwork.graphml'
+    retrieveGraph_customGraph(geneDict, customNetwork) # generate gpickles needed for pathway analysis
 
 """
 ##########TESTS##########

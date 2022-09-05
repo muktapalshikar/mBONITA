@@ -201,7 +201,7 @@ class modelClass:
     def updateCpointers(self):
         tempandnoder = []
         tempandinverter = []
-        for currentNode in range(500):
+        for currentNode in range(1000):
             tempAndNodes = []
             tempandNodeInvertList = []
             if currentNode < len(self.nodeList):
@@ -419,7 +419,7 @@ def asyncBool(individual, model, simSteps, initValues, iters, knockouts, knockin
 # init value generator for EBNs
 def genEBNInitValues(individual, model, sampleProbs):
     # return [True if (random()<sampleProbs[node]) else False for node in range(0,len(sampleProbs))]
-    initValues = np.zeros(500, dtype=np.intc, order="C")
+    initValues = np.zeros(1000, dtype=np.intc, order="C")
     for node in range(0, len(sampleProbs)):
         if random() < sampleProbs[node]:
             initValues[node] = 1

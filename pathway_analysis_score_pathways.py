@@ -163,7 +163,7 @@ def findPathwayList():
                 codes.append(file[:-8])
             else:
                 print((file[:-8] + " has no output"))
-    print(codes)
+    #print(codes)
     # for each of these pathways, we find the output of the rule determination and scoring procedures and put them together.
     for code in codes:
         pathVals = []
@@ -186,7 +186,7 @@ def findPathwayList():
                 ).load()
             )
             rules.append(writeModel(bruteOut1, model))
-        print(pathVals)
+        #print(pathVals)
         #graph = nx.read_gpickle("gpickles/" + code + ".gpickle")
         graph = nx.read_graphml("graphmls/" + code + ".graphml")
         ImportanceVals = {}  # average importance vals over trials
@@ -270,7 +270,7 @@ def analyze_pathways(diffName, matrixName, dataName, delmited):
         CVdict[keyVal] = np.std(data[keyVal])
     # iterate over pathways and calculate scores for pathway
     for pathway in pathList:
-        print((pathway[0]))
+        #print((pathway[0]))
         # print out graphs with importance scores, rules, and relative abundances
         for RAval, comparator in zip(RAvals, comparisonStrings):
             outputGraphs(pathway, RAval, comparator, pathway[1])

@@ -355,4 +355,16 @@ draw(h1, heatmap_legend_side = "top")
 ```{r}
 order(gsub("Combined_|Proteomics_|Transcriptomics_|Phosphoproteomics_", "", rownames(temp)))
 ```
+# new mBONITA pvalues
+
+```{r}
+PAvals <- read.csv("pvals_temp.csv")
+PAvals <- PAvals[PAvals$P.value < 0.05,]
+head(PAvals)
+```
+
+```{r}
+require(ggplot2)
+ggplot(PAvals) + geom_point(aes(x=X.log10Pvalue, y=Pathway, color=Contrast)) + theme_bw() + facet_wrap('Contrast')
+```
 

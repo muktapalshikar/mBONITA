@@ -232,10 +232,10 @@ def writeNode(currentNode, nodeIndividual, model):
         "" + model.nodeList[currentNode] + "*="
     )  # set up the initial string to use to write node
 
-    print(currentNode)
-    print(andNodes)
-    print(andNodeInvertList)
-    print(nodeIndividual)
+    #print(currentNode)
+    #print(andNodes)
+    #print(andNodeInvertList)
+    #print(nodeIndividual)
     if model.andLenList[currentNode] == 0 or sum(nodeIndividual) == 0:
         return (
             writenode + " " + model.nodeList[currentNode]
@@ -272,7 +272,7 @@ def writeNode(currentNode, nodeIndividual, model):
         writenode = writenode + orset.pop()
         for val in orset:
             writenode = writenode + " or " + val
-        print(writenode)
+        #print(writenode)
         return writenode
 
 
