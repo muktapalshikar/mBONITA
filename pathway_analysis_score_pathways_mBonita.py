@@ -115,11 +115,11 @@ for j in range(0, len(contrasts)): # iterate over contrasts
     RA = pd.DataFrame.from_dict(meanAbundance[meanAbundance.index.get_level_values('Condition') == condition1].values - meanAbundance[meanAbundance.index.get_level_values('Condition') == condition2].values).abs()
     RA.index = meanAbundance[meanAbundance.index.get_level_values('Condition') == condition1].index.get_level_values('Dataset')
     RA.columns = meanAbundance.columns
-    #print(RA)
+    print(RA)
     nodeModulation = RA * CV
-    #print(nodeModulation)
-    nodeModulation = nodeModulation.sum()* score
-    #print(nodeModulation)
+    print(nodeModulation)
+    nodeModulation = nodeModulation.sum() * score
+    print(nodeModulation)
     z_scores = {}
     for i in range(0, len(pathList)): # iterate over pathways
         pathway = pathList[i]
@@ -128,12 +128,15 @@ for j in range(0, len(contrasts)): # iterate over contrasts
         #print(nodeModulation.loc[pathImportances.index])
         nodeModulation_pathway = pathImportances * pd.DataFrame(nodeModulation.loc[set(nodeModulation.index).intersection(set(pathImportances.index))])
         #print(nodeModulation_pathway)
-        score = nodeModulation_pathway.values.sum()
-        #print(score)
+        nodeModPathway = nodeModulation_pathway.values.sum()
+        #print(nodeModPathway)
         #Calculate z-score
         randomScores = []
         for i in range(1000):
-            randomScores.append(pd.DataFrame(pathImportances.reset_index(drop=True) * pd.DataFrame(nodeModulation.sample(n = len(pathImportances.index))).reset_index(drop=True)).values.sum())
+            nm_temp = pd.DataFrame(RA.T.sample(n = len(pathImportances.index))).reset_index(drop=True) * pd.DataFrame(CV.T.sample(n = len(pathImportances.index))).reset_index(drop=True)
+            nm_temp = nm_temp.sum() * pd.DataFrame(score.T.sample(n = len(pathImportances.index))).reset_index(drop=True)
+            nm_temp = (pd.DataFrame(pathImportances.T.reset_index(drop=True)) * nm_temp).values.sum()
+            randomScores.append(nm_temp)
         meaner = np.mean(randomScores)
         stdev = np.std(randomScores)
         if stdev == 0:
@@ -156,6 +159,6 @@ for j in range(0, len(contrasts)): # iterate over contrasts
         pvaluesDF = temp
     else:
         pvaluesDF = pd.concat([pvaluesDF, temp])
-    print(temp)
+    #print(temp)
 pvaluesDF['Pathway Name'] = [pathDict[i[3:]] for i in pvaluesDF.Pathway]
 pvaluesDF.to_csv("pvals_temp.csv", index = False)

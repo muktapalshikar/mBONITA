@@ -195,7 +195,7 @@ def findPathwayList():
                 np.mean([pathVals[i][node] for i in range(5)])
             )
         # add nodes removed during network simplification back in
-        print(ImportanceVals)
+        #print(ImportanceVals)
         pathways.append([code, ImportanceVals, rules, graph])
     return pathways
 
