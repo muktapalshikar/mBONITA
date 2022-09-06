@@ -1,13 +1,7 @@
-,Pathway,Method,Contrast,negativelog10pvalue,pvalue,FDR,negativelog10FDR
-27,Homologous recombination,Concatenated,X1O2PlusCyA - X1O2NoCyA,1.87021147,0.013483062,0.132643431,0.877314254
-72,Circadian rhythm,Concatenated,X1O2PlusCyA - X1O2NoCyA,1.418374897,0.038161471,0.243379449,0.613716096
-73,MicroRNAs in cancer,Concatenated,X1O2PlusCyA - X1O2NoCyA,2.880520018,0.001316679,0.036388226,1.43903912
-175,"Parathyroid hormone synthesis, secretion and action",Concatenated,X1O2PlusCyA - X1O2NoCyA,1.667078366,0.021523933,0.171384725,0.766027889
-376,Circadian rhythm,Concatenated,X1O2NoCyA - X19O2NoCyA,3.259984015,0.000549561,0.023866654,1.622208471
-377,MicroRNAs in cancer,Concatenated,X1O2NoCyA - X19O2NoCyA,1.497100047,0.031834641,0.214294013,0.668989963
-422,Viral protein interaction with cytokine and cytokine receptor,Concatenated,X1O2NoCyA - X19O2NoCyA,3.738466696,0.000182614,0.011895977,1.924599893
-518,Mineral absorption,Concatenated,X1O2NoCyA - X19O2NoCyA,3.277221795,0.000528175,0.023866654,1.622208471
-674,NF-kappa B signaling pathway,Concatenated,X19O2NoCyA - X1O2PlusCyA,1.900647152,0.012570509,0.127846226,0.893312088
-680,Circadian rhythm,Concatenated,X19O2NoCyA - X1O2PlusCyA,2.685856075,0.002061313,0.045851643,1.338645093
-726,Viral protein interaction with cytokine and cytokine receptor,Concatenated,X19O2NoCyA - X1O2PlusCyA,4.655186421,2.21E-05,0.002517528,2.599025673
-822,Mineral absorption,Concatenated,X19O2NoCyA - X1O2PlusCyA,4.765770766,1.71E-05,0.00223422,2.650873968
+"","Pathway Name","Contrast","negativeLog10_adjpvals","Method","Significant","Contrast2"
+"4","Long-term depression","1% O2, CyA- vs 19% O2, CyA-",1.89965802570461,"mBONITA","TRUE","1% O2, CyA-
+vs
+19% O2, CyA-"
+"18","Long-term depression","19% O2, CyA- vs 1% O2, CyA+",3.15232596065746,"mBONITA","TRUE","19% O2, CyA-
+vs
+1% O2, CyA+"

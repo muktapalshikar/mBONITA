@@ -5,9 +5,10 @@ output: html_notebook
 
 # Load data
 ```{r}
+
 threshold <- 0.05
 cwd <- getwd()
-methods <- c("CAMERA", "LeapR", "PaintOmics", "ActivePathways", "mBONITA")
+methods <- c("CAMERA", "LeapR", "PaintOmics", "ActivePathways", "BONITA", "mBONITA")
 PAlist <- vector(mode = "list", length = length(methods))
 names(PAlist) <- methods
 PAlist[["CAMERA"]] <- read.csv(paste0(cwd, "/reactomeGSA-camera/camera_combinedPvalues.csv"), row.names = 1)
@@ -23,23 +24,45 @@ PAlist[["PaintOmics"]]<- as.data.frame(read.csv(paste0(cwd, "/paintomics/paintom
 colnames(PAlist[["PaintOmics"]])[1] <- "Pathway"
 temp <- PAlist[["PaintOmics"]]$Combined.pValue.Fisher..FDR.BH < threshold
 PAlist[["PaintOmics"]] <- PAlist[["PaintOmics"]][temp,]
-
+PAlist[["PaintOmics"]]$Method <- "Combined"
+PAlist[["PaintOmics"]]$negativelog10FDR <- (-1)*log10(PAlist[["PaintOmics"]]$Combined.pValue.Fisher..FDR.BH.)
 
 PAlist[["ActivePathways"]]<- read.csv(paste0(cwd, "/ActivePathways/activePathways_allResults.csv"), row.names = NULL)
 temp <- PAlist[["ActivePathways"]]$adjusted.p.val < threshold
 PAlist[["ActivePathways"]] <- PAlist[["ActivePathways"]][temp,]
 
-PAlist[["mBONITA"]]<- read.csv(paste0(cwd, "/mBonita_pvalues/mBonita_allResults.csv"), row.names = 1)
-temp <- PAlist[["mBONITA"]]$FDR < threshold
+PAlist[["BONITA"]]<- read.csv(paste0(cwd, "/mBonita_pvalues/Bonita_allResults.csv"), row.names = 1)
+temp <- PAlist[["BONITA"]]$FDR < threshold
+PAlist[["BONITA"]] <- na.omit(PAlist[["BONITA"]][temp,])
+PAlist[['BONITA']] <- na.omit(PAlist[["BONITA"]][PAlist[["BONITA"]]$Method %in% c('Combined'),])
+#levels(PAlist$BONITA$Contrast) <- c("X19O2NoCyA - X1O2PlusCyA", "X19O2NoCyA - X1O2NoCyA", "X1O2PlusCyA - X1O2NoCyA" )
+
+PAlist[["mBONITA"]]<- read.csv(paste0(cwd, "/mBonita_pvalues/mBonita_pvalues.csv"), row.names = 1)
+temp <- PAlist[["mBONITA"]]$negativelog10FDR > 1.303
+PAlist[['mBONITA']]$Algorithm <- 'mBONITA'
+PAlist[['mBONITA']]$Method <- 'Concatenated'
 PAlist[["mBONITA"]] <- na.omit(PAlist[["mBONITA"]][temp,])
-levels(PAlist$mBONITA$Contrast) <- c("X19O2NoCyA - X1O2PlusCyA", "X19O2NoCyA - X1O2NoCyA", "X1O2PlusCyA - X1O2NoCyA" )
+PAlist[["mBONITA"]]$Pathway.Code <- PAlist[["mBONITA"]]$Pathway 
+PAlist[["mBONITA"]]$Pathway <- PAlist[["mBONITA"]]$Pathway.Name
+
+for (n in names(PAlist)){
+  print(n)
+  PAlist[[n]]$Contrast <- gsub('X1O2NoCyA - X19O2NoCyA', '1% O2, CyA- vs 19% O2, CyA-', PAlist[[n]]$Contrast)
+  PAlist[[n]]$Contrast <- gsub('X1O2PlusCyA - X1O2NoCyA', '1% O2, CyA+ vs 1% O2, CyA-', PAlist[[n]]$Contrast)
+  PAlist[[n]]$Contrast <- gsub('X19O2NoCyA - X1O2PlusCyA', '19% O2, CyA- vs 1% O2, CyA+', PAlist[[n]]$Contrast)
+  PAlist[[n]]$Contrast <- gsub("X19O2NoCyA - X1O2NoCyA", '1% O2, CyA- vs 19% O2, CyA-', PAlist[[n]]$Contrast)
+  PAlist[[n]]$Contrast <- gsub("X1O2NoCyA - X1O2PlusCyA", '1% O2, CyA+ vs 1% O2, CyA-', PAlist[[n]]$Contrast)
+  print(unique(PAlist[[n]]$Contrast))
+}
+
+
 #PAlist[[""]]<- read.csv(paste0(cwd, ""))
 
 print(lapply(PAlist, dim))
 ```
 # Pathways only identified by mBONITA
-
-```{r}
+No longer valid after new metric
+```{r, eval=FALSE}
 temp <- PAlist[['mBONITA']]
 tempPath <- setdiff(temp$Pathway, Reduce(union, list(PAlist[["CAMERA"]]$Pathway, PAlist[["LeapR"]]$Pathway, PAlist[["PaintOmics"]]$Pathway, PAlist[["ActivePathways"]]$Pathway)))
 unique_mb <- na.omit(temp[temp$Pathway %in% tempPath,])
@@ -67,17 +90,19 @@ makeVisList <- function(tempPAlist, contrast) {
     unique(str_to_title(as.vector(tempPAlist[["LeapR"]]$Pathway[tempPAlist[["LeapR"]]$Method == "Phosphoproteomics"]))) #NO COMBINED RESULTS YET
   visList[["PaintOmics"]] <-
     unique(str_to_title(trimws(as.vector(
-      tempPAlist[["PaintOmics"]]$Pathway.name
+      tempPAlist[["PaintOmics"]]$Pathway
     )))) #ALREADY FILTERED TO COMBINED PVALS IN PREVIOUS STEP
+  visList[["BONITA"]] <-
+    unique(str_to_title(trimws(as.vector(tempPAlist[["BONITA"]]$Pathway[tempPAlist[["BONITA"]]$Method == "Combined"]))))
   visList[["mBONITA"]] <-
-    unique(str_to_title(trimws(as.vector(tempPAlist[["mBONITA"]]$Pathway[tempPAlist[["mBONITA"]]$Method == "Concatenated"]))))
+    unique(str_to_title(trimws(as.vector(tempPAlist[["mBONITA"]]$Pathway[tempPAlist[["mBONITA"]]$Algorithm == "mBONITA"]))))
   visList[["ActivePathways"]] <-
     unique(str_to_title(trimws(as.vector(
       tempPAlist[["ActivePathways"]]$Pathway
     ))))
   visList <- lapply(visList, function(x){if(length(x) > 0){return(x)}else{return(NA)}})
   visList <- visList[!is.na(visList)]
-  print(visList)
+  #print(visList)
   return(visList)
 }
 
@@ -89,21 +114,23 @@ makeVisList <- function(tempPAlist, contrast) {
 ```{r}
 require(UpSetR)
 require(ggplot2)
-
-visList <- makeVisList(PAlist, "X19O2NoCyA - X1O2PlusCyA")
+# "1% O2, CyA- vs 19% O2, CyA-" "1% O2, CyA+ vs 1% O2, CyA-"  "19% O2, CyA- vs 1% O2, CyA+"
+visList <- makeVisList(PAlist, "19% O2, CyA- vs 1% O2, CyA+")
 png(filename = "upset_X19O2NoCyA - X1O2PlusCyA.png", width = 4, height = 8, pointsize = 14, res = 600, units = 'in')
 upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 5, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(2,2, 2, 2, 2, 2), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
 dev.off()
 ```
 ```{r}
-visList <- makeVisList(PAlist, "X19O2NoCyA - X1O2NoCyA")
+# "1% O2, CyA- vs 19% O2, CyA-" "1% O2, CyA+ vs 1% O2, CyA-"  "19% O2, CyA- vs 1% O2, CyA+"
+visList <- makeVisList(PAlist, "1% O2, CyA- vs 19% O2, CyA-")
 png(filename = "upset_X19O2NoCyA - X1O2NoCyA.png", width = 4, height = 8, pointsize = 14, res = 600, units = 'in')
 upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 5, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(2,2, 2, 2, 2, 2), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
 dev.off()
 ```
 
 ```{r}
-visList <- makeVisList(PAlist, "X1O2PlusCyA - X1O2NoCyA")
+# "1% O2, CyA- vs 19% O2, CyA-" "1% O2, CyA+ vs 1% O2, CyA-"  "19% O2, CyA- vs 1% O2, CyA+"
+visList <- makeVisList(PAlist, "1% O2, CyA+ vs 1% O2, CyA-")
 png(filename = "upset_X1O2PlusCyA - X1O2NoCyA.png", width = 4, height = 8, pointsize = 14, res = 600, units = 'in')
 upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 5, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(2,2, 2, 2, 2, 2), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
 dev.off()
@@ -124,7 +151,7 @@ print(gmt)
 ```
 
 ```{r}
-PAlist2 <- lapply(PAlist, function(x){return(x[x$Method %in% c("Concatenated", "Combined"), intersect(colnames(x), c('Contrast', 'Pathway',"Method", 'negativelog10FDR'))])}) #lapply(PAlist, function(x){return(x[x$Pathway %in% gmt$Pathway & x$Method %in% c("Concatenated", "Combined"), intersect(colnames(x), c('Contrast', 'Pathway',"Method", 'negativelog10FDR'))])})
+PAlist2 <- lapply(PAlist, function(x){return(x[x$Method %in% c("Concatenated", "Combined", "mBONITA"), intersect(colnames(x), c('Contrast', 'Pathway',"Method", 'negativelog10FDR'))])}) #lapply(PAlist, function(x){return(x[x$Pathway %in% gmt$Pathway & x$Method %in% c("Concatenated", "Combined"), intersect(colnames(x), c('Contrast', 'Pathway',"Method", 'negativelog10FDR'))])})
 PAlist2$Pathway <- unlist(lapply(PAlist2$Pathway, function(x){if(x %in% gmt$Pathway){return(paste0(x, "**"))}}))
 PAlist2 <- Filter(function(x) dim(x)[1] > 0, PAlist2)
 for (i in names(PAlist2)){
@@ -152,18 +179,48 @@ colnames(temp) <- c("Pathway", "Algorithm", "negativelog10FDR")
 ggplot(temp, aes(Algorithm, Pathway, fill=negativelog10FDR)) +
   geom_tile() + scale_fill_gradient(low="white", high="blue")
 ```
+
+
 ```{r}
 require(ggsci)
 require(ggpubr)
 PAlist2$Significant <- as.factor(unlist(lapply(PAlist2$negativelog10FDR, function(x){if(x<1.303){return(FALSE)}else{return(TRUE)}})))
+
+#filter out pathways that aren't significant in any method/contrast combination
+#aggregate(Significant ~ Pathway, data = PAlist2, FUN = sum)
+
 p1 <- ggplot(PAlist2, aes(Algorithm, Pathway, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + facet_wrap(~Contrast) + theme_pubr() + rotate_x_text(90) + scale_fill_brewer()
 #ggpar(p1, palette = "npg")
 #png(filename = "heatmap_HIF1pathways.png", width = 10, height = 4, pointsize = 14, res = 600, units = 'in')
-png(filename = "heatmap_allKEGGpathways.png", width = 10, height = 14, pointsize = 14, res = 600, units = 'in')
+png(filename = "heatmap_allKEGGpathways.png", width = 20, height = 14, pointsize = 14, res = 600, units = 'in')
+p1 
+dev.off()
+print(p1)
+
+svg(filename = "heatmap_allKEGGpathways.svg", width = 10, height = 14, pointsize = 14)
 p1 
 dev.off()
 print(p1)
 ```
 
+
+
+```{r}
+PAlist2$Pathway <- gsub("\\*\\*", "", PAlist2$Pathway)
+PAlist2 <- na.omit(PAlist2[PAlist2$Pathway %in% gmt$Pathway,])
+
+p1 <- ggplot(PAlist2, aes(Algorithm, Pathway, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + facet_wrap(~Contrast) + theme_pubr() + rotate_x_text(90) + scale_fill_brewer()
+#ggpar(p1, palette = "npg")
+#png(filename = "heatmap_HIF1pathways.png", width = 10, height = 4, pointsize = 14, res = 600, units = 'in')
+png(filename = "heatmap_HIF1_pathways.png", width = 10, height = 10, pointsize = 14, res = 600, units = 'in')
+p1 
+dev.off()
+print(p1)
+
+svg(filename = "heatmap_HIF1_pathways.svg", width = 10, height = 10, pointsize = 14)
+p1 
+dev.off()
+print(p1)
+```
 
 

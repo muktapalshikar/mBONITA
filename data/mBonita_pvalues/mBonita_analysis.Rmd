@@ -9,6 +9,7 @@ require(ggplot2)
 require(ggsci)
 require(ggpubr)
 require(reshape2)
+require(metap)
 ```
 
 
@@ -38,9 +39,9 @@ reshapePvals <- function(mBonita_PA) {
 
 ```{r}
 
-concat_PA <- read.csv("pvalues_concatenated_20220816.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE)
-concat_PA$Method <- "Concatenated"
-concat_PA <- reshapePvals(concat_PA)
+#concat_PA <- read.csv("pvalues_concatenated_20220816.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE)
+#concat_PA$Method <- "Concatenated"
+#concat_PA <- reshapePvals(concat_PA)
 prot_PA <- read.csv("pvalues_proteomics_20220816.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE)
 prot_PA$Method <- "Proteomics"
 prot_PA <- reshapePvals(prot_PA)
@@ -54,42 +55,104 @@ phosph_PA <- reshapePvals(phosph_PA)
 ```
 
 ```{r}
-mBonita_PA <- rbind(concat_PA, prot_PA, trans_PA, phosph_PA)
-write.csv(mBonita_PA, "mBonita_allResults.csv")
-temp <- mBonita_PA$FDR < 0.05
-mBonita_PA <- mBonita_PA[temp,]
-head(mBonita_PA)
+Bonita_PA <- rbind(prot_PA, trans_PA, phosph_PA)
+temp <- as.data.frame(reshape2::acast(data = Bonita_PA, Contrast ~ Pathway , value.var = 'FDR', fun.aggregate = function(x){return(metap::sumz(x)$p)}))
+temp <- as.data.frame(reshape2::melt(as.matrix(temp)))
+temp$Method <- "Combined"
+colnames(temp) <- c("Contrast", "Pathway", "FDR", "Method")
+temp$negativelog10FDR <- (-1)*log10(temp$FDR)
+hist(temp$FDR)
+concat_PA <- temp
+Bonita_PA <- na.omit(rbind(prot_PA[,colnames(temp)], trans_PA[,colnames(temp)], phosph_PA[,colnames(temp)], temp))
 ```
+
+```{r}
+write.csv(Bonita_PA, "Bonita_allResults.csv")
+temp <- Bonita_PA$FDR < 0.05
+Bonita_PA <- Bonita_PA[temp,]
+```
+
 ```{r}
 ggplot(trans_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
-ggsave(filename = "mBonita_trans_allResults.svg", width = 12, height = 24, units = 'in')
-ggsave(filename = 'mBonita_trans_allResults.png', width = 12, height =24, units = 'in')
+ggsave(filename = "Bonita_trans_allResults.svg", width = 12, height = 24, units = 'in')
+ggsave(filename = 'Bonita_trans_allResults.png', width = 12, height =24, units = 'in')
 ```
 ```{r}
 ggplot(prot_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
-ggsave(filename = "mBonita_prot_allResults.svg", width = 12, height = 24, units = 'in')
-ggsave(filename = 'mBonita_prot_allResults.png', width = 12, height =24, units = 'in')
+ggsave(filename = "Bonita_prot_allResults.svg", width = 12, height = 24, units = 'in')
+ggsave(filename = 'Bonita_prot_allResults.png', width = 12, height =24, units = 'in')
 ```
 ```{r}
 ggplot(phosph_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
-ggsave(filename = "mBonita_phosph_allResults.svg", width = 12, height = 24, units = 'in')
-ggsave(filename = 'mBonita_phosph_allResults.png', width = 12, height =24, units = 'in')
+ggsave(filename = "Bonita_phosph_allResults.svg", width = 12, height = 24, units = 'in')
+ggsave(filename = 'Bonita_phosph_allResults.png', width = 12, height =24, units = 'in')
 ```
 
 ```{r}
 ggplot(concat_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
-ggsave(filename = "mBonita_concat_allResults.svg", width = 12, height = 24, units = 'in')
-ggsave(filename = 'mBonita_concat_allResults.png', width = 12, height =24, units = 'in')
+ggsave(filename = "Bonita_combined_pvals_allResults.svg", width = 12, height = 24, units = 'in')
+ggsave(filename = 'Bonita_combined_pvals_allResults.png', width = 12, height =24, units = 'in')
 ```
 
-# Pathways only in concatenated/multi-omics
+# new mBONITA pvalues
 
 ```{r}
-unique_concat <- setdiff(concat_PA$Pathway, union(prot_PA$Pathway, union(phosph_PA$Pathway, prot_PA$Pathway)))
-unique_concat <- na.omit(concat_PA[concat_PA$Pathway %in% unique_concat, ])
-#write.csv(file = 'unique_mBONITA.csv', x = unique_concat)
+PAvals <- read.csv("pvals_temp.csv")
+PAvals$BHpvals <- p.adjust(PAvals$P.value)
+PAvals <- PAvals[PAvals$BHpvals < 0.05,]
+PAvals$negativelog10FDR <- (-1)*log10(PAvals$BHpvals)
+PAvals <- na.omit(PAvals)
+head(PAvals)
+write.csv(PAvals, "mBonita_pvalues.csv")
+```
 
-ggplot(unique_concat) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Contrast', drop=TRUE) + theme_pubr() + theme(panel.grid.major = element_line("gray",0.5), panel.grid.minor = element_line("gray",0.25))
+```{r}
+require(ggplot2)
+require(ggpubr)
+ggplot(PAvals) + geom_point(aes(x=negativeLog10_adjpvals, y=Pathway.Name, color=Contrast)) + theme_bw() + facet_wrap('Contrast') + xlab("-log10 (BH-corrected P value)") + ylab("Pathway Name") + xlim(0, max(PAvals$negativeLog10_adjpvals)) + theme_pubr()
+```
+```{r}
+PAvals <- reshape2::melt(reshape2::acast(PAvals, Pathway.Name ~ Contrast, value.var = 'negativeLog10_adjpvals'))
+PAvals[is.na(PAvals)] <- 0
+colnames(PAvals) <- c("Pathway Name", "Contrast", "negativeLog10_adjpvals")
+PAvals$Method <- 'mBONITA'
+
+unique(Bonita_PA$Method)
+```
+
+
+```{r}
+PAvals$Significant <- as.factor(unlist(lapply(PAvals$negativeLog10_adjpvals, function(x){if(x<1.303){return(FALSE)}else{return(TRUE)}})))
+PAvals$Contrast2 <- gsub(" vs ", "\nvs\n", PAvals$Contrast)
+p1 <- ggplot(PAvals, aes(Contrast2, `Pathway Name`, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + scale_x_discrete(position = "top") + theme_pubr(base_size = 16) + rotate_x_text(0) + scale_fill_brewer() + xlab("")
+png(
+  "mBONITA_pvalues.png",
+  width = 12,
+  height = 4,
+  units = "in",
+  res = 600
+)
+p1
+dev.off()
+svg(
+  "mBONITA_pvalues.svg",
+  width = 12,
+  height = 4
+)
+p1
+dev.off()
+```
+
+
+# Pathways only in mBonita
+
+```{r}
+unique_concat <- setdiff(PAvals$`Pathway Name`, union(concat_PA$Pathway, union(prot_PA$Pathway, union(phosph_PA$Pathway, prot_PA$Pathway))))
+unique_concat <- na.omit(PAvals[PAvals$`Pathway Name` %in% unique_concat, ])
+unique_concat <- unique_concat[unique_concat$negativeLog10_adjpvals > 1.303,]
+write.csv(file = 'unique_mBONITA.csv', x = unique_concat)
+
+ggplot(unique_concat) + geom_point(aes(x=negativeLog10_adjpvals, y=`Pathway Name`, color=Contrast)) + facet_wrap(facets = 'Contrast', drop=TRUE) + theme_pubr() + theme(panel.grid.major = element_line("gray",0.5), panel.grid.minor = element_line("gray",0.25))
 ggsave(filename = "mBonita_uniqueResults.svg", width = 10, height = 6, units = 'in')
 ggsave(filename = 'mBonita_uniqueResults.png', width = 10, height = 6, units = 'in')
 ```
@@ -97,29 +160,39 @@ ggsave(filename = 'mBonita_uniqueResults.png', width = 10, height = 6, units = '
 ```{r}
 require(ggplot2)
 
-ggplot(mBonita_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
-ggsave(filename = "mBonita_allResults.svg", width = 12, height = 24, units = 'in')
-ggsave(filename = 'mBonita_allResults.png', width = 12, height = 24, units = 'in')
+ggplot(Bonita_PA) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', drop=TRUE) + theme_bw()
+ggsave(filename = "Bonita_allResults.svg", width = 12, height = 24, units = 'in')
+ggsave(filename = 'Bonita_allResults.png', width = 12, height = 24, units = 'in')
 ```
 
 
 
 ```{r}
+colnames(PAvals) <- c("Pathway", "Contrast", "negativelog10FDR", "Method", "Significant", "Contrast2")
+Bonita_PA$Contrast <- gsub('X1O2NoCyA - X19O2NoCyA', '1% O2, CyA- vs 19% O2, CyA-', Bonita_PA$Contrast)
+Bonita_PA$Contrast <- gsub('X1O2PlusCyA - X1O2NoCyA', '1% O2, CyA+ vs 1% O2, CyA-', Bonita_PA$Contrast)
+Bonita_PA$Contrast <- gsub('X19O2NoCyA - X1O2PlusCyA', '19% O2, CyA- vs 1% O2, CyA+', Bonita_PA$Contrast)
+
+columns <- intersect(colnames(Bonita_PA), colnames(PAvals))
+
+mBonita_PA <- rbind(Bonita_PA[,columns], PAvals[,columns])
+
 visList <- vector(mode = "list", length = length(unique(mBonita_PA$Method)))
 names(visList) <- unique(mBonita_PA$Method)
-for (n in names(visList)){
+for (n in unique(mBonita_PA$Method)){
   visList[[n]] <- na.omit(mBonita_PA[mBonita_PA$Method %in% c(n), ])
 }
-unique(mBonita_PA$Contrast)
+
 
 ```
 ```{r}
 
 makeMBonitaUpset <- function(contrast, visList){
   visList2 <- lapply(visList, function(x, contrast){return(as.vector(na.omit(x[x$Contrast == contrast,"Pathway"])))},contrast)
+  #print(visList2)
   p1 <- upset(fromList(visList2), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 5, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(2,2, 2, 2, 2, 2), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
   print(p1)
-  png(filename = paste0('upset','_mBonita_',contrast,'.png'), width = 5, height = 8, pointsize = 14, res = 600, units = 'in')
+  png(filename = paste0('upset','_mBonita_',make.names(contrast),'.png'), width = 5, height = 8, pointsize = 14, res = 600, units = 'in')
   print(p1)
   dev.off()
 }
@@ -129,6 +202,7 @@ makeMBonitaUpset <- function(contrast, visList){
 
 ```{r}
 for (contrast in unique(mBonita_PA$Contrast)){
+  print(contrast)
  makeMBonitaUpset(contrast, visList)
 }
 
@@ -153,7 +227,7 @@ head(mBonita_PA)
 ```
 
 ```{r, eval=TRUE}
-PAlist2 <- mBonita_PA[mBonita_PA$FDR < 0.05,]
+PAlist2 <- mBonita_PA[mBonita_PA$negativelog10FDR > 1.303,]
 PAlist2 <- reshape2::acast(PAlist2, Pathway ~ Method ~ Contrast, value.var = 'negativelog10FDR')
 PAlist2[is.na(PAlist2)] <- 0
 PAlist2 <- reshape2::melt(PAlist2)
@@ -195,12 +269,6 @@ nodeData_HIF$Dataset <- as.vector(nodeData_HIF$Dataset)
 
 
 ```
-
-
-
-
-
-
 
 
 ```{r}
@@ -355,52 +423,5 @@ draw(h1, heatmap_legend_side = "top")
 ```{r}
 order(gsub("Combined_|Proteomics_|Transcriptomics_|Phosphoproteomics_", "", rownames(temp)))
 ```
-# new mBONITA pvalues
 
-```{r}
-PAvals <- read.csv("pvals_temp.csv")
-PAvals$BHpvals <- p.adjust(PAvals$P.value)
-PAvals <- PAvals[PAvals$BHpvals < 0.05,]
-PAvals$negativeLog10_adjpvals <- (-1)*log10(PAvals$BHpvals)
-PAvals <- na.omit(PAvals)
-head(PAvals)
-```
-
-```{r}
-require(ggplot2)
-require(ggpubr)
-ggplot(PAvals) + geom_point(aes(x=negativeLog10_adjpvals, y=Pathway.Name, color=Contrast)) + theme_bw() + facet_wrap('Contrast') + xlab("-log10 (BH-corrected P value)") + ylab("Pathway Name") + xlim(0, max(PAvals$negativeLog10_adjpvals)) + theme_pubr()
-```
-```{r}
-PAvals <- reshape2::melt(reshape2::acast(PAvals, Pathway.Name ~ Contrast, value.var = 'negativeLog10_adjpvals'))
-PAvals[is.na(PAvals)] <- 0
-colnames(PAvals) <- c("Pathway Name", "Contrast", "negativeLog10_adjpvals")
-```
-
-
-```{r}
-PAvals$Significant <- as.factor(unlist(lapply(PAvals$negativeLog10_adjpvals, function(x){if(x<1.303){return(FALSE)}else{return(TRUE)}})))
-PAvals$Contrast <- gsub(" vs ", "\nvs\n", PAvals$Contrast)
-p1 <- ggplot(PAvals, aes(Contrast, `Pathway Name`, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + scale_x_discrete(position = "top") + theme_pubr(base_size = 16) + rotate_x_text(0) + scale_fill_brewer() + xlab("")
-png(
-  "mBONITA_pvalues.png",
-  width = 12,
-  height = 4,
-  units = "in",
-  res = 600
-)
-p1
-dev.off()
-svg(
-  "mBONITA_pvalues.svg",
-  width = 12,
-  height = 4
-)
-p1
-dev.off()
-```
-
-```{r}
-
-```
 
