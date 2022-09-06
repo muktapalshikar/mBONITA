@@ -223,4 +223,25 @@ dev.off()
 print(p1)
 ```
 
+```{r}
+
+PAlist2 <- as.data.frame(apply(PAlist2, 2, as.vector))
+signif_in_most_methods <- unique(PAlist2$Pathway[PAlist2$Significant == TRUE & PAlist2$Algorithm %in% c("ActivePathways", "CAMERA", "mBONITA", "PaintOmics")])
+
+PAlist2$Pathway <- gsub("\\*\\*", "", PAlist2$Pathway)
+PAlist2 <- na.omit(PAlist2[PAlist2$Pathway %in% signif_in_most_methods,])
+
+p1 <- ggplot(PAlist2, aes(Algorithm, Pathway, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + facet_wrap(~Contrast) + theme_pubr() + rotate_x_text(90) + scale_fill_brewer()
+#ggpar(p1, palette = "npg")
+#png(filename = "heatmap_HIF1pathways.png", width = 10, height = 4, pointsize = 14, res = 600, units = 'in')
+png(filename = "heatmap_signif_in_most_methods.png", width = 10, height = 10, pointsize = 14, res = 600, units = 'in')
+p1 
+dev.off()
+print(p1)
+
+svg(filename = "heatmap_signif_in_most_methods.svg", width = 10, height = 10, pointsize = 14)
+p1 
+dev.off()
+print(p1)
+```
 
