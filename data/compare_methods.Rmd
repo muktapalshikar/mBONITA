@@ -120,6 +120,7 @@ png(filename = "upset_X19O2NoCyA - X1O2PlusCyA.png", width = 4, height = 8, poin
 upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 5, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(2,2, 2, 2, 2, 2), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
 dev.off()
 ```
+
 ```{r}
 # "1% O2, CyA- vs 19% O2, CyA-" "1% O2, CyA+ vs 1% O2, CyA-"  "19% O2, CyA- vs 1% O2, CyA+"
 visList <- makeVisList(PAlist, "1% O2, CyA- vs 19% O2, CyA-")
