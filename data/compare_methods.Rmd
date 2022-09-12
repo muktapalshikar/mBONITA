@@ -1,14 +1,15 @@
 ---
-title: "Compare CAMERA + some pvalue combination method, leapR, paintomics, mBONITA"
+title: "Compare CAMERA + some pvalue combination method, leapR, paintomics, mBONITA, multiGSEA"
 output: html_notebook
 ---
 
 # Load data
+
 ```{r}
 
 threshold <- 0.05
 cwd <- getwd()
-methods <- c("CAMERA", "LeapR", "PaintOmics", "ActivePathways", "BONITA", "mBONITA")
+methods <- c("CAMERA", "LeapR", "PaintOmics", "ActivePathways", "BONITA", "mBONITA", "multiGSEA")
 PAlist <- vector(mode = "list", length = length(methods))
 names(PAlist) <- methods
 PAlist[["CAMERA"]] <- read.csv(paste0(cwd, "/reactomeGSA-camera/camera_combinedPvalues.csv"), row.names = 1)
@@ -44,6 +45,10 @@ PAlist[['mBONITA']]$Method <- 'Concatenated'
 PAlist[["mBONITA"]] <- na.omit(PAlist[["mBONITA"]][temp,])
 PAlist[["mBONITA"]]$Pathway.Code <- PAlist[["mBONITA"]]$Pathway 
 PAlist[["mBONITA"]]$Pathway <- PAlist[["mBONITA"]]$Pathway.Name
+
+PAlist[["multiGSEA"]]<- read.csv(paste0(cwd, "/multiGSEA/multiGSEA_allResults.csv"), row.names = 1)
+PAlist[["multiGSEA"]]<- na.omit(PAlist[["multiGSEA"]][PAlist[["multiGSEA"]]$combined_padj < threshold,])
+PAlist[["multiGSEA"]]$Method <- "Combined"
 
 for (n in names(PAlist)){
   print(n)
@@ -99,6 +104,9 @@ makeVisList <- function(tempPAlist, contrast) {
   visList[["ActivePathways"]] <-
     unique(str_to_title(trimws(as.vector(
       tempPAlist[["ActivePathways"]]$Pathway
+    ))))
+  visList[["multiGSEA"]] <- unique(str_to_title(trimws(as.vector(
+      tempPAlist[["multiGSEA"]]$Pathway
     ))))
   visList <- lapply(visList, function(x){if(length(x) > 0){return(x)}else{return(NA)}})
   visList <- visList[!is.na(visList)]
@@ -227,7 +235,7 @@ print(p1)
 ```{r}
 
 PAlist2 <- as.data.frame(apply(PAlist2, 2, as.vector))
-signif_in_most_methods <- unique(PAlist2$Pathway[PAlist2$Significant == TRUE & PAlist2$Algorithm %in% c("ActivePathways", "CAMERA", "mBONITA", "PaintOmics")])
+signif_in_most_methods <- unique(PAlist2$Pathway[PAlist2$Significant == TRUE & PAlist2$Algorithm %in% c("ActivePathways", "CAMERA", "mBONITA", "PaintOmics", "multiGSEA")])
 
 PAlist2$Pathway <- gsub("\\*\\*", "", PAlist2$Pathway)
 PAlist2 <- na.omit(PAlist2[PAlist2$Pathway %in% signif_in_most_methods,])
