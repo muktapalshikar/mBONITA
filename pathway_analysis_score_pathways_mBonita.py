@@ -120,6 +120,7 @@ for j in range(0, len(contrasts)): # iterate over contrasts
     print(nodeModulation)
     nodeModulation = nodeModulation.sum() * score
     print(nodeModulation)
+    nodeModulation.to_csv(str(condition1)+"_vs_"+str(condition2)+"_nodeModulation.csv")
     z_scores = {}
     for i in range(0, len(pathList)): # iterate over pathways
         pathway = pathList[i]
