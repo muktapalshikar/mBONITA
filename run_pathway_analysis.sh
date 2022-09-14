@@ -14,4 +14,4 @@ activate BONITA
 #Example
 #python3 pathway_analysis_score_pathways.py concatenated_datasets.csv concatenated_conditions.csv contrasts.csv -sep ,
 
-python3 pathway_analysis_score_pathways_mBonita.py
+python3 pathway_analysis_score_pathways_mBonita.py concatenated_datasets.csv concatenated_conditions.csv contrasts.csv -sep ,

@@ -246,7 +246,7 @@ dev.off()
 print(p1)
 ```
 
-# Analyze node modulation score
+# Analyze node modulation score - old version
 
 ```{r}
 nodeData <- read.csv("node_table.csv")
@@ -424,4 +424,122 @@ draw(h1, heatmap_legend_side = "top")
 order(gsub("Combined_|Proteomics_|Transcriptomics_|Phosphoproteomics_", "", rownames(temp)))
 ```
 
+# Analyze node modulation score - new version
+
+```{r}
+metaNet_scores = read.csv("nodeModulation.csv", row.names = 1)
+head(metaNet_scores)
+```
+# find the genes with highest sd in nodemodulation scores
+
+```{r}
+temp2 = aggregate(nodeModulation ~ index, metaNet_scores, sd)
+colnames(temp2) <- c("index", "nodeModulation_sd")
+temp2 <- temp2[order(temp2$nodeModulation, decreasing = TRUE),]
+head(temp2)
+highSD_genes = temp2$index[1:100]
+```
+
+
+
+```{r}
+temp = t(reshape2::acast(metaNet_scores, index ~ Contrast, value.var = 'nodeModulation'))
+temp = temp[,temp2$index[1:100]]
+knitr::kable(head(temp))
+```
+
+
+```{r}
+require(ComplexHeatmap)
+require(circlize)
+f2 = colorRamp2(seq(-1, 1, length = 3), c("blue", "white", "red"), space = "RGB")
+h1 <- Heatmap(scale(temp),
+    col = f2,
+    rect_gp = gpar(col = "lightgrey", lwd = 2),
+    column_title_rot = 0,
+    row_title_rot = 0,
+    column_title = paste0('Genes in network'),
+    column_title_side = "bottom",
+    border = TRUE,
+    heatmap_legend_param = list(
+      direction = "horizontal",
+      title = "Scaled Node Modulation Score",
+      title_position = "topcenter",
+      legend_width = unit(5, 'in'),
+      border = 'black'
+    ),
+    column_names_gp = gpar(fontsize = 10),
+    row_names_gp = gpar(fontsize = 10))
+draw(h1, heatmap_legend_side = "top")
+```
+# Make plots showing RA, evidence score, importance score and node modulation score together
+
+```{r}
+IS = read.csv("ImportanceScores.csv", row.names = 1)
+RA = read.csv("RelativeAbundance.csv")
+ES = read.csv("EvidenceScore.csv")
+NM = read.csv("nodeModulation.csv", row.names = 1)
+SD = read.csv("StandardDeviation.csv")
+require(knitr)
+kable(head(IS))
+kable(head(RA))
+kable(head(ES))
+kable(head(NM))
+```
+
+```{r}
+pathway = 'metaNetwork'
+contrast = '19% O2, CyA-_vs_1% O2, CyA+'
+genesInPathway = as.vector(IS$index[IS$Pathway %in% c(pathway)])
+```
+
+```{r}
+require(plyr)
+RA$index = RA$Gene
+ES$index = ES$Gene
+SD$index = SD$Gene
+colnames(SD) = c("Gene", "Phosphoproteomics_SD", "Proteomics_SD", "Transcriptomics_SD", "index")
+temp = plyr::join(IS, RA, by = c('index'), type = 'inner')
+temp = plyr::join(temp, ES, by = c('index'), type = 'inner')
+temp = plyr::join(temp, SD, by = c('index'), type = 'inner')
+temp = plyr::join(temp, NM, by = c('index', 'Contrast'), type = 'inner')
+temp = temp[temp$Pathway == pathway, c("index", "Contrast", "nodeModulation", "EvidenceScore", "ImportanceScore", "Phosphoproteomics", "Proteomics", "Transcriptomics", "Phosphoproteomics_SD", "Proteomics_SD", "Transcriptomics_SD")]
+dim(temp)
+colnames(temp)
+head(temp)
+temp = temp[temp$index %in% highSD_genes,]
+temp = temp[temp$Contrast==contrast,]
+```
+
+```{r}
+require(circlize)
+require(ComplexHeatmap)
+f2 = colorRamp2(seq(-1, 1, length = 3), c("blue", "white", "red"), space = "RGB")
+
+heatmapList = vector(mode = 'list', length = length(c("Phosphoproteomics", "Proteomics", "Transcriptomics", "nodeModulation", "EvidenceScore","Phosphoproteomics_SD", "Proteomics_SD", "Transcriptomics_SD", "ImportanceScore")))
+temp = temp[,c("index", "Contrast", "EvidenceScore", "ImportanceScore", "Phosphoproteomics", "Proteomics", "Transcriptomics", "Phosphoproteomics_SD", "Proteomics_SD", "Transcriptomics_SD", "nodeModulation")]
+for (i in c("Phosphoproteomics", "Proteomics", "Transcriptomics", "nodeModulation", "Phosphoproteomics_SD", "Proteomics_SD", "Transcriptomics_SD", "ImportanceScore")){
+  valueVar = i
+  #heatmapList[[i]] = Heatmap(as.matrix(scale(reshape2::acast(temp, index ~ Contrast, value.var = valueVar))), cluster_rows = TRUE, cluster_columns = TRUE, column_title = valueVar)
+  heatmapList[[i]] = Heatmap((scale(as.matrix(temp[,i]))), col=f2, cluster_rows = FALSE, cluster_columns = FALSE, column_title = valueVar)
+  draw(heatmapList[[i]], heatmap_legend_side = "top")
+}
+
+col_letters = c("1" = "pink", "2" = "purple", "3" = "blue")
+heatmapList[["EvidenceScore"]] = Heatmap(t(as.matrix(temp[,"EvidenceScore"])), col=col_letters, cluster_rows = FALSE, cluster_columns = FALSE, column_title = "EvidenceScore")
+
+```
+```{r}
+ht_list = heatmapList[["nodeModulation"]] + heatmapList[["Phosphoproteomics_SD"]] + heatmapList[["Proteomics_SD"]] +  heatmapList[["Transcriptomics_SD"]] + heatmapList[["ImportanceScore"]] + heatmapList[["EvidenceScore"]] 
+heatmapList[["Phosphoproteomics"]] + heatmapList[["Proteomics"]] +  heatmapList[["Transcriptomics"]]  + heatmapList[["EvidenceScore"]]  
+draw(ht_list, cluster_rows=TRUE, row_km = 4)
+  
+```
+```{r}
+require("ggplot2")                     # Load ggplot2 package
+require("GGally")                      # Load GGally package
+require(ggpubr)
+p1 = ggpairs(temp[,c("nodeModulation", "ImportanceScore","Phosphoproteomics", "Proteomics", "Transcriptomics",  "EvidenceScore","Phosphoproteomics_SD", "Proteomics_SD", "Transcriptomics_SD")]) + theme_bw()
+ggsave("nodeModComponents.svg", p1, dpi = 1200, width = 14, height=14)
+```
 

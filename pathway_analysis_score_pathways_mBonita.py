@@ -100,13 +100,32 @@ conditionMatrix = pd.read_csv(conditionName, sep = delimited, index_col=0)
 groupedData = data.groupby([conditionMatrix['Dataset'], conditionMatrix['Condition']], axis = 0)
 meanAbundance = groupedData.mean()
 CV = data.groupby(conditionMatrix['Dataset'], axis = 0).std()
+CV2 = pd.DataFrame(CV).T
+pd.DataFrame(CV2).to_csv("StandardDeviation.csv")
+
 score = data.groupby(conditionMatrix['Dataset']).agg(lambda x: np.count_nonzero(x)).agg(lambda x: np.count_nonzero(x))
-#print(CV)
-#print(meanAbundance)
-#print(score)
+score2 = pd.DataFrame(score)
+score2.columns = ["EvidenceScore"]
+pd.DataFrame(score2).to_csv("EvidenceScore.csv")
 pvaluesDF = pd.DataFrame()
 pathList = findPathwayList() # identify pathways under consideration
 pathDict = retrievePathKey()
+nodeMod_complete = pd.DataFrame.from_dict({'nodeModulation':[np.nan], 'Contrast' : np.nan, 'Pathway': np.nan}, orient = 'columns')
+RA_complete = pd.DataFrame()
+
+pathImportances_complete = pd.DataFrame()
+for i in range(0, len(pathList)): # iterate over pathways
+    pathway = pathList[i]
+    pathImportances = pd.DataFrame.from_dict(pathway[1], orient = 'index')
+    pathImportances['Pathway'] = pathway[0]
+    if len(RA_complete) == 0:
+        pathImportances_complete = pathImportances
+    else:
+        pathImportances_complete = pd.concat([pathImportances_complete , pathImportances])
+pathImportances_complete.columns = ['ImportanceScore', 'Pathway']
+pathImportances_complete = pathImportances_complete.reset_index()
+pathImportances_complete.to_csv("ImportanceScores.csv")
+
 for j in range(0, len(contrasts)): # iterate over contrasts
     condition1 = contrasts.iloc[j,0]
     condition2 = contrasts.iloc[j,1]
@@ -115,22 +134,31 @@ for j in range(0, len(contrasts)): # iterate over contrasts
     RA = pd.DataFrame.from_dict(meanAbundance[meanAbundance.index.get_level_values('Condition') == condition1].values - meanAbundance[meanAbundance.index.get_level_values('Condition') == condition2].values).abs()
     RA.index = meanAbundance[meanAbundance.index.get_level_values('Condition') == condition1].index.get_level_values('Dataset')
     RA.columns = meanAbundance.columns
-    print(RA)
+    RA2 = RA.T
+    RA2['Contrast'] = str(condition1)+"_vs_"+str(condition2)
+    if len(RA_complete) == 0:
+        RA_complete = RA2
+    else:
+        RA_complete = pd.concat([RA2, RA_complete])
     nodeModulation = RA * CV
-    print(nodeModulation)
     nodeModulation = nodeModulation.sum() * score
-    print(nodeModulation)
-    nodeModulation.to_csv(str(condition1)+"_vs_"+str(condition2)+"_nodeModulation.csv")
     z_scores = {}
     for i in range(0, len(pathList)): # iterate over pathways
         pathway = pathList[i]
         pathImportances = pd.DataFrame.from_dict(pathway[1], orient = 'index')
-        #print(pathImportances)
-        #print(nodeModulation.loc[pathImportances.index])
         nodeModulation_pathway = pathImportances * pd.DataFrame(nodeModulation.loc[set(nodeModulation.index).intersection(set(pathImportances.index))])
-        #print(nodeModulation_pathway)
         nodeModPathway = nodeModulation_pathway.values.sum()
-        #print(nodeModPathway)
+        nodeModulation_pathway['Contrast'] = str(condition1)+"_vs_"+str(condition2)
+        nodeModulation_pathway['Pathway'] = str(pathway[0])
+        nodeModulation_pathway.columns = ['nodeModulation', 'Contrast', 'Pathway']
+        #pd.DataFrame(nodeModulation, columns = ["nodeModulation"]).to_csv(str(condition1)+"_vs_"+str(condition2)+"_"+str(pathway[0])+"_nodeModulation.csv")
+        nodeMod_complete = pd.concat([nodeMod_complete, nodeModulation_pathway])
+
+nodeMod_complete = nodeMod_complete.reset_index().dropna()
+#nodeMod_complete.columns = ['Gene','nodeModulation', 'Contrast, Pathway']
+nodeMod_complete.to_csv("nodeModulation.csv", index=True)
+RA_complete.to_csv("RelativeAbundance.csv")
+"""
         #Calculate z-score
         randomScores = []
         for i in range(1000):
@@ -150,10 +178,14 @@ for j in range(0, len(contrasts)): # iterate over contrasts
     for i in range(0, len(pathList)):
         pathway = pathList[i]
         pvalDict[pathway[0]] = pvals[i]
+    print(pvalDict)
     temp = pd.DataFrame.from_dict(pvalDict, orient = 'index')
+    print(temp)
     temp['Contrast'] = ' vs '.join([condition1, condition2])
     temp = temp.reset_index(drop = False)
+    print(temp)
     temp['-log10Pvalue'] = np.nan
+    print(temp.head())
     temp.columns = ['Pathway', 'P-value', 'Contrast', '-log10Pvalue']
     temp['-log10Pvalue'] = (-1)*np.log10(temp['P-value'])
     if len(pvaluesDF) == 0:
@@ -163,3 +195,4 @@ for j in range(0, len(contrasts)): # iterate over contrasts
     #print(temp)
 pvaluesDF['Pathway Name'] = [pathDict[i[3:]] for i in pvaluesDF.Pathway]
 pvaluesDF.to_csv("pvals_temp.csv", index = False)
+"""
