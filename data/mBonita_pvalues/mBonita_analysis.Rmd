@@ -605,7 +605,7 @@ ggsave("nodeModComponents2.png", p1, dpi = 1200, width = 7, height=5)
 
 ```{r}
 temp4 = melt(as.data.frame(t(temp)))
-p1 = ggplot(data = as.data.frame(temp4)) + geom_histogram(aes(value, fill = variable), color = 'black') + theme_pubr(legend=c(0.7,0.5), margin=FALSE) + scale_fill_brewer('Contrast', palette = 'Blues') + xlab("Count of genes in the network") + ylab('Node modulation score')+ theme(text = element_text(size=8))
+p1 = ggplot(data = as.data.frame(temp4)) + geom_histogram(aes(value, fill = variable), color = 'black') + theme_pubr(legend=c(0.7,0.75), margin=FALSE) + scale_fill_brewer('Contrast', palette = 'Blues') + ylab("Count of genes in the network") + xlab('Node modulation score')+ theme(text = element_text(size=8))
 ggsave("hist_nodeModScore.svg", p1, dpi = 1200, width = 2, height=3)
 ggsave("hist_nodeModScore.png", p1, dpi = 1200, width = 2, height=3)
 ```
