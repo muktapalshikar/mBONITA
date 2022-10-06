@@ -1,13 +1,13 @@
 ## ----bioconductor, eval=FALSE-------------------------------------------------
 #
-# if (!requireNamespace("BiocManager", quietly = TRUE))
+#if (!requireNamespace("BiocManager", quietly = TRUE))
 #     install.packages("BiocManager")
-#
+
 # # The following initializes usage of Bioc devel
 # BiocManager::install(version='devel')
-#
+
 # BiocManager::install("multiGSEA")
-#
+
 
 ## ----devtools, eval=FALSE-----------------------------------------------------
 #
@@ -15,7 +15,8 @@
 #  devtools::install_github("https://github.com/yigbt/multiGSEA")
 #
 
-setwd("C:\\Users\\mpalshikar\\Documents\\moBONITA\\data\\multiGSEA")
+#setwd("C:\\Users\\mpalshikar\\Documents\\moBONITA\\data\\multiGSEA")
+setwd("C:\\Users\\Mukta\ Palshikar\\Documents\\GitHub\\moBONITA\\data\\multiGSEA")
 
 ## ----load_mapping_library, results='hide', warning=FALSE, message=FALSE-------
 require( "org.Hs.eg.db")
@@ -28,7 +29,7 @@ require( magrittr)
 
 require(readxl)
 
-
+pathToReactome <- "C:\\Users\\Mukta Palshikar\\Documents\\GitHub\\moBONITA\\data\\paintomics\\"
 runMultiGSEA <- function(de_mrna, de_prot, de_phospho){
 
     de_mrna <- de_mrna[,c("Identifier", "logFC", "P.Value", "adj.P.Val")]
@@ -114,33 +115,35 @@ runMultiGSEA <- function(de_mrna, de_prot, de_phospho){
 }
 
 
-## Contrast: 19O2NoCyA vs 1O2NoCyA
-excel_sheets(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""))
-de_mrna <- read_excel(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 2)
-de_prot <- read_excel(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 3)
-de_phospho <- read_excel(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 4)
-
+# Contrast 1: 1O2NoCyA vs 1O2PlusCyA
+de_mrna <- read.csv(paste(pathToReactome,"\\contrast1\\Transcriptomics_1O2NoCyclo_vs_1O2PlusCyclo.csv", sep = ""))
+de_prot <- read.csv(paste(pathToReactome,"\\contrast1\\Proteomics_1O2NoCyclo_vs_1O2PlusCyclo.csv", sep = ""))
+de_phospho <- read.csv(paste(pathToReactome,"\\contrast1\\Phosphoproteomics_1O2NoCyclo_vs_1O2PlusCyclo.csv", sep = ""))
+commonGenes <- union(de_mrna$Identifier, union(de_prot$Identifier, de_phospho$Identifier))
+length(commonGenes)
 contrast1 <- runMultiGSEA(de_mrna, de_prot, de_phospho)
-contrast1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
+contrast1$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
 
-# Contrast: 1O2PlusCyA vs 19O2NoCyA
-excel_sheets(paste(getwd(),"/1O2PlusCyA vs 19O2NoCyA/1O2PlusCyA vs 19O2NoCyA.xlsx", sep = ""))
-de_mrna <- read_excel(paste(getwd(),"/1O2PlusCyA vs 19O2NoCyA/1O2PlusCyA vs 19O2NoCyA.xlsx", sep = ""), sheet = 2)
-de_prot <- read_excel(paste(getwd(),"/1O2PlusCyA vs 19O2NoCyA/1O2PlusCyA vs 19O2NoCyA.xlsx", sep = ""), sheet = 3)
-de_phospho <- read_excel(paste(getwd(),"/1O2PlusCyA vs 19O2NoCyA/1O2PlusCyA vs 19O2NoCyA.xlsx", sep = ""), sheet = 4)
-
+#Contrast 2: 1O2NoCyA vs 19O2NoCyA  1O2NoCyclo_vs_19O2NoCyclo
+de_mrna <- read.csv(paste(pathToReactome,"\\contrast2\\Transcriptomics_1O2NoCyclo_vs_19O2NoCyclo.csv", sep = ""))
+de_prot <- read.csv(paste(pathToReactome,"\\contrast2\\Proteomics_1O2NoCyclo_vs_19O2NoCyclo.csv", sep = ""))
+de_phospho <- read.csv(paste(pathToReactome,"\\contrast2\\Phosphoproteomics_1O2NoCyclo_vs_19O2NoCyclo.csv", sep = ""))
+commonGenes <- union(de_mrna$Identifier, union(de_prot$Identifier, de_phospho$Identifier))
+length(commonGenes)
 contrast2 <- runMultiGSEA(de_mrna, de_prot, de_phospho)
-contrast2$Contrast <- "X19O2NoCyA - X1O2PlusCyA"
+contrast2$Contrast <- "X1O2NoCyA vs X19O2NoCyA"
+contrast2
 
 
-# Contrast: 1O2NoCyA vs 1O2PlusCyA
-excel_sheets(paste(getwd(),"/1O2NoCyA vs 1O2PlusCyA/1O2NoCyA vs 1O2PlusCyA.xlsx", sep = ""))
-de_mrna <- read_excel(paste(getwd(),"/1O2NoCyA vs 1O2PlusCyA/1O2NoCyA vs 1O2PlusCyA.xlsx", sep = ""), sheet = 2)
-de_prot <- read_excel(paste(getwd(),"/1O2NoCyA vs 1O2PlusCyA/1O2NoCyA vs 1O2PlusCyA.xlsx", sep = ""), sheet = 3)
-de_phospho <- read_excel(paste(getwd(),"/1O2NoCyA vs 1O2PlusCyA/1O2NoCyA vs 1O2PlusCyA.xlsx", sep = ""), sheet = 4)
+# Contrast 3: 1O2PlusCyA vs 19O2NoCyA
 
+de_mrna <- read.csv(paste(pathToReactome,"\\contrast3\\Transcriptomics_1O2PlusCyclo_vs_19O2NoCyclo.csv", sep = ""))
+de_prot <- read.csv(paste(pathToReactome,"\\contrast3\\Proteomics_1O2PlusCyclo_vs_19O2NoCyclo.csv", sep = ""))
+de_phospho <- read.csv(paste(pathToReactome,"\\contrast3\\Phosphoproteomics_1O2PlusCyclo_vs_19O2NoCyclo.csv", sep = ""))
+commonGenes <- union(de_mrna$Identifier, union(de_prot$Identifier, de_phospho$Identifier))
+length(commonGenes)
 contrast3 <- runMultiGSEA(de_mrna, de_prot, de_phospho)
-contrast3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
+contrast3$Contrast <- "X19O2NoCyA - X1O2PlusCyA"
 
 allResults <- rbind(contrast1, contrast2, contrast3)
 allResults$negativelog10FDR <- (-1)*log10(allResults$combined_padj)

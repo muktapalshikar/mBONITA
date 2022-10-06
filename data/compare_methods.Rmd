@@ -18,15 +18,15 @@ PAlist[["CAMERA"]] <- na.omit(PAlist[["CAMERA"]][temp,])
 
 PAlist[["LeapR"]] <- read.csv(paste0(cwd, "/leapR/leapR_allResults.csv"))
 temp <- PAlist[["LeapR"]]$BH_pvalue < threshold
-PAlist[["LeapR"]] <- na.omit(PAlist[["LeapR"]][temp,])
+#PAlist[["LeapR"]] <- na.omit(PAlist[["LeapR"]][temp,])
 PAlist[["LeapR"]]$Pathway <- trimws(gsub("KEGG|_|\\d+$", " ", PAlist[["LeapR"]]$Pathway))
 
 PAlist[["PaintOmics"]]<- as.data.frame(read.csv(paste0(cwd, "/paintomics/paintomics_allResults.csv"), row.names = 1))
 colnames(PAlist[["PaintOmics"]])[1] <- "Pathway"
-temp <- PAlist[["PaintOmics"]]$Combined.pValue.Fisher..FDR.BH < threshold
+temp <- PAlist[["PaintOmics"]]$Combined_FDR < threshold
 PAlist[["PaintOmics"]] <- PAlist[["PaintOmics"]][temp,]
 PAlist[["PaintOmics"]]$Method <- "Combined"
-PAlist[["PaintOmics"]]$negativelog10FDR <- (-1)*log10(PAlist[["PaintOmics"]]$Combined.pValue.Fisher..FDR.BH.)
+PAlist[["PaintOmics"]]$negativelog10FDR <- (-1)*log10(PAlist[["PaintOmics"]]$Combined_FDR)
 
 PAlist[["ActivePathways"]]<- read.csv(paste0(cwd, "/ActivePathways/activePathways_allResults.csv"), row.names = NULL)
 temp <- PAlist[["ActivePathways"]]$adjusted.p.val < threshold
@@ -57,6 +57,8 @@ for (n in names(PAlist)){
   PAlist[[n]]$Contrast <- gsub('X19O2NoCyA - X1O2PlusCyA', '19% O2, CyA- vs 1% O2, CyA+', PAlist[[n]]$Contrast)
   PAlist[[n]]$Contrast <- gsub("X19O2NoCyA - X1O2NoCyA", '1% O2, CyA- vs 19% O2, CyA-', PAlist[[n]]$Contrast)
   PAlist[[n]]$Contrast <- gsub("X1O2NoCyA - X1O2PlusCyA", '1% O2, CyA+ vs 1% O2, CyA-', PAlist[[n]]$Contrast)
+  PAlist[[n]]$Contrast <- gsub("X1O2NoCyA vs X19O2NoCyA", '1% O2, CyA- vs 19% O2, CyA-', PAlist[[n]]$Contrast)
+  PAlist[[n]]$Contrast <- gsub("X1O2PlusCyA - X19O2NoCyA", '19% O2, CyA- vs 1% O2, CyA+', PAlist[[n]]$Contrast)
   print(unique(PAlist[[n]]$Contrast))
 }
 

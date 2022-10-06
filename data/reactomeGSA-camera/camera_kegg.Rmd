@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "CAMERA + Fisher p-value combination"
 output: html_notebook
 ---
 
@@ -14,22 +14,10 @@ prot_contrast <- contrasts[colnames(proteomics),]
 mrna_contrast <- contrasts[colnames(transcriptomics),]
 phosph_contrast <- contrasts[colnames(phosphoproteomics),]
 kegg <- clusterProfiler::read.gmt('kegg_networks_edited.gmt')
-keggList <- setNames(lapply(unique(kegg$ont), function(x){return(kegg$gene[kegg$ont == x])}), unique(kegg$ont))
+#keggList <- setNames(lapply(unique(kegg$ont), function(x){return(kegg$gene[kegg$ont == x])}), unique(kegg$ont))
+keggList <- setNames(lapply(unique(as.vector(kegg$term)), function(x){return(kegg$gene[kegg$term == x])}), unique(kegg$term))
 ```
 
-# Contrast - 19O2NoCyA vs 1O2NoCyA
-
-```{r}
-require(readxl)
-
-excel_sheets(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""))
-
-de_mrna <- read_excel(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 2)
-de_prot <- read_excel(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 3)
-de_phospho <- read_excel(paste(getwd(),"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 4)
-
-
-```
 
 # Proteomics
 
@@ -151,32 +139,7 @@ ggsave(filename = "camera_allResults.svg", width = 12, height = 10, units = 'in'
 ggsave(filename = 'camera_allResults.png', width = 12, height =10, units = 'in')
 ```
 
-```{r, eval=FALSE}
-require(pathwayPCA)
-kegg <- pathwayPCA::read_gmt('c2.cp.kegg.v7.5.1.symbols.gmt')
 
-prot3 <- as.data.frame(t(prot2))
-prot3 <- cbind(make.unique(colnames(prot2)), prot3)
-colnames(prot3)[1] <- 'Sample'
-resp <- data.frame('Sample ID' = prot3$Sample, 'Response' = colnames(prot2))
-
-prot4 <- CreateOmics(
-  assayData_df = prot3,
-  response = resp,
-  respType = 'regression',
-  pathwayCollection_ls = kegg,
-  minPathSize = 5
-)
-
-prot_aespcOut <- AESPCA_pVals(
-  object = prot4,
-  numPCs = 1,
-  parallel = FALSE,
-  numReps = 0,
-  adjustment = "BH"
-)
-
-```
 
 
 

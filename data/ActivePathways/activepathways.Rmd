@@ -11,7 +11,7 @@ require(ActivePathways)
 require(readxl)
 require(ggplot2)
 require(stringr)
-pathToReactome <- "C:/Users/mpalshikar/Documents/moBONITA/data/reactomeGSA-camera"
+pathToReactome <- "C:\\Users\\Mukta Palshikar\\Documents\\GitHub\\moBONITA\\data\\paintomics\\" #"C:/Users/mpalshikar/Documents/moBONITA/data/paintomics"
 ```
 
 
@@ -55,32 +55,33 @@ runActivePathways <-
   }
 ```
 
-# Contrast 1: 19O2NoCyA vs 1O2NoCyA
+# Contrast 1: 1O2NoCyA vs 1O2PlusCyA
 ```{r}
-de_mrna <- read_excel(paste(pathToReactome,"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 2)
-de_prot <- read_excel(paste(pathToReactome,"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 3)
-de_phospho <- read_excel(paste(pathToReactome,"/19O2NoCyA vs 1O2NoCyA/19O2NoCyA vs 1O2NoCyA.xlsx", sep = ""), sheet = 4)
+de_mrna <- read.csv(paste(pathToReactome,"\\contrast1\\Transcriptomics_1O2NoCyclo_vs_1O2PlusCyclo.csv", sep = ""))
+de_prot <- read.csv(paste(pathToReactome,"\\contrast1\\Proteomics_1O2NoCyclo_vs_1O2PlusCyclo.csv", sep = ""))
+de_phospho <- read.csv(paste(pathToReactome,"\\contrast1\\Phosphoproteomics_1O2NoCyclo_vs_1O2PlusCyclo.csv", sep = ""))
 commonGenes <- union(de_mrna$Identifier, union(de_prot$Identifier, de_phospho$Identifier))
 length(commonGenes)
 contrast1 <- runActivePathways(de_mrna,de_prot,de_phospho)
-contrast1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
+contrast1$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
 ```
-# Contrast 2: 1O2NoCyA vs 1O2PlusCyA
+# Contrast 2: 1O2NoCyA vs 19O2NoCyA  1O2NoCyclo_vs_19O2NoCyclo
 ```{r}
-de_mrna <- read_excel(paste(pathToReactome,"/1O2NoCyA vs 1O2PlusCyA/1O2NoCyA vs 1O2PlusCyA.xlsx", sep = ""), sheet = 2)
-de_prot <- read_excel(paste(pathToReactome,"/1O2NoCyA vs 1O2PlusCyA/1O2NoCyA vs 1O2PlusCyA.xlsx", sep = ""), sheet = 3)
-de_phospho <- read_excel(paste(pathToReactome,"/1O2NoCyA vs 1O2PlusCyA/1O2NoCyA vs 1O2PlusCyA.xlsx", sep = ""), sheet = 4)
+de_mrna <- read.csv(paste(pathToReactome,"\\contrast2\\Transcriptomics_1O2NoCyclo_vs_19O2NoCyclo.csv", sep = ""))
+de_prot <- read.csv(paste(pathToReactome,"\\contrast2\\Proteomics_1O2NoCyclo_vs_19O2NoCyclo.csv", sep = ""))
+de_phospho <- read.csv(paste(pathToReactome,"\\contrast2\\Phosphoproteomics_1O2NoCyclo_vs_19O2NoCyclo.csv", sep = ""))
 commonGenes <- union(de_mrna$Identifier, union(de_prot$Identifier, de_phospho$Identifier))
 length(commonGenes)
 contrast2 <- runActivePathways(de_mrna,de_prot,de_phospho)
-contrast2$Contrast <- "X1O2PlusCyA - X1O2NoCyA"
+contrast2$Contrast <- "X1O2NoCyA vs X19O2NoCyA"
 contrast2
 ```
 # Contrast 3: 1O2PlusCyA vs 19O2NoCyA
+
 ```{r}
-de_mrna <- read_excel(paste(pathToReactome,"/1O2PlusCyA vs 19O2NoCyA/1O2PlusCyA vs 19O2NoCyA.xlsx", sep = ""), sheet = 2)
-de_prot <- read_excel(paste(pathToReactome,"/1O2PlusCyA vs 19O2NoCyA/1O2PlusCyA vs 19O2NoCyA.xlsx", sep = ""), sheet = 3)
-de_phospho <- read_excel(paste(pathToReactome,"/1O2PlusCyA vs 19O2NoCyA/1O2PlusCyA vs 19O2NoCyA.xlsx", sep = ""), sheet = 4)
+de_mrna <- read.csv(paste(pathToReactome,"\\contrast3\\Transcriptomics_1O2PlusCyclo_vs_19O2NoCyclo.csv", sep = ""))
+de_prot <- read.csv(paste(pathToReactome,"\\contrast3\\Proteomics_1O2PlusCyclo_vs_19O2NoCyclo.csv", sep = ""))
+de_phospho <- read.csv(paste(pathToReactome,"\\contrast3\\Phosphoproteomics_1O2PlusCyclo_vs_19O2NoCyclo.csv", sep = ""))
 commonGenes <- union(de_mrna$Identifier, union(de_prot$Identifier, de_phospho$Identifier))
 length(commonGenes)
 contrast3 <- runActivePathways(de_mrna,de_prot,de_phospho)
