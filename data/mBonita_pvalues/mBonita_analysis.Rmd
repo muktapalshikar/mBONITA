@@ -45,7 +45,7 @@ reshapePvals <- function(mBonita_PA) {
 prot_PA <- read.csv("pvalues_proteomics_20220816.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE)
 prot_PA$Method <- "Proteomics"
 prot_PA <- reshapePvals(prot_PA)
-trans_PA <- read.csv("pvalues_transcriptomics_20220816.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE)
+trans_PA <- read.csv("pvalues_transcriptomics_20221007.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE) #read.csv("pvalues_transcriptomics_20220816.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE)
 trans_PA$Method <- "Transcriptomics"
 trans_PA <- reshapePvals(trans_PA)
 phosph_PA <- read.csv("pvalues_phosphoproteomics_20220816.csv", row.names = 1, col.names= c("Pathway", "Code", "Nodes", "X1O2PlusCyA - X1O2NoCyA", "X1O2NoCyA - X19O2NoCyA", "X19O2NoCyA - X1O2PlusCyA"), check.names = FALSE)
@@ -67,7 +67,7 @@ Bonita_PA <- na.omit(rbind(prot_PA[,colnames(temp)], trans_PA[,colnames(temp)], 
 ```
 
 ```{r}
-write.csv(Bonita_PA, "Bonita_allResults.csv")
+write.csv(Bonita_PA, "Bonita_allResults_20221007.csv")
 temp <- Bonita_PA$FDR < 0.05
 Bonita_PA <- Bonita_PA[temp,]
 ```
