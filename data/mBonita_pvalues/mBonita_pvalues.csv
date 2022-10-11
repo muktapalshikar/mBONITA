@@ -1,10 +1,889 @@
-"","Pathway","P.value","Contrast","X.log10Pvalue","Pathway.Name","BHpvals","negativelog10FDR"
-"6","hsa00100",6.56702125795779e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.18263157786517,"Steroid biosynthesis",0.000592345317467792,3.22742504032322
-"18","hsa04066",6.02669507254752e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.21992078159665,"HIF-1 signaling pathway",0.000544210565051041,3.26423303128314
-"24","hsa04114",4.14208518914718e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.38278097333342,"Oocyte meiosis",0.0371130832947587,1.4304729636713
-"472","hsa04914",3.18239446552136e-05,"1% O2, CyA- vs 19% O2, CyA-",4.4972459894973,"Progesterone-mediated oocyte maturation",0.0285460783557266,1.54445354645321
-"519","hsa04730",1.40146508500833e-05,"1% O2, CyA- vs 19% O2, CyA-",4.85341771743784,"Long-term depression",0.0125991711142249,1.89965802570461
-"597","hsa04062",2.42742359327139e-05,"1% O2, CyA- vs 19% O2, CyA-",4.61485443126253,"Chemokine signaling pathway",0.021798263867577,1.66157809459523
-"776","hsa04914",1.06611215429287e-05,"19% O2, CyA- vs 1% O2, CyA+",4.97219710541414,"Progesterone-mediated oocyte maturation",0.0095950093886358,2.01795459597481
-"823","hsa04730",7.81536468929871e-07,"19% O2, CyA- vs 1% O2, CyA+",6.10705075163652,"Long-term depression",0.000704164358505814,3.15232596065746
-"855","hsa05224",5.40769543423367e-05,"19% O2, CyA- vs 1% O2, CyA+",4.26698777619298,"Breast cancer",0.0483988741363913,1.31516474087707
+"","Pathway","P.value","Contrast","X.log10Pvalue","Pathway.Name","BHpvals","negativeLog10_adjpvals"
+"1","hsa05225",2.3865570097861e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.6222281867996,"Hepatocellular carcinoma",0.0165149745077198,1.78212209234285
+"2","hsa04962",0.485402892113437,"1% O2, CyA+ vs 1% O2, CyA-",0.313897640395586,"Vasopressin-regulated water reabsorption",1,0
+"3","hsa03250",4.39844966660438e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.35670037348769,"Viral life cycle - HIV-1",0.000322846205528761,3.49100431357162
+"4","hsa04912",0.000210039317783624,"1% O2, CyA+ vs 1% O2, CyA-",3.6776994009891,"GnRH signaling pathway",0.139466107008326,0.85553132162108
+"5","hsa05218",0.0079507864180582,"1% O2, CyA+ vs 1% O2, CyA-",2.09958991283639,"Melanoma",1,0
+"6","hsa00100",5.28922483558919e-29,"1% O2, CyA+ vs 1% O2, CyA-",28.2766079714986,"Steroid biosynthesis",4.46939498607287e-26,25.3497512625489
+"7","hsa00830",0.473338278103377,"1% O2, CyA+ vs 1% O2, CyA-",0.324828373417323,"Retinol metabolism",1,0
+"8","hsa00785",0.546738170893761,"1% O2, CyA+ vs 1% O2, CyA-",0.262220604488112,"Lipoic acid metabolism",1,0
+"9","hsa04625",1.05124934285002e-16,"1% O2, CyA+ vs 1% O2, CyA-",15.9782942626772,"C-type lectin receptor signaling pathway",8.50460718365667e-14,13.0703457410649
+"10","hsa05221",0.00690584134372539,"1% O2, CyA+ vs 1% O2, CyA-",2.16078340344618,"Acute myeloid leukemia",1,0
+"11","hsa04145",0.00512532164719601,"1% O2, CyA+ vs 1% O2, CyA-",2.29027887461971,"Phagosome",1,0
+"12","hsa05217",0.249244209845051,"1% O2, CyA+ vs 1% O2, CyA-",0.603374921929253,"Basal cell carcinoma",1,0
+"13","hsa05223",0.0986189770202555,"1% O2, CyA+ vs 1% O2, CyA-",1.00603950674062,"Non-small cell lung cancer",1,0
+"14","hsa05330",0.542973899240955,"1% O2, CyA+ vs 1% O2, CyA-",0.265221046448112,"Allograft rejection",1,0
+"15","hsa04022",0.0104581576188443,"1% O2, CyA+ vs 1% O2, CyA-",1.98054481704084,"cGMP-PKG signaling pathway",1,0
+"16","hsa00140",0.502254091835657,"1% O2, CyA+ vs 1% O2, CyA-",0.299076516392739,"Steroid hormone biosynthesis",1,0
+"17","hsa04066",2.08001190866611e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.68193417856937,"HIF-1 signaling pathway",0.000154336883623025,3.81153027329034
+"18","hsa04724",0.440638395397801,"1% O2, CyA+ vs 1% O2, CyA-",0.355917662920877,"Glutamatergic synapse",1,0
+"19","hsa05012",0.306961081555479,"1% O2, CyA+ vs 1% O2, CyA-",0.51291668360141,"Parkinson disease",1,0
+"20","hsa05146",0.43903979662507,"1% O2, CyA+ vs 1% O2, CyA-",0.357496111486088,"Amoebiasis",1,0
+"21","hsa05410",0.389444010432984,"1% O2, CyA+ vs 1% O2, CyA-",0.409554971130937,"Hypertrophic cardiomyopathy",1,0
+"22","hsa00510",0.471088197548552,"1% O2, CyA+ vs 1% O2, CyA-",0.326897776262181,"N-Glycan biosynthesis",1,0
+"23","hsa04114",1.13332702978747e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.94564475320929,"Oocyte meiosis",0.00794462247881018,2.09992673524263
+"24","hsa04310",0.00904109264072445,"1% O2, CyA+ vs 1% O2, CyA-",2.04377908067926,"Wnt signaling pathway",1,0
+"25","hsa03015",5.9907323695705e-19,"1% O2, CyA+ vs 1% O2, CyA-",18.2225200816807,"mRNA surveillance pathway",4.90041907830867e-16,15.3097667780094
+"26","hsa03440",0.150469739379408,"1% O2, CyA+ vs 1% O2, CyA-",0.822550831245781,"Homologous recombination",1,0
+"27","hsa05152",0.126959692092013,"1% O2, CyA+ vs 1% O2, CyA-",0.89633413952118,"Tuberculosis",1,0
+"28","hsa04110",0.0775258066650578,"1% O2, CyA+ vs 1% O2, CyA-",1.1105537061824,"Cell cycle",1,0
+"29","hsa00604",0.524190366695734,"1% O2, CyA+ vs 1% O2, CyA-",0.280510964559444,"Glycosphingolipid biosynthesis - ganglio series",1,0
+"30","hsa05416",0.0142387862593108,"1% O2, CyA+ vs 1% O2, CyA-",1.84652702919281,"Viral myocarditis",1,0
+"31","hsa04664",1.77975403410517e-26,"1% O2, CyA+ vs 1% O2, CyA-",25.74964001399,"Fc epsilon RI signaling pathway",1.48787437251192e-23,22.827433736551
+"32","hsa04929",3.68633557363327e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.43340513272421,"GnRH secretion",0.0252145353236516,1.59834903100409
+"33","hsa04136",2.41792675915635e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.61655685838674,"Autophagy - other",0.0167078739057704,1.77707881101254
+"34","hsa04660",3.18189244870623e-10,"1% O2, CyA+ vs 1% O2, CyA-",9.49731450404921,"T cell receptor signaling pathway",2.45960286284992e-07,6.60913501013089
+"35","hsa00310",0.00258887703551442,"1% O2, CyA+ vs 1% O2, CyA-",2.58688857685975,"Lysine degradation",1,0
+"36","hsa04070",0.334544561438186,"1% O2, CyA+ vs 1% O2, CyA-",0.475546025884935,"Phosphatidylinositol signaling system",1,0
+"37","hsa04726",0.00430880637100401,"1% O2, CyA+ vs 1% O2, CyA-",2.36564302178398,"Serotonergic synapse",1,0
+"38","hsa05332",0.538107978121083,"1% O2, CyA+ vs 1% O2, CyA-",0.269130568949089,"Graft-versus-host disease",1,0
+"39","hsa04916",0.00203207334426594,"1% O2, CyA+ vs 1% O2, CyA-",2.69206062097713,"Melanogenesis",1,0
+"40","hsa05169",0.159107192516435,"1% O2, CyA+ vs 1% O2, CyA-",0.798310187420708,"Epstein-Barr virus infection",1,0
+"41","hsa00900",0.0219678360971013,"1% O2, CyA+ vs 1% O2, CyA-",1.65821272038363,"Terpenoid backbone biosynthesis",1,0
+"42","hsa00591",0.517449046400937,"1% O2, CyA+ vs 1% O2, CyA-",0.286132409071805,"Linoleic acid metabolism",1,0
+"43","hsa04024",0.028281291978194,"1% O2, CyA+ vs 1% O2, CyA-",1.54850075448674,"cAMP signaling pathway",1,0
+"44","hsa04068",1.47403141498645e-06,"1% O2, CyA+ vs 1% O2, CyA-",5.83149326056796,"FoxO signaling pathway",0.00106425068162022,2.97295606299832
+"45","hsa00520",0.304449597821249,"1% O2, CyA+ vs 1% O2, CyA-",0.516484595313278,"Amino sugar and nucleotide sugar metabolism",1,0
+"46","hsa00860",0.469639487816195,"1% O2, CyA+ vs 1% O2, CyA-",0.328235394256848,"Porphyrin metabolism",1,0
+"47","hsa04922",8.24313050277039e-09,"1% O2, CyA+ vs 1% O2, CyA-",8.08390782448186,"Glucagon signaling pathway",6.28126544311104e-06,5.20195285314226
+"48","hsa04926",0.0408867638747385,"1% O2, CyA+ vs 1% O2, CyA-",1.38841726183405,"Relaxin signaling pathway",1,0
+"49","hsa04370",5.55737764926462e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.25513008991267,"VEGF signaling pathway",0.0377901680149994,1.42262117720643
+"50","hsa05213",2.15850609809755e-20,"1% O2, CyA+ vs 1% O2, CyA-",19.6658467200601,"Endometrial cancer",1.78508454312668e-17,16.7483412105076
+"51","hsa04520",2.04860320715052e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.68854215171724,"Adherens junction",0.0141968202255531,1.84780891710543
+"52","hsa05110",0.00557304716607664,"1% O2, CyA+ vs 1% O2, CyA-",2.25390728138662,"Vibrio cholerae infection",1,0
+"53","hsa05220",0.0110722697800887,"1% O2, CyA+ vs 1% O2, CyA-",1.95576334100722,"Chronic myeloid leukemia",1,0
+"54","hsa05235",2.2834539747137e-09,"1% O2, CyA+ vs 1% O2, CyA-",8.64140773760606,"PD-L1 expression and PD-1 checkpoint pathway in cancer",1.74912574463069e-06,5.75717896797345
+"55","hsa05207",0.000317809380551908,"1% O2, CyA+ vs 1% O2, CyA-",3.49783328818022,"Chemical carcinogenesis - receptor activation",0.209118572403156,0.679607394566267
+"56","hsa05418",0.185697094451906,"1% O2, CyA+ vs 1% O2, CyA-",0.731194891485723,"Fluid shear stress and atherosclerosis",1,0
+"57","hsa00920",0.526078126889818,"1% O2, CyA+ vs 1% O2, CyA-",0.278949754786251,"Sulfur metabolism",1,0
+"58","hsa04931",0.000107575501658055,"1% O2, CyA+ vs 1% O2, CyA-",3.96828661999031,"Insulin resistance",0.0723983126158713,1.14027155576633
+"59","hsa00500",0.0295943692706266,"1% O2, CyA+ vs 1% O2, CyA-",1.52879091148552,"Starch and sucrose metabolism",1,0
+"60","hsa05216",0.413889761373307,"1% O2, CyA+ vs 1% O2, CyA-",0.383115316856243,"Thyroid cancer",1,0
+"61","hsa00740",0.416577316390884,"1% O2, CyA+ vs 1% O2, CyA-",0.380304382094655,"Riboflavin metabolism",1,0
+"62","hsa00062",0.23814831682609,"1% O2, CyA+ vs 1% O2, CyA-",0.623152483628453,"Fatty acid elongation",1,0
+"63","hsa04390",0.0176395807764404,"1% O2, CyA+ vs 1% O2, CyA-",1.75351174055579,"Hippo signaling pathway",1,0
+"64","hsa04064",0.200499338524844,"1% O2, CyA+ vs 1% O2, CyA-",0.697887055839231,"NF-kappa B signaling pathway",1,0
+"65","hsa04932",0.261589782985666,"1% O2, CyA+ vs 1% O2, CyA-",0.582379222425745,"Non-alcoholic fatty liver disease",1,0
+"66","hsa05222",0.040715158655015,"1% O2, CyA+ vs 1% O2, CyA-",1.39024386854981,"Small cell lung cancer",1,0
+"67","hsa05320",0.555825980555502,"1% O2, CyA+ vs 1% O2, CyA-",0.255061157184077,"Autoimmune thyroid disease",1,0
+"68","hsa04115",0.0479035785556625,"1% O2, CyA+ vs 1% O2, CyA-",1.31963204214022,"p53 signaling pathway",1,0
+"69","hsa04710",0.160269830183734,"1% O2, CyA+ vs 1% O2, CyA-",0.795148223234674,"Circadian rhythm",1,0
+"70","hsa05206",0.000664617296126861,"1% O2, CyA+ vs 1% O2, CyA-",3.17742836074808,"MicroRNAs in cancer",0.430672007890206,0.365853354877489
+"71","hsa05032",0.471311616823057,"1% O2, CyA+ vs 1% O2, CyA-",0.326691855678568,"Morphine addiction",1,0
+"72","hsa00620",0.33322384337416,"1% O2, CyA+ vs 1% O2, CyA-",0.477263930808623,"Pyruvate metabolism",1,0
+"73","hsa05132",0.197136267987642,"1% O2, CyA+ vs 1% O2, CyA-",0.70523346938912,"Salmonella infection",1,0
+"74","hsa04658",0.141718556138628,"1% O2, CyA+ vs 1% O2, CyA-",0.848573281008779,"Th1 and Th2 cell differentiation",1,0
+"75","hsa05014",0.0351590773018352,"1% O2, CyA+ vs 1% O2, CyA-",1.45396253086731,"Amyotrophic lateral sclerosis",1,0
+"76","hsa04933",0.476379252125895,"1% O2, CyA+ vs 1% O2, CyA-",0.322047161722121,"AGE-RAGE signaling pathway in diabetic complications",1,0
+"77","hsa00531",0.485347524961082,"1% O2, CyA+ vs 1% O2, CyA-",0.313947180727168,"Glycosaminoglycan degradation",1,0
+"78","hsa04714",0.0683798789504421,"1% O2, CyA+ vs 1% O2, CyA-",1.16507167234904,"Thermogenesis",1,0
+"79","hsa00592",0.466665162175495,"1% O2, CyA+ vs 1% O2, CyA-",0.330994619169854,"alpha-Linolenic acid metabolism",1,0
+"80","hsa05170",8.33508060748401e-08,"1% O2, CyA+ vs 1% O2, CyA-",7.07909019581003,"Human immunodeficiency virus 1 infection",6.23464029439804e-05,4.20518859794557
+"81","hsa05160",3.12665704302206e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.50491975306837,"Hepatitis C",0.0214488673151314,1.66859563736162
+"82","hsa04392",0.0582092735811059,"1% O2, CyA+ vs 1% O2, CyA-",1.23500782043142,"Hippo signaling pathway - multiple species",1,0
+"83","hsa04666",0.000594620534669522,"1% O2, CyA+ vs 1% O2, CyA-",3.22576009691435,"Fc gamma R-mediated phagocytosis",0.386503347535189,0.412846740271491
+"84","hsa04920",0.0623073269987122,"1% O2, CyA+ vs 1% O2, CyA-",1.20546087969709,"Adipocytokine signaling pathway",1,0
+"85","hsa04940",0.551177268587503,"1% O2, CyA+ vs 1% O2, CyA-",0.258708701714693,"Type I diabetes mellitus",1,0
+"86","hsa04672",0.0764922789366375,"1% O2, CyA+ vs 1% O2, CyA-",1.11638239993713,"Intestinal immune network for IgA production",1,0
+"87","hsa00780",0.5233070802331,"1% O2, CyA+ vs 1% O2, CyA-",0.281243389308941,"Biotin metabolism",1,0
+"88","hsa00590",0.311927055650781,"1% O2, CyA+ vs 1% O2, CyA-",0.505946954161619,"Arachidonic acid metabolism",1,0
+"89","hsa05161",0.0199902371600414,"1% O2, CyA+ vs 1% O2, CyA-",1.69918205347136,"Hepatitis B",1,0
+"90","hsa04540",1.972870689465e-42,"1% O2, CyA+ vs 1% O2, CyA-",41.7049013793663,"Gap junction",1.6966687929399e-39,38.7704029281227
+"91","hsa04913",0.158010598921146,"1% O2, CyA+ vs 1% O2, CyA-",0.801313780776056,"Ovarian steroidogenesis",1,0
+"92","hsa05212",0.26553751820573,"1% O2, CyA+ vs 1% O2, CyA-",0.575874108109569,"Pancreatic cancer",1,0
+"93","hsa05211",2.63129521031311e-271,"1% O2, CyA+ vs 1% O2, CyA-",270.579830424808,"Renal cell carcinoma",2.31553978507554e-268,267.635347752657
+"94","hsa04371",0.000998832940487561,"1% O2, CyA+ vs 1% O2, CyA-",3.00050714349722,"Apelin signaling pathway",0.639253081912039,0.194327169513335
+"95","hsa05164",0.0573806459542989,"1% O2, CyA+ vs 1% O2, CyA-",1.24123456705536,"Influenza A",1,0
+"96","hsa04146",0.0687659046373194,"1% O2, CyA+ vs 1% O2, CyA-",1.16262683935399,"Peroxisome",1,0
+"97","hsa04122",3.88683549872067e-19,"1% O2, CyA+ vs 1% O2, CyA-",18.4104038394844,"Sulfur relay system",3.18331827345223e-16,15.497119937724
+"98","hsa05167",0.282896777127656,"1% O2, CyA+ vs 1% O2, CyA-",0.548372000169901,"Kaposi sarcoma-associated herpesvirus infection",1,0
+"99","hsa00562",0.429212441346906,"1% O2, CyA+ vs 1% O2, CyA-",0.367327697866389,"Inositol phosphate metabolism",1,0
+"100","hsa04935",0.00049374735395882,"1% O2, CyA+ vs 1% O2, CyA-",3.30649521878657,"Growth hormone synthesis, secretion and action",0.321429527427192,0.492914230218381
+"101","hsa00240",0.290162603852191,"1% O2, CyA+ vs 1% O2, CyA-",0.537358560151759,"Pyrimidine metabolism",1,0
+"102","hsa05200",0.241681287083585,"1% O2, CyA+ vs 1% O2, CyA-",0.616756974875581,"Pathways in cancer",1,0
+"103","hsa00480",0.382340201726951,"1% O2, CyA+ vs 1% O2, CyA-",0.41755003504336,"Glutathione metabolism",1,0
+"104","hsa04150",8.14566566470463e-08,"1% O2, CyA+ vs 1% O2, CyA-",7.08907341931185,"mTOR signaling pathway",6.10110358286377e-05,4.21459160161239
+"105","hsa05034",5.02842406849888e-09,"1% O2, CyA+ vs 1% O2, CyA-",8.29856810353126,"Alcoholism",3.84674441240164e-06,5.41490666837764
+"106","hsa04750",0.176511760135805,"1% O2, CyA+ vs 1% O2, CyA-",0.75322635434447,"Inflammatory mediator regulation of TRP channels",1,0
+"107","hsa04137",0.0742958080555514,"1% O2, CyA+ vs 1% O2, CyA-",1.12903568946555,"Mitophagy - animal",1,0
+"108","hsa05203",0.000358104654018036,"1% O2, CyA+ vs 1% O2, CyA-",3.44599003475124,"Viral carcinogenesis",0.234916653035831,0.629086195375583
+"109","hsa03320",0.466045627726567,"1% O2, CyA+ vs 1% O2, CyA-",0.331571562065768,"PPAR signaling pathway",1,0
+"110","hsa00564",0.48320632563728,"1% O2, CyA+ vs 1% O2, CyA-",0.315867389015684,"Glycerophospholipid metabolism",1,0
+"111","hsa04961",0.467246789339015,"1% O2, CyA+ vs 1% O2, CyA-",0.330453674169868,"Endocrine and other factor-regulated calcium reabsorption",1,0
+"112","hsa00220",0.505906782967332,"1% O2, CyA+ vs 1% O2, CyA-",0.295929497730126,"Arginine biosynthesis",1,0
+"113","hsa05168",5.49119067211285e-30,"1% O2, CyA+ vs 1% O2, CyA-",29.2603334759029,"Herpes simplex virus 1 infection",4.64554730860747e-27,26.3329631128639
+"114","hsa04061",0.0028395318083201,"1% O2, CyA+ vs 1% O2, CyA-",2.54675326200411,"Viral protein interaction with cytokine and cytokine receptor",1,0
+"115","hsa05412",0.362722893783468,"1% O2, CyA+ vs 1% O2, CyA-",0.440425032426042,"Arrhythmogenic right ventricular cardiomyopathy",1,0
+"116","hsa04924",0.00416121182957638,"1% O2, CyA+ vs 1% O2, CyA-",2.38078017556141,"Renin secretion",1,0
+"117","hsa05143",0.468686434712858,"1% O2, CyA+ vs 1% O2, CyA-",0.329117616171719,"African trypanosomiasis",1,0
+"118","hsa04960",0.0272486136053,"1% O2, CyA+ vs 1% O2, CyA-",1.56465558949321,"Aldosterone-regulated sodium reabsorption",1,0
+"119","hsa05162",0.361770461727848,"1% O2, CyA+ vs 1% O2, CyA-",0.441566895829706,"Measles",1,0
+"120","hsa00730",0.433046179990116,"1% O2, CyA+ vs 1% O2, CyA-",0.363465788068172,"Thiamine metabolism",1,0
+"121","hsa05030",0.251852605267605,"1% O2, CyA+ vs 1% O2, CyA-",0.598853552261134,"Cocaine addiction",1,0
+"122","hsa00750",0.389043903041302,"1% O2, CyA+ vs 1% O2, CyA-",0.410001386405134,"Vitamin B6 metabolism",1,0
+"123","hsa04623",0.223158959398729,"1% O2, CyA+ vs 1% O2, CyA-",0.651385672393608,"Cytosolic DNA-sensing pathway",1,0
+"124","hsa00650",0.392968234326297,"1% O2, CyA+ vs 1% O2, CyA-",0.405642554495759,"Butanoate metabolism",1,0
+"125","hsa05010",0.0407497854622323,"1% O2, CyA+ vs 1% O2, CyA-",1.38987467337343,"Alzheimer disease",1,0
+"126","hsa05031",0.189083703435188,"1% O2, CyA+ vs 1% O2, CyA-",0.723345900098154,"Amphetamine addiction",1,0
+"127","hsa00071",0.0991784992961545,"1% O2, CyA+ vs 1% O2, CyA-",1.00358246745376,"Fatty acid degradation",1,0
+"128","hsa00561",0.397036020857782,"1% O2, CyA+ vs 1% O2, CyA-",0.401170090339868,"Glycerolipid metabolism",1,0
+"129","hsa04614",0.0408106432287116,"1% O2, CyA+ vs 1% O2, CyA-",1.38922656012801,"Renin-angiotensin system",1,0
+"130","hsa04971",0.000176086922889821,"1% O2, CyA+ vs 1% O2, CyA-",3.75427289575148,"Gastric acid secretion",0.117449977567511,0.930147061834926
+"131","hsa04215",0.0432232116729753,"1% O2, CyA+ vs 1% O2, CyA-",1.36428296628135,"Apoptosis - multiple species",1,0
+"132","hsa04080",0.363806356109709,"1% O2, CyA+ vs 1% O2, CyA-",0.439129717589031,"Neuroactive ligand-receptor interaction",1,0
+"133","hsa05231",0.0865900057383948,"1% O2, CyA+ vs 1% O2, CyA-",1.06253223157555,"Choline metabolism in cancer",1,0
+"134","hsa05166",5.55605345795854e-06,"1% O2, CyA+ vs 1% O2, CyA-",5.25523358431946,"Human T-cell leukemia virus 1 infection",0.00392257374131873,2.40642888326766
+"135","hsa00790",0.178303378172374,"1% O2, CyA+ vs 1% O2, CyA-",0.748840428514367,"Folate biosynthesis",1,0
+"136","hsa00983",0.238045486951249,"1% O2, CyA+ vs 1% O2, CyA-",0.623340047799001,"Drug metabolism - other enzymes",1,0
+"137","hsa04721",0.206193927023334,"1% O2, CyA+ vs 1% O2, CyA-",0.685724130027743,"Synaptic vesicle cycle",1,0
+"138","hsa04218",4.2003632892081e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.37671314586989,"Cellular senescence",0.0286464776323993,1.54292877121342
+"139","hsa04530",0.205218766459658,"1% O2, CyA+ vs 1% O2, CyA-",0.687782927199538,"Tight junction",1,0
+"140","hsa04340",0.0489047281410618,"1% O2, CyA+ vs 1% O2, CyA-",1.31064915097235,"Hedgehog signaling pathway",1,0
+"141","hsa04725",0.0676762516237139,"1% O2, CyA+ vs 1% O2, CyA-",1.16956370351836,"Cholinergic synapse",1,0
+"142","hsa04740",0.540835267501751,"1% O2, CyA+ vs 1% O2, CyA-",0.266934996093784,"Olfactory transduction",1,0
+"143","hsa04152",2.79128343395516e-06,"1% O2, CyA+ vs 1% O2, CyA-",5.55419606191593,"AMPK signaling pathway",0.00200135022214585,2.69867690624813
+"144","hsa03460",1.00539200691234e-64,"1% O2, CyA+ vs 1% O2, CyA-",63.9976645718309,"Fanconi anemia pathway",8.69664085979173e-62,61.0606484643661
+"145","hsa05214",0.000926055364561484,"1% O2, CyA+ vs 1% O2, CyA-",3.03336304808613,"Glioma",0.595453599413034,0.225152075161904
+"146","hsa00440",0.528350325635679,"1% O2, CyA+ vs 1% O2, CyA-",0.277078020573829,"Phosphonate and phosphinate metabolism",1,0
+"147","hsa04020",0.117095933914206,"1% O2, CyA+ vs 1% O2, CyA-",0.931458185280176,"Calcium signaling pathway",1,0
+"148","hsa04514",0.373171329332719,"1% O2, CyA+ vs 1% O2, CyA-",0.428091730388838,"Cell adhesion molecules",1,0
+"149","hsa04613",0.0981077196161357,"1% O2, CyA+ vs 1% O2, CyA-",1.00829681876901,"Neutrophil extracellular trap formation",1,0
+"150","hsa00250",0.442144119729163,"1% O2, CyA+ vs 1% O2, CyA-",0.354436146485462,"Alanine, aspartate and glutamate metabolism",1,0
+"151","hsa04217",0.118864270701945,"1% O2, CyA+ vs 1% O2, CyA-",0.924948669930337,"Necroptosis",1,0
+"152","hsa04934",1.01341677331787e-06,"1% O2, CyA+ vs 1% O2, CyA-",5.99421191186782,"Cushing syndrome",0.000736753994202094,3.13267750100878
+"153","hsa05140",0.0592188263414549,"1% O2, CyA+ vs 1% O2, CyA-",1.22754020414835,"Leishmaniasis",1,0
+"154","hsa04919",3.66338588570582e-08,"1% O2, CyA+ vs 1% O2, CyA-",7.43611733216651,"Thyroid hormone signaling pathway",2.76219295782219e-05,4.55874598629673
+"155","hsa04550",0.239525303765281,"1% O2, CyA+ vs 1% O2, CyA-",0.62064860039075,"Signaling pathways regulating pluripotency of stem cells",1,0
+"156","hsa00061",0.0287645914403036,"1% O2, CyA+ vs 1% O2, CyA-",1.54114179012386,"Fatty acid biosynthesis",1,0
+"157","hsa00532",0.432938801686386,"1% O2, CyA+ vs 1% O2, CyA-",0.363573489254709,"Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate",1,0
+"158","hsa04742",0.300411135629384,"1% O2, CyA+ vs 1% O2, CyA-",0.522283972956951,"Taste transduction",1,0
+"159","hsa04261",0.0976548227212499,"1% O2, CyA+ vs 1% O2, CyA-",1.01030630404528,"Adrenergic signaling in cardiomyocytes",1,0
+"160","hsa04910",3.61690629011353e-12,"1% O2, CyA+ vs 1% O2, CyA-",11.4416627431637,"Insulin signaling pathway",2.84288834402923e-09,8.54624019712427
+"161","hsa04015",0.00232229582899882,"1% O2, CyA+ vs 1% O2, CyA-",2.63408245784537,"Rap1 signaling pathway",1,0
+"162","hsa05208",1.63517357332762e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.78643614028971,"Chemical carcinogenesis - reactive oxygen species",0.000121820431212908,3.91427986754142
+"163","hsa04914",1.75318289898564e-70,"1% O2, CyA+ vs 1% O2, CyA-",69.7561727742218,"Progesterone-mediated oocyte maturation",1.51825639052156e-67,66.8186548822045
+"164","hsa04130",0.147477672790979,"1% O2, CyA+ vs 1% O2, CyA-",0.831273724212183,"SNARE interactions in vesicular transport",1,0
+"165","hsa00640",0.133305794480529,"1% O2, CyA+ vs 1% O2, CyA-",0.875150972444918,"Propanoate metabolism",1,0
+"166","hsa00450",0.445042902885906,"1% O2, CyA+ vs 1% O2, CyA-",0.351598120280919,"Selenocompound metabolism",1,0
+"167","hsa04621",0.00183710497895535,"1% O2, CyA+ vs 1% O2, CyA-",2.73586602579634,"NOD-like receptor signaling pathway",1,0
+"168","hsa05130",0.0564109559727361,"1% O2, CyA+ vs 1% O2, CyA-",1.24863654040639,"Pathogenic Escherichia coli infection",1,0
+"169","hsa04670",0.156993529876902,"1% O2, CyA+ vs 1% O2, CyA-",0.804118245658668,"Leukocyte transendothelial migration",1,0
+"170","hsa04928",0.0300277831147435,"1% O2, CyA+ vs 1% O2, CyA-",1.52247672962496,"Parathyroid hormone synthesis, secretion and action",1,0
+"171","hsa00130",0.427186006941893,"1% O2, CyA+ vs 1% O2, CyA-",0.369382981652374,"Ubiquinone and other terpenoid-quinone biosynthesis",1,0
+"172","hsa05100",0.125045103945212,"1% O2, CyA+ vs 1% O2, CyA-",0.902933308101449,"Bacterial invasion of epithelial cells",1,0
+"173","hsa05414",0.439203169202712,"1% O2, CyA+ vs 1% O2, CyA-",0.357334534764057,"Dilated cardiomyopathy",1,0
+"174","hsa05321",0.447414844312418,"1% O2, CyA+ vs 1% O2, CyA-",0.349289610994812,"Inflammatory bowel disease",1,0
+"175","hsa00051",0.0713642407345113,"1% O2, CyA+ vs 1% O2, CyA-",1.14651935043581,"Fructose and mannose metabolism",1,0
+"176","hsa05230",1.13654509015175e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.94441332983286,"Central carbon metabolism in cancer",8.48999182343356e-05,4.07109272801746
+"177","hsa04727",0.373665441833407,"1% O2, CyA+ vs 1% O2, CyA-",0.427517065690785,"GABAergic synapse",1,0
+"178","hsa04630",0.0019460484311985,"1% O2, CyA+ vs 1% O2, CyA-",2.71084635567068,"JAK-STAT signaling pathway",1,0
+"179","hsa00603",0.564102304731467,"1% O2, CyA+ vs 1% O2, CyA-",0.248642125890431,"Glycosphingolipid biosynthesis - globo and isoglobo series",1,0
+"180","hsa00340",0.337862466265945,"1% O2, CyA+ vs 1% O2, CyA-",0.471260052081239,"Histidine metabolism",1,0
+"181","hsa04610",0.479620622174467,"1% O2, CyA+ vs 1% O2, CyA-",0.319102151878378,"Complement and coagulation cascades",1,0
+"182","hsa05205",0.0198181285583892,"1% O2, CyA+ vs 1% O2, CyA-",1.70293735868718,"Proteoglycans in cancer",1,0
+"183","hsa04140",1.19162064078531e-26,"1% O2, CyA+ vs 1% O2, CyA-",25.9238619827132,"Autophagy - animal",9.97386476337305e-24,23.0011365247199
+"184","hsa00010",0.391500143765496,"1% O2, CyA+ vs 1% O2, CyA-",0.407268074125705,"Glycolysis / Gluconeogenesis",1,0
+"185","hsa04144",2.62143960317445e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.58146014379051,"Endocytosis",0.000193724386674592,3.71281570539568
+"186","hsa01521",0.00435980096569605,"1% O2, CyA+ vs 1% O2, CyA-",2.36053333675732,"EGFR tyrosine kinase inhibitor resistance",1,0
+"187","hsa05415",0.0542895405235066,"1% O2, CyA+ vs 1% O2, CyA-",1.26528383395585,"Diabetic cardiomyopathy",1,0
+"188","hsa05133",2.13227627124406e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.67115652605091,"Pertussis",0.000158001671699185,3.80133831807159
+"189","hsa04620",0.0911114392798404,"1% O2, CyA+ vs 1% O2, CyA-",1.04042709279402,"Toll-like receptor signaling pathway",1,0
+"190","hsa00980",0.375988374761968,"1% O2, CyA+ vs 1% O2, CyA-",0.424825582877603,"Metabolism of xenobiotics by cytochrome P450",1,0
+"191","hsa01524",9.46097144192141e-09,"1% O2, CyA+ vs 1% O2, CyA-",8.02406426843906,"Platinum drug resistance",7.19979926730219e-06,5.14267961166849
+"192","hsa00630",0.369610741647378,"1% O2, CyA+ vs 1% O2, CyA-",0.432255415778786,"Glyoxylate and dicarboxylate metabolism",1,0
+"193","hsa05022",0.0468674982797103,"1% O2, CyA+ vs 1% O2, CyA-",1.32912822788184,"Pathways of neurodegeneration - multiple diseases",1,0
+"194","hsa05165",0.108500074525601,"1% O2, CyA+ vs 1% O2, CyA-",0.96456996351088,"Human papillomavirus infection",1,0
+"195","hsa04330",1.92549319193329e-06,"1% O2, CyA+ vs 1% O2, CyA-",5.71545801259619,"Notch signaling pathway",0.0013882805913839,2.85752274787676
+"196","hsa04927",0.00685166308209012,"1% O2, CyA+ vs 1% O2, CyA-",2.16420400081257,"Cortisol synthesis and secretion",1,0
+"197","hsa01523",1.78455685625107e-09,"1% O2, CyA+ vs 1% O2, CyA-",8.74846961080008,"Antifolate resistance",1.36875510874457e-06,5.8636742468511
+"198","hsa05323",0.479753547716235,"1% O2, CyA+ vs 1% O2, CyA-",0.318981805028369,"Rheumatoid arthritis",1,0
+"199","hsa00563",0.520562410060244,"1% O2, CyA+ vs 1% O2, CyA-",0.283527195605993,"Glycosylphosphatidylinositol (GPI)-anchor biosynthesis",1,0
+"200","hsa04917",1.47389948509443e-15,"1% O2, CyA+ vs 1% O2, CyA-",14.8315321328659,"Prolactin signaling pathway",1.18059348756064e-12,11.9278996167817
+"201","hsa05135",5.22946013963535e-08,"1% O2, CyA+ vs 1% O2, CyA-",7.28154314296428,"Yersinia infection",3.93255402500578e-05,4.40532530237264
+"202","hsa04612",0.00121339215162238,"1% O2, CyA+ vs 1% O2, CyA-",2.91599881845585,"Antigen processing and presentation",0.771717408431832,0.112541702807441
+"203","hsa00330",0.493889872917928,"1% O2, CyA+ vs 1% O2, CyA-",0.306369878841393,"Arginine and proline metabolism",1,0
+"204","hsa05016",0.033649244265901,"1% O2, CyA+ vs 1% O2, CyA-",1.47302468522409,"Huntington disease",1,0
+"205","hsa04141",2.52029558943415e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.59854852059471,"Protein processing in endoplasmic reticulum",0.000186501873618127,3.72931680086373
+"206","hsa04979",0.274248680347167,"1% O2, CyA+ vs 1% O2, CyA-",0.561855453522885,"Cholesterol metabolism",1,0
+"207","hsa00670",0.359094167322295,"1% O2, CyA+ vs 1% O2, CyA-",0.444791648954445,"One carbon pool by folate",1,0
+"208","hsa00260",0.442578177025745,"1% O2, CyA+ vs 1% O2, CyA-",0.354010004396466,"Glycine, serine and threonine metabolism",1,0
+"209","hsa04730",5.61069555639419e-31,"1% O2, CyA+ vs 1% O2, CyA-",30.2509832960382,"Long-term depression",4.76348052737867e-28,27.3220756057942
+"210","hsa04650",0.039328114392635,"1% O2, CyA+ vs 1% O2, CyA-",1.40529687557105,"Natural killer cell mediated cytotoxicity",1,0
+"211","hsa04720",1.51743850282619e-39,"1% O2, CyA+ vs 1% O2, CyA-",38.8188889005324,"Long-term potentiation",1.29740991991639e-36,35.8869227858042
+"212","hsa00360",0.534769069864587,"1% O2, CyA+ vs 1% O2, CyA-",0.271833719539431,"Phenylalanine metabolism",1,0
+"213","hsa05020",4.01936990203511e-16,"1% O2, CyA+ vs 1% O2, CyA-",15.3958420239099,"Prion disease",3.23157340123623e-13,12.4905859751614
+"214","hsa00760",0.357130928030756,"1% O2, CyA+ vs 1% O2, CyA-",0.447172537677654,"Nicotinate and nicotinamide metabolism",1,0
+"215","hsa05210",0.0100795031871582,"1% O2, CyA+ vs 1% O2, CyA-",1.99656087348504,"Colorectal cancer",1,0
+"216","hsa03018",0.0559940240671216,"1% O2, CyA+ vs 1% O2, CyA-",1.25185832037166,"RNA degradation",1,0
+"217","hsa00410",0.372839579594842,"1% O2, CyA+ vs 1% O2, CyA-",0.428477990397388,"beta-Alanine metabolism",1,0
+"218","hsa00565",0.435646223205115,"1% O2, CyA+ vs 1% O2, CyA-",0.360866046689674,"Ether lipid metabolism",1,0
+"219","hsa04350",0.218004505310836,"1% O2, CyA+ vs 1% O2, CyA-",0.661534531113666,"TGF-beta signaling pathway",1,0
+"220","hsa05150",0.164289250171178,"1% O2, CyA+ vs 1% O2, CyA-",0.784390852536173,"Staphylococcus aureus infection",1,0
+"221","hsa00120",0.533955664406157,"1% O2, CyA+ vs 1% O2, CyA-",0.272494801966046,"Primary bile acid biosynthesis",1,0
+"222","hsa04810",0.000140981865906063,"1% O2, CyA+ vs 1% O2, CyA-",3.85083674580854,"Regulation of actin cytoskeleton",0.0943168682911563,1.02541062804072
+"223","hsa05144",0.46488148149795,"1% O2, CyA+ vs 1% O2, CyA-",0.332657753544676,"Malaria",1,0
+"224","hsa04072",0.0621461047484501,"1% O2, CyA+ vs 1% O2, CyA-",1.20658608728411,"Phospholipase D signaling pathway",1,0
+"225","hsa00910",1.89982762048477e-41,"1% O2, CyA+ vs 1% O2, CyA-",40.7212858026622,"Nitrogen metabolism",1.63195192599642e-38,37.7872926388309
+"226","hsa00513",0.0824995452964132,"1% O2, CyA+ vs 1% O2, CyA-",1.08354844509617,"Various types of N-glycan biosynthesis",1,0
+"227","hsa05134",0.0382552091367465,"1% O2, CyA+ vs 1% O2, CyA-",1.41730941945648,"Legionellosis",1,0
+"228","hsa04970",0.255736533291571,"1% O2, CyA+ vs 1% O2, CyA-",0.59220722632018,"Salivary secretion",1,0
+"229","hsa05171",0.115714824219673,"1% O2, CyA+ vs 1% O2, CyA-",0.936611000042252,"Coronavirus disease - COVID-19",1,0
+"230","hsa05017",0.00103492560530366,"1% O2, CyA+ vs 1% O2, CyA-",2.98509086795328,"Spinocerebellar ataxia",0.661317461789039,0.17959000979488
+"231","hsa04976",9.7310386117636e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.01184080420385,"Bile secretion",0.0656845106294043,1.18253703137282
+"232","hsa04060",0.270008752396045,"1% O2, CyA+ vs 1% O2, CyA-",0.568622157856945,"Cytokine-cytokine receptor interaction",1,0
+"233","hsa04925",0.000192933739940931,"1% O2, CyA+ vs 1% O2, CyA-",3.71459181699666,"Aldosterone synthesis and secretion",0.12849387080066,0.89111758782636
+"234","hsa00280",0.0814799748279508,"1% O2, CyA+ vs 1% O2, CyA-",1.0889491138408,"Valine, leucine and isoleucine degradation",1,0
+"235","hsa00380",0.267333633578646,"1% O2, CyA+ vs 1% O2, CyA-",0.572946398674368,"Tryptophan metabolism",1,0
+"236","hsa04662",0.00039107835472948,"1% O2, CyA+ vs 1% O2, CyA-",3.40773622056458,"B cell receptor signaling pathway",0.25576524399308,0.592158472240317
+"237","hsa00970",0.0390696884409429,"1% O2, CyA+ vs 1% O2, CyA-",1.40816005201859,"Aminoacyl-tRNA biosynthesis",1,0
+"238","hsa04936",0.00106060978317837,"1% O2, CyA+ vs 1% O2, CyA-",2.97444437122011,"Alcoholic liver disease",0.676669041667798,0.169623692498948
+"239","hsa04923",0.125863180646141,"1% O2, CyA+ vs 1% O2, CyA-",0.900101297539954,"Regulation of lipolysis in adipocytes",1,0
+"240","hsa05215",2.69182966085154e-19,"1% O2, CyA+ vs 1% O2, CyA-",18.5699524257604,"Prostate cancer",2.20999215155911e-16,15.655609268641
+"241","hsa05224",4.05215488746318e-06,"1% O2, CyA+ vs 1% O2, CyA-",5.39231396274784,"Breast cancer",0.00289729074453617,2.53800792094676
+"242","hsa04014",3.10082564841917e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.50852265235609,"Ras signaling pathway",0.0213026722046397,1.67156591529654
+"243","hsa04151",0.0607776390161704,"1% O2, CyA+ vs 1% O2, CyA-",1.21625617464378,"PI3K-Akt signaling pathway",1,0
+"244","hsa05417",0.0166611209417352,"1% O2, CyA+ vs 1% O2, CyA-",1.77829578309529,"Lipid and atherosclerosis",1,0
+"245","hsa04210",0.0185209997005319,"1% O2, CyA+ vs 1% O2, CyA-",1.7323355752833,"Apoptosis",1,0
+"246","hsa04713",0.309815437073118,"1% O2, CyA+ vs 1% O2, CyA-",0.508896946587646,"Circadian entrainment",1,0
+"247","hsa05120",0.00967609637232,"1% O2, CyA+ vs 1% O2, CyA-",2.01429981478738,"Epithelial cell signaling in Helicobacter pylori infection",1,0
+"248","hsa00350",0.48607707936512,"1% O2, CyA+ vs 1% O2, CyA-",0.31329485730427,"Tyrosine metabolism",1,0
+"249","hsa05322",0.521375246617344,"1% O2, CyA+ vs 1% O2, CyA-",0.282849591719066,"Systemic lupus erythematosus",1,0
+"250","hsa05163",0.161100338894122,"1% O2, CyA+ vs 1% O2, CyA-",0.79290354598865,"Human cytomegalovirus infection",1,0
+"251","hsa00030",0.0552592260798303,"1% O2, CyA+ vs 1% O2, CyA-",1.25759520178673,"Pentose phosphate pathway",1,0
+"252","hsa00230",0.260072848441038,"1% O2, CyA+ vs 1% O2, CyA-",0.584904985703936,"Purine metabolism",1,0
+"253","hsa04211",0.00031638391831643,"1% O2, CyA+ vs 1% O2, CyA-",3.4997855996495,"Longevity regulating pathway",0.208497002170528,0.680900185055487
+"254","hsa04611",1.8136416636693e-10,"1% O2, CyA+ vs 1% O2, CyA-",9.74144851598816,"Platelet activation",1.40919957267104e-07,6.85102749718724
+"255","hsa04012",0.000395130759830692,"1% O2, CyA+ vs 1% O2, CyA-",3.403259160385,"ErbB signaling pathway",0.258020386169442,0.588345979109927
+"256","hsa04728",0.440557780529151,"1% O2, CyA+ vs 1% O2, CyA-",0.355997124438456,"Dopaminergic synapse",1,0
+"257","hsa05219",0.0270392613822631,"1% O2, CyA+ vs 1% O2, CyA-",1.56800517596962,"Bladder cancer",1,0
+"258","hsa00600",5.79883838879939e-10,"1% O2, CyA+ vs 1% O2, CyA-",9.2366589946887,"Sphingolipid metabolism",4.45930672098673e-07,6.35073265488727
+"259","hsa04972",4.77536711520311e-06,"1% O2, CyA+ vs 1% O2, CyA-",5.3209932356031,"Pancreatic secretion",0.00340006138602461,2.46851324196625
+"260","hsa04360",2.65836085980215e-16,"1% O2, CyA+ vs 1% O2, CyA-",15.575386065988,"Axon guidance",2.14529721386034e-13,12.6685125312659
+"261","hsa04722",9.27145478020608e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.03285211553778,"Neurotrophin signaling pathway",0.000674961907999003,3.17072073622474
+"262","hsa00512",0.532996812067658,"1% O2, CyA+ vs 1% O2, CyA-",0.273275388544845,"Mucin type O-glycan biosynthesis",1,0
+"263","hsa04723",0.164038429374866,"1% O2, CyA+ vs 1% O2, CyA-",0.785054397620924,"Retrograde endocannabinoid signaling",1,0
+"264","hsa00601",0.533457217222776,"1% O2, CyA+ vs 1% O2, CyA-",0.272900404860151,"Glycosphingolipid biosynthesis - lacto and neolacto series",1,0
+"265","hsa05204",0.333992959317096,"1% O2, CyA+ vs 1% O2, CyA-",0.476262688164373,"Chemical carcinogenesis - DNA adducts",1,0
+"266","hsa04071",7.80903438493037e-06,"1% O2, CyA+ vs 1% O2, CyA-",5.10740266487085,"Sphingolipid signaling pathway",0.00549756020699098,2.25983000572874
+"267","hsa04213",0.00560409329734011,"1% O2, CyA+ vs 1% O2, CyA-",2.25149464316094,"Longevity regulating pathway - multiple species",1,0
+"268","hsa04270",0.0205513836727158,"1% O2, CyA+ vs 1% O2, CyA-",1.68715893285382,"Vascular smooth muscle contraction",1,0
+"269","hsa04918",3.21008990833264e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.49348280368674,"Thyroid hormone synthesis",0.000235941608262449,3.62719546460254
+"270","hsa04657",0.201275283485143,"1% O2, CyA+ vs 1% O2, CyA-",0.696209553005372,"IL-17 signaling pathway",1,0
+"271","hsa04622",3.89493179977525e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.40950014241775,"RIG-I-like receptor signaling pathway",0.026602384192465,1.57507943873622
+"272","hsa00052",0.0736233871931743,"1% O2, CyA+ vs 1% O2, CyA-",1.13298420583169,"Galactose metabolism",1,0
+"273","hsa00515",0.540416265115002,"1% O2, CyA+ vs 1% O2, CyA-",0.267271588326191,"Mannose type O-glycan biosynthesis",1,0
+"274","hsa04659",0.189360982644697,"1% O2, CyA+ vs 1% O2, CyA-",0.722709501403105,"Th17 cell differentiation",1,0
+"275","hsa00270",0.278780573869617,"1% O2, CyA+ vs 1% O2, CyA-",0.554737492249663,"Cysteine and methionine metabolism",1,0
+"276","hsa04915",0.195478417370877,"1% O2, CyA+ vs 1% O2, CyA-",0.708901185757418,"Estrogen signaling pathway",1,0
+"277","hsa04216",0.00135047563072588,"1% O2, CyA+ vs 1% O2, CyA-",2.86951324823089,"Ferroptosis",0.853500598618757,0.0687961699485074
+"278","hsa04512",0.397837363793315,"1% O2, CyA+ vs 1% O2, CyA-",0.400294431550338,"ECM-receptor interaction",1,0
+"279","hsa04510",0.29205347199198,"1% O2, CyA+ vs 1% O2, CyA-",0.534537626411121,"Focal adhesion",1,0
+"280","hsa04668",0.000974802733064036,"1% O2, CyA+ vs 1% O2, CyA-",3.01108326184988,"TNF signaling pathway",0.624848551894047,0.204225232331067
+"281","hsa05226",0.00535342190520508,"1% O2, CyA+ vs 1% O2, CyA-",2.27136852835541,"Gastric cancer",1,0
+"282","hsa00770",0.518037592291924,"1% O2, CyA+ vs 1% O2, CyA-",0.285638723782637,"Pantothenate and CoA biosynthesis",1,0
+"283","hsa05131",8.51817942012606e-07,"1% O2, CyA+ vs 1% O2, CyA-",6.06965321653392,"Shigellosis",0.00062097527972719,3.20692568821595
+"284","hsa01522",0.314561870210812,"1% O2, CyA+ vs 1% O2, CyA-",0.502293921765618,"Endocrine resistance",1,0
+"285","hsa04062",0.0310042327715175,"1% O2, CyA+ vs 1% O2, CyA-",1.50857901120363,"Chemokine signaling pathway",1,0
+"286","hsa04911",0.14415408589671,"1% O2, CyA+ vs 1% O2, CyA-",0.84117304347871,"Insulin secretion",1,0
+"287","hsa00040",0.481200647020927,"1% O2, CyA+ vs 1% O2, CyA-",0.317673797380761,"Pentose and glucuronate interconversions",1,0
+"288","hsa04930",7.23974296812888e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.14027685224275,"Type II diabetes mellitus",0.0489406624645513,1.31033015630111
+"289","hsa05202",1.90789208368484e-05,"1% O2, CyA+ vs 1% O2, CyA-",4.71944619398498,"Transcriptional misregulation in cancer",0.0132789289024465,1.87683695437442
+"290","hsa05145",0.246437795713082,"1% O2, CyA+ vs 1% O2, CyA-",0.608292684450638,"Toxoplasmosis",1,0
+"291","hsa04380",0.0209813810511557,"1% O2, CyA+ vs 1% O2, CyA-",1.6781659287661,"Osteoclast differentiation",1,0
+"292","hsa04010",0.261264991803872,"1% O2, CyA+ vs 1% O2, CyA-",0.582918779652603,"MAPK signaling pathway",1,0
+"293","hsa05142",0.214991067912346,"1% O2, CyA+ vs 1% O2, CyA-",0.667579583047006,"Chagas disease",1,0
+"294","hsa00020",0.26913124693469,"1% O2, CyA+ vs 1% O2, CyA-",0.570035876433564,"Citrate cycle (TCA cycle)",1,0
+"295","hsa04744",0.519282334935236,"1% O2, CyA+ vs 1% O2, CyA-",0.284596451082277,"Phototransduction",1,0
+"296","hsa04921",0.129960967997268,"1% O2, CyA+ vs 1% O2, CyA-",0.886187062529375,"Oxytocin signaling pathway",1,0
+"297","hsa05225",2.86095171710004e-08,"1% O2, CyA- vs 19% O2, CyA-",7.54348947151105,"Hepatocellular carcinoma",2.16287949812763e-05,4.66496767600984
+"298","hsa04962",0.472707600336092,"1% O2, CyA- vs 19% O2, CyA-",0.325407414922621,"Vasopressin-regulated water reabsorption",1,0
+"299","hsa03250",0,"1% O2, CyA- vs 19% O2, CyA-",Inf,"Viral life cycle - HIV-1",0,Inf
+"300","hsa04912",8.13004920696926e-27,"1% O2, CyA- vs 19% O2, CyA-",26.0899068258388,"GnRH signaling pathway",6.81298123544024e-24,23.1666628072086
+"301","hsa05218",5.74345799361306e-23,"1% O2, CyA- vs 19% O2, CyA-",22.2408265509192,"Melanoma",4.77855705068606e-20,19.3207032246285
+"302","hsa00100",5.05598865322076e-14,"1% O2, CyA- vs 19% O2, CyA-",13.2961939093794,"Steroid biosynthesis",3.99928702469762e-11,10.3980174258817
+"303","hsa00830",0.474118157383814,"1% O2, CyA- vs 19% O2, CyA-",0.324113412112818,"Retinol metabolism",1,0
+"304","hsa00785",0.553357213425947,"1% O2, CyA- vs 19% O2, CyA-",0.256994424326596,"Lipoic acid metabolism",1,0
+"305","hsa04625",2.48048253021955e-15,"1% O2, CyA- vs 19% O2, CyA-",14.6054638273079,"C-type lectin receptor signaling pathway",1.9794250591152e-12,11.7034609359572
+"306","hsa05221",0.000780848111235906,"1% O2, CyA- vs 19% O2, CyA-",3.10743343586319,"Acute myeloid leukemia",0.504427879858395,0.297200917868101
+"307","hsa04145",4.23880911548942e-06,"1% O2, CyA- vs 19% O2, CyA-",5.37275614039243,"Phagosome",0.00302650970845945,2.51905792861626
+"308","hsa05217",0.479348130747865,"1% O2, CyA- vs 19% O2, CyA-",0.31934896185162,"Basal cell carcinoma",1,0
+"309","hsa05223",0.116188172591513,"1% O2, CyA- vs 19% O2, CyA-",0.934838078827546,"Non-small cell lung cancer",1,0
+"310","hsa05330",0.547493939589186,"1% O2, CyA- vs 19% O2, CyA-",0.26162068382582,"Allograft rejection",1,0
+"311","hsa04022",0.120699330954845,"1% O2, CyA- vs 19% O2, CyA-",0.918295137221825,"cGMP-PKG signaling pathway",1,0
+"312","hsa00140",0.519371363149907,"1% O2, CyA- vs 19% O2, CyA-",0.284521999968241,"Steroid hormone biosynthesis",1,0
+"313","hsa04066",0.0219638009120609,"1% O2, CyA- vs 19% O2, CyA-",1.65829250154913,"HIF-1 signaling pathway",1,0
+"314","hsa04724",0.448738070566691,"1% O2, CyA- vs 19% O2, CyA-",0.348007083719302,"Glutamatergic synapse",1,0
+"315","hsa05012",0.326089249119436,"1% O2, CyA- vs 19% O2, CyA-",0.486663519271537,"Parkinson disease",1,0
+"316","hsa05146",0.461775502254106,"1% O2, CyA- vs 19% O2, CyA-",0.335569110652424,"Amoebiasis",1,0
+"317","hsa05410",0.355521694337258,"1% O2, CyA- vs 19% O2, CyA-",0.449133892983465,"Hypertrophic cardiomyopathy",1,0
+"318","hsa00510",0.504438643050504,"1% O2, CyA- vs 19% O2, CyA-",0.297191651240981,"N-Glycan biosynthesis",1,0
+"319","hsa04114",0,"1% O2, CyA- vs 19% O2, CyA-",Inf,"Oocyte meiosis",0,Inf
+"320","hsa04310",0.0280377508830012,"1% O2, CyA- vs 19% O2, CyA-",1.55225682730588,"Wnt signaling pathway",1,0
+"321","hsa03015",5.15118670550897e-08,"1% O2, CyA- vs 19% O2, CyA-",7.28809270876768,"mRNA surveillance pathway",3.87884358924826e-05,4.41129773256698
+"322","hsa03440",0.099071018120758,"1% O2, CyA- vs 19% O2, CyA-",1.00405337388082,"Homologous recombination",1,0
+"323","hsa05152",0.297030848331562,"1% O2, CyA- vs 19% O2, CyA-",0.527198444405149,"Tuberculosis",1,0
+"324","hsa04110",0.0218446132917593,"1% O2, CyA- vs 19% O2, CyA-",1.66065563906343,"Cell cycle",1,0
+"325","hsa00604",0.535845161388903,"1% O2, CyA- vs 19% O2, CyA-",0.27096068655562,"Glycosphingolipid biosynthesis - ganglio series",1,0
+"326","hsa05416",1.53847186360397e-15,"1% O2, CyA- vs 19% O2, CyA-",14.8129104419536,"Viral myocarditis",1.23077749088318e-12,11.9098204549616
+"327","hsa04664",1.08531791581853e-08,"1% O2, CyA- vs 19% O2, CyA-",7.96444302784141,"Fc epsilon RI signaling pathway",8.2484161602208e-06,5.08362943556062
+"328","hsa04929",0.00132892521261911,"1% O2, CyA- vs 19% O2, CyA-",2.87649945898258,"GnRH secretion",0.841209659587899,0.0750957489652273
+"329","hsa04136",2.73048728518199e-28,"1% O2, CyA- vs 19% O2, CyA-",27.5637598414643,"Autophagy - other",2.29633980683805e-25,24.6389638456664
+"330","hsa04660",5.06532901637985e-06,"1% O2, CyA- vs 19% O2, CyA-",5.29539233996659,"T cell receptor signaling pathway",0.00359131827261332,2.44474610478353
+"331","hsa00310",0.124978034725798,"1% O2, CyA- vs 19% O2, CyA-",0.903166308876901,"Lysine degradation",1,0
+"332","hsa04070",0.273962847898157,"1% O2, CyA- vs 19% O2, CyA-",0.562308327861373,"Phosphatidylinositol signaling system",1,0
+"333","hsa04726",0.196029097230357,"1% O2, CyA- vs 19% O2, CyA-",0.707679460129858,"Serotonergic synapse",1,0
+"334","hsa05332",0.551165837599227,"1% O2, CyA- vs 19% O2, CyA-",0.258717708738193,"Graft-versus-host disease",1,0
+"335","hsa04916",0.225814622887536,"1% O2, CyA- vs 19% O2, CyA-",0.646247938258083,"Melanogenesis",1,0
+"336","hsa05169",0.180065483031809,"1% O2, CyA- vs 19% O2, CyA-",0.744569529631891,"Epstein-Barr virus infection",1,0
+"337","hsa00900",0.249469305757131,"1% O2, CyA- vs 19% O2, CyA-",0.602982881544963,"Terpenoid backbone biosynthesis",1,0
+"338","hsa00591",0.46856715839425,"1% O2, CyA- vs 19% O2, CyA-",0.329228154125703,"Linoleic acid metabolism",1,0
+"339","hsa04024",0.000694278923073402,"1% O2, CyA- vs 19% O2, CyA-",3.15846601885962,"cAMP signaling pathway",0.449198463228491,0.347561738190918
+"340","hsa04068",8.8248246714236e-19,"1% O2, CyA- vs 19% O2, CyA-",18.0542939142676,"FoxO signaling pathway",7.20988175655308e-16,15.1420718577352
+"341","hsa00520",0.378172590316002,"1% O2, CyA- vs 19% O2, CyA-",0.422309951709628,"Amino sugar and nucleotide sugar metabolism",1,0
+"342","hsa00860",0.492727643888016,"1% O2, CyA- vs 19% O2, CyA-",0.307393071475369,"Porphyrin metabolism",1,0
+"343","hsa04922",1.21764116477455e-131,"1% O2, CyA- vs 19% O2, CyA-",130.914480678139,"Glucagon signaling pathway",1.06421837801296e-128,127.972969245505
+"344","hsa04926",0.0840940617030088,"1% O2, CyA- vs 19% O2, CyA-",1.07523467079745,"Relaxin signaling pathway",1,0
+"345","hsa04370",0.142498348083102,"1% O2, CyA- vs 19% O2, CyA-",0.846190170199694,"VEGF signaling pathway",1,0
+"346","hsa05213",7.18299695995375e-22,"1% O2, CyA- vs 19% O2, CyA-",21.1436943173723,"Endometrial cancer",5.95470447980166e-19,18.225139786822
+"347","hsa04520",6.93056400959293e-08,"1% O2, CyA- vs 19% O2, CyA-",7.15923142104666,"Adherens junction",5.1979230071947e-05,4.28417015765496
+"348","hsa05110",0.0696950898083908,"1% O2, CyA- vs 19% O2, CyA-",1.15679781794558,"Vibrio cholerae infection",1,0
+"349","hsa05220",0.0104554753031813,"1% O2, CyA- vs 19% O2, CyA-",1.98065621948363,"Chronic myeloid leukemia",1,0
+"350","hsa05235",0.04986131860498,"1% O2, CyA- vs 19% O2, CyA-",1.30223624056762,"PD-L1 expression and PD-1 checkpoint pathway in cancer",1,0
+"351","hsa05207",2.4429069821154e-06,"1% O2, CyA- vs 19% O2, CyA-",5.61209306922103,"Chemical carcinogenesis - receptor activation",0.00175645012014097,2.75536417883815
+"352","hsa05418",0.366488346993038,"1% O2, CyA- vs 19% O2, CyA-",0.435939829800694,"Fluid shear stress and atherosclerosis",1,0
+"353","hsa00920",0.524355211053773,"1% O2, CyA- vs 19% O2, CyA-",0.280374411609953,"Sulfur metabolism",1,0
+"354","hsa04931",0.113539166465802,"1% O2, CyA- vs 19% O2, CyA-",0.944854298419849,"Insulin resistance",1,0
+"355","hsa00500",0.345498858483155,"1% O2, CyA- vs 19% O2, CyA-",0.461553383182072,"Starch and sucrose metabolism",1,0
+"356","hsa05216",0.388999151286868,"1% O2, CyA- vs 19% O2, CyA-",0.410051346211136,"Thyroid cancer",1,0
+"357","hsa00740",0.474257656506972,"1% O2, CyA- vs 19% O2, CyA-",0.323985649048921,"Riboflavin metabolism",1,0
+"358","hsa00062",0.339491960236769,"1% O2, CyA- vs 19% O2, CyA-",0.469170506114409,"Fatty acid elongation",1,0
+"359","hsa04390",0.3689171040633,"1% O2, CyA- vs 19% O2, CyA-",0.43307120915891,"Hippo signaling pathway",1,0
+"360","hsa04064",0.172563691873782,"1% O2, CyA- vs 19% O2, CyA-",0.763050576393807,"NF-kappa B signaling pathway",1,0
+"361","hsa04932",0.000960911654735889,"1% O2, CyA- vs 19% O2, CyA-",3.01731653909982,"Non-alcoholic fatty liver disease",0.616905282340441,0.209781511030971
+"362","hsa05222",1.05358000932269e-11,"1% O2, CyA- vs 19% O2, CyA-",10.9773324782923,"Small cell lung cancer",8.24953147299667e-09,8.08357071623435
+"363","hsa05320",0.531326107984813,"1% O2, CyA- vs 19% O2, CyA-",0.274638843463197,"Autoimmune thyroid disease",1,0
+"364","hsa04115",0.355422492377945,"1% O2, CyA- vs 19% O2, CyA-",0.449255091987855,"p53 signaling pathway",1,0
+"365","hsa04710",1.90580484674454e-57,"1% O2, CyA- vs 19% O2, CyA-",56.7199215729113,"Circadian rhythm",1.64661538758728e-54,53.7834078304324
+"366","hsa05206",5.41622345186733e-07,"1% O2, CyA- vs 19% O2, CyA-",6.26630342668792,"MicroRNAs in cancer",0.000396467556676689,3.40179234562953
+"367","hsa05032",0.322095330946941,"1% O2, CyA- vs 19% O2, CyA-",0.492015570612399,"Morphine addiction",1,0
+"368","hsa00620",0.215847604389885,"1% O2, CyA- vs 19% O2, CyA-",0.665852767049536,"Pyruvate metabolism",1,0
+"369","hsa05132",2.54402764991863e-30,"1% O2, CyA- vs 19% O2, CyA-",29.5944781728421,"Salmonella infection",2.15479141948108e-27,26.6665947625114
+"370","hsa04658",0.332671448653333,"1% O2, CyA- vs 19% O2, CyA-",0.477984470620181,"Th1 and Th2 cell differentiation",1,0
+"371","hsa05014",2.85982035919819e-06,"1% O2, CyA- vs 19% O2, CyA-",5.54366124640216,"Amyotrophic lateral sclerosis",0.00204763137718591,2.6887482240943
+"372","hsa04933",0.301538824567843,"1% O2, CyA- vs 19% O2, CyA-",0.520656762429158,"AGE-RAGE signaling pathway in diabetic complications",1,0
+"373","hsa00531",0.519064574385359,"1% O2, CyA- vs 19% O2, CyA-",0.284778610254178,"Glycosaminoglycan degradation",1,0
+"374","hsa04714",0.0182583994093716,"1% O2, CyA- vs 19% O2, CyA-",1.73853729679873,"Thermogenesis",1,0
+"375","hsa00592",0.432112999581254,"1% O2, CyA- vs 19% O2, CyA-",0.364402668283809,"alpha-Linolenic acid metabolism",1,0
+"376","hsa05170",0.224560797829432,"1% O2, CyA- vs 19% O2, CyA-",0.648666057390432,"Human immunodeficiency virus 1 infection",1,0
+"377","hsa05160",0.197685095775745,"1% O2, CyA- vs 19% O2, CyA-",0.704026072549504,"Hepatitis C",1,0
+"378","hsa04392",0.445555197410847,"1% O2, CyA- vs 19% O2, CyA-",0.351098485912159,"Hippo signaling pathway - multiple species",1,0
+"379","hsa04666",6.58355333626127e-05,"1% O2, CyA- vs 19% O2, CyA-",4.18153964167448,"Fc gamma R-mediated phagocytosis",0.0445706560864888,1.35095097298933
+"380","hsa04920",0.0278731871335822,"1% O2, CyA- vs 19% O2, CyA-",1.55481336944996,"Adipocytokine signaling pathway",1,0
+"381","hsa04940",0.52940567592334,"1% O2, CyA- vs 19% O2, CyA-",0.276211406803141,"Type I diabetes mellitus",1,0
+"382","hsa04672",0.18979638514806,"1% O2, CyA- vs 19% O2, CyA-",0.72171206337975,"Intestinal immune network for IgA production",1,0
+"383","hsa00780",0.544107571241728,"1% O2, CyA- vs 19% O2, CyA-",0.264315230856407,"Biotin metabolism",1,0
+"384","hsa00590",0.489233773130559,"1% O2, CyA- vs 19% O2, CyA-",0.310483570078191,"Arachidonic acid metabolism",1,0
+"385","hsa05161",0.340461900342705,"1% O2, CyA- vs 19% O2, CyA-",0.467931481098373,"Hepatitis B",1,0
+"386","hsa04540",0.322182677722207,"1% O2, CyA- vs 19% O2, CyA-",0.491897813301945,"Gap junction",1,0
+"387","hsa04913",0.00025425491650875,"1% O2, CyA- vs 19% O2, CyA-",3.59473064040335,"Ovarian steroidogenesis",0.168062499812284,0.774529180917706
+"388","hsa05212",0.080788575380753,"1% O2, CyA- vs 19% O2, CyA-",1.0926500501153,"Pancreatic cancer",1,0
+"389","hsa05211",3.52184919126077e-40,"1% O2, CyA- vs 19% O2, CyA-",39.4532292448496,"Renal cell carcinoma",3.01470290771922e-37,36.5207554801724
+"390","hsa04371",0.00399532762951928,"1% O2, CyA- vs 19% O2, CyA-",2.39844760136672,"Apelin signaling pathway",1,0
+"391","hsa05164",0.0433724774904362,"1% O2, CyA- vs 19% O2, CyA-",1.36278576969595,"Influenza A",1,0
+"392","hsa04146",0.360878620889056,"1% O2, CyA- vs 19% O2, CyA-",0.442638845579536,"Peroxisome",1,0
+"393","hsa04122",1.78829359588371e-08,"1% O2, CyA- vs 19% O2, CyA-",7.74756117871415,"Sulfur relay system",1.35373825208397e-05,4.86846529921408
+"394","hsa05167",0.0357762254844219,"1% O2, CyA- vs 19% O2, CyA-",1.4464054809223,"Kaposi sarcoma-associated herpesvirus infection",1,0
+"395","hsa00562",0.0532100725718145,"1% O2, CyA- vs 19% O2, CyA-",1.27400614875208,"Inositol phosphate metabolism",1,0
+"396","hsa04935",0.173740876547049,"1% O2, CyA- vs 19% O2, CyA-",0.760097991741035,"Growth hormone synthesis, secretion and action",1,0
+"397","hsa00240",0.178991908027811,"1% O2, CyA- vs 19% O2, CyA-",0.747166602418466,"Pyrimidine metabolism",1,0
+"398","hsa05200",0.0835388184126958,"1% O2, CyA- vs 19% O2, CyA-",1.07811167176272,"Pathways in cancer",1,0
+"399","hsa00480",0.48041634207544,"1% O2, CyA- vs 19% O2, CyA-",0.318382227845999,"Glutathione metabolism",1,0
+"400","hsa04150",8.48468252705231e-20,"1% O2, CyA- vs 19% O2, CyA-",19.0713644031199,"mTOR signaling pathway",6.9913784022911e-17,16.1554371914228
+"401","hsa05034",5.52323815051552e-15,"1% O2, CyA- vs 19% O2, CyA-",14.2578062304999,"Alcoholism",4.39649756781035e-12,11.3568931627622
+"402","hsa04750",0.239460790229021,"1% O2, CyA- vs 19% O2, CyA-",0.62076558864292,"Inflammatory mediator regulation of TRP channels",1,0
+"403","hsa04137",0.00139324663376544,"1% O2, CyA- vs 19% O2, CyA-",2.85597199757294,"Mitophagy - animal",0.879138625905994,0.0559426383288009
+"404","hsa05203",1.08519292020707e-06,"1% O2, CyA- vs 19% O2, CyA-",5.96449304823613,"Viral carcinogenesis",0.000786764867150123,3.10415504166513
+"405","hsa03320",0.485034705782075,"1% O2, CyA- vs 19% O2, CyA-",0.314227185128894,"PPAR signaling pathway",1,0
+"406","hsa00564",0.450431464385679,"1% O2, CyA- vs 19% O2, CyA-",0.346371279942243,"Glycerophospholipid metabolism",1,0
+"407","hsa04961",0.489623267101232,"1% O2, CyA- vs 19% O2, CyA-",0.310137952517766,"Endocrine and other factor-regulated calcium reabsorption",1,0
+"408","hsa00220",0.43505272542151,"1% O2, CyA- vs 19% O2, CyA-",0.361458106328123,"Arginine biosynthesis",1,0
+"409","hsa05168",0.204204901811584,"1% O2, CyA- vs 19% O2, CyA-",0.689933837155222,"Herpes simplex virus 1 infection",1,0
+"410","hsa04061",0.000120465218610155,"1% O2, CyA- vs 19% O2, CyA-",3.91913832691588,"Viral protein interaction with cytokine and cytokine receptor",0.080832161687414,1.09241580674689
+"411","hsa05412",0.173272097885785,"1% O2, CyA- vs 19% O2, CyA-",0.761271366367721,"Arrhythmogenic right ventricular cardiomyopathy",1,0
+"412","hsa04924",0.416707495410134,"1% O2, CyA- vs 19% O2, CyA-",0.380168687721305,"Renin secretion",1,0
+"413","hsa05143",0.482057946575885,"1% O2, CyA- vs 19% O2, CyA-",0.316900753533892,"African trypanosomiasis",1,0
+"414","hsa04960",0.184127602234215,"1% O2, CyA- vs 19% O2, CyA-",0.734881102319175,"Aldosterone-regulated sodium reabsorption",1,0
+"415","hsa05162",0.134306468878576,"1% O2, CyA- vs 19% O2, CyA-",0.871903069009533,"Measles",1,0
+"416","hsa00730",0.502307540299136,"1% O2, CyA- vs 19% O2, CyA-",0.299030302458154,"Thiamine metabolism",1,0
+"417","hsa05030",0.196151999053584,"1% O2, CyA- vs 19% O2, CyA-",0.707407261465026,"Cocaine addiction",1,0
+"418","hsa00750",0.502442874030414,"1% O2, CyA- vs 19% O2, CyA-",0.298913308840183,"Vitamin B6 metabolism",1,0
+"419","hsa04623",0.0146913712717618,"1% O2, CyA- vs 19% O2, CyA-",1.83293766588672,"Cytosolic DNA-sensing pathway",1,0
+"420","hsa00650",0.27902170014353,"1% O2, CyA- vs 19% O2, CyA-",0.554362019356835,"Butanoate metabolism",1,0
+"421","hsa05010",0.0123779074268027,"1% O2, CyA- vs 19% O2, CyA-",1.90735276967836,"Alzheimer disease",1,0
+"422","hsa05031",6.94919998293807e-06,"1% O2, CyA- vs 19% O2, CyA-",5.1580651900853,"Amphetamine addiction",0.00489918598797134,2.3098760730939
+"423","hsa00071",0.0639249112281352,"1% O2, CyA- vs 19% O2, CyA-",1.19432986640148,"Fatty acid degradation",1,0
+"424","hsa00561",0.475569027577829,"1% O2, CyA- vs 19% O2, CyA-",0.322786437463875,"Glycerolipid metabolism",1,0
+"425","hsa04614",0.483952094253055,"1% O2, CyA- vs 19% O2, CyA-",0.315197626436693,"Renin-angiotensin system",1,0
+"426","hsa04971",0.0544954009948091,"1% O2, CyA- vs 19% O2, CyA-",1.2636401473904,"Gastric acid secretion",1,0
+"427","hsa04215",3.79663040698821e-14,"1% O2, CyA- vs 19% O2, CyA-",13.4206016783456,"Apoptosis - multiple species",3.00693128233466e-11,10.5218764967561
+"428","hsa04080",0.36543919815473,"1% O2, CyA- vs 19% O2, CyA-",0.437184870696485,"Neuroactive ligand-receptor interaction",1,0
+"429","hsa05231",0.0305725207145129,"1% O2, CyA- vs 19% O2, CyA-",1.51466875207301,"Choline metabolism in cancer",1,0
+"430","hsa05166",0.00388155876659487,"1% O2, CyA- vs 19% O2, CyA-",2.41099383425525,"Human T-cell leukemia virus 1 infection",1,0
+"431","hsa00790",0.420729962739903,"1% O2, CyA- vs 19% O2, CyA-",0.375996558129815,"Folate biosynthesis",1,0
+"432","hsa00983",0.383536075324968,"1% O2, CyA- vs 19% O2, CyA-",0.416193780143393,"Drug metabolism - other enzymes",1,0
+"433","hsa04721",0.105837947911911,"1% O2, CyA- vs 19% O2, CyA-",0.9753585892587,"Synaptic vesicle cycle",1,0
+"434","hsa04218",1.39704151660047e-166,"1% O2, CyA- vs 19% O2, CyA-",165.854790687542,"Cellular senescence",1.22520541005861e-163,162.911791094176
+"435","hsa04530",0.0051233373409949,"1% O2, CyA- vs 19% O2, CyA-",2.29044704749878,"Tight junction",1,0
+"436","hsa04340",0.227490169785144,"1% O2, CyA- vs 19% O2, CyA-",0.643037365162061,"Hedgehog signaling pathway",1,0
+"437","hsa04725",8.7912871092114e-10,"1% O2, CyA- vs 19% O2, CyA-",9.05594753635895,"Cholinergic synapse",6.75170849987435e-07,6.17058631632744
+"438","hsa04740",0.521914970114418,"1% O2, CyA- vs 19% O2, CyA-",0.282400246074519,"Olfactory transduction",1,0
+"439","hsa04152",1.01100571986609e-22,"1% O2, CyA- vs 19% O2, CyA-",21.9952463873375,"AMPK signaling pathway",8.40145753208724e-20,19.0756453635534
+"440","hsa03460",0.000612251096467298,"1% O2, CyA- vs 19% O2, CyA-",3.21307042843392,"Fanconi anemia pathway",0.397350961607276,0.400825731633552
+"441","hsa05214",0.00576290304419959,"1% O2, CyA- vs 19% O2, CyA-",2.23935868698177,"Glioma",1,0
+"442","hsa00440",0.535768923181774,"1% O2, CyA- vs 19% O2, CyA-",0.271022480877286,"Phosphonate and phosphinate metabolism",1,0
+"443","hsa04020",0.43900081066791,"1% O2, CyA- vs 19% O2, CyA-",0.357534677780032,"Calcium signaling pathway",1,0
+"444","hsa04514",0.0559607555827895,"1% O2, CyA- vs 19% O2, CyA-",1.25211643029135,"Cell adhesion molecules",1,0
+"445","hsa04613",0.0239140851910319,"1% O2, CyA- vs 19% O2, CyA-",1.62134622796726,"Neutrophil extracellular trap formation",1,0
+"446","hsa00250",0.421023792209874,"1% O2, CyA- vs 19% O2, CyA-",0.375693361329417,"Alanine, aspartate and glutamate metabolism",1,0
+"447","hsa04217",0.0165870886367113,"1% O2, CyA- vs 19% O2, CyA-",1.78022983458849,"Necroptosis",1,0
+"448","hsa04934",3.00654859233813e-16,"1% O2, CyA- vs 19% O2, CyA-",15.5219317726221,"Cushing syndrome",2.42327816542453e-13,12.6155967308171
+"449","hsa05140",1.30168959913108e-08,"1% O2, CyA- vs 19% O2, CyA-",7.88549256527329,"Leishmaniasis",9.87982405740492e-06,5.00525078937781
+"450","hsa04919",2.94673165254841e-07,"1% O2, CyA- vs 19% O2, CyA-",6.53065941186769,"Thyroid hormone signaling pathway",0.000217174122792818,3.66319192400864
+"451","hsa04550",0.014193664007238,"1% O2, CyA- vs 19% O2, CyA-",1.84790547961506,"Signaling pathways regulating pluripotency of stem cells",1,0
+"452","hsa00061",0.00569854410024048,"1% O2, CyA- vs 19% O2, CyA-",2.24423608643198,"Fatty acid biosynthesis",1,0
+"453","hsa00532",0.515091198296648,"1% O2, CyA- vs 19% O2, CyA-",0.288115871132537,"Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate",1,0
+"454","hsa04742",0.311899995439734,"1% O2, CyA- vs 19% O2, CyA-",0.505984631592643,"Taste transduction",1,0
+"455","hsa04261",0.221318141067424,"1% O2, CyA- vs 19% O2, CyA-",0.654982986241864,"Adrenergic signaling in cardiomyocytes",1,0
+"456","hsa04910",0.119345741778521,"1% O2, CyA- vs 19% O2, CyA-",0.923193071882048,"Insulin signaling pathway",1,0
+"457","hsa04015",1.66433407085514e-08,"1% O2, CyA- vs 19% O2, CyA-",7.77875949621417,"Rap1 signaling pathway",1.26156522570819e-05,4.89909029058212
+"458","hsa05208",0.0346531956653946,"1% O2, CyA- vs 19% O2, CyA-",1.46025670922384,"Chemical carcinogenesis - reactive oxygen species",1,0
+"459","hsa04914",1.83888825351182e-159,"1% O2, CyA- vs 19% O2, CyA-",158.735444661386,"Progesterone-mediated oocyte maturation",1.61086611007636e-156,155.792940555218
+"460","hsa04130",0.231609847574552,"1% O2, CyA- vs 19% O2, CyA-",0.635242979243533,"SNARE interactions in vesicular transport",1,0
+"461","hsa00640",4.5592411410215e-20,"1% O2, CyA- vs 19% O2, CyA-",19.3411074370927,"Propanoate metabolism",3.76137394134274e-17,16.4246534885428
+"462","hsa00450",0.450978949978614,"1% O2, CyA- vs 19% O2, CyA-",0.345843728901383,"Selenocompound metabolism",1,0
+"463","hsa04621",1.13296445161252e-06,"1% O2, CyA- vs 19% O2, CyA-",5.94578371653618,"NOD-like receptor signaling pathway",0.000820266262967467,3.08604515033903
+"464","hsa05130",0.000898666944995383,"1% O2, CyA- vs 19% O2, CyA-",3.04640123234977,"Pathogenic Escherichia coli infection",0.578741512577026,0.237515364989958
+"465","hsa04670",0.215140136174716,"1% O2, CyA- vs 19% O2, CyA-",0.667278560820527,"Leukocyte transendothelial migration",1,0
+"466","hsa04928",1.40938213650619e-10,"1% O2, CyA- vs 19% O2, CyA-",9.85097123735553,"Parathyroid hormone synthesis, secretion and action",1.09649930220181e-07,6.95999164036585
+"467","hsa00130",0.408622881827282,"1% O2, CyA- vs 19% O2, CyA-",0.388677317651972,"Ubiquinone and other terpenoid-quinone biosynthesis",1,0
+"468","hsa05100",0.0658099560362471,"1% O2, CyA- vs 19% O2, CyA-",1.18170839932645,"Bacterial invasion of epithelial cells",1,0
+"469","hsa05414",0.32901452713087,"1% O2, CyA- vs 19% O2, CyA-",0.482784926021183,"Dilated cardiomyopathy",1,0
+"470","hsa05321",0.491118921284059,"1% O2, CyA- vs 19% O2, CyA-",0.308813333530868,"Inflammatory bowel disease",1,0
+"471","hsa00051",0.338699969167362,"1% O2, CyA- vs 19% O2, CyA-",0.470184842890194,"Fructose and mannose metabolism",1,0
+"472","hsa05230",4.27989679640388e-17,"1% O2, CyA- vs 19% O2, CyA-",16.3685667032515,"Central carbon metabolism in cancer",3.47527619867995e-14,13.4590106740103
+"473","hsa04727",0.00313164832689105,"1% O2, CyA- vs 19% O2, CyA-",2.50422701362107,"GABAergic synapse",1,0
+"474","hsa04630",0.383045981524009,"1% O2, CyA- vs 19% O2, CyA-",0.416749089416468,"JAK-STAT signaling pathway",1,0
+"475","hsa00603",0.523248130002113,"1% O2, CyA- vs 19% O2, CyA-",0.281292315079509,"Glycosphingolipid biosynthesis - globo and isoglobo series",1,0
+"476","hsa00340",0.519892937931726,"1% O2, CyA- vs 19% O2, CyA-",0.284086081851116,"Histidine metabolism",1,0
+"477","hsa04610",0.350896128898659,"1% O2, CyA- vs 19% O2, CyA-",0.454821422913761,"Complement and coagulation cascades",1,0
+"478","hsa05205",0.0787973984333621,"1% O2, CyA- vs 19% O2, CyA-",1.10348812089479,"Proteoglycans in cancer",1,0
+"479","hsa04140",1.24748540354897e-52,"1% O2, CyA- vs 19% O2, CyA-",51.9039645272238,"Autophagy - animal",1.07657990326276e-49,48.9679537315086
+"480","hsa00010",0.444467122287403,"1% O2, CyA- vs 19% O2, CyA-",0.352160358737069,"Glycolysis / Gluconeogenesis",1,0
+"481","hsa04144",5.47658111476999e-07,"1% O2, CyA- vs 19% O2, CyA-",6.261490475522,"Endocytosis",0.000400338079489686,3.39757309856414
+"482","hsa01521",0,"1% O2, CyA- vs 19% O2, CyA-",Inf,"EGFR tyrosine kinase inhibitor resistance",0,Inf
+"483","hsa05415",0.230899699638225,"1% O2, CyA- vs 19% O2, CyA-",0.636576632026722,"Diabetic cardiomyopathy",1,0
+"484","hsa05133",0.309846031291455,"1% O2, CyA- vs 19% O2, CyA-",0.508854062203539,"Pertussis",1,0
+"485","hsa04620",0.104140747390485,"1% O2, CyA- vs 19% O2, CyA-",0.98237930983299,"Toll-like receptor signaling pathway",1,0
+"486","hsa00980",0.48592696530577,"1% O2, CyA- vs 19% O2, CyA-",0.313429000178485,"Metabolism of xenobiotics by cytochrome P450",1,0
+"487","hsa01524",1.85852081335231e-12,"1% O2, CyA- vs 19% O2, CyA-",11.7308325709291,"Platinum drug resistance",1.46265588010827e-09,8.83485783857
+"488","hsa00630",0.42315996607687,"1% O2, CyA- vs 19% O2, CyA-",0.373495426356429,"Glyoxylate and dicarboxylate metabolism",1,0
+"489","hsa05022",0.0697201225253642,"1% O2, CyA- vs 19% O2, CyA-",1.1566418583371,"Pathways of neurodegeneration - multiple diseases",1,0
+"490","hsa05165",0.3801874266963,"1% O2, CyA- vs 19% O2, CyA-",0.420002249929041,"Human papillomavirus infection",1,0
+"491","hsa04330",0.0563027438869489,"1% O2, CyA- vs 19% O2, CyA-",1.24947043950171,"Notch signaling pathway",1,0
+"492","hsa04927",0.026286799573979,"1% O2, CyA- vs 19% O2, CyA-",1.58026228616329,"Cortisol synthesis and secretion",1,0
+"493","hsa01523",0.192406738537808,"1% O2, CyA- vs 19% O2, CyA-",0.715779722014741,"Antifolate resistance",1,0
+"494","hsa05323",0.505025615834665,"1% O2, CyA- vs 19% O2, CyA-",0.296686593102123,"Rheumatoid arthritis",1,0
+"495","hsa00563",0.518895068384769,"1% O2, CyA- vs 19% O2, CyA-",0.284920456850764,"Glycosylphosphatidylinositol (GPI)-anchor biosynthesis",1,0
+"496","hsa04917",0.0683404070650555,"1% O2, CyA- vs 19% O2, CyA-",1.16532243868357,"Prolactin signaling pathway",1,0
+"497","hsa05135",0.237866689133548,"1% O2, CyA- vs 19% O2, CyA-",0.623666372331801,"Yersinia infection",1,0
+"498","hsa04612",0.172229120877999,"1% O2, CyA- vs 19% O2, CyA-",0.763893415208911,"Antigen processing and presentation",1,0
+"499","hsa00330",0.474068939277783,"1% O2, CyA- vs 19% O2, CyA-",0.324158498471731,"Arginine and proline metabolism",1,0
+"500","hsa05016",4.31980796921126e-13,"1% O2, CyA- vs 19% O2, CyA-",12.3645355586864,"Huntington disease",3.40832848770769e-10,9.46745855547695
+"501","hsa04141",2.00336606100909e-18,"1% O2, CyA- vs 19% O2, CyA-",17.6982396878752,"Protein processing in endoplasmic reticulum",1.63274333972241e-15,14.7870820791352
+"502","hsa04979",0.0358940242234794,"1% O2, CyA- vs 19% O2, CyA-",1.44497784843531,"Cholesterol metabolism",1,0
+"503","hsa00670",0.374035660004436,"1% O2, CyA- vs 19% O2, CyA-",0.427086990834609,"One carbon pool by folate",1,0
+"504","hsa00260",0.504841693022585,"1% O2, CyA- vs 19% O2, CyA-",0.29684478549545,"Glycine, serine and threonine metabolism",1,0
+"505","hsa04730",0,"1% O2, CyA- vs 19% O2, CyA-",Inf,"Long-term depression",0,Inf
+"506","hsa04650",2.461539733344e-19,"1% O2, CyA- vs 19% O2, CyA-",18.6087931495996,"Natural killer cell mediated cytotoxicity",2.02338566080877e-16,15.6939213320596
+"507","hsa04720",1.87415569650717e-10,"1% O2, CyA- vs 19% O2, CyA-",9.72719433269844,"Long-term potentiation",1.45434482048956e-07,6.83733261144025
+"508","hsa00360",0.536022812409233,"1% O2, CyA- vs 19% O2, CyA-",0.270816726925467,"Phenylalanine metabolism",1,0
+"509","hsa05020",1.05397377966294e-06,"1% O2, CyA- vs 19% O2, CyA-",5.97717019319306,"Prion disease",0.000765184964035294,3.11623357249296
+"510","hsa00760",0.471228587873098,"1% O2, CyA- vs 19% O2, CyA-",0.326768370218147,"Nicotinate and nicotinamide metabolism",1,0
+"511","hsa05210",0.0911761513141761,"1% O2, CyA- vs 19% O2, CyA-",1.04011874398636,"Colorectal cancer",1,0
+"512","hsa03018",0.0282102114035398,"1% O2, CyA- vs 19% O2, CyA-",1.54959365928785,"RNA degradation",1,0
+"513","hsa00410",0.444667520546971,"1% O2, CyA- vs 19% O2, CyA-",0.35196459117703,"beta-Alanine metabolism",1,0
+"514","hsa00565",0.501958086534768,"1% O2, CyA- vs 19% O2, CyA-",0.299332544900025,"Ether lipid metabolism",1,0
+"515","hsa04350",0.0409051777169884,"1% O2, CyA- vs 19% O2, CyA-",1.38822171615903,"TGF-beta signaling pathway",1,0
+"516","hsa05150",0.431089858376213,"1% O2, CyA- vs 19% O2, CyA-",0.365432194040234,"Staphylococcus aureus infection",1,0
+"517","hsa00120",0.531315006670788,"1% O2, CyA- vs 19% O2, CyA-",0.274647917532244,"Primary bile acid biosynthesis",1,0
+"518","hsa04810",8.35901115841513e-99,"1% O2, CyA- vs 19% O2, CyA-",98.0778450950304,"Regulation of actin cytoskeleton",7.28069871897958e-96,95.1378269400227
+"519","hsa05144",0.48338326547019,"1% O2, CyA- vs 19% O2, CyA-",0.315708388764435,"Malaria",1,0
+"520","hsa04072",4.47540363231163e-21,"1% O2, CyA- vs 19% O2, CyA-",20.3491677899837,"Phospholipase D signaling pathway",3.70563420755403e-18,17.4311374531988
+"521","hsa00910",1.80042475685218e-18,"1% O2, CyA- vs 19% O2, CyA-",17.7446250238993,"Nitrogen metabolism",1.46914660159138e-15,14.8329348651455
+"522","hsa00513",0.361567228150839,"1% O2, CyA- vs 19% O2, CyA-",0.441810940138721,"Various types of N-glycan biosynthesis",1,0
+"523","hsa05134",0.357353558124527,"1% O2, CyA- vs 19% O2, CyA-",0.446901889325638,"Legionellosis",1,0
+"524","hsa04970",0.0932452709139182,"1% O2, CyA- vs 19% O2, CyA-",1.03037318491413,"Salivary secretion",1,0
+"525","hsa05171",0.22959471001045,"1% O2, CyA- vs 19% O2, CyA-",0.639038122544699,"Coronavirus disease - COVID-19",1,0
+"526","hsa05017",0.135125646419407,"1% O2, CyA- vs 19% O2, CyA-",0.86926221543856,"Spinocerebellar ataxia",1,0
+"527","hsa04976",0.0364206072400046,"1% O2, CyA- vs 19% O2, CyA-",1.43865281749814,"Bile secretion",1,0
+"528","hsa04060",0.0343949163271818,"1% O2, CyA- vs 19% O2, CyA-",1.46350574272514,"Cytokine-cytokine receptor interaction",1,0
+"529","hsa04925",2.52408901571073e-14,"1% O2, CyA- vs 19% O2, CyA-",13.5978953331243,"Aldosterone synthesis and secretion",2.00665076749003e-11,10.6975282044678
+"530","hsa00280",1.98885083430825e-28,"1% O2, CyA- vs 19% O2, CyA-",27.7013977881506,"Valine, leucine and isoleucine degradation",1.67461240248755e-25,24.776085696651
+"531","hsa00380",0.348590018461886,"1% O2, CyA- vs 19% O2, CyA-",0.457685052650543,"Tryptophan metabolism",1,0
+"532","hsa04662",0.0382148376241016,"1% O2, CyA- vs 19% O2, CyA-",1.41776798140431,"B cell receptor signaling pathway",1,0
+"533","hsa00970",0.236094248392488,"1% O2, CyA- vs 19% O2, CyA-",0.626914592852787,"Aminoacyl-tRNA biosynthesis",1,0
+"534","hsa04936",0.253248615676048,"1% O2, CyA- vs 19% O2, CyA-",0.596452919929761,"Alcoholic liver disease",1,0
+"535","hsa04923",0.455559506117365,"1% O2, CyA- vs 19% O2, CyA-",0.341454886549395,"Regulation of lipolysis in adipocytes",1,0
+"536","hsa05215",0.114110875787418,"1% O2, CyA- vs 19% O2, CyA-",0.94267296145936,"Prostate cancer",1,0
+"537","hsa05224",0.270492343409903,"1% O2, CyA- vs 19% O2, CyA-",0.567845023577341,"Breast cancer",1,0
+"538","hsa04014",2.75044501712169e-07,"1% O2, CyA- vs 19% O2, CyA-",6.56059703240821,"Ras signaling pathway",0.000202982842263581,3.69254067058516
+"539","hsa04151",1.8566298117445e-05,"1% O2, CyA- vs 19% O2, CyA-",4.73127468039774,"PI3K-Akt signaling pathway",0.0129407097878591,1.88804190229973
+"540","hsa05417",0.142393202651232,"1% O2, CyA- vs 19% O2, CyA-",0.846510741889617,"Lipid and atherosclerosis",1,0
+"541","hsa04210",0.00394856811329304,"1% O2, CyA- vs 19% O2, CyA-",2.40356036595226,"Apoptosis",1,0
+"542","hsa04713",2.46811583271219e-15,"1% O2, CyA- vs 19% O2, CyA-",14.6076344620103,"Circadian entrainment",1.97202455033704e-12,11.7050876826963
+"543","hsa05120",0.260674314281796,"1% O2, CyA- vs 19% O2, CyA-",0.583901760221209,"Epithelial cell signaling in Helicobacter pylori infection",1,0
+"544","hsa00350",0.483833664104458,"1% O2, CyA- vs 19% O2, CyA-",0.315303917648025,"Tyrosine metabolism",1,0
+"545","hsa05322",0.529094285220057,"1% O2, CyA- vs 19% O2, CyA-",0.276466929284043,"Systemic lupus erythematosus",1,0
+"546","hsa05163",0.0501474846446725,"1% O2, CyA- vs 19% O2, CyA-",1.29975084594038,"Human cytomegalovirus infection",1,0
+"547","hsa00030",3.02262993172322e-05,"1% O2, CyA- vs 19% O2, CyA-",4.51961502134641,"Pentose phosphate pathway",0.0207956939302558,1.68202658311089
+"548","hsa00230",0.456343171035622,"1% O2, CyA- vs 19% O2, CyA-",0.340708444101159,"Purine metabolism",1,0
+"549","hsa04211",0,"1% O2, CyA- vs 19% O2, CyA-",Inf,"Longevity regulating pathway",0,Inf
+"550","hsa04611",0.0883537066626761,"1% O2, CyA- vs 19% O2, CyA-",1.05377522601711,"Platelet activation",1,0
+"551","hsa04012",0.0678046704064847,"1% O2, CyA- vs 19% O2, CyA-",1.16874039076558,"ErbB signaling pathway",1,0
+"552","hsa04728",0.362846602357098,"1% O2, CyA- vs 19% O2, CyA-",0.440276939233872,"Dopaminergic synapse",1,0
+"553","hsa05219",0.405514545412806,"1% O2, CyA- vs 19% O2, CyA-",0.39199356345227,"Bladder cancer",1,0
+"554","hsa00600",0.142473603579248,"1% O2, CyA- vs 19% O2, CyA-",0.846265590966163,"Sphingolipid metabolism",1,0
+"555","hsa04972",0.0238228190603711,"1% O2, CyA- vs 19% O2, CyA-",1.62300684781034,"Pancreatic secretion",1,0
+"556","hsa04360",2.20091966873897e-11,"1% O2, CyA- vs 19% O2, CyA-",10.6573958084508,"Axon guidance",1.72111918095388e-08,7.76418905539092
+"557","hsa04722",0.0875324364590797,"1% O2, CyA- vs 19% O2, CyA-",1.05783098280856,"Neurotrophin signaling pathway",1,0
+"558","hsa00512",0.533620882596087,"1% O2, CyA- vs 19% O2, CyA-",0.272767183179232,"Mucin type O-glycan biosynthesis",1,0
+"559","hsa04723",0.48013781513753,"1% O2, CyA- vs 19% O2, CyA-",0.318634088117858,"Retrograde endocannabinoid signaling",1,0
+"560","hsa00601",0.522083572997593,"1% O2, CyA- vs 19% O2, CyA-",0.282259971353035,"Glycosphingolipid biosynthesis - lacto and neolacto series",1,0
+"561","hsa05204",0.261186249921109,"1% O2, CyA- vs 19% O2, CyA-",0.583049690109718,"Chemical carcinogenesis - DNA adducts",1,0
+"562","hsa04071",5.89514441628121e-26,"1% O2, CyA- vs 19% O2, CyA-",25.2295055513109,"Sphingolipid signaling pathway",4.92244558759481e-23,22.3078190758273
+"563","hsa04213",4.14072028659867e-12,"1% O2, CyA- vs 19% O2, CyA-",11.3829241059114,"Longevity regulating pathway - multiple species",3.25046542497995e-09,8.4880544491662
+"564","hsa04270",6.87619353736464e-08,"1% O2, CyA- vs 19% O2, CyA-",7.16265190815912,"Vascular smooth muscle contraction",5.16402134656084e-05,4.28701197115496
+"565","hsa04918",0.00110193238675181,"1% O2, CyA- vs 19% O2, CyA-",2.95784505245469,"Thyroid hormone synthesis",0.701930930360906,0.153705620119341
+"566","hsa04657",0.416042533671561,"1% O2, CyA- vs 19% O2, CyA-",0.380862267463204,"IL-17 signaling pathway",1,0
+"567","hsa04622",0.119211741637593,"1% O2, CyA- vs 19% O2, CyA-",0.923680967101819,"RIG-I-like receptor signaling pathway",1,0
+"568","hsa00052",0.360723436113362,"1% O2, CyA- vs 19% O2, CyA-",0.442825640758802,"Galactose metabolism",1,0
+"569","hsa00515",0.543045959676211,"1% O2, CyA- vs 19% O2, CyA-",0.265163413156816,"Mannose type O-glycan biosynthesis",1,0
+"570","hsa04659",0.195604920229922,"1% O2, CyA- vs 19% O2, CyA-",0.708620225203685,"Th17 cell differentiation",1,0
+"571","hsa00270",0.0784627605247012,"1% O2, CyA- vs 19% O2, CyA-",1.10533641632432,"Cysteine and methionine metabolism",1,0
+"572","hsa04915",0.0817937108084842,"1% O2, CyA- vs 19% O2, CyA-",1.08728008833573,"Estrogen signaling pathway",1,0
+"573","hsa04216",0.276294945215915,"1% O2, CyA- vs 19% O2, CyA-",0.558627060378155,"Ferroptosis",1,0
+"574","hsa04512",0.368780271445834,"1% O2, CyA- vs 19% O2, CyA-",0.433232320349933,"ECM-receptor interaction",1,0
+"575","hsa04510",3.63963758140363e-10,"1% O2, CyA- vs 19% O2, CyA-",9.43894185927201,"Focal adhesion",2.8098002128436e-07,6.55132455893628
+"576","hsa04668",3.06592447822367e-10,"1% O2, CyA- vs 19% O2, CyA-",9.51343854716419,"TNF signaling pathway",2.37302554614512e-07,6.62469758648129
+"577","hsa05226",5.39864857363308e-05,"1% O2, CyA- vs 19% O2, CyA-",4.2677149421156,"Gastric cancer",0.0367647967864413,1.43456783020281
+"578","hsa00770",0.522691692574314,"1% O2, CyA- vs 19% O2, CyA-",0.281754402327742,"Pantothenate and CoA biosynthesis",1,0
+"579","hsa05131",0.0741784902287429,"1% O2, CyA- vs 19% O2, CyA-",1.12972201020933,"Shigellosis",1,0
+"580","hsa01522",4.97750400310023e-06,"1% O2, CyA- vs 19% O2, CyA-",5.30298838202408,"Endocrine resistance",0.00353402784220116,2.45173003330501
+"581","hsa04062",0.187847300392342,"1% O2, CyA- vs 19% O2, CyA-",0.726195041926834,"Chemokine signaling pathway",1,0
+"582","hsa04911",2.14805673389221e-06,"1% O2, CyA- vs 19% O2, CyA-",5.66795425235286,"Insulin secretion",0.00154660084840239,2.81062175592159
+"583","hsa00040",0.531070078458646,"1% O2, CyA- vs 19% O2, CyA-",0.274848166903907,"Pentose and glucuronate interconversions",1,0
+"584","hsa04930",0.0229993888098036,"1% O2, CyA- vs 19% O2, CyA-",1.63828370485443,"Type II diabetes mellitus",1,0
+"585","hsa05202",0.000258234806883642,"1% O2, CyA- vs 19% O2, CyA-",3.58798522055644,"Transcriptional misregulation in cancer",0.170434972543204,0.768441285014573
+"586","hsa05145",0.0304767757839461,"1% O2, CyA- vs 19% O2, CyA-",1.51603098002622,"Toxoplasmosis",1,0
+"587","hsa04380",0.014328230759995,"1% O2, CyA- vs 19% O2, CyA-",1.84380743267372,"Osteoclast differentiation",1,0
+"588","hsa04010",0.0211908936504079,"1% O2, CyA- vs 19% O2, CyA-",1.67385072808122,"MAPK signaling pathway",1,0
+"589","hsa05142",0.476662881092893,"1% O2, CyA- vs 19% O2, CyA-",0.321788666332214,"Chagas disease",1,0
+"590","hsa00020",0.298325150111074,"1% O2, CyA- vs 19% O2, CyA-",0.525310132175865,"Citrate cycle (TCA cycle)",1,0
+"591","hsa04744",0.511658777615167,"1% O2, CyA- vs 19% O2, CyA-",0.291019571058797,"Phototransduction",1,0
+"592","hsa04921",0.242882805927801,"1% O2, CyA- vs 19% O2, CyA-",0.614603228525385,"Oxytocin signaling pathway",1,0
+"593","hsa05225",0.00510606483208324,"19% O2, CyA- vs 1% O2, CyA+",2.29191367522757,"Hepatocellular carcinoma",1,0
+"594","hsa04962",0.495653529756538,"19% O2, CyA- vs 1% O2, CyA+",0.304821796681604,"Vasopressin-regulated water reabsorption",1,0
+"595","hsa03250",7.22919803092238e-91,"19% O2, CyA- vs 1% O2, CyA+",90.1409098783712,"Viral life cycle - HIV-1",6.28940228690247e-88,87.2013906257526
+"596","hsa04912",6.29376307941601e-09,"19% O2, CyA- vs 1% O2, CyA+",8.20108960957007,"GnRH signaling pathway",4.80843499267383e-06,5.31799625099437
+"597","hsa05218",2.58013003609318e-14,"19% O2, CyA- vs 1% O2, CyA+",13.5883584054575,"Melanoma",2.04862324865799e-11,10.6885379030304
+"598","hsa00100",2.63398992487142e-05,"19% O2, CyA- vs 1% O2, CyA+",4.57938589056676,"Steroid biosynthesis",0.0181481905823641,1.74116666865914
+"599","hsa00830",0.501178469755301,"19% O2, CyA- vs 1% O2, CyA+",0.300007594236763,"Retinol metabolism",1,0
+"600","hsa00785",0.517587073955168,"19% O2, CyA- vs 1% O2, CyA+",0.286016578127688,"Lipoic acid metabolism",1,0
+"601","hsa04625",0.132203449483875,"19% O2, CyA- vs 1% O2, CyA+",0.878757212987536,"C-type lectin receptor signaling pathway",1,0
+"602","hsa05221",0.00126819741766133,"19% O2, CyA- vs 1% O2, CyA+",2.8968131354706,"Acute myeloid leukemia",0.804037162797286,0.0947238775888629
+"603","hsa04145",1.12271066097841e-16,"19% O2, CyA- vs 1% O2, CyA+",15.9497321533833,"Phagosome",9.07150214070553e-14,13.0423207926087
+"604","hsa05217",0.490567377042146,"19% O2, CyA- vs 1% O2, CyA+",0.309301335953639,"Basal cell carcinoma",1,0
+"605","hsa05223",0.0152262170220798,"19% O2, CyA- vs 1% O2, CyA+",1.81740798441923,"Non-small cell lung cancer",1,0
+"606","hsa05330",0.542351931307906,"19% O2, CyA- vs 1% O2, CyA+",0.265718808987639,"Allograft rejection",1,0
+"607","hsa04022",0.311849109261146,"19% O2, CyA- vs 1% O2, CyA+",0.506055492092316,"cGMP-PKG signaling pathway",1,0
+"608","hsa00140",0.50000323628684,"19% O2, CyA- vs 1% O2, CyA+",0.301027184670045,"Steroid hormone biosynthesis",1,0
+"609","hsa04066",0.0166016092130849,"19% O2, CyA- vs 1% O2, CyA+",1.77984981325569,"HIF-1 signaling pathway",1,0
+"610","hsa04724",0.492849647112792,"19% O2, CyA- vs 1% O2, CyA+",0.307285550070302,"Glutamatergic synapse",1,0
+"611","hsa05012",0.264912467703101,"19% O2, CyA- vs 1% O2, CyA+",0.576897601811336,"Parkinson disease",1,0
+"612","hsa05146",0.365322869087407,"19% O2, CyA- vs 1% O2, CyA+",0.437323140250188,"Amoebiasis",1,0
+"613","hsa05410",0.410909892063795,"19% O2, CyA- vs 1% O2, CyA+",0.386253403598169,"Hypertrophic cardiomyopathy",1,0
+"614","hsa00510",0.499495994774458,"19% O2, CyA- vs 1% O2, CyA+",0.301467989829041,"N-Glycan biosynthesis",1,0
+"615","hsa04114",0.00416493557646166,"19% O2, CyA- vs 1% O2, CyA+",2.38039171190512,"Oocyte meiosis",1,0
+"616","hsa04310",0.0290335005824104,"19% O2, CyA- vs 1% O2, CyA+",1.53710059792754,"Wnt signaling pathway",1,0
+"617","hsa03015",3.65740972553771e-27,"19% O2, CyA- vs 1% O2, CyA+",26.436826384597,"mRNA surveillance pathway",3.06856675972614e-24,23.5130644237683
+"618","hsa03440",0.0136884353192875,"19% O2, CyA- vs 1% O2, CyA+",1.86364619182477,"Homologous recombination",1,0
+"619","hsa05152",1.26528047278433e-06,"19% O2, CyA- vs 1% O2, CyA+",5.89781319442406,"Tuberculosis",0.000914797781823072,3.03867489712953
+"620","hsa04110",2.67184868341699e-33,"19% O2, CyA- vs 1% O2, CyA+",32.5731881411882,"Cell cycle",2.27641507827127e-30,29.6427485464215
+"621","hsa00604",0.518036419699185,"19% O2, CyA- vs 1% O2, CyA+",0.28563970682159,"Glycosphingolipid biosynthesis - ganglio series",1,0
+"622","hsa05416",3.31301377940064e-50,"19% O2, CyA- vs 1% O2, CyA+",49.479776757808,"Viral myocarditis",2.85581787784335e-47,46.5442694919833
+"623","hsa04664",0,"19% O2, CyA- vs 1% O2, CyA+",Inf,"Fc epsilon RI signaling pathway",0,Inf
+"624","hsa04929",0.229078166026462,"19% O2, CyA- vs 1% O2, CyA+",0.64001630245663,"GnRH secretion",1,0
+"625","hsa04136",0,"19% O2, CyA- vs 1% O2, CyA+",Inf,"Autophagy - other",0,Inf
+"626","hsa04660",0.000349280614690216,"19% O2, CyA- vs 1% O2, CyA+",3.45682551733027,"T cell receptor signaling pathway",0.229477363851472,0.639260147770489
+"627","hsa00310",0.022041530587987,"19% O2, CyA- vs 1% O2, CyA+",1.65675825088937,"Lysine degradation",1,0
+"628","hsa04070",0.009940011323346,"19% O2, CyA- vs 1% O2, CyA+",2.00261312086789,"Phosphatidylinositol signaling system",1,0
+"629","hsa04726",0.0868034830217495,"19% O2, CyA- vs 1% O2, CyA+",1.06146284824773,"Serotonergic synapse",1,0
+"630","hsa05332",0.548845732704541,"19% O2, CyA- vs 1% O2, CyA+",0.260549708099918,"Graft-versus-host disease",1,0
+"631","hsa04916",0.466398668591071,"19% O2, CyA- vs 1% O2, CyA+",0.331242698009712,"Melanogenesis",1,0
+"632","hsa05169",0.226104036819173,"19% O2, CyA- vs 1% O2, CyA+",0.645691683772992,"Epstein-Barr virus infection",1,0
+"633","hsa00900",0.260899469852372,"19% O2, CyA- vs 1% O2, CyA+",0.583526803385112,"Terpenoid backbone biosynthesis",1,0
+"634","hsa00591",0.528383456504175,"19% O2, CyA- vs 1% O2, CyA+",0.277050788448546,"Linoleic acid metabolism",1,0
+"635","hsa04024",0.216699582833215,"19% O2, CyA- vs 1% O2, CyA+",0.664141924736513,"cAMP signaling pathway",1,0
+"636","hsa04068",6.6322256464685e-31,"19% O2, CyA- vs 1% O2, CyA+",30.1783407063195,"FoxO signaling pathway",5.62412734820529e-28,27.2499448540628
+"637","hsa00520",0.125570969167893,"19% O2, CyA- vs 1% O2, CyA+",0.901110753811358,"Amino sugar and nucleotide sugar metabolism",1,0
+"638","hsa00860",0.508150627881105,"19% O2, CyA- vs 1% O2, CyA+",0.294007533461999,"Porphyrin metabolism",1,0
+"639","hsa04922",1.19735913809859e-90,"19% O2, CyA- vs 1% O2, CyA+",89.9217755669696,"Glucagon signaling pathway",1.04050509100768e-87,86.9827557905209
+"640","hsa04926",0.273247792417045,"19% O2, CyA- vs 1% O2, CyA+",0.563443338051521,"Relaxin signaling pathway",1,0
+"641","hsa04370",3.09558561680593e-08,"19% O2, CyA- vs 1% O2, CyA+",7.5092571798946,"VEGF signaling pathway",2.33716714068848e-05,4.63131022826541
+"642","hsa05213",5.26454562551076e-118,"19% O2, CyA- vs 1% O2, CyA+",117.278639106121,"Endometrial cancer",4.59594833107089e-115,114.337624862416
+"643","hsa04520",3.20781127100263e-23,"19% O2, CyA- vs 1% O2, CyA+",22.493791191003,"Adherens junction",2.67210678874519e-20,19.5731461895962
+"644","hsa05110",0.00374473301512438,"19% O2, CyA- vs 1% O2, CyA+",2.42657914036546,"Vibrio cholerae infection",1,0
+"645","hsa05220",0.29118626149168,"19% O2, CyA- vs 1% O2, CyA+",0.535829119397137,"Chronic myeloid leukemia",1,0
+"646","hsa05235",0.000462657431501799,"19% O2, CyA- vs 1% O2, CyA+",3.33474045752267,"PD-L1 expression and PD-1 checkpoint pathway in cancer",0.301652645339173,0.520492861790745
+"647","hsa05207",5.75289945838763e-10,"19% O2, CyA- vs 1% O2, CyA+",9.24011321593609,"Chemical carcinogenesis - receptor activation",4.42973258295847e-07,6.35362249076361
+"648","hsa05418",0.00648859541248831,"19% O2, CyA- vs 1% O2, CyA+",2.18784930483674,"Fluid shear stress and atherosclerosis",1,0
+"649","hsa00920",0.484231396507376,"19% O2, CyA- vs 1% O2, CyA+",0.314947055274599,"Sulfur metabolism",1,0
+"650","hsa04931",0.00227628892342139,"19% O2, CyA- vs 1% O2, CyA+",2.64277261491142,"Insulin resistance",1,0
+"651","hsa00500",0.291743515751025,"19% O2, CyA- vs 1% O2, CyA+",0.534998787741354,"Starch and sucrose metabolism",1,0
+"652","hsa05216",0.215393184993858,"19% O2, CyA- vs 1% O2, CyA+",0.666768041829047,"Thyroid cancer",1,0
+"653","hsa00740",0.422109268573964,"19% O2, CyA- vs 1% O2, CyA+",0.374575111606942,"Riboflavin metabolism",1,0
+"654","hsa00062",0.508050176768503,"19% O2, CyA- vs 1% O2, CyA+",0.294093393193356,"Fatty acid elongation",1,0
+"655","hsa04390",0.467259870931631,"19% O2, CyA- vs 1% O2, CyA+",0.330441515319151,"Hippo signaling pathway",1,0
+"656","hsa04064",0.265668355102671,"19% O2, CyA- vs 1% O2, CyA+",0.57566017318763,"NF-kappa B signaling pathway",1,0
+"657","hsa04932",1.12995089564748e-15,"19% O2, CyA- vs 1% O2, CyA+",14.9469404292712,"Non-alcoholic fatty liver disease",9.06220618309279e-13,12.042766060987
+"658","hsa05222",0.439627647720663,"19% O2, CyA- vs 1% O2, CyA+",0.356915003066219,"Small cell lung cancer",1,0
+"659","hsa05320",0.545915111670345,"19% O2, CyA- vs 1% O2, CyA+",0.262874883667647,"Autoimmune thyroid disease",1,0
+"660","hsa04115",0.0656370085913952,"19% O2, CyA- vs 1% O2, CyA+",1.18285122015176,"p53 signaling pathway",1,0
+"661","hsa04710",8.8066347060274e-184,"19% O2, CyA- vs 1% O2, CyA+",183.05519001756,"Circadian rhythm",7.73222527189206e-181,180.111695501654
+"662","hsa05206",0.0333886125032577,"19% O2, CyA- vs 1% O2, CyA+",1.47640162810643,"MicroRNAs in cancer",1,0
+"663","hsa05032",0.494996861654111,"19% O2, CyA- vs 1% O2, CyA+",0.305397554542436,"Morphine addiction",1,0
+"664","hsa00620",0.459049400504217,"19% O2, CyA- vs 1% O2, CyA+",0.338140575438905,"Pyruvate metabolism",1,0
+"665","hsa05132",3.42556456890765e-14,"19% O2, CyA- vs 1% O2, CyA+",13.4652678419948,"Salmonella infection",2.71647270314377e-11,10.5659946546772
+"666","hsa04658",0.2970790575383,"19% O2, CyA- vs 1% O2, CyA+",0.527127962521907,"Th1 and Th2 cell differentiation",1,0
+"667","hsa05014",2.85940067089936e-81,"19% O2, CyA- vs 1% O2, CyA+",80.5437249852616,"Amyotrophic lateral sclerosis",2.48195978234064e-78,77.6052052600851
+"668","hsa04933",0.453651130437625,"19% O2, CyA- vs 1% O2, CyA+",0.343278002581895,"AGE-RAGE signaling pathway in diabetic complications",1,0
+"669","hsa00531",0.467112565640054,"19% O2, CyA- vs 1% O2, CyA+",0.330578449743399,"Glycosaminoglycan degradation",1,0
+"670","hsa04714",6.37067205408236e-05,"19% O2, CyA- vs 1% O2, CyA+",4.19581475071268,"Thermogenesis",0.0432568632472192,1.36394497643218
+"671","hsa00592",0.306045762289853,"19% O2, CyA- vs 1% O2, CyA+",0.514213629649108,"alpha-Linolenic acid metabolism",1,0
+"672","hsa05170",0.235308692083435,"19% O2, CyA- vs 1% O2, CyA+",0.62836203009491,"Human immunodeficiency virus 1 infection",1,0
+"673","hsa05160",0.000218939418106812,"19% O2, CyA- vs 1% O2, CyA+",3.65967604051012,"Hepatitis C",0.145156834204816,0.838162512105346
+"674","hsa04392",0.318503824820475,"19% O2, CyA- vs 1% O2, CyA+",0.496885347980271,"Hippo signaling pathway - multiple species",1,0
+"675","hsa04666",9.43662754718399e-17,"19% O2, CyA- vs 1% O2, CyA+",16.025183185716,"Fc gamma R-mediated phagocytosis",7.64366831321903e-14,13.1166981668373
+"676","hsa04920",0.439606328958964,"19% O2, CyA- vs 1% O2, CyA+",0.356936063718592,"Adipocytokine signaling pathway",1,0
+"677","hsa04940",0.540706124140208,"19% O2, CyA- vs 1% O2, CyA+",0.267038711494771,"Type I diabetes mellitus",1,0
+"678","hsa04672",0.264465112557706,"19% O2, CyA- vs 1% O2, CyA+",0.577631610672263,"Intestinal immune network for IgA production",1,0
+"679","hsa00780",0.55559092218277,"19% O2, CyA- vs 1% O2, CyA+",0.2552448588274,"Biotin metabolism",1,0
+"680","hsa00590",0.46973567539086,"19% O2, CyA- vs 1% O2, CyA+",0.328146454853962,"Arachidonic acid metabolism",1,0
+"681","hsa05161",0.0201838828922511,"19% O2, CyA- vs 1% O2, CyA+",1.69499528227827,"Hepatitis B",1,0
+"682","hsa04540",0.156679170319996,"19% O2, CyA- vs 1% O2, CyA+",0.804988736884203,"Gap junction",1,0
+"683","hsa04913",1.88671832677024e-07,"19% O2, CyA- vs 1% O2, CyA+",6.72429293198152,"Ovarian steroidogenesis",0.000140371843511706,3.85271999643564
+"684","hsa05212",0.36456926460528,"19% O2, CyA- vs 1% O2, CyA+",0.438219947790143,"Pancreatic cancer",1,0
+"685","hsa05211",0.0206275956736027,"19% O2, CyA- vs 1% O2, CyA+",1.68555138989108,"Renal cell carcinoma",1,0
+"686","hsa04371",0.000830941454289239,"19% O2, CyA- vs 1% O2, CyA+",3.0804295742602,"Apelin signaling pathway",0.535957238016559,0.270869859624936
+"687","hsa05164",0.407368207944156,"19% O2, CyA- vs 1% O2, CyA+",0.390012867464423,"Influenza A",1,0
+"688","hsa04146",0.00125983007487993,"19% O2, CyA- vs 1% O2, CyA+",2.89968802830993,"Peroxisome",0.799992097548758,0.0969143030179548
+"689","hsa04122",0.196988342684483,"19% O2, CyA- vs 1% O2, CyA+",0.705559473623177,"Sulfur relay system",1,0
+"690","hsa05167",0.159191470432881,"19% O2, CyA- vs 1% O2, CyA+",0.798080205713748,"Kaposi sarcoma-associated herpesvirus infection",1,0
+"691","hsa00562",0.209477167299151,"19% O2, CyA- vs 1% O2, CyA+",0.678863307573042,"Inositol phosphate metabolism",1,0
+"692","hsa04935",3.13300685478032e-07,"19% O2, CyA- vs 1% O2, CyA+",6.50403865491401,"Growth hormone synthesis, secretion and action",0.000230589304511831,3.63716084057652
+"693","hsa00240",0.371055240333123,"19% O2, CyA- vs 1% O2, CyA+",0.430561430584459,"Pyrimidine metabolism",1,0
+"694","hsa05200",4.35678791830878e-10,"19% O2, CyA- vs 1% O2, CyA+",9.36083358033277,"Pathways in cancer",3.35908348501607e-07,6.47377920228181
+"695","hsa00480",0.491429243437087,"19% O2, CyA- vs 1% O2, CyA+",0.308539003563153,"Glutathione metabolism",1,0
+"696","hsa04150",1.05967695677357e-05,"19% O2, CyA- vs 1% O2, CyA+",4.9748265095212,"mTOR signaling pathway",0.00743893223655047,2.1284893973914
+"697","hsa05034",0.0176160734587407,"19% O2, CyA- vs 1% O2, CyA+",1.7540908873676,"Alcoholism",1,0
+"698","hsa04750",0.492282565013059,"19% O2, CyA- vs 1% O2, CyA+",0.307785545199629,"Inflammatory mediator regulation of TRP channels",1,0
+"699","hsa04137",0.111962422094599,"19% O2, CyA- vs 1% O2, CyA+",0.950927714967031,"Mitophagy - animal",1,0
+"700","hsa05203",4.49403390563963e-06,"19% O2, CyA- vs 1% O2, CyA+",5.34736365533108,"Viral carcinogenesis",0.00320424617472105,2.49427412547921
+"701","hsa03320",0.502190701014607,"19% O2, CyA- vs 1% O2, CyA+",0.299131333310538,"PPAR signaling pathway",1,0
+"702","hsa00564",0.499412414853004,"19% O2, CyA- vs 1% O2, CyA+",0.301540665758927,"Glycerophospholipid metabolism",1,0
+"703","hsa04961",0.481888553665606,"19% O2, CyA- vs 1% O2, CyA+",0.317053389405171,"Endocrine and other factor-regulated calcium reabsorption",1,0
+"704","hsa00220",0.514415064084552,"19% O2, CyA- vs 1% O2, CyA+",0.288686322057,"Arginine biosynthesis",1,0
+"705","hsa05168",6.51841026462902e-11,"19% O2, CyA- vs 1% O2, CyA+",10.18585830879,"Herpes simplex virus 1 infection",5.08436000641064e-08,7.2937637060995
+"706","hsa04061",2.51896771203352e-05,"19% O2, CyA- vs 1% O2, CyA+",4.59877739922501,"Viral protein interaction with cytokine and cytokine receptor",0.0173808772130313,1.75992830848775
+"707","hsa05412",0.31404862616161,"19% O2, CyA- vs 1% O2, CyA+",0.503003102122149,"Arrhythmogenic right ventricular cardiomyopathy",1,0
+"708","hsa04924",0.339678071468153,"19% O2, CyA- vs 1% O2, CyA+",0.468932488890267,"Renin secretion",1,0
+"709","hsa05143",0.443448079238272,"19% O2, CyA- vs 1% O2, CyA+",0.353157221875824,"African trypanosomiasis",1,0
+"710","hsa04960",0.342307693927359,"19% O2, CyA- vs 1% O2, CyA+",0.465583339270993,"Aldosterone-regulated sodium reabsorption",1,0
+"711","hsa05162",0.363967086295971,"19% O2, CyA- vs 1% O2, CyA+",0.438937888016704,"Measles",1,0
+"712","hsa00730",0.43494691670739,"19% O2, CyA- vs 1% O2, CyA+",0.361563743477108,"Thiamine metabolism",1,0
+"713","hsa05030",0.0472085699716255,"19% O2, CyA- vs 1% O2, CyA+",1.32597915489258,"Cocaine addiction",1,0
+"714","hsa00750",0.451213155232804,"19% O2, CyA- vs 1% O2, CyA+",0.345618246875493,"Vitamin B6 metabolism",1,0
+"715","hsa04623",0.442229164145495,"19% O2, CyA- vs 1% O2, CyA+",0.354352619944086,"Cytosolic DNA-sensing pathway",1,0
+"716","hsa00650",0.237465778266879,"19% O2, CyA- vs 1% O2, CyA+",0.624398968694798,"Butanoate metabolism",1,0
+"717","hsa05010",0.367185477366873,"19% O2, CyA- vs 1% O2, CyA+",0.435114504007164,"Alzheimer disease",1,0
+"718","hsa05031",5.81943416737212e-07,"19% O2, CyA- vs 1% O2, CyA+",6.23511924042474,"Amphetamine addiction",0.000424818694218165,3.37179638030428
+"719","hsa00071",0.17645039825385,"19% O2, CyA- vs 1% O2, CyA+",0.753377357087213,"Fatty acid degradation",1,0
+"720","hsa00561",0.373503104085998,"19% O2, CyA- vs 1% O2, CyA+",0.427705784526445,"Glycerolipid metabolism",1,0
+"721","hsa04614",0.45753768953169,"19% O2, CyA- vs 1% O2, CyA+",0.339573125244635,"Renin-angiotensin system",1,0
+"722","hsa04971",0.294309765673623,"19% O2, CyA- vs 1% O2, CyA+",0.53119532706858,"Gastric acid secretion",1,0
+"723","hsa04215",7.73264364689362e-11,"19% O2, CyA- vs 1% O2, CyA+",10.1116720034976,"Apoptosis - multiple species",6.02372940093013e-08,7.22013454582502
+"724","hsa04080",0.322067353669901,"19% O2, CyA- vs 1% O2, CyA+",0.492053295172777,"Neuroactive ligand-receptor interaction",1,0
+"725","hsa05231",0.38146319285788,"19% O2, CyA- vs 1% O2, CyA+",0.418547360487319,"Choline metabolism in cancer",1,0
+"726","hsa05166",3.65663618505925e-15,"19% O2, CyA- vs 1% O2, CyA+",14.4369182473954,"Human T-cell leukemia virus 1 infection",2.91433903949222e-12,11.5354599259993
+"727","hsa00790",0.449321182788773,"19% O2, CyA- vs 1% O2, CyA+",0.347443106554048,"Folate biosynthesis",1,0
+"728","hsa00983",0.327865210597935,"19% O2, CyA- vs 1% O2, CyA+",0.4843046633761,"Drug metabolism - other enzymes",1,0
+"729","hsa04721",0.0121704363919401,"19% O2, CyA- vs 1% O2, CyA+",1.91469384911474,"Synaptic vesicle cycle",1,0
+"730","hsa04218",0.00253623499533815,"19% O2, CyA- vs 1% O2, CyA+",2.59581050928777,"Cellular senescence",1,0
+"731","hsa04530",7.53005746469494e-17,"19% O2, CyA- vs 1% O2, CyA+",16.1232017095224,"Tight junction",6.10687660386759e-14,13.2141808553113
+"732","hsa04340",0.388008248813992,"19% O2, CyA- vs 1% O2, CyA+",0.411159041477136,"Hedgehog signaling pathway",1,0
+"733","hsa04725",9.91560385839734e-06,"19% O2, CyA- vs 1% O2, CyA+",5.00368083220158,"Cholinergic synapse",0.00697066951245333,2.15672550718176
+"734","hsa04740",0.510056860443718,"19% O2, CyA- vs 1% O2, CyA+",0.292381406646264,"Olfactory transduction",1,0
+"735","hsa04152",5.33044175948125e-06,"19% O2, CyA- vs 1% O2, CyA+",5.2732367973984,"AMPK signaling pathway",0.00376862232395324,2.4238173836015
+"736","hsa03460",1.23501395781049e-37,"19% O2, CyA- vs 1% O2, CyA+",36.9083281340919,"Fanconi anemia pathway",1.05470191997016e-34,33.9768702634029
+"737","hsa05214",0.00581176781184394,"19% O2, CyA- vs 1% O2, CyA+",2.23569174469219,"Glioma",1,0
+"738","hsa00440",0.532607496635425,"19% O2, CyA- vs 1% O2, CyA+",0.273592725008447,"Phosphonate and phosphinate metabolism",1,0
+"739","hsa04020",0.351975546487462,"19% O2, CyA- vs 1% O2, CyA+",0.453487508097049,"Calcium signaling pathway",1,0
+"740","hsa04514",5.13201917129224e-33,"19% O2, CyA- vs 1% O2, CyA+",32.2897117299333,"Cell adhesion molecules",4.36734831476969e-30,29.3597821698487
+"741","hsa04613",7.80901846325745e-45,"19% O2, CyA- vs 1% O2, CyA+",44.1074035503455,"Neutrophil extracellular trap formation",6.72356489686467e-42,41.1724003988918
+"742","hsa00250",0.452164684514183,"19% O2, CyA- vs 1% O2, CyA+",0.344703360432824,"Alanine, aspartate and glutamate metabolism",1,0
+"743","hsa04217",0.0456159319093178,"19% O2, CyA- vs 1% O2, CyA+",1.34088344830342,"Necroptosis",1,0
+"744","hsa04934",0.00193068133664757,"19% O2, CyA- vs 1% O2, CyA+",2.71428940159917,"Cushing syndrome",1,0
+"745","hsa05140",0.00192232274325981,"19% O2, CyA- vs 1% O2, CyA+",2.71617369582992,"Leishmaniasis",1,0
+"746","hsa04919",2.58965070081408e-299,"19% O2, CyA- vs 1% O2, CyA+",298.586758810799,"Thyroid hormone signaling pathway",2.2814822674172e-296,295.641782902387
+"747","hsa04550",0.037263989249156,"19% O2, CyA- vs 1% O2, CyA+",1.42871065410547,"Signaling pathways regulating pluripotency of stem cells",1,0
+"748","hsa00061",1.95691720907228e-05,"19% O2, CyA- vs 1% O2, CyA+",4.70842754756818,"Fatty acid biosynthesis",0.0136005746030523,1.86644274297807
+"749","hsa00532",0.469459978609271,"19% O2, CyA- vs 1% O2, CyA+",0.328401425357396,"Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate",1,0
+"750","hsa04742",0.408401161360363,"19% O2, CyA- vs 1% O2, CyA+",0.388913031590808,"Taste transduction",1,0
+"751","hsa04261",0.0935229006157641,"19% O2, CyA- vs 1% O2, CyA+",1.02908203198004,"Adrenergic signaling in cardiomyocytes",1,0
+"752","hsa04910",0.01594733216114,"19% O2, CyA- vs 1% O2, CyA+",1.79731195991739,"Insulin signaling pathway",1,0
+"753","hsa04015",0.000111476593197089,"19% O2, CyA- vs 1% O2, CyA+",3.95281631210004,"Rap1 signaling pathway",0.074912270628444,1.12544703904622
+"754","hsa05208",0.0439288404643994,"19% O2, CyA- vs 1% O2, CyA+",1.35725026012095,"Chemical carcinogenesis - reactive oxygen species",1,0
+"755","hsa04914",1.04413295582897e-76,"19% O2, CyA- vs 1% O2, CyA+",75.9812441964426,"Progesterone-mediated oocyte maturation",9.0526327270372e-74,73.0432250989664
+"756","hsa04130",0.327207643736696,"19% O2, CyA- vs 1% O2, CyA+",0.485176559542605,"SNARE interactions in vesicular transport",1,0
+"757","hsa00640",8.08827112828877e-35,"19% O2, CyA- vs 1% O2, CyA+",34.0921442991151,"Propanoate metabolism",6.89929527243032e-32,31.1611952679476
+"758","hsa00450",0.411435196829014,"19% O2, CyA- vs 1% O2, CyA+",0.385698558691903,"Selenocompound metabolism",1,0
+"759","hsa04621",3.56819987123025e-25,"19% O2, CyA- vs 1% O2, CyA+",24.44755082679,"NOD-like receptor signaling pathway",2.97587869260603e-22,21.5263847761522
+"760","hsa05130",0.0533802771539038,"19% O2, CyA- vs 1% O2, CyA+",1.27261917565719,"Pathogenic Escherichia coli infection",1,0
+"761","hsa04670",0.293784919459885,"19% O2, CyA- vs 1% O2, CyA+",0.53197050113749,"Leukocyte transendothelial migration",1,0
+"762","hsa04928",2.72685079097227e-111,"19% O2, CyA- vs 1% O2, CyA+",110.564338625326,"Parathyroid hormone synthesis, secretion and action",2.37781388972782e-108,107.623822140393
+"763","hsa00130",0.524199617736258,"19% O2, CyA- vs 1% O2, CyA+",0.280503300091239,"Ubiquinone and other terpenoid-quinone biosynthesis",1,0
+"764","hsa05100",1.93153898429387e-07,"19% O2, CyA- vs 1% O2, CyA+",6.71409652205561,"Bacterial invasion of epithelial cells",0.000143513346533034,3.84310770829503
+"765","hsa05414",0.186307624956538,"19% O2, CyA- vs 1% O2, CyA+",0.72976937049944,"Dilated cardiomyopathy",1,0
+"766","hsa05321",0.488711342734464,"19% O2, CyA- vs 1% O2, CyA+",0.310947581107246,"Inflammatory bowel disease",1,0
+"767","hsa00051",4.8820390595532e-06,"19% O2, CyA- vs 1% O2, CyA+",5.31139875026079,"Fructose and mannose metabolism",0.00347112977134232,2.45952914953102
+"768","hsa05230",0.0734704456190975,"19% O2, CyA- vs 1% O2, CyA+",1.13388732602839,"Central carbon metabolism in cancer",1,0
+"769","hsa04727",0.024748906836574,"19% O2, CyA- vs 1% O2, CyA+",1.60644397916793,"GABAergic synapse",1,0
+"770","hsa04630",0.236743279399676,"19% O2, CyA- vs 1% O2, CyA+",0.625722340776909,"JAK-STAT signaling pathway",1,0
+"771","hsa00603",0.508700152599698,"19% O2, CyA- vs 1% O2, CyA+",0.293538132089115,"Glycosphingolipid biosynthesis - globo and isoglobo series",1,0
+"772","hsa00340",0.482809983971918,"19% O2, CyA- vs 1% O2, CyA+",0.31622375775638,"Histidine metabolism",1,0
+"773","hsa04610",0.507154059296056,"19% O2, CyA- vs 1% O2, CyA+",0.294860094041663,"Complement and coagulation cascades",1,0
+"774","hsa05205",0.0701778416196611,"19% O2, CyA- vs 1% O2, CyA+",1.15379999301839,"Proteoglycans in cancer",1,0
+"775","hsa04140",8.4147384114662e-29,"19% O2, CyA- vs 1% O2, CyA+",28.0749593803682,"Autophagy - animal",7.10203921927747e-26,25.1486169337425
+"776","hsa00010",0.412923684046876,"19% O2, CyA- vs 1% O2, CyA+",0.38413020660004,"Glycolysis / Gluconeogenesis",1,0
+"777","hsa04144",1.07614689793065e-19,"19% O2, CyA- vs 1% O2, CyA+",18.9681284418609,"Endocytosis",8.85668896996921e-17,16.0527286066486
+"778","hsa01521",0.000249863308012194,"19% O2, CyA- vs 1% O2, CyA+",3.60229751457303,"EGFR tyrosine kinase inhibitor resistance",0.165409509904072,0.781439525133329
+"779","hsa05415",0.267876474472869,"19% O2, CyA- vs 1% O2, CyA+",0.572065425455786,"Diabetic cardiomyopathy",1,0
+"780","hsa05133",0.0405785554752575,"19% O2, CyA- vs 1% O2, CyA+",1.39170341714227,"Pertussis",1,0
+"781","hsa04620",1.95706516472267e-05,"19% O2, CyA- vs 1% O2, CyA+",4.708394713326,"Toll-like receptor signaling pathway",0.0136005746030523,1.86644274297807
+"782","hsa00980",0.472184193923403,"19% O2, CyA- vs 1% O2, CyA+",0.325888554755678,"Metabolism of xenobiotics by cytochrome P450",1,0
+"783","hsa01524",9.63812233846827e-12,"19% O2, CyA- vs 1% O2, CyA+",11.0160075654197,"Platinum drug resistance",7.55628791335912e-09,8.12169150273525
+"784","hsa00630",0.427037398380164,"19% O2, CyA- vs 1% O2, CyA+",0.369534089380333,"Glyoxylate and dicarboxylate metabolism",1,0
+"785","hsa05022",0.000198317437854017,"19% O2, CyA- vs 1% O2, CyA+",3.70263909703617,"Pathways of neurodegeneration - multiple diseases",0.131881096172921,0.879817451733067
+"786","hsa05165",0.18999776488373,"19% O2, CyA- vs 1% O2, CyA+",0.72125150801755,"Human papillomavirus infection",1,0
+"787","hsa04330",0.480139850184175,"19% O2, CyA- vs 1% O2, CyA+",0.318632247380413,"Notch signaling pathway",1,0
+"788","hsa04927",0.00348044883677998,"19% O2, CyA- vs 1% O2, CyA+",2.45836474606278,"Cortisol synthesis and secretion",1,0
+"789","hsa01523",0.18123063554975,"19% O2, CyA- vs 1% O2, CyA+",0.74176838653997,"Antifolate resistance",1,0
+"790","hsa05323",0.422819341802088,"19% O2, CyA- vs 1% O2, CyA+",0.37384515417969,"Rheumatoid arthritis",1,0
+"791","hsa00563",0.518838752126327,"19% O2, CyA- vs 1% O2, CyA+",0.284967593871499,"Glycosylphosphatidylinositol (GPI)-anchor biosynthesis",1,0
+"792","hsa04917",0.0710572678672368,"19% O2, CyA- vs 1% O2, CyA+",1.14839149503124,"Prolactin signaling pathway",1,0
+"793","hsa05135",2.15138813035224e-10,"19% O2, CyA- vs 1% O2, CyA+",9.66728123179563,"Yersinia infection",1.66732580102298e-07,6.77797952928932
+"794","hsa04612",0.457563244715498,"19% O2, CyA- vs 1% O2, CyA+",0.339548868957925,"Antigen processing and presentation",1,0
+"795","hsa00330",0.527675908925282,"19% O2, CyA- vs 1% O2, CyA+",0.277632733110436,"Arginine and proline metabolism",1,0
+"796","hsa05016",3.47620702117925e-05,"19% O2, CyA- vs 1% O2, CyA+",4.45889436758627,"Huntington disease",0.0238120180950779,1.62320379609385
+"797","hsa04141",3.8589350449721e-11,"19% O2, CyA- vs 1% O2, CyA+",10.4135325315731,"Protein processing in endoplasmic reticulum",3.01382827012321e-08,7.5208814976958
+"798","hsa04979",0.0646668826551292,"19% O2, CyA- vs 1% O2, CyA+",1.18931807423623,"Cholesterol metabolism",1,0
+"799","hsa00670",0.438826788695931,"19% O2, CyA- vs 1% O2, CyA+",0.357706868272117,"One carbon pool by folate",1,0
+"800","hsa00260",0.518979049998029,"19% O2, CyA- vs 1% O2, CyA+",0.284850173276574,"Glycine, serine and threonine metabolism",1,0
+"801","hsa04730",1.04681414335614e-22,"19% O2, CyA- vs 1% O2, CyA+",21.9801304183019,"Long-term depression",8.688557389856e-20,19.0610523259258
+"802","hsa04650",3.01640556724241e-41,"19% O2, CyA- vs 1% O2, CyA+",40.5205102663255,"Natural killer cell mediated cytotoxicity",2.58807597669399e-38,37.5870229784768
+"803","hsa04720",3.8435813293346e-18,"19% O2, CyA- vs 1% O2, CyA+",17.4152639249219,"Long-term potentiation",3.12483162074903e-15,14.5051733793278
+"804","hsa00360",0.529732424384089,"19% O2, CyA- vs 1% O2, CyA+",0.275943443526331,"Phenylalanine metabolism",1,0
+"805","hsa05020",5.25666787466595e-06,"19% O2, CyA- vs 1% O2, CyA+",5.27928946158847,"Prion disease",0.00372172085526349,2.4292562038987
+"806","hsa00760",0.522066856662137,"19% O2, CyA- vs 1% O2, CyA+",0.282273877035665,"Nicotinate and nicotinamide metabolism",1,0
+"807","hsa05210",6.33390925169528e-13,"19% O2, CyA- vs 1% O2, CyA+",12.1983281632202,"Colorectal cancer",4.99112049033588e-10,9.30180194573068
+"808","hsa03018",0.274567538532903,"19% O2, CyA- vs 1% O2, CyA+",0.561350809668013,"RNA degradation",1,0
+"809","hsa00410",0.517603299929058,"19% O2, CyA- vs 1% O2, CyA+",0.286002963528668,"beta-Alanine metabolism",1,0
+"810","hsa00565",0.478358241934084,"19% O2, CyA- vs 1% O2, CyA+",0.320246738904962,"Ether lipid metabolism",1,0
+"811","hsa04350",0.417305303017025,"19% O2, CyA- vs 1% O2, CyA+",0.379546096341735,"TGF-beta signaling pathway",1,0
+"812","hsa05150",0.428416448317521,"19% O2, CyA- vs 1% O2, CyA+",0.368133863525512,"Staphylococcus aureus infection",1,0
+"813","hsa00120",0.561893798885746,"19% O2, CyA- vs 1% O2, CyA+",0.250345760794516,"Primary bile acid biosynthesis",1,0
+"814","hsa04810",1.88334519951783e-28,"19% O2, CyA- vs 1% O2, CyA+",27.7250700705805,"Regulation of actin cytoskeleton",1.58766000319353e-25,24.7992424959557
+"815","hsa05144",0.509198183572303,"19% O2, CyA- vs 1% O2, CyA+",0.293113154244487,"Malaria",1,0
+"816","hsa04072",2.45291579995305e-31,"19% O2, CyA- vs 1% O2, CyA+",30.6103173593531,"Phospholipase D signaling pathway",2.08497842996009e-28,27.6808984336388
+"817","hsa00910",0.00036988808607696,"19% O2, CyA- vs 1% O2, CyA+",3.43192965688239,"Nitrogen metabolism",0.242276696380409,0.61568835689061
+"818","hsa00513",0.485953237912039,"19% O2, CyA- vs 1% O2, CyA+",0.313405519819706,"Various types of N-glycan biosynthesis",1,0
+"819","hsa05134",0.361349058557228,"19% O2, CyA- vs 1% O2, CyA+",0.442073072436036,"Legionellosis",1,0
+"820","hsa04970",0.243429550363173,"19% O2, CyA- vs 1% O2, CyA+",0.613626703095732,"Salivary secretion",1,0
+"821","hsa05171",0.473770591849612,"19% O2, CyA- vs 1% O2, CyA+",0.324431900544063,"Coronavirus disease - COVID-19",1,0
+"822","hsa05017",4.20704235476995e-13,"19% O2, CyA- vs 1% O2, CyA+",12.376023115663,"Spinocerebellar ataxia",3.32356346026826e-10,9.47839602437255
+"823","hsa04976",0.467932171552948,"19% O2, CyA- vs 1% O2, CyA+",0.329817094906975,"Bile secretion",1,0
+"824","hsa04060",0.113205600369092,"19% O2, CyA- vs 1% O2, CyA+",0.946132087730516,"Cytokine-cytokine receptor interaction",1,0
+"825","hsa04925",2.48291241678149e-06,"19% O2, CyA- vs 1% O2, CyA+",5.60503859964776,"Aldosterone synthesis and secretion",0.00178273111524911,2.74891415540546
+"826","hsa00280",0.306055401764453,"19% O2, CyA- vs 1% O2, CyA+",0.514199950960443,"Valine, leucine and isoleucine degradation",1,0
+"827","hsa00380",0.471854341991535,"19% O2, CyA- vs 1% O2, CyA+",0.326192044230387,"Tryptophan metabolism",1,0
+"828","hsa04662",0.00303505245603991,"19% O2, CyA- vs 1% O2, CyA+",2.51783379843656,"B cell receptor signaling pathway",1,0
+"829","hsa00970",0.252268581587387,"19% O2, CyA- vs 1% O2, CyA+",0.598136834670222,"Aminoacyl-tRNA biosynthesis",1,0
+"830","hsa04936",0.276130797752664,"19% O2, CyA- vs 1% O2, CyA+",0.558885152404146,"Alcoholic liver disease",1,0
+"831","hsa04923",0.372771994700343,"19% O2, CyA- vs 1% O2, CyA+",0.428556722401647,"Regulation of lipolysis in adipocytes",1,0
+"832","hsa05215",1.75786375528391e-05,"19% O2, CyA- vs 1% O2, CyA+",4.75501478831876,"Prostate cancer",0.0122698890118817,1.9111593656956
+"833","hsa05224",0.0122868563674106,"19% O2, CyA- vs 1% O2, CyA+",1.91055921857207,"Breast cancer",1,0
+"834","hsa04014",0.094445938409123,"19% O2, CyA- vs 1% O2, CyA+",1.02481671391402,"Ras signaling pathway",1,0
+"835","hsa04151",0.337923430556158,"19% O2, CyA- vs 1% O2, CyA+",0.471181694556973,"PI3K-Akt signaling pathway",1,0
+"836","hsa05417",0.438033434002448,"19% O2, CyA- vs 1% O2, CyA+",0.358492739613226,"Lipid and atherosclerosis",1,0
+"837","hsa04210",9.85477191869471e-16,"19% O2, CyA- vs 1% O2, CyA+",15.0063534226883,"Apoptosis",7.91338185071185e-13,12.1016378774096
+"838","hsa04713",4.79593855255871e-41,"19% O2, CyA- vs 1% O2, CyA+",40.3191263898884,"Circadian entrainment",4.11011933954281e-38,37.3861455679652
+"839","hsa05120",1.29667033326784e-07,"19% O2, CyA- vs 1% O2, CyA+",6.88717042533554,"Epithelial cell signaling in Helicobacter pylori infection",9.67316068617809e-05,4.01443159786287
+"840","hsa00350",0.513512348898147,"19% O2, CyA- vs 1% O2, CyA+",0.28944910806702,"Tyrosine metabolism",1,0
+"841","hsa05322",0.524850608870746,"19% O2, CyA- vs 1% O2, CyA+",0.27996429464308,"Systemic lupus erythematosus",1,0
+"842","hsa05163",0.204669886495432,"19% O2, CyA- vs 1% O2, CyA+",0.68894605128436,"Human cytomegalovirus infection",1,0
+"843","hsa00030",4.01225524434451e-20,"19% O2, CyA- vs 1% O2, CyA+",19.3966114466176,"Pentose phosphate pathway",3.31412283182857e-17,16.4796313992973
+"844","hsa00230",0.46978711569704,"19% O2, CyA- vs 1% O2, CyA+",0.328098898282997,"Purine metabolism",1,0
+"845","hsa04211",8.78892824070025e-28,"19% O2, CyA- vs 1% O2, CyA+",27.0560640814141,"Longevity regulating pathway",7.38269972218821e-25,24.1317847953523
+"846","hsa04611",0.000154730664326242,"19% O2, CyA- vs 1% O2, CyA+",3.81042360984308,"Platelet activation",0.10336008376993,0.985647147367533
+"847","hsa04012",0.000135205942787197,"19% O2, CyA- vs 1% O2, CyA+",3.86900421917126,"ErbB signaling pathway",0.0905879816674219,1.04292941647044
+"848","hsa04728",0.218855074753901,"19% O2, CyA- vs 1% O2, CyA+",0.659843378627911,"Dopaminergic synapse",1,0
+"849","hsa05219",0.137432814512817,"19% O2, CyA- vs 1% O2, CyA+",0.861909559413667,"Bladder cancer",1,0
+"850","hsa00600",0.403341319691688,"19% O2, CyA- vs 1% O2, CyA+",0.394327285071744,"Sphingolipid metabolism",1,0
+"851","hsa04972",0.244081115507689,"19% O2, CyA- vs 1% O2, CyA+",0.612465820533927,"Pancreatic secretion",1,0
+"852","hsa04360",1.33000435206927e-213,"19% O2, CyA- vs 1% O2, CyA+",212.876146937923,"Axon guidance",1.16907382546889e-210,209.932158062849
+"853","hsa04722",0.00604480789637344,"19% O2, CyA- vs 1% O2, CyA+",2.21861749643607,"Neurotrophin signaling pathway",1,0
+"854","hsa00512",0.518819012159565,"19% O2, CyA- vs 1% O2, CyA+",0.284984117544204,"Mucin type O-glycan biosynthesis",1,0
+"855","hsa04723",0.450186829380696,"19% O2, CyA- vs 1% O2, CyA+",0.346607214824075,"Retrograde endocannabinoid signaling",1,0
+"856","hsa00601",0.526319990811554,"19% O2, CyA- vs 1% O2, CyA+",0.278750134192744,"Glycosphingolipid biosynthesis - lacto and neolacto series",1,0
+"857","hsa05204",0.332051739969335,"19% O2, CyA- vs 1% O2, CyA+",0.478794239692262,"Chemical carcinogenesis - DNA adducts",1,0
+"858","hsa04071",3.40769204858248e-16,"19% O2, CyA- vs 1% O2, CyA+",15.4675396591061,"Sphingolipid signaling pathway",2.74319209910889e-13,12.5617437787382
+"859","hsa04213",2.9917451487841e-19,"19% O2, CyA- vs 1% O2, CyA+",18.5240754045211,"Longevity regulating pathway - multiple species",2.45323102200296e-16,15.6102615521374
+"860","hsa04270",6.51135923960029e-05,"19% O2, CyA- vs 1% O2, CyA+",4.1863283434379,"Vascular smooth muscle contraction",0.04414701564449,1.35509864957083
+"861","hsa04918",0.057161351760304,"19% O2, CyA- vs 1% O2, CyA+",1.24289750949794,"Thyroid hormone synthesis",1,0
+"862","hsa04657",0.0662672411501463,"19% O2, CyA- vs 1% O2, CyA+",1.17870110965952,"IL-17 signaling pathway",1,0
+"863","hsa04622",0.287252495832945,"19% O2, CyA- vs 1% O2, CyA+",0.541736189195755,"RIG-I-like receptor signaling pathway",1,0
+"864","hsa00052",0.376011961288097,"19% O2, CyA- vs 1% O2, CyA+",0.424798339543637,"Galactose metabolism",1,0
+"865","hsa00515",0.532257287801138,"19% O2, CyA- vs 1% O2, CyA+",0.273878383379257,"Mannose type O-glycan biosynthesis",1,0
+"866","hsa04659",0.321752839349373,"19% O2, CyA- vs 1% O2, CyA+",0.492477611919072,"Th17 cell differentiation",1,0
+"867","hsa00270",0.490380229698076,"19% O2, CyA- vs 1% O2, CyA+",0.309467047270451,"Cysteine and methionine metabolism",1,0
+"868","hsa04915",0.286331754106675,"19% O2, CyA- vs 1% O2, CyA+",0.543130486178228,"Estrogen signaling pathway",1,0
+"869","hsa04216",0.00241848919656305,"19% O2, CyA- vs 1% O2, CyA+",2.61645584827285,"Ferroptosis",1,0
+"870","hsa04512",0.458784354271794,"19% O2, CyA- vs 1% O2, CyA+",0.338391401078715,"ECM-receptor interaction",1,0
+"871","hsa04510",8.63641966401523e-156,"19% O2, CyA- vs 1% O2, CyA+",155.063666262431,"Focal adhesion",7.55686720601333e-153,152.121658209409
+"872","hsa04668",3.21795541390095e-18,"19% O2, CyA- vs 1% O2, CyA+",17.4924199775244,"TNF signaling pathway",2.61941570691537e-15,14.5817955726352
+"873","hsa05226",1.35257006714777e-05,"19% O2, CyA- vs 1% O2, CyA+",4.86884022789426,"Gastric cancer",0.00946799047003438,2.02374218788
+"874","hsa00770",0.534092348021096,"19% O2, CyA- vs 1% O2, CyA+",0.272383644154097,"Pantothenate and CoA biosynthesis",1,0
+"875","hsa05131",0.000103337212916851,"19% O2, CyA- vs 1% O2, CyA+",3.98574325588456,"Shigellosis",0.0696492815059573,1.15708335934924
+"876","hsa01522",0.20285556996563,"19% O2, CyA- vs 1% O2, CyA+",0.692813063029278,"Endocrine resistance",1,0
+"877","hsa04062",0.406377812651352,"19% O2, CyA- vs 1% O2, CyA+",0.391070011615203,"Chemokine signaling pathway",1,0
+"878","hsa04911",0.0990528591227119,"19% O2, CyA- vs 1% O2, CyA+",1.00413298420119,"Insulin secretion",1,0
+"879","hsa00040",0.510000556396251,"19% O2, CyA- vs 1% O2, CyA+",0.29242935009875,"Pentose and glucuronate interconversions",1,0
+"880","hsa04930",0.325210031342827,"19% O2, CyA- vs 1% O2, CyA+",0.487836066738349,"Type II diabetes mellitus",1,0
+"881","hsa05202",6.55542992065824e-09,"19% O2, CyA- vs 1% O2, CyA+",8.18339882097666,"Transcriptional misregulation in cancer",5.00179302946223e-06,5.30087428302178
+"882","hsa05145",0.312021408665411,"19% O2, CyA- vs 1% O2, CyA+",0.505815606794775,"Toxoplasmosis",1,0
+"883","hsa04380",4.42801404878636e-07,"19% O2, CyA- vs 1% O2, CyA+",6.35379100990246,"Osteoclast differentiation",0.00032457342977604,3.48868703526133
+"884","hsa04010",0.0197293926549832,"19% O2, CyA- vs 1% O2, CyA+",1.70488628376196,"MAPK signaling pathway",1,0
+"885","hsa05142",0.445799902691247,"19% O2, CyA- vs 1% O2, CyA+",0.350860030653132,"Chagas disease",1,0
+"886","hsa00020",0.388645002729513,"19% O2, CyA- vs 1% O2, CyA+",0.410446912162662,"Citrate cycle (TCA cycle)",1,0
+"887","hsa04744",0.526931165573594,"19% O2, CyA- vs 1% O2, CyA+",0.278246114131024,"Phototransduction",1,0
+"888","hsa04921",1.71404124290797e-05,"19% O2, CyA- vs 1% O2, CyA+",4.76597873238257,"Oxytocin signaling pathway",0.0119811482879267,1.92150155663689

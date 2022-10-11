@@ -67,7 +67,7 @@ Bonita_PA <- na.omit(rbind(prot_PA[,colnames(temp)], trans_PA[,colnames(temp)], 
 ```
 
 ```{r}
-write.csv(Bonita_PA, "Bonita_allResults_20221007.csv")
+write.csv(Bonita_PA, "Bonita_allResults_20221010.csv")
 temp <- Bonita_PA$FDR < 0.05
 Bonita_PA <- Bonita_PA[temp,]
 ```
@@ -97,13 +97,15 @@ ggsave(filename = 'Bonita_combined_pvals_allResults.png', width = 12, height =24
 # new mBONITA pvalues
 
 ```{r}
-PAvals <- read.csv("pvals_temp.csv")
+PAvals <- read.csv("pvalues_concatenated_20221010.csv")
 PAvals$BHpvals <- p.adjust(PAvals$P.value)
-PAvals <- PAvals[PAvals$BHpvals < 0.05,]
-PAvals$negativelog10FDR <- (-1)*log10(PAvals$BHpvals)
-PAvals <- na.omit(PAvals)
+hist(PAvals$BHpvals)
+#PAvals <- PAvals[PAvals$BHpvals < 0.05,]
+PAvals$negativeLog10_adjpvals <- (-1)*log10(PAvals$BHpvals)
+#PAvals <- na.omit(PAvals)
 head(PAvals)
 write.csv(PAvals, "mBonita_pvalues.csv")
+hist(PAvals$BHpvals)
 ```
 
 ```{r}
@@ -111,24 +113,30 @@ require(ggplot2)
 require(ggpubr)
 ggplot(PAvals) + geom_point(aes(x=negativeLog10_adjpvals, y=Pathway.Name, color=Contrast)) + theme_bw() + facet_wrap('Contrast') + xlab("-log10 (BH-corrected P value)") + ylab("Pathway Name") + xlim(0, max(PAvals$negativeLog10_adjpvals)) + theme_pubr()
 ```
+
+
+
+
 ```{r}
-PAvals <- reshape2::melt(reshape2::acast(PAvals, Pathway.Name ~ Contrast, value.var = 'negativeLog10_adjpvals'))
+require(reshape2)
+PAvals <- reshape2::melt(reshape2::acast(PAvals, Pathway.Name ~ Contrast, value.var = 'BHpvals'))
+#reshape2::melt(reshape2::acast(PAvals, Pathway.Name ~ Contrast, value.var = 'negativeLog10_adjpvals'))
 PAvals[is.na(PAvals)] <- 0
-colnames(PAvals) <- c("Pathway Name", "Contrast", "negativeLog10_adjpvals")
+PAvals$negativeLog10_adjpvals = (-1)*log10(PAvals$value)
+colnames(PAvals) <- c("Pathway Name", "Contrast", "BHpvals", "negativeLog10_adjpvals")
 PAvals$Method <- 'mBONITA'
 
 unique(Bonita_PA$Method)
 ```
 
-
 ```{r}
-PAvals$Significant <- as.factor(unlist(lapply(PAvals$negativeLog10_adjpvals, function(x){if(x<1.303){return(FALSE)}else{return(TRUE)}})))
+PAvals$Significant <- as.factor(unlist(lapply(PAvals$BHpvals, function(x){if(x>0.05){return(FALSE)}else{return(TRUE)}})))
 PAvals$Contrast2 <- gsub(" vs ", "\nvs\n", PAvals$Contrast)
 p1 <- ggplot(PAvals, aes(Contrast2, `Pathway Name`, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + scale_x_discrete(position = "top") + theme_pubr(base_size = 16) + rotate_x_text(0) + scale_fill_brewer() + xlab("")
 png(
   "mBONITA_pvalues.png",
   width = 12,
-  height = 4,
+  height = 12,
   units = "in",
   res = 600
 )
@@ -137,12 +145,31 @@ dev.off()
 svg(
   "mBONITA_pvalues.svg",
   width = 12,
-  height = 4
+  height = 12
 )
 p1
 dev.off()
 ```
 
+# Make upset plot of significant pathways from mBonita
+
+```{r}
+
+visList <- vector(mode = "list", length = length(unique(PAvals$Contrast)))
+names(visList) <- unique(PAvals$Contrast)
+for (n in unique(PAvals$Contrast)){
+  visList[[n]] <- na.omit(PAvals[PAvals$Contrast %in% c(n), ])
+  visList[[n]] <- as.vector(visList[[n]][visList[[n]]$BHpvals < 0.05, "Pathway Name"])
+}
+
+p1 = upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 5, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(2,2, 2, 2, 2, 2), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black') 
+
+png(filename = paste0('upset','_mBonita_','allContrasts.png'), width = 8, height = 3, pointsize = 14, res = 600, units = 'in')
+print(p1)
+dev.off()
+  
+gplots::venn(visList)
+```
 
 # Pathways only in mBonita
 
@@ -183,8 +210,8 @@ for (n in unique(mBonita_PA$Method)){
   visList[[n]] <- na.omit(mBonita_PA[mBonita_PA$Method %in% c(n), ])
 }
 
-
 ```
+
 ```{r}
 
 makeMBonitaUpset <- function(contrast, visList){
@@ -240,7 +267,18 @@ require(ggsci)
 require(ggpubr)
 PAlist2$Significant <- as.factor(unlist(lapply(PAlist2$negativelog10FDR, function(x){if(x<1.303){return(FALSE)}else{return(TRUE)}})))
 p1 <- ggplot(PAlist2, aes(Method, Pathway, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + facet_wrap(~Contrast, as.table=FALSE) + theme_pubr(base_size = 16) + rotate_x_text(90) + scale_fill_brewer() + xlab("Dataset")
-png(filename = "heatmap_mBonita_HIF1pathways.png", width = 12, height = 10, pointsize = 14, res = 600, units = 'in')
+png(filename = "heatmap_mBonita_HIF1pathways.png", width = 12, height = 10, pointsize = 10, res = 600, units = 'in')
+p1 
+dev.off()
+print(p1)
+```
+
+```{r}
+require(ggsci)
+require(ggpubr)
+PAlist2$Significant <- as.factor(unlist(lapply(PAlist2$negativelog10FDR, function(x){if(x<1.303){return(FALSE)}else{return(TRUE)}})))
+p1 <- ggplot(PAlist2, aes(Method, Pathway, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + facet_wrap(~Contrast, as.table=FALSE) + theme_pubr(base_size = 16) + rotate_x_text(90) + scale_fill_brewer() + xlab("Dataset")
+png(filename = "heatmap_mBonita_HIF1pathways.png", width = 12, height = 10, pointsize = 10, res = 600, units = 'in')
 p1 
 dev.off()
 print(p1)
@@ -488,7 +526,7 @@ require(ComplexHeatmap)
 require(circlize)
 f3 = colorRamp2(seq(min(temp), max(temp), length = 3), c("blue", "white", "red"), space = "RGB")
 h1 <- Heatmap(temp,
-    col = f2,
+    col = f3,
     rect_gp = gpar(col = "lightgrey", lwd = 2),
     column_title_rot = 0,
     row_title_rot = 0,
@@ -504,7 +542,6 @@ h1 <- Heatmap(temp,
     ),
     column_names_gp = gpar(fontsize = 10),
     row_names_gp = gpar(fontsize = 10))
-
 png(
   "LSP1network_unscaled.png",
   width = 8,
@@ -554,7 +591,7 @@ dim(temp)
 colnames(temp)
 head(temp)
 temp = temp[temp$index %in% highSD_genes,]
-temp = temp[temp$Contrast==contrast,]
+#temp = temp[temp$Contrast==contrast,]
 ```
 
 ```{r}
@@ -604,9 +641,18 @@ ggsave("nodeModComponents2.png", p1, dpi = 1200, width = 7, height=5)
 ```
 
 ```{r}
-temp4 = melt(as.data.frame(t(temp)))
-p1 = ggplot(data = as.data.frame(temp4)) + geom_histogram(aes(value, fill = variable), color = 'black') + theme_pubr(legend=c(0.7,0.75), margin=FALSE) + scale_fill_brewer('Contrast', palette = 'Blues') + ylab("Count of genes in the network") + xlab('Node modulation score')+ theme(text = element_text(size=8))
+temp4 = melt(as.data.frame(temp), value.vars = 'nodeModulation', id.vars = c('Contrast', 'index'))
+#for (c in unique(temp4$Contrast)){
+#  temp5 = temp4[temp4$Contrast == c,]
+#  temp5$value = unlist(lapply(temp5$value, function(x){return(x/max(temp5$value))}))
+#  temp4[temp4$Contrast == c,] = temp5
+#}
+# bin values > 2x the 3rd quartile
+test = 2*summary(temp4$value)[5]
+temp4$value = unlist(lapply(temp4$value, function(x){if(x > test){return(test)}else{return(x)}}))
+p1 = ggplot(data = as.data.frame(temp4)) + geom_histogram(aes(value, fill = Contrast), color = 'black')+ theme_pubr(legend=c(0.7,0.75), margin=FALSE) + scale_fill_brewer('Contrast', palette = 'Blues') + ylab("Count of genes in the network") + xlab('Node modulation score')+ theme(text = element_text(size=8)) #+ scale_x_continuous(breaks=as.vector(summary(temp4$value))[1:4]) + xlim(0, as.vector(summary(temp4$value))[4])
 ggsave("hist_nodeModScore.svg", p1, dpi = 1200, width = 2, height=3)
 ggsave("hist_nodeModScore.png", p1, dpi = 1200, width = 2, height=3)
+p1
 ```
 
