@@ -9,7 +9,7 @@ output: html_notebook
 
 threshold <- 0.05
 cwd <- getwd()
-methods <- c("CAMERA", "LeapR", "PaintOmics", "ActivePathways", "BONITA", "mBONITA", "multiGSEA")
+methods <- c("CAMERA", "LeapR", "PaintOmics", "ActivePathways", "mBONITA", "multiGSEA")#"BONITA", 
 PAlist <- vector(mode = "list", length = length(methods))
 names(PAlist) <- methods
 PAlist[["CAMERA"]] <- read.csv(paste0(cwd, "/reactomeGSA-camera/camera_combinedPvalues.csv"), row.names = 1)
@@ -18,7 +18,7 @@ PAlist[["CAMERA"]] <- na.omit(PAlist[["CAMERA"]][temp,])
 
 PAlist[["LeapR"]] <- read.csv(paste0(cwd, "/leapR/leapR_allResults.csv"))
 temp <- PAlist[["LeapR"]]$BH_pvalue < threshold
-#PAlist[["LeapR"]] <- na.omit(PAlist[["LeapR"]][temp,])
+PAlist[["LeapR"]] <- na.omit(PAlist[["LeapR"]][temp,])
 PAlist[["LeapR"]]$Pathway <- trimws(gsub("KEGG|_|\\d+$", " ", PAlist[["LeapR"]]$Pathway))
 
 PAlist[["PaintOmics"]]<- as.data.frame(read.csv(paste0(cwd, "/paintomics/paintomics_allResults.csv"), row.names = 1))
@@ -32,6 +32,7 @@ PAlist[["ActivePathways"]]<- read.csv(paste0(cwd, "/ActivePathways/activePathway
 temp <- PAlist[["ActivePathways"]]$adjusted.p.val < threshold
 PAlist[["ActivePathways"]] <- PAlist[["ActivePathways"]][temp,]
 
+
 PAlist[["BONITA"]]<- read.csv(paste0(cwd, "/mBonita_pvalues/Bonita_allResults.csv"), row.names = 1)
 temp <- PAlist[["BONITA"]]$FDR < threshold
 PAlist[["BONITA"]] <- na.omit(PAlist[["BONITA"]][temp,])
@@ -39,12 +40,13 @@ PAlist[['BONITA']] <- na.omit(PAlist[["BONITA"]][PAlist[["BONITA"]]$Method %in% 
 #levels(PAlist$BONITA$Contrast) <- c("X19O2NoCyA - X1O2PlusCyA", "X19O2NoCyA - X1O2NoCyA", "X1O2PlusCyA - X1O2NoCyA" )
 
 PAlist[["mBONITA"]]<- read.csv(paste0(cwd, "/mBonita_pvalues/mBonita_pvalues.csv"), row.names = 1)
-temp <- PAlist[["mBONITA"]]$negativelog10FDR > 1.303
+temp <- PAlist[["mBONITA"]]$BHpvals < threshold
 PAlist[['mBONITA']]$Algorithm <- 'mBONITA'
 PAlist[['mBONITA']]$Method <- 'Concatenated'
 PAlist[["mBONITA"]] <- na.omit(PAlist[["mBONITA"]][temp,])
 PAlist[["mBONITA"]]$Pathway.Code <- PAlist[["mBONITA"]]$Pathway 
 PAlist[["mBONITA"]]$Pathway <- PAlist[["mBONITA"]]$Pathway.Name
+PAlist[["mBONITA"]]$negativelog10FDR <- PAlist[["mBONITA"]]$negativeLog10_adjpvals
 
 PAlist[["multiGSEA"]]<- read.csv(paste0(cwd, "/multiGSEA/multiGSEA_allResults.csv"), row.names = 1)
 PAlist[["multiGSEA"]]<- na.omit(PAlist[["multiGSEA"]][PAlist[["multiGSEA"]]$combined_padj < threshold,])
@@ -100,7 +102,7 @@ makeVisList <- function(tempPAlist, contrast) {
       tempPAlist[["PaintOmics"]]$Pathway
     )))) #ALREADY FILTERED TO COMBINED PVALS IN PREVIOUS STEP
   visList[["BONITA"]] <-
-    unique(str_to_title(trimws(as.vector(tempPAlist[["BONITA"]]$Pathway[tempPAlist[["BONITA"]]$Method == "Combined"]))))
+     unique(str_to_title(trimws(as.vector(tempPAlist[["BONITA"]]$Pathway[tempPAlist[["BONITA"]]$Method == "Combined"]))))
   visList[["mBONITA"]] <-
     unique(str_to_title(trimws(as.vector(tempPAlist[["mBONITA"]]$Pathway[tempPAlist[["mBONITA"]]$Algorithm == "mBONITA"]))))
   visList[["ActivePathways"]] <-
@@ -167,6 +169,9 @@ PAlist2$Pathway <- unlist(lapply(PAlist2$Pathway, function(x){if(x %in% gmt$Path
 PAlist2 <- Filter(function(x) dim(x)[1] > 0, PAlist2)
 for (i in names(PAlist2)){
   PAlist2[[i]]$Algorithm <- i
+  print(i)
+  print(colnames(PAlist2[[i]]))
+  print("###")
 }
 
 PAlist2 <- do.call(rbind,PAlist2)

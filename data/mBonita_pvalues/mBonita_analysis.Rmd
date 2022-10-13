@@ -524,8 +524,11 @@ draw(h1, heatmap_legend_side = "top")
 ```{r}
 require(ComplexHeatmap)
 require(circlize)
-f3 = colorRamp2(seq(min(temp), max(temp), length = 3), c("blue", "white", "red"), space = "RGB")
-h1 <- Heatmap(temp,
+temp_binned = temp
+temp_binned[temp_binned > 2000] = 2000
+#f3 = colorRamp2(seq(min(temp), max(temp), length = 3), c("blue", "white", "red"), space = "RGB")
+f3 = colorRamp2(seq(min(temp_binned), max(temp_binned), length = 2), c("white", "navy"))
+h1 <- Heatmap(temp_binned,
     col = f3,
     rect_gp = gpar(col = "lightgrey", lwd = 2),
     column_title_rot = 0,
@@ -537,7 +540,9 @@ h1 <- Heatmap(temp,
       direction = "horizontal",
       title = "Unscaled Node Modulation Score",
       title_position = "topcenter",
-      legend_width = unit(5, 'in'),
+      #legend_width = unit(5, 'in'),
+      #at = c(0, 2000, 4000, 5000, 10000, 20000),
+      #break_dist = c(100, 5, 4, 1),
       border = 'black'
     ),
     column_names_gp = gpar(fontsize = 10),
@@ -553,6 +558,9 @@ draw(h1, heatmap_legend_side = "top")
 dev.off()
 draw(h1, heatmap_legend_side = "top")
 ```
+
+
+
 
 
 # Make plots showing RA, evidence score, importance score and node modulation score together
@@ -639,20 +647,13 @@ p1 = ggplot(data = temp3, aes(val, nm)) + geom_point(aes(val, nm)) + facet_wrap(
 ggsave("nodeModComponents2.svg", p1, dpi = 1200, width = 7, height=5)
 ggsave("nodeModComponents2.png", p1, dpi = 1200, width = 7, height=5)
 ```
+# histogram of node modulation score
+
 
 ```{r}
-temp4 = melt(as.data.frame(temp), value.vars = 'nodeModulation', id.vars = c('Contrast', 'index'))
-#for (c in unique(temp4$Contrast)){
-#  temp5 = temp4[temp4$Contrast == c,]
-#  temp5$value = unlist(lapply(temp5$value, function(x){return(x/max(temp5$value))}))
-#  temp4[temp4$Contrast == c,] = temp5
-#}
-# bin values > 2x the 3rd quartile
-test = 2*summary(temp4$value)[5]
-temp4$value = unlist(lapply(temp4$value, function(x){if(x > test){return(test)}else{return(x)}}))
-p1 = ggplot(data = as.data.frame(temp4)) + geom_histogram(aes(value, fill = Contrast), color = 'black')+ theme_pubr(legend=c(0.7,0.75), margin=FALSE) + scale_fill_brewer('Contrast', palette = 'Blues') + ylab("Count of genes in the network") + xlab('Node modulation score')+ theme(text = element_text(size=8)) #+ scale_x_continuous(breaks=as.vector(summary(temp4$value))[1:4]) + xlim(0, as.vector(summary(temp4$value))[4])
+temp4 = as.data.frame(melt(as.data.frame(temp), value.vars = 'nodeModulation', id.vars = c('Contrast', 'index')))
+p1 = ggplot(data = temp4[temp4$value < 250,]) + geom_histogram(aes(value, fill = Contrast), color = 'black')+ theme_pubr(legend=c(0.7,0.75), margin=FALSE) + scale_fill_brewer('Contrast', palette = 'Blues') + ylab("Count of genes in the network") + xlab('Node modulation score')+ theme(text = element_text(size=8)) #+ scale_x_continuous(breaks=as.vector(summary(temp4$value))[1:4]) + xlim(0, as.vector(summary(temp4$value))[4])
 ggsave("hist_nodeModScore.svg", p1, dpi = 1200, width = 2, height=3)
 ggsave("hist_nodeModScore.png", p1, dpi = 1200, width = 2, height=3)
 p1
 ```
-
