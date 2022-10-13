@@ -10,6 +10,17 @@ require(ggsci)
 require(ggpubr)
 require(reshape2)
 require(metap)
+require(GGally)
+```
+
+# correlations between datasets - output from https://jupyter.circ.rochester.edu/user/mpalshik/notebooks/scratch/multiomics_networks_2022/multiomics_networks_20220609/Figure1.ipynb
+
+```{r}
+medianDF = read.csv("medianDF.csv", row.names = 1)
+head(medianDF)
+p1 = ggpairs(medianDF, columns = c("Transcriptomics", "Proteomics", "Phosphoproteomics"), aes(color = Condition, shape = Condition)) + theme_bw() + theme(panel.grid.minor = element_line(color = 'grey', size = 0.25, linetype = 2), text = element_text(size = 16)) + scale_color_brewer(palette = 'Dark2') + scale_fill_brewer(palette = 'Dark2')  
+ggsave("correlation_between_datasets.svg", plot = p1, device = "svg", height = 6, width = 6)
+ggsave("correlation_between_datasets.png", plot = p1, device = "png", height = 6, width = 6, dpi = 600)
 ```
 
 
