@@ -237,30 +237,30 @@ g = sns.relplot(
         'sharex': True,
         'sharey': False,
         'legend_out': True
-    })
+    } , height = 10 )
 g.xlabel = "-log10 (adjusted p-value)"
 g.ylabel = ""
-g.figure.set_figheight(10)
-g.figure.set_figwidth(30)
-g.figure.tight_layout()
+g.fig.set_figheight(10)
+g.fig.set_figwidth(30)
+g.tight_layout()
 """
 for a in g.axes_dict:
     g.axes_dict[a].yaxis.grid(color='grey', linestyle=(0, (5, 10)), linewidth=0.5)
     g.axes_dict[a].xaxis.grid(color='grey', linestyle=(0, (5, 10)), linewidth=0.5)
 """
-g.figure.savefig("all_pvalues_bonita.pdf")
-g.figure.savefig("all_pvalues_bonita.png", dpi=300)
+g.savefig("all_pvalues_bonita.pdf")
+g.savefig("all_pvalues_bonita.png", dpi=300)
 
 
 # # Collect the *local1.pickle* files in the specified directory (change directory variable below)
 
-# directory = "/gpfs/fs2/scratch/mpalshik/multiomics_networks_2022/BONITA_experiments/"
-# outputfiles = []
-# for root, dirs, files in os.walk(directory):
-#     for f in files:
-#         if f.endswith("_local1.pickle"):
-#             outputfiles.append(os.path.join(root, f))
-# print(len(outputfiles), outputfiles[0:5])
+directory = "/gpfs/fs2/scratch/mpalshik/multiomics_networks_2022/BONITA_experiments/"
+outputfiles = []
+for root, dirs, files in os.walk(directory):
+     for f in files:
+         if f.endswith("_local1.pickle"):
+            outputfiles.append(os.path.join(root, f))
+print(len(outputfiles), outputfiles[0:5])
 
 # # Open local1.pickle files and process the information into a single dataframe
 # **One row in the dataframe contains information for one node. The dataframe has the following columns:**
@@ -318,7 +318,10 @@ for f in outputfiles:
     else:
         methodName="N.A."
     result = fileReg.match(f)
-    networkName = getPathwayName('hsa'+result.group(1))
+    if result.group(1):
+        networkName = getPathwayName('hsa'+result.group(1))
+    else:
+        networkName = f
     print(f)
     outputList = pickle.load(open(f, mode = "rb"))
     print(len(outputList))

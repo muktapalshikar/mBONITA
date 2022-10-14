@@ -224,28 +224,125 @@ DEheatmap(scaledHeatmap, name = "Z-score\n", colGroups = ha, cluster_columns = F
 
 ```{r}
 allDEgenes = unique(c(rownames(res), rownames(res2), rownames(res3)))
+heatmapData = rpmMat2[allDEgenes,]
+type = trimws(gsub("O2", "% O2", gsub(
+    "PlusCyclo", "+ CyA", gsub("NoCyclo", "", gsub(
+        "Ramos_|_|_\\d+",
+        " ", colnames(heatmapData)
+    ))
+)))
+heatmapData = as.matrix(heatmapData)
+heatmapData = apply(heatmapData, c(1, 2), as.numeric)
+
+pdf('allDEgenes_scaled_heatmap.pdf',
+    width = 9,
+    height = 20)
+DEheatmap(
+    scaledHeatmap,
+    name = "Z-score\n",
+    colGroups = ha,
+    cluster_columns = TRUE,
+    cluster_rows = TRUE,
+    show_column_names = FALSE,
+    column_km = 3,
+    border = TRUE,
+    row_km = 5
+)
+dev.off()
+png(
+    'allDEgenes_scaled_heatmap.png',
+    width = 9,
+    height = 20,
+    units = "in",
+    res = 300
+)
+DEheatmap(
+    scaledHeatmap,
+    name = "Z-score\n",
+    colGroups = ha,
+    cluster_columns = FALSE,
+    cluster_rows = TRUE,
+    show_column_names = FALSE,
+    column_km = 3,
+    border = TRUE,
+    row_km = 5
+)
+dev.off()
+DEheatmap(
+    scaledHeatmap,
+    name = "Z-score\n",
+    colGroups = ha,
+    cluster_columns = FALSE,
+    cluster_rows = TRUE,
+    show_column_names = FALSE,
+    column_km = 3,
+    border = TRUE,
+    row_km = 5
+)
+```
+
+# Horizontal DE genes heatmap
+
+```{r}
+allDEgenes = unique(c(rownames(res), rownames(res2), rownames(res3)))
 heatmapData = rpmMat2[allDEgenes, ]
 type = trimws(gsub("O2", "% O2", gsub("PlusCyclo", "+ CyA", gsub("NoCyclo", "", gsub("Ramos_|_|_\\d+", 
     " ", colnames(heatmapData))))))
 heatmapData = as.matrix(heatmapData)
 heatmapData = apply(heatmapData, c(1, 2), as.numeric)
-scaledHeatmap = as.matrix(t(scale(t(heatmapData))))
-type = trimws(gsub("O2", "% O2", gsub("PlusCyclo", "+ CyA", gsub("NoCyclo", "", gsub("Ramos_|_|_\\d+", 
-    " ", colnames(heatmapData))))))
-ha = HeatmapAnnotation(type = type, border = TRUE, show_annotation_name = 0, which = "column", 
+ha = HeatmapAnnotation(type = type, border = TRUE, show_annotation_name = 0, which = "row", 
     annotation_legend_param = list(direction = "horizontal", border = TRUE, title = "Treatment\n"), 
     col = list(type = c(`19% O2` = "white", `19% O2 + CyA` = "grey", `1% O2` = "black", 
         `1% O2 + CyA` = "grey89")))
-pdf('allDEgenes_scaled_heatmap.pdf', width = 9, height = 20)
-DEheatmap(scaledHeatmap, name = "Z-score\n", colGroups = ha, cluster_columns = TRUE, 
-    cluster_rows = TRUE, show_column_names = FALSE, column_km = 3, border = TRUE, row_km=5)
+scaledHeatmap = t(as.matrix(t(scale(t(heatmapData)))))
+ha = HeatmapAnnotation(
+    type = type,
+    border = TRUE,
+    show_annotation_name = 0,
+    which = "row",
+    show_legend = TRUE,
+    annotation_legend_param = list(
+        direction = "horizontal", 'ncol' = 1,
+        border = TRUE,
+        title = "\nTreatment"
+    , 'grid_height' = unit(0.25, 'in'), 'grid_width' = unit(0.5, 'in'), title_gp = gpar(fontsize = 20), title_position = 'leftcenter-rot', 'labels_gp' = gpar(fontsize=20)),
+    col = list(
+        type = c(
+            `19% O[2]` = "white",
+            #`19% O2 + CyA` = "grey",
+            `1% O2` = "black",
+            `1% O2 + CyA` = "darkgrey"
+        )
+    )
+)
+
+
+expMat = scaledHeatmap
+ht = Heatmap(
+    expMat,
+    name = "\nZ-score (log2-RPM)",
+    cluster_columns = TRUE,
+    cluster_rows = TRUE,
+    left_annotation = ha,
+    right_annotation = ha,
+    show_column_names = TRUE,
+    show_row_names = FALSE,
+    show_row_dend = FALSE,
+    column_km=5,
+    row_km=3,
+    column_title = " ",
+    heatmap_legend_param = list('direction' = 'vertical', 'legend_height' = unit(1, 'in'), 'grid_width' = unit(0.5, 'in'), title_gp = gpar(fontsize = 20), title_position = 'leftcenter-rot', 'labels_gp' = gpar(fontsize=20)),
+    col = colorRamp2(seq(min(expMat),
+                         max(expMat), length = 3), c("blue", "white", "red"))
+)
+
+pdf('allDEgenes_scaled_horizontal_heatmap.pdf', width = 22, height = 4)
+draw(ht)
 dev.off()
-png('allDEgenes_scaled_heatmap.png', width = 9, height = 20, units="in", res=300)
-DEheatmap(scaledHeatmap, name = "Z-score\n", colGroups = ha, cluster_columns = FALSE, 
-    cluster_rows = TRUE, show_column_names = FALSE, column_km = 3, border = TRUE, row_km=5)
+png('allDEgenes_scaled_horizontal_heatmap.png', width = 22, height = 4, units="in", res=600)
+draw(ht)
 dev.off()
-DEheatmap(scaledHeatmap, name = "Z-score\n", colGroups = ha, cluster_columns = FALSE, 
-    cluster_rows = TRUE, show_column_names = FALSE, column_km = 3, border = TRUE, row_km=5)
+draw(ht)
 ```
 
 ```{r}
@@ -286,15 +383,21 @@ colnames(allEnrich)
 
 ```{r}
 require(ggthemes)
-enrichPlot = ggplot(data=allEnrich) + geom_point(aes(x = log10pvalue, y = reorder(ID, -log10pvalue))) + facet_wrap(vars(Contrast), as.table=TRUE, nrow=3, scales = "free_y") + theme_pander(nomargin = TRUE, fc = "black", gM=TRUE, gm=TRUE, gc = "black", boxes=TRUE, gl = "dotdash") + xlab("-log10 (p-value)") + ylab("")+ theme(strip.background = element_rect(fill = "cornsilk"), strip.placement = "outside")
+allEnrich$Contrast = gsub(" vs ", "\nvs\n",allEnrich$Contrast)
+enrichPlot = ggplot(data=allEnrich) + geom_point(size=4, aes(x = log10pvalue, y = reorder(ID, -log10pvalue))) + facet_wrap(vars(Contrast), as.table=TRUE, nrow=1) + theme_pander(nomargin = TRUE, fc = "black", gM=TRUE, gm=TRUE, gc = "black", boxes=TRUE, gl = "dotdash") + xlab("-log10 (p-value)") + ylab("")+ theme(strip.background = element_rect(fill = "cornsilk"), strip.placement = "outside", text=element_text(size=30))
 enrichPlot
-ggsave(filename = "all_enrichr_results.pdf", plot = enrichPlot, width = 7, height=7)
-ggsave(filename = "all_enrichr_results.png", plot = enrichPlot, width = 7, height=7)
+ggsave(filename = "all_enrichr_results.pdf", plot = enrichPlot, width = 10, height=3)
+ggsave(filename = "all_enrichr_results.png", plot = enrichPlot, width = 10, height=3)
 ```
 
 
 ```{r}
-
+upset = upset(fromList(listInput), order.by = c("freq", "degree"), main.bar.color = "#3D9140", 
+    matrix.color = "black", shade.color = "#E0EEE0", text.scale = 2)
+#upset
+#plot(enrichPlot)
+#draw(ht)
+ggpubr::ggarrange(upset, enrichPlot, ht, ncol = 1)
 ```
 
 
