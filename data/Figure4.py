@@ -299,7 +299,7 @@ def findEnds2(model, node, indiv):
 
 directory = "/gpfs/fs2/scratch/mpalshik/multiomics_networks_2022/BONITA_experiments/"
 fileReg = re.compile('.*hsa(\d+)\_.+\.pickle')
-seriesIndices = ["networkName", "methodName", "nodeList", "andNodeList", "andNodeInvertList", "ruleLengths", "equivs", "plainRules", "randomERSIndividual", "minLocalSearchError"]
+seriesIndices = ["networkName", "methodName", "nodeList", "andNodeList", "andNodeInvertList", "ruleLengths", "equivs", "plainRules", "randomERSIndividual", "minLocalSearchError", "indegree"]
 df = pd.DataFrame(columns = seriesIndices)
 i = 1
 counter = 1
@@ -307,7 +307,8 @@ fileReg2 = re.compile(re.escape(directory) + r"(\w+.*)")
 outputfiles = glob.glob("/gpfs/fs2/scratch/mpalshik/multiomics_networks_2022/BONITA_experiments/"+"*/pickles/*local1.pickle")
 
 print(len(outputfiles))
-
+CSVfile = "local1Data.csv"
+#dfCSVFile = open(CSVfile, mode = "w")
 for f in outputfiles:
     if (counter % 20 == 0):
         print(counter)
@@ -322,9 +323,9 @@ for f in outputfiles:
         networkName = getPathwayName('hsa'+result.group(1))
     else:
         networkName = f
-    print(f)
+    #print(f)
     outputList = pickle.load(open(f, mode = "rb"))
-    print(len(outputList))
+    #print(len(outputList))
     bruteOut1,dev,storeModel, storeModel3, equivalents, dev2 = [outputList[k] for k in range(len(outputList))]
     randomERSIndividual = bruteOut1 #random individual from the ERS
     minLocalSearchError = dev2 #lowest error for the rules tried for each node
@@ -341,26 +342,22 @@ for f in outputfiles:
             plainRules.append(writeNode(model1.nodeList.index(model1.nodeList[node]), rule, model1))
         ruleLengths=len(ers)
         ersAllNodes=plainRules
-        s = pd.Series([networkName, methodName, model1.nodeList[node], model1.andNodeList[node], model1.andNodeInvertList[node], ruleLengths, str(ers), plainRules, randomERSIndividual, minLocalSearchError[node]], index = seriesIndices)
+        indegree = len(model1.andNodeList[node])
+        s = pd.Series([networkName, methodName, model1.nodeList[node], model1.andNodeList[node], model1.andNodeInvertList[node], ruleLengths, str(ers), plainRules, randomERSIndividual, minLocalSearchError[node], str(indegree)], index = seriesIndices)
         df.loc[i] = s
         i = i + 1
-df['methodName'] = df['methodName'].str.extract(r'(\w+)\/', expand=False)
-df['indegree'] = [len(set([item for sublist in literal_eval(i) for item in sublist])) for i in df.andNodeList]
-CSVfile = "local1Data.csv"
-dfCSVFile = open(CSVfile, mode = "w")
-df.to_csv(dfCSVFile)
-dfCSVFile.close()
+    df.to_csv(CSVfile)
 
+#df['methodName'] = df['methodName'].str.extract(r'(\w+)\/', expand=False)
+#df['indegree'] = [len(set([item for sublist in literal_eval(i) for item in sublist])) for i in df.andNodeList]
+#df['indegree'] = [len(set([item for sublist in i for item in sublist])) for i in df.andNodeList]
+#dfCSVFile = open(CSVfile, mode = "w")
+#df.to_csv(dfCSVFile)
+#dfCSVFile.close()
+#df.to_csv(CSVfile)
 
 # In[ ]:
 
-
-df = pd.read_csv("local1Data.csv", index_col=0)
-df['indegree'] = [
-    len(set([item for sublist in literal_eval(i) for item in sublist]))
-    for i in df.andNodeList
-]
-df.head()
 
 
 # In[ ]:
@@ -382,7 +379,7 @@ g = sns.displot(
     })
 g.set_axis_labels("Size of ERS for\nnodes with in-degree >= 3", "Count")
 g.set_titles("{row_name}")
-g.figure.figsize = (1, 1)
+g.figsize = (1, 1)
 g.savefig("figure3a.png", dpi=300)
 g.savefig("figure3a.pdf")
 
@@ -438,48 +435,48 @@ df.loc[:, 'hasReducedERS'] = df.loc[:, 'ruleLengths'] < df.loc[:, 'maxERS']
 # 
 
 # 
-# nodeTable = pd.DataFrame(index=["temp"],
-#                          columns=[
-#                              "andNode", "Display Name", "IS", "name", "RA",
-#                              "selected", "shared name", "Dataset", "Contrast",
-#                              "Network"
-#                          ])
-# for file in glob(
-#         "/gpfs/fs2/scratch/mpalshik/multiomics_networks_2022/BONITA_experiments/*/*/*rules.graphml"
-# ):
-#     temp_df1 = pd.DataFrame(index=["temp"],
-#                             columns=[
-#                                 "andNode", "Display Name", "IS", "name", "RA","Dataset",
-#                                 "Contrast", "Network"
-#                             ])
-#     temp_G = nx.read_graphml(file)
-#     raw_table = list(temp_G.nodes.data())
-#     for node in raw_table:
-#         data = dict(node[1])
-#         temp_df2 = pd.DataFrame(data, index=[0])
-#         temp_df1 = pd.concat((temp_df1, temp_df2), axis=0)
-#     temp_df1 = temp_df1.iloc[1:]
-#     temp_df1 = temp_df1[temp_df1["andNode"] == 0]
-#     temp_df1.drop(temp_df1.columns[[0, 3, 5, 6]], axis=1, inplace=True)
-#     temp_df1.index = arange(1, len(temp_df1) + 1)
-#     filename = filepath = ''
-#     parsed1 = file.split('/')
-#     temp_df1["Dataset"] = parsed1[7]
-#     temp_df1["Contrast"] = parsed1[8]
-#     temp_df1["Network"] = parsed1[9].replace("_rules.graphml", "")
-#     #parsed2 = parsed1[3:]
-#     #parsed3 = parsed2[0].split(
-#     #    '_')[0][:2] + '_' + parsed2[1] + '_' + parsed2[2][:-14]
-#     #parsed4 = parsed3.replace('percent', '')
-#     #filename = parsed4.replace('-', '_')
-#     #filepath = '/'.join(parsed1[:3]) + "/Node_Tables/"
-#     #destination = filepath + filename
-#     #print(filename)
-#     #temp_df1.to_csv(destination)
-#     nodeTable = pd.concat([nodeTable, temp_df1])
-# nodeTable = nodeTable.dropna(axis=0, how='all')
-# nodeTable.to_csv("node_table.csv")
-# nodeTable
+nodeTable = pd.DataFrame(index=["temp"],
+                         columns=[
+                             "andNode", "Display Name", "IS", "name", "RA",
+                             "selected", "shared name", "Dataset", "Contrast",
+                             "Network"
+                         ])
+for file in glob.glob(
+        "/gpfs/fs2/scratch/mpalshik/multiomics_networks_2022/BONITA_experiments/*/*/*rules.graphml"
+):
+    temp_df1 = pd.DataFrame(index=["temp"],
+                            columns=[
+                                "andNode", "Display Name", "IS", "name", "RA","Dataset",
+                                "Contrast", "Network"
+                            ])
+    temp_G = nx.read_graphml(file)
+    raw_table = list(temp_G.nodes.data())
+    for node in raw_table:
+        data = dict(node[1])
+        temp_df2 = pd.DataFrame(data, index=[0])
+        temp_df1 = pd.concat((temp_df1, temp_df2), axis=0)
+    temp_df1 = temp_df1.iloc[1:]
+    temp_df1 = temp_df1[temp_df1["andNode"] == 0]
+    temp_df1.drop(temp_df1.columns[[0, 3, 5, 6]], axis=1, inplace=True)
+    temp_df1.index = arange(1, len(temp_df1) + 1)
+    filename = filepath = ''
+    parsed1 = file.split('/')
+    temp_df1["Dataset"] = parsed1[7]
+    temp_df1["Contrast"] = parsed1[8]
+    temp_df1["Network"] = parsed1[9].replace("_rules.graphml", "")
+    #parsed2 = parsed1[3:]
+    #parsed3 = parsed2[0].split(
+    #    '_')[0][:2] + '_' + parsed2[1] + '_' + parsed2[2][:-14]
+    #parsed4 = parsed3.replace('percent', '')
+    #filename = parsed4.replace('-', '_')
+    #filepath = '/'.join(parsed1[:3]) + "/Node_Tables/"
+    #destination = filepath + filename
+    #print(filename)
+    #temp_df1.to_csv(destination)
+    nodeTable = pd.concat([nodeTable, temp_df1])
+nodeTable = nodeTable.dropna(axis=0, how='all')
+nodeTable.to_csv("node_table.csv")
+nodeTable
 
 # In[ ]:
 

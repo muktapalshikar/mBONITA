@@ -106,13 +106,17 @@ res3 <- na.omit(res3[res3$padj < 0.05 & abs(res3$log2FoldChange) > 0.5, ])
 ```{r}
 listInput <- list(`1% O2, CyA+ vs 19% O2, CyA-` = rownames(res3), `19% O2, CyA- vs 1% O2, CyA-` = rownames(res), 
     `1% O2, CyA+ vs 1% O2, CyA-` = rownames(res2))
-pdf(file = "upset_de_genes_transcriptomics.pdf")
-upset(fromList(listInput), order.by = c("freq", "degree"), main.bar.color = "#3D9140", 
-    matrix.color = "black", shade.color = "#E0EEE0", text.scale = 2)
+pdf(file = "upset_de_genes_transcriptomics.pdf", width=4, height=2)
+upset(fromList(listInput), order.by = c("freq", "degree"), main.bar.color = "black", 
+    matrix.color = "black", shade.color = "#E0EEE0", text.scale = 1)
 dev.off()
-png(file = "upset_de_genes_transcriptomics.png")
-upset(fromList(listInput), order.by = c("freq", "degree"), main.bar.color = "#3D9140", 
-    matrix.color = "black", shade.color = "#E0EEE0", text.scale = 2)
+svg(file = "upset_de_genes_transcriptomics.svg", width=8, height=2.5)
+upset(fromList(listInput), order.by = c("freq", "degree"), main.bar.color = "black", 
+    matrix.color = "black", shade.color = "#E0EEE0", text.scale = 1)
+dev.off()
+png(filename = "upset_de_genes_transcriptomics.png", width=4, height=2.5, res = 600, units="in")
+upset(fromList(listInput), order.by = c("freq", "degree"), main.bar.color = "black", 
+    matrix.color = "black", shade.color = "#E0EEE0", text.scale = 1)
 dev.off()
 
 upset(fromList(listInput), order.by = c("freq", "degree"), main.bar.color = "#3D9140", 
@@ -166,7 +170,7 @@ type = trimws(gsub("O2", "% O2", gsub("PlusCyclo", "+ CyA", gsub("NoCyclo", "", 
     " ", colnames(heatmapData))))))
 ha = HeatmapAnnotation(type = type, border = TRUE, show_annotation_name = 0, which = "column", 
     annotation_legend_param = list(border = TRUE, title = "Treatment\n"), col = list(type = c(`19% O2` = "white", 
-        `19% O2 + CyA` = "grey", `1% O2` = "black", `1% O2 + CyA` = "grey89")))
+        `19% O2 + CyA` = "grey", `1% O2` = "black", `1% O2 + CyA` = "darkgrey")))
 # png( 'unscaled_heatmap.png', width = 11, height = 11, units = 'in', res = 300 )
 DEheatmap(scaledHeatmap, name = "Z-score\n", colGroups = ha, cluster_columns = TRUE, 
     show_column_names = FALSE, heatmap_legend_param = list(direction = "vertical"))
@@ -190,7 +194,7 @@ type = trimws(gsub("O2", "% O2", gsub("PlusCyclo", "+ CyA", gsub("NoCyclo", "", 
 ha = HeatmapAnnotation(type = type, border = TRUE, show_annotation_name = 0, which = "column", 
     annotation_legend_param = list(direction = "horizontal", border = TRUE, title = "Treatment\n"), 
     col = list(type = c(`19% O2` = "white", `19% O2 + CyA` = "grey", `1% O2` = "black", 
-        `1% O2 + CyA` = "grey89")))
+        `1% O2 + CyA` = "darkgrey")))
 # png( 'unscaled_heatmap.png', width = 11, height = 11, units = 'in', res = 300 )
 DEheatmap(scaledHeatmap, name = "Z-score\n", colGroups = ha, cluster_columns = TRUE, 
     show_column_names = FALSE)
@@ -214,7 +218,7 @@ type = trimws(gsub("O2", "% O2", gsub("PlusCyclo", "+ CyA", gsub("NoCyclo", "", 
 ha = HeatmapAnnotation(type = type, border = TRUE, show_annotation_name = 0, which = "column", 
     annotation_legend_param = list(direction = "horizontal", border = TRUE, title = "Treatment\n"), 
     col = list(type = c(`19% O2` = "white", `19% O2 + CyA` = "grey", `1% O2` = "black", 
-        `1% O2 + CyA` = "grey89")))
+        `1% O2 + CyA` = "darkgrey")))
 #pdf('res3_scaled_heatmap.pdf', width = 9, height = 20)
 DEheatmap(scaledHeatmap, name = "Z-score\n", colGroups = ha, cluster_columns = FALSE, 
     show_column_names = FALSE)
@@ -284,6 +288,7 @@ DEheatmap(
 # Horizontal DE genes heatmap
 
 ```{r}
+set.seed(1)
 allDEgenes = unique(c(rownames(res), rownames(res2), rownames(res3)))
 heatmapData = rpmMat2[allDEgenes, ]
 type = trimws(gsub("O2", "% O2", gsub("PlusCyclo", "+ CyA", gsub("NoCyclo", "", gsub("Ramos_|_|_\\d+", 
@@ -304,11 +309,11 @@ ha = HeatmapAnnotation(
     annotation_legend_param = list(
         direction = "horizontal", 'ncol' = 1,
         border = TRUE,
-        title = "\nTreatment"
-    , 'grid_height' = unit(0.25, 'in'), 'grid_width' = unit(0.5, 'in'), title_gp = gpar(fontsize = 20), title_position = 'leftcenter-rot', 'labels_gp' = gpar(fontsize=20)),
+        title = "", #"\nTreatment",
+     'grid_height' = unit(0.25, 'in'), 'grid_width' = unit(0.5, 'in'), title_gp = gpar(fontsize = 18), title_position = 'topcenter', 'labels_gp' = gpar(fontsize=20)),
     col = list(
         type = c(
-            `19% O[2]` = "white",
+            `19% O2` = "white",
             #`19% O2 + CyA` = "grey",
             `1% O2` = "black",
             `1% O2 + CyA` = "darkgrey"
@@ -320,26 +325,31 @@ ha = HeatmapAnnotation(
 expMat = scaledHeatmap
 ht = Heatmap(
     expMat,
-    name = "\nZ-score (log2-RPM)",
+    #name = "\nZ-score\n(log2-RPM)",
+    name = "",
     cluster_columns = TRUE,
     cluster_rows = TRUE,
     left_annotation = ha,
-    right_annotation = ha,
+    #right_annotation = ha,
     show_column_names = TRUE,
     show_row_names = FALSE,
     show_row_dend = FALSE,
+    border=TRUE,
     column_km=5,
     row_km=3,
     column_title = " ",
-    heatmap_legend_param = list('direction' = 'vertical', 'legend_height' = unit(1, 'in'), 'grid_width' = unit(0.5, 'in'), title_gp = gpar(fontsize = 20), title_position = 'leftcenter-rot', 'labels_gp' = gpar(fontsize=20)),
+    heatmap_legend_param = list('direction' = 'vertical', 'legend_height' = unit(1, 'in'), 'grid_width' = unit(0.5, 'in'), title_gp = gpar(fontsize = 20), title_position = 'topcenter', 'labels_gp' = gpar(fontsize=18), at = c(3, 0, -2)),
     col = colorRamp2(seq(min(expMat),
                          max(expMat), length = 3), c("blue", "white", "red"))
 )
 
-pdf('allDEgenes_scaled_horizontal_heatmap.pdf', width = 22, height = 4)
+pdf('allDEgenes_scaled_horizontal_heatmap.pdf', width = 22, height = 5)
 draw(ht)
 dev.off()
-png('allDEgenes_scaled_horizontal_heatmap.png', width = 22, height = 4, units="in", res=600)
+svg('allDEgenes_scaled_horizontal_heatmap.svg ', width = 22, height = 5)
+draw(ht)
+dev.off()
+png('allDEgenes_scaled_horizontal_heatmap.png', width = 22, height = 5, units="in", res=600)
 draw(ht)
 dev.off()
 draw(ht)
@@ -384,10 +394,11 @@ colnames(allEnrich)
 ```{r}
 require(ggthemes)
 allEnrich$Contrast = gsub(" vs ", "\nvs\n",allEnrich$Contrast)
-enrichPlot = ggplot(data=allEnrich) + geom_point(size=4, aes(x = log10pvalue, y = reorder(ID, -log10pvalue))) + facet_wrap(vars(Contrast), as.table=TRUE, nrow=1) + theme_pander(nomargin = TRUE, fc = "black", gM=TRUE, gm=TRUE, gc = "black", boxes=TRUE, gl = "dotdash") + xlab("-log10 (p-value)") + ylab("")+ theme(strip.background = element_rect(fill = "cornsilk"), strip.placement = "outside", text=element_text(size=30))
+enrichPlot = ggplot(data=allEnrich) + geom_point(pch = 19, size=4, aes(x = log10pvalue, y = reorder(ID, -log10pvalue))) + facet_wrap(vars(Contrast), as.table=TRUE, nrow=1) + theme_pander(nomargin = TRUE, fc = "black", gM=TRUE, gm=TRUE, gc = "black", boxes=TRUE, gl = "dotdash") + xlab("-log10 (p-value)") + ylab("")+ theme(strip.background = element_rect(fill = "cornsilk"), strip.placement = "outside", text=element_text(size=30))
 enrichPlot
+ggsave(filename = "all_enrichr_results.svg", plot = enrichPlot, width = 10, height=3)
 ggsave(filename = "all_enrichr_results.pdf", plot = enrichPlot, width = 10, height=3)
-ggsave(filename = "all_enrichr_results.png", plot = enrichPlot, width = 10, height=3)
+ggsave(filename = "all_enrichr_results.png", plot = enrichPlot, width = 10, height=3, dpi=1200)
 ```
 
 
