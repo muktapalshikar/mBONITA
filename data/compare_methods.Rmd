@@ -33,11 +33,12 @@ temp <- PAlist[["ActivePathways"]]$adjusted.p.val < threshold
 PAlist[["ActivePathways"]] <- PAlist[["ActivePathways"]][temp,]
 
 
-PAlist[["BONITA"]]<- read.csv(paste0(cwd, "/mBonita_pvalues/Bonita_allResults.csv"), row.names = 1)
-temp <- PAlist[["BONITA"]]$FDR < threshold
-PAlist[["BONITA"]] <- na.omit(PAlist[["BONITA"]][temp,])
-PAlist[['BONITA']] <- na.omit(PAlist[["BONITA"]][PAlist[["BONITA"]]$Method %in% c('Combined'),])
-#levels(PAlist$BONITA$Contrast) <- c("X19O2NoCyA - X1O2PlusCyA", "X19O2NoCyA - X1O2NoCyA", "X1O2PlusCyA - X1O2NoCyA" )
+#PAlist[["BONITA"]]<- read.csv(paste0(cwd, "/mBonita_pvalues/Bonita_allResults.csv"), row.names = 1)
+#temp <- PAlist[["BONITA"]]$FDR < threshold
+#PAlist[["BONITA"]] <- na.omit(PAlist[["BONITA"]][temp,])
+#PAlist[['BONITA']] <- na.omit(PAlist[["BONITA"]][PAlist[["BONITA"]]$Method %in% c('Combined'),])
+##levels(PAlist$BONITA$Contrast) <- c("X19O2NoCyA - X1O2PlusCyA", "X19O2NoCyA - X1O2NoCyA", "X1O2PlusCyA - X1O2NoCyA" )
+
 
 PAlist[["mBONITA"]]<- read.csv(paste0(cwd, "/mBonita_pvalues/mBonita_pvalues.csv"), row.names = 1)
 temp <- PAlist[["mBONITA"]]$BHpvals < threshold
@@ -128,25 +129,43 @@ require(UpSetR)
 require(ggplot2)
 # "1% O2, CyA- vs 19% O2, CyA-" "1% O2, CyA+ vs 1% O2, CyA-"  "19% O2, CyA- vs 1% O2, CyA+"
 visList <- makeVisList(PAlist, "19% O2, CyA- vs 1% O2, CyA+")
-png(filename = "upset_X19O2NoCyA - X1O2PlusCyA.png", width = 4, height = 8, pointsize = 14, res = 600, units = 'in')
-upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 5, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(2,2, 2, 2, 2, 2), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
+png(filename = "upset_X19O2NoCyA - X1O2PlusCyA.png", width = 4.5, height = 3.5, pointsize = 16, res = 1200, units = 'in')
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 4, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(1.5,1.5,1.5,1.5,1.5,1.5), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
 dev.off()
+
+svg(filename = "upset_X19O2NoCyA - X1O2PlusCyA.svg", width = 4.5, height = 3.5, pointsize = 16)
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 4, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(1.5,1.5,1.5,1.5,1.5,1.5), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
+dev.off()
+
+upset1 = upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.7,0.3), empty.intersections = NULL, point.size = 4, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(1.5,1.5,1.5,1.5,1.5,1.5), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
 ```
 
 ```{r}
 # "1% O2, CyA- vs 19% O2, CyA-" "1% O2, CyA+ vs 1% O2, CyA-"  "19% O2, CyA- vs 1% O2, CyA+"
 visList <- makeVisList(PAlist, "1% O2, CyA- vs 19% O2, CyA-")
-png(filename = "upset_X19O2NoCyA - X1O2NoCyA.png", width = 4, height = 8, pointsize = 14, res = 600, units = 'in')
-upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 5, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(2,2, 2, 2, 2, 2), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
+png(filename = "upset_X19O2NoCyA - X1O2NoCyA.png", width = 4.5, height = 3.5, pointsize = 16, res = 1200, units = 'in')
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 4, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(1.5,1.5,1.5,1.5,1.5,1.5), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
 dev.off()
+
+svg(filename = "upset_X19O2NoCyA - X1O2NoCyA.svg", width = 4.5, height = 3.5, pointsize = 16)
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 4, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(1.5,1.5,1.5,1.5,1.5,1.5), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
+dev.off()
+
+upset2 = upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.7,0.3), empty.intersections = NULL, point.size = 4, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(1.5,1.5,1.5,1.5,1.5,1.5), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
 ```
 
 ```{r}
 # "1% O2, CyA- vs 19% O2, CyA-" "1% O2, CyA+ vs 1% O2, CyA-"  "19% O2, CyA- vs 1% O2, CyA+"
 visList <- makeVisList(PAlist, "1% O2, CyA+ vs 1% O2, CyA-")
-png(filename = "upset_X1O2PlusCyA - X1O2NoCyA.png", width = 4, height = 8, pointsize = 14, res = 600, units = 'in')
-upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 5, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(2,2, 2, 2, 2, 2), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
+png(filename = "upset_X1O2PlusCyA - X1O2NoCyA.png", width = 4.5, height = 3.5, pointsize = 16, res = 1200, units = 'in')
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 4, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(1.5,1.5,1.5,1.5,1.5,1.5), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
 dev.off()
+
+svg(filename = "upset_X1O2PlusCyA - X1O2NoCyA.svg", width = 4.5, height = 3.5, pointsize = 16,)
+upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 4, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(1.5,1.5,1.5,1.5,1.5,1.5), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
+dev.off()
+
+upset3 = upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.7,0.3), empty.intersections = NULL, point.size = 4, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(1.5,1.5,1.5,1.5,1.5,1.5), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black')
 ```
 # Are the pathways of interest significant?
 
@@ -224,7 +243,6 @@ print(p1)
 ```{r}
 PAlist2$Pathway <- gsub("\\*\\*", "", PAlist2$Pathway)
 PAlist2 <- na.omit(PAlist2[PAlist2$Pathway %in% gmt$Pathway,])
-
 p1 <- ggplot(PAlist2, aes(Algorithm, Pathway, fill=Significant)) + geom_tile(color = 'black', size = 0.3) + facet_wrap(~Contrast) + theme_pubr() + rotate_x_text(90) + scale_fill_brewer()
 #ggpar(p1, palette = "npg")
 #png(filename = "heatmap_HIF1pathways.png", width = 10, height = 4, pointsize = 14, res = 600, units = 'in')
@@ -237,6 +255,8 @@ svg(filename = "heatmap_HIF1_pathways.svg", width = 10, height = 10, pointsize =
 p1 
 dev.off()
 print(p1)
+
+hif1 = p1
 ```
 
 ```{r}
@@ -259,5 +279,22 @@ svg(filename = "heatmap_signif_in_most_methods.svg", width = 10, height = 10, po
 p1 
 dev.off()
 print(p1)
+```
+```{r}
+require(ggplotify)
+upset1 = as.grob(upset1)
+upset2 = as.grob(upset2)
+upset3 = as.grob(upset3)
+require(gridExtra)
+
+svg('Figure5_autoArranged.svg', width = 10, height = 10)
+ggarrange(ggarrange(upset2,upset3,upset1,labels = c("A", "B", "C"), nrow=1, ncol = 3), hif1, labels = c("", "D"), nrow = 2, heights = c(1,1))
+dev.off()
+
+pdf('Figure5_autoArranged.pdf', width = 10, height = 10)
+ggarrange(ggarrange(upset2,upset3,upset1,labels = c("A", "B", "C"), nrow=1, ncol = 3), hif1, labels = c("", "D"), nrow = 2, heights = c(1,1)) 
+dev.off()
+#p5 = arrangeGrob(upset2,upset3,upset1,hif1, layout_matrix = matrix(data = c(1,2,3,1,2,3,4,4,4,4,4,4,4,4,4), ncol=3, nrow=5, byrow=TRUE)) #note order
+#ggsave('temp2.svg', p5, height = 10, width = 10, units="in")
 ```
 

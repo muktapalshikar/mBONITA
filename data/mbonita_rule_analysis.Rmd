@@ -17,10 +17,13 @@ colnames(localData)
 ```
 
 ```{r}
-getIndegree = function(x){
-  return(stringr::str_count(pattern = "\\[",string = x) - 1)
-}
-localData$indegree = unlist(lapply(as.vector(localData$equivs), getIndegree))
+#getIndegree = function(x){
+#  return(stringr::str_count(pattern = "\\[",string = x) - 1)
+#}
+#localData$indegree = unlist(lapply(as.vector(localData$equivs), getIndegree))
+require(stringr)
+localData$methodName = gsub("\\/.*","", localData$methodName)
+localData$methodName = str_to_title(localData$methodName)
 ```
 
 ```{r}
@@ -32,13 +35,14 @@ ggpairs(data = localData[localData$indegree>=3,], columns = 'ruleLengths', aes(c
 
 ```{r}
 require(plyr)
-levels(localData$methodName) = c("Combined", "Phosphoproteomics", "Proteomics", "Transcriptomics")
+localData$methodName = as.factor(localData$methodName)
 mu <- ddply(localData[localData$indegree>=3,], "methodName", summarise, grp.mean=mean(ruleLengths))
 mu$grp.mean = round(mu$grp.mean,1)
-ggplot(data = localData[localData$indegree>=3,]) + geom_histogram(aes(ruleLengths), bins = 20) + theme_bw() + theme(panel.grid.minor = element_line(color = 'grey', size = 0.25, linetype = 2), text = element_text(size = 14))  + ylab("Count") + scale_x_continuous(name = "Size of ERS") + facet_wrap(vars(methodName), nrow=1, scales="free_y") + geom_vline(data = mu, aes(xintercept=grp.mean), color='red',linetype='dashed') + geom_label(data = mu, y = Inf, x=Inf, vjust=2, hjust=2, aes(label=grp.mean), color = 'red') + facet_wrap(vars(methodName), nrow=1, scales="free_y")
-ggsave(filename = "ERS_size_distribution.png", height = 4, width = 8, dpi = 600)
-ggsave(filename = "ERS_size_distribution.svg", height = 4, width = 8)
-ggsave(filename = "ERS_size_distribution.pdf", height = 4, width = 8)
+ERS_size_distribution = ggplot(data = localData[localData$indegree>=3,]) + geom_histogram(aes(ruleLengths), bins = 20) + theme_bw() + theme(panel.grid.minor = element_line(color = 'grey', size = 0.25, linetype = 2), text = element_text(size = 14))  + ylab("Count") + scale_x_continuous(name = "Size of ERS") + facet_wrap(vars(methodName), nrow=1, scales="free_y") + geom_vline(data = mu, aes(xintercept=grp.mean), color='red',linetype='dashed') + geom_label(data = mu, y = Inf, x=Inf, vjust=2, hjust=2, aes(label=grp.mean), color = 'red') + facet_wrap(vars(methodName), nrow=1, scales="free_y")
+ggsave(plot = ERS_size_distribution, filename = "ERS_size_distribution.png", height = 4, width = 8, dpi = 600)
+ggsave(plot = ERS_size_distribution, filename = "ERS_size_distribution.svg", height = 4, width = 8)
+ggsave(plot = ERS_size_distribution, filename = "ERS_size_distribution.pdf", height = 4, width = 8)
+print(ERS_size_distribution)
 ```
 ```{r}
 knitr::kable(mu)

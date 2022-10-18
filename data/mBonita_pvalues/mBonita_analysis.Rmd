@@ -11,6 +11,8 @@ require(ggpubr)
 require(reshape2)
 require(metap)
 require(GGally)
+require(ggplotify)
+require(ComplexHeatmap)
 ```
 
 # correlations between datasets - output from https://jupyter.circ.rochester.edu/user/mpalshik/notebooks/scratch/multiomics_networks_2022/multiomics_networks_20220609/Figure1.ipynb
@@ -173,15 +175,24 @@ for (n in unique(PAvals$Contrast)){
   visList[[n]] <- na.omit(PAvals[PAvals$Contrast %in% c(n), ])
   visList[[n]] <- as.vector(visList[[n]][visList[[n]]$BHpvals < 0.05, "Pathway Name"])
 }
+names(visList) <- gsub(" vs ", "\nvs ", names(visList))
+#names(visList) <- gsub("O2", "O_2", names(visList))
+p1 = upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.6, 0.4), empty.intersections = NULL, point.size = 5, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(2,2, 2, 2, 1.5, 2), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black') 
 
-p1 = upset(fromList(visList), order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), empty.intersections = NULL, point.size = 5, line.size = 1 , mainbar.y.label = "Intersections", sets.x.label = "Pathways", text.scale = c(2,2, 2, 2, 2, 2), number.angles = 0, main.bar.color = 'black', sets.bar.color = 'black', shade.color = 'white', matrix.color = 'black') 
-
-png(filename = paste0('upset','_mBonita_','allContrasts.png'), width = 8, height = 3, pointsize = 14, res = 600, units = 'in')
+png(filename = paste0('upset','_mBonita_','allContrasts.png'), width = 10, height = 5, pointsize = 14, res = 600, units = 'in')
 print(p1)
 dev.off()
-  
+
+upset_mBonita_allContrasts = as.grob(p1, margin=0)
 gplots::venn(visList)
 ```
+```{r}
+require(ComplexHeatmap)
+lt = make_comb_mat(list_to_matrix(visList))
+p1 = UpSet(lt, pt_size = unit(5, "mm"), right_annotation = upset_right_annotation(lt, add_numbers = TRUE, numbers_rot = 0,numbers_gp = gpar(cex=1)),  top_annotation = upset_top_annotation(lt, add_numbers = TRUE, numbers_rot = 0,numbers_gp = gpar(cex=1)))
+upset_mBonita_allContrasts = as.grob(p1)
+```
+
 
 # Pathways only in mBonita
 
@@ -539,7 +550,7 @@ require(circlize)
 temp_binned = temp
 temp_binned[temp_binned > 2000] = 2000
 #f3 = colorRamp2(seq(min(temp), max(temp), length = 3), c("blue", "white", "red"), space = "RGB")
-f3 = colorRamp2(seq(min(temp_binned), max(temp_binned), length = 2), c("white", "navy"))
+f3 = colorRamp2(seq(min(temp_binned), max(temp_binned), length = 2), c("#FFFAF0", "#4B0082"))
 h1 <- Heatmap(temp_binned,
     col = f3,
     rect_gp = gpar(col = "lightgrey", lwd = 2),
@@ -553,7 +564,8 @@ h1 <- Heatmap(temp_binned,
       title = "Unscaled Node Modulation Score",
       title_position = "topcenter",
       #legend_width = unit(5, 'in'),
-      #at = c(0, 2000, 4000, 5000, 10000, 20000),
+      at = c(0, 500,1000,1500,2000),
+      labels = c("0", "500", "1000", "1500", "> 2000"),
       #break_dist = c(100, 5, 4, 1),
       border = 'black'
     ),
@@ -568,7 +580,38 @@ png(
 )
 draw(h1, heatmap_legend_side = "top")
 dev.off()
-draw(h1, heatmap_legend_side = "top")
+
+LSP1unscaled <- Heatmap(temp_binned,
+    col = f3,
+    rect_gp = gpar(col = "lightgrey", lwd = 2),
+    column_title_rot = 0,
+    row_title_rot = 0,
+    column_title = paste0('Genes with highly variable node modulation scores'),
+    column_title_side = "bottom",
+    border = TRUE,
+    heatmap_legend_param = list(
+      direction = "horizontal",
+      title = "Unscaled Node Modulation Score",
+      title_position = "topcenter",
+      legend_height = unit(3, 'in'),
+      at = c(0, 500,1000,1500,2000),
+      labels = c("0", "500", "1000", "1500", "> 2000"),
+      #break_dist = c(100, 5, 4, 1),
+      border = 'black'
+    ),
+    column_names_gp = gpar(fontsize = 10),
+    row_names_gp = gpar(fontsize = 10), show_heatmap_legend = FALSE)
+
+LSP1unscaled_legend = Legend(col_fun = f3 , direction = "horizontal",
+      title = "Unscaled Node Modulation Score",
+      title_position = "topcenter",
+      legend_width = unit(5, 'in'),
+      at = c(0, 500,1000,1500,2000),
+      labels = c("0", "500", "1000", "1500", "> 2000"),
+      #break_dist = c(100, 5, 4, 1),
+      title_gp = gpar(fontsize=10),
+      border = 'black')
+draw(LSP1unscaled_legend)
 ```
 
 
@@ -655,17 +698,161 @@ require(ggpmisc)
 require(reshape2)
 temp3 = melt(temp2, id.vars = "Node Modulation\nScore")
 colnames(temp3) = c('nm', 'var', 'val')
-p1 = ggplot(data = temp3, aes(val, nm)) + geom_point(aes(val, nm)) + facet_wrap(vars(var), nrow=2, scales= 'free') + theme_pubr() + stat_correlation(method = "spearman") + stat_poly_line() + ylab("Node Modulation Score") + xlab("") + theme(text = element_text(size=11))
+p1 = ggplot(data = temp3, aes(val, nm)) + geom_point(aes(val, nm)) + facet_wrap(vars(var), nrow=2, scales= 'free') + theme_pubr() + stat_correlation(method = "spearman") + stat_poly_line() + ylab("Node Modulation Score") + xlab("") + theme(text = element_text(size=12), title = element_text(size=12))
 ggsave("nodeModComponents2.svg", p1, dpi = 1200, width = 7, height=5)
 ggsave("nodeModComponents2.png", p1, dpi = 1200, width = 7, height=5)
+nodeModComponents2 = p1 
 ```
 # histogram of node modulation score
 
 
 ```{r}
 temp4 = as.data.frame(melt(as.data.frame(temp), value.vars = 'nodeModulation', id.vars = c('Contrast', 'index')))
-p1 = ggplot(data = temp4[temp4$value < 250,]) + geom_histogram(aes(value, fill = Contrast), color = 'black')+ theme_pubr(legend=c(0.7,0.75), margin=FALSE) + scale_fill_brewer('Contrast', palette = 'Blues') + ylab("Count of genes in the network") + xlab('Node modulation score')+ theme(text = element_text(size=8)) #+ scale_x_continuous(breaks=as.vector(summary(temp4$value))[1:4]) + xlim(0, as.vector(summary(temp4$value))[4])
+p1 = ggplot(data = temp4) + geom_histogram(aes(value, fill = Contrast), color = 'black')+ theme_pubr(legend=c(0.7,0.75), margin=FALSE) + scale_fill_brewer('Contrast', palette = 'Blues') + ylab("Count of genes in the network") + xlab('Node modulation score')+ theme(text = element_text(size=8)) #+ scale_x_continuous(breaks=as.vector(summary(temp4$value))[1:4]) + xlim(0, as.vector(summary(temp4$value))[4])
 ggsave("hist_nodeModScore.svg", p1, dpi = 1200, width = 2, height=3)
 ggsave("hist_nodeModScore.png", p1, dpi = 1200, width = 2, height=3)
 p1
 ```
+
+
+```{r}
+require(ggpubr)
+require(ggplotify)
+LSP1unscaled2 = as.grob(LSP1unscaled)
+nodeModComponents2 = nodeModComponents2 + theme()
+LSP1unscaled_legend = Legend(col_fun = f3 , direction = "horizontal",
+      title = "Unscaled Node Modulation Score",
+      title_position = "topcenter",
+      legend_width = unit(5, 'in'),
+      at = c(0, 500,1000,1500,2000),
+      labels = c("0", "500", "1000", "1500", "> 2000"),
+      #break_dist = c(100, 5, 4, 1),
+      title_gp = gpar(fontsize=14),
+      border = 'black')
+LSP1unscaled_legend2 = LSP1unscaled_legend@grob
+figure4 = ggarrange(nodeModComponents2,LSP1unscaled_legend2,LSP1unscaled2,  ncol = 1, heights = c(1,0.15,1), labels = c("A", "", "B")) 
+ggsave(plot = figure4, filename = "Figure4_autoarrange.pdf", height = 10, width = 8.5)
+
+
+
+```
+
+
+# mBONITA rule analysis
+
+```{r}
+localData = read.csv('local1Data.csv')
+localData = localData[,2:ncol(localData)]
+```
+
+```{r}
+head(localData)
+```
+
+```{r}
+colnames(localData)
+```
+
+```{r}
+getIndegree = function(x){
+  return(stringr::str_count(pattern = "\\[",string = x) - 1)
+}
+localData$indegree = unlist(lapply(as.vector(localData$equivs), getIndegree))
+require(stringr)
+localData$methodName = gsub("\\/.*","", localData$methodName)
+localData$methodName = str_to_title(localData$methodName)
+```
+
+```{r}
+require(ggplot2)
+require(GGally)
+require(reshape2)
+ggpairs(data = localData[localData$indegree>=3,], columns = 'ruleLengths', aes(color = methodName, shape = methodName), showStrips = FALSE) 
+```
+
+```{r}
+require(plyr)
+localData$methodName = as.factor(localData$methodName)
+mu <- as.data.frame(ddply(localData[localData$indegree>=3,], "methodName", summarise, grp.mean=mean(ruleLengths), grp.sd = median(ruleLengths)))
+mu$grp.mean = unlist(lapply(mu$grp.mean, round, 1))
+mu$grp.sd = unlist(lapply(mu$grp.sd, round, 1))
+mu$label = paste("\U00B5 = ", mu$grp.mean, "\n", "Mdn = ", mu$grp.sd, sep = "") #
+#mu$label = unlist(lapply(mu$label, trimws))
+#mu$label = unlist(lapply(mu$label, str_pad, nchar(mu$label[1]), side = "right", pad = " "))
+localData$methodName = gsub("Concatenated", "Combined", localData$methodName)
+ERS_size_distribution = ggplot(data = localData[localData$indegree>=3,]) + geom_histogram(aes(ruleLengths), bins = 20) + theme_bw() + theme(panel.grid.minor = element_line(color = 'grey', size = 0.25, linetype = 2), text = element_text(size = 14))  + ylab("Count") + scale_x_continuous(name = "Size of ERS") + facet_wrap(vars(methodName), nrow=1, scales="free_y") + geom_vline(data = mu, aes(xintercept=grp.mean), color='red',linetype='dashed') + geom_label(data = mu, y = Inf, x=Inf, vjust=2, hjust=1.15, aes(label=label), color = 'red') + facet_wrap(vars(methodName), nrow=1, scales="free_y")
+ggsave(plot = ERS_size_distribution, filename = "ERS_size_distribution.png", height = 4, width = 8, dpi = 600)
+ggsave(plot = ERS_size_distribution, filename = "ERS_size_distribution.svg", height = 4, width = 8)
+ggsave(plot = ERS_size_distribution, filename = "ERS_size_distribution.pdf", height = 4, width = 8)
+print(ERS_size_distribution)
+```
+
+
+
+```{r}
+knitr::kable(mu)
+```
+
+```{r}
+ggplot(data = localData[localData$indegree>=3,]) + geom_boxplot(aes(x=ruleLengths,y=methodName))
+```
+```{r}
+rm(localData)
+```
+
+```{r}
+nodeTable = read.csv("node_table.csv")
+nodeTable = nodeTable[,2:ncol(nodeTable)]
+print(colnames(nodeTable))
+```
+
+```{r}
+require(reshape2)
+require(stringr)
+nodeTable_pivot = dcast(nodeTable, Display.Name + Network  ~ Dataset, value.var = 'IS', fun.aggregate = mean)
+nodeTable_pivot = nodeTable_pivot[complete.cases(nodeTable_pivot),]
+colnames(nodeTable_pivot)  = str_to_title(colnames(nodeTable_pivot))
+#colnames(nodeTable_pivot)  = gsub("Concatenated", "Combined", colnames(nodeTable_pivot))
+head(nodeTable_pivot)
+```
+
+
+```{r}
+require(GGally)
+#wrapAt7 = function(x){return(trimws(paste(sapply(seq(1, nchar(x), 7), function(i) paste0(substring(x, i, min(i + 6, nchar(x))), '\n')), collapse='')))}
+#colnames(nodeTable_pivot) = unlist(lapply(colnames(nodeTable_pivot), wrapAt7))
+colnames(nodeTable_pivot) = gsub("Phosphoproteomics", "Phospho\nproteomics", colnames(nodeTable_pivot))
+colnames(nodeTable_pivot) = gsub("Transcriptomics", "Transcript\nomics", colnames(nodeTable_pivot))
+colnames(nodeTable_pivot) = gsub("Concatenated", "Combined", colnames(nodeTable_pivot))
+IS_correlations = ggpairs(nodeTable_pivot,  columns = c(3,4,5,6), diag = list(continuous = 'barDiag'), s=0.001) + theme_bw() + theme(panel.grid.minor = element_line(color = 'grey', size = 0.25, linetype = 2), strip.text= element_text(size = 12), plot.margin=rep(unit(0,"null"),4)) + xlab("Node Importance Scores") + scale_x_continuous(breaks = c(0.5,1)) + scale_y_continuous(n.breaks = 3)
+IS_correlations
+```
+
+
+
+
+```{r}
+
+upset_mBonita_allContrasts2 = upset_mBonita_allContrasts 
+temp = ggarrange(ERS_size_distribution, ggarrange(ggmatrix_gtable(IS_correlations), upset_mBonita_allContrasts2, ncol = 2, labels = c("B", "C"), widths = c(1.25,1)), ncol = 1, labels = c("A", ""), heights = c(1,2,1))
+ggsave("Figure3_autoArranged.svg", temp, width = 8, height= 8)
+ggsave("Figure3_autoArranged.pdf", temp, width = 8, height= 8, dpi = 1200)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
