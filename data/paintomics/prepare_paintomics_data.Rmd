@@ -38,16 +38,17 @@ See the sheet 'Explanation' in DE_analysis_20221003.xlsx
 ```{r}
 require(readxl)
 
-explanation <- read_excel("C:\\Users\\Mukta\ Palshikar\\Documents\\GitHub\\moBONITA\\data\\paintomics\\DE_analysis_20221003.xlsx", sheet = 'Explanation')
+explanation <- read_excel("DE_analysis_20221003.xlsx", sheet = 'Explanation') #read_excel("C:\\Users\\Mukta\ Palshikar\\Documents\\GitHub\\moBONITA\\data\\paintomics\\DE_analysis_20221003.xlsx", sheet = 'Explanation')
 
 for (i in 1:nrow(explanation)){
   #print(explanation$Name[i])
-  temp = read_excel("C:\\Users\\Mukta\ Palshikar\\Documents\\GitHub\\moBONITA\\data\\paintomics\\DE_analysis_20221003.xlsx", sheet = explanation$Name[i])
+  temp = read_excel("DE_analysis_20221003.xlsx", sheet = explanation$Name[i])#read_excel("C:\\Users\\Mukta\ Palshikar\\Documents\\GitHub\\moBONITA\\data\\paintomics\\DE_analysis_20221003.xlsx", sheet = explanation$Name[i])
   fileName = paste0(explanation$Dataset[i], "_", explanation$Contrast[i], ".csv")
   print(fileName)
   write.csv(temp, fileName)
   fileName = paste0("Relevant_", fileName)
-  temp2 = as.data.frame(temp$Identifier[temp$logFC>quantile(temp$logFC)[4]])
+  temp$absLog2FC = abs(temp$logFC)
+  temp2 = as.data.frame(temp$Identifier[temp$absLog2FC>quantile(temp$absLog2FC)[4]])
   colnames(temp2) = "Gene"
   write.csv(temp2, fileName, row.names=FALSE)
 }
@@ -108,13 +109,13 @@ contrast3 = read.csv(paste0(getwd(), "/contrast3/Paintomics_pathways_1O2PlusCycl
 contrast3$Contrast = "X1O2PlusCyA - X19O2NoCyA"
 
 results <- rbind(contrast1, contrast2, contrast3)
-colnames(results) = c("Pathway.name", "Unique.genes", "Uniquemetabol", "Phosphoproteomics", "Proteomics", "Transcriptomics", "Combined", "X", "Contrast")
+colnames(results) = c("Pathway.name", "Unique.genes", "Uniquemetabol", "Phosphoproteomics", "PhosphoproteomicsFDR_BH", "Proteomics", "ProteomicsFDR_BH", "Transcriptomics", "TranscriptomicsFDR_BH", "Combined", "CombinedFDR_BH", "Contrast")
 results = results[,!colnames(results) %in% c("X","Uniquemetabol")]
-results = as.data.frame(apply(results, c(1,2), function(x){if(x=="-"){return(NA)}else{return(x)}}))
-results$Proteomics_FDR = p.adjust(results$Proteomics, "fdr")
-results$Phosphoproteomics_FDR = p.adjust(results$Phosphoproteomics, "fdr")
-results$Transcriptomics_FDR = p.adjust(results$Transcriptomics, "fdr")
-results$Combined_FDR = p.adjust(results$Combined, "fdr")
+results = as.data.frame(apply(results, c(1,2), function(x){if(x%in%c("-")){return(NA)}else{return(x)}}))
+results$Proteomics_FDR = p.adjust(results$Proteomics, "BH")
+results$Phosphoproteomics_FDR = p.adjust(results$Phosphoproteomics, "BH")
+results$Transcriptomics_FDR = p.adjust(results$Transcriptomics, "BH")
+results$Combined_FDR = p.adjust(results$Combined, "BH")
 write.csv(results, "paintomics_allResults.csv")
 head(results)
 ```
@@ -158,8 +159,9 @@ ggsave(filename = "paintomics_allResults.png", width = 12, height = 10, units = 
 ```
 
 
+# below code will not run as there are no significant pathways
 
-```{r}
+```{r, eval=FALSE}
 require(ggplot2)
 temp <- melt_results$FDR < 0.05
 melt_results <- na.omit(melt_results[temp,])

@@ -43,7 +43,7 @@ runActivePathways <-
                   by = 'Identifier',
                   all = TRUE)
     colnames(temp) <- c("Identifier", "mrna", "prot", "phosph")
-    temp[is.na(temp)] <- 1
+    temp[is.na(temp)] <- 1 # as recommended in documentation
     rownames(temp) <- temp$Identifier
     temp <- temp[, colnames(temp) %in% c("mrna", "prot", "phosph")]
     temp <- as.matrix(temp)

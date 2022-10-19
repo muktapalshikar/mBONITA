@@ -23,10 +23,10 @@ PAlist[["LeapR"]]$Pathway <- trimws(gsub("KEGG|_|\\d+$", " ", PAlist[["LeapR"]]$
 
 PAlist[["PaintOmics"]]<- as.data.frame(read.csv(paste0(cwd, "/paintomics/paintomics_allResults.csv"), row.names = 1))
 colnames(PAlist[["PaintOmics"]])[1] <- "Pathway"
-temp <- PAlist[["PaintOmics"]]$Combined_FDR < threshold
+temp <- PAlist[["PaintOmics"]]$CombinedFDR_BH < threshold
 PAlist[["PaintOmics"]] <- PAlist[["PaintOmics"]][temp,]
 PAlist[["PaintOmics"]]$Method <- "Combined"
-PAlist[["PaintOmics"]]$negativelog10FDR <- (-1)*log10(PAlist[["PaintOmics"]]$Combined_FDR)
+PAlist[["PaintOmics"]]$negativelog10FDR <- (-1)*log10(PAlist[["PaintOmics"]]$CombinedFDR_BH)
 
 PAlist[["ActivePathways"]]<- read.csv(paste0(cwd, "/ActivePathways/activePathways_allResults.csv"), row.names = NULL)
 temp <- PAlist[["ActivePathways"]]$adjusted.p.val < threshold
