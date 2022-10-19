@@ -112,11 +112,11 @@ results <- rbind(contrast1, contrast2, contrast3)
 colnames(results) = c("Pathway.name", "Unique.genes", "Uniquemetabol", "Phosphoproteomics", "PhosphoproteomicsFDR_BH", "Proteomics", "ProteomicsFDR_BH", "Transcriptomics", "TranscriptomicsFDR_BH", "Combined", "CombinedFDR_BH", "Contrast")
 results = results[,!colnames(results) %in% c("X","Uniquemetabol")]
 results = as.data.frame(apply(results, c(1,2), function(x){if(x%in%c("-")){return(NA)}else{return(x)}}))
+write.csv(results, "paintomics_allResults.csv")
 results$Proteomics_FDR = p.adjust(results$Proteomics, "BH")
 results$Phosphoproteomics_FDR = p.adjust(results$Phosphoproteomics, "BH")
 results$Transcriptomics_FDR = p.adjust(results$Transcriptomics, "BH")
 results$Combined_FDR = p.adjust(results$Combined, "BH")
-write.csv(results, "paintomics_allResults.csv")
 head(results)
 ```
 
