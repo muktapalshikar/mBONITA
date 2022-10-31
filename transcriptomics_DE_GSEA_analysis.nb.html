@@ -1682,23 +1682,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1763,10 +1757,10 @@ display: none;
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVxdWlyZShERVNlcTIpXG5gYGAifQ== -->
 <pre class="r"><code>require(DESeq2)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBERVNlcTJcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogUzRWZWN0b3JzXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IHN0YXRzNFxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBCaW9jR2VuZXJpY3NcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogcGFyYWxsZWxcblxuQXR0YWNoaW5nIHBhY2thZ2U6IOKAmEJpb2NHZW5lcmljc+KAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6cGFyYWxsZWzigJk6XG5cbiAgICBjbHVzdGVyQXBwbHksIGNsdXN0ZXJBcHBseUxCLCBjbHVzdGVyQ2FsbCwgY2x1c3RlckV2YWxRLCBjbHVzdGVyRXhwb3J0LFxuICAgIGNsdXN0ZXJNYXAsIHBhckFwcGx5LCBwYXJDYXBwbHksIHBhckxhcHBseSwgcGFyTGFwcGx5TEIsIHBhclJhcHBseSwgcGFyU2FwcGx5LFxuICAgIHBhclNhcHBseUxCXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpzdGF0c+KAmTpcblxuICAgIElRUiwgbWFkLCBzZCwgdmFyLCB4dGFic1xuXG5UaGUgZm9sbG93aW5nIG9iamVjdHMgYXJlIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIGFueUR1cGxpY2F0ZWQsIGFwcGVuZCwgYXMuZGF0YS5mcmFtZSwgYmFzZW5hbWUsIGNiaW5kLCBjb2xuYW1lcywgZGlybmFtZSxcbiAgICBkby5jYWxsLCBkdXBsaWNhdGVkLCBldmFsLCBldmFscSwgRmlsdGVyLCBGaW5kLCBnZXQsIGdyZXAsIGdyZXBsLCBpbnRlcnNlY3QsXG4gICAgaXMudW5zb3J0ZWQsIGxhcHBseSwgTWFwLCBtYXBwbHksIG1hdGNoLCBtZ2V0LCBvcmRlciwgcGFzdGUsIHBtYXgsIHBtYXguaW50LFxuICAgIHBtaW4sIHBtaW4uaW50LCBQb3NpdGlvbiwgcmFuaywgcmJpbmQsIFJlZHVjZSwgcm93bmFtZXMsIHNhcHBseSwgc2V0ZGlmZiwgc29ydCxcbiAgICB0YWJsZSwgdGFwcGx5LCB1bmlvbiwgdW5pcXVlLCB1bnNwbGl0LCB3aGljaCwgd2hpY2gubWF4LCB3aGljaC5taW5cblxuXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYUzRWZWN0b3Jz4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIGV4cGFuZC5ncmlkXG5cbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogSVJhbmdlc1xuXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYSVJhbmdlc+KAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdCBpcyBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmdyRGV2aWNlc+KAmTpcblxuICAgIHdpbmRvd3NcblxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBHZW5vbWljUmFuZ2VzXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IEdlbm9tZUluZm9EYlxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBTdW1tYXJpemVkRXhwZXJpbWVudFxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBCaW9iYXNlXG5XZWxjb21lIHRvIEJpb2NvbmR1Y3RvclxuXG4gICAgVmlnbmV0dGVzIGNvbnRhaW4gaW50cm9kdWN0b3J5IG1hdGVyaWFsOyB2aWV3IHdpdGggJ2Jyb3dzZVZpZ25ldHRlcygpJy4gVG8gY2l0ZVxuICAgIEJpb2NvbmR1Y3Rvciwgc2VlICdjaXRhdGlvbihcIkJpb2Jhc2VcIiknLCBhbmQgZm9yIHBhY2thZ2VzICdjaXRhdGlvbihcInBrZ25hbWVcIiknLlxuXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IERlbGF5ZWRBcnJheVxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBtYXRyaXhTdGF0c1xuV2FybmluZzogcGFja2FnZSDigJhtYXRyaXhTdGF0c+KAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDMuNi4zXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbWF0cml4U3RhdHPigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOkJpb2Jhc2XigJk6XG5cbiAgICBhbnlNaXNzaW5nLCByb3dNZWRpYW5zXG5cbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogQmlvY1BhcmFsbGVsXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDigJhEZWxheWVkQXJyYXnigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOm1hdHJpeFN0YXRz4oCZOlxuXG4gICAgY29sTWF4cywgY29sTWlucywgY29sUmFuZ2VzLCByb3dNYXhzLCByb3dNaW5zLCByb3dSYW5nZXNcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBhcGVybSwgYXBwbHksIHJvd3N1bVxuXG5SZWdpc3RlcmVkIFMzIG1ldGhvZCBvdmVyd3JpdHRlbiBieSAnaHRtbHdpZGdldHMnOlxuICBtZXRob2QgICAgICAgICAgIGZyb20gICAgICAgICBcbiAgcHJpbnQuaHRtbHdpZGdldCB0b29sczpyc3R1ZGlvXG5SZWdpc3RlcmVkIFMzIG1ldGhvZCBvdmVyd3JpdHRlbiBieSAnZGF0YS50YWJsZSc6XG4gIG1ldGhvZCAgICAgICAgICAgZnJvbVxuICBwcmludC5kYXRhLnRhYmxlICAgICBcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBERVNlcTJcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogUzRWZWN0b3JzXG5XYXJuaW5nOiBwYWNrYWdlIOKAmFM0VmVjdG9yc+KAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDMuNi4zTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBzdGF0czRcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogQmlvY0dlbmVyaWNzXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IHBhcmFsbGVsXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDigJhCaW9jR2VuZXJpY3PigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnBhcmFsbGVs4oCZOlxuXG4gICAgY2x1c3RlckFwcGx5LCBjbHVzdGVyQXBwbHlMQiwgY2x1c3RlckNhbGwsIGNsdXN0ZXJFdmFsUSwgY2x1c3RlckV4cG9ydCwgY2x1c3Rlck1hcCxcbiAgICBwYXJBcHBseSwgcGFyQ2FwcGx5LCBwYXJMYXBwbHksIHBhckxhcHBseUxCLCBwYXJSYXBwbHksIHBhclNhcHBseSwgcGFyU2FwcGx5TEJcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgSVFSLCBtYWQsIHNkLCB2YXIsIHh0YWJzXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpiYXNl4oCZOlxuXG4gICAgYW55RHVwbGljYXRlZCwgYXBwZW5kLCBhcy5kYXRhLmZyYW1lLCBiYXNlbmFtZSwgY2JpbmQsIGNvbG5hbWVzLCBkaXJuYW1lLCBkby5jYWxsLFxuICAgIGR1cGxpY2F0ZWQsIGV2YWwsIGV2YWxxLCBGaWx0ZXIsIEZpbmQsIGdldCwgZ3JlcCwgZ3JlcGwsIGludGVyc2VjdCwgaXMudW5zb3J0ZWQsXG4gICAgbGFwcGx5LCBNYXAsIG1hcHBseSwgbWF0Y2gsIG1nZXQsIG9yZGVyLCBwYXN0ZSwgcG1heCwgcG1heC5pbnQsIHBtaW4sIHBtaW4uaW50LFxuICAgIFBvc2l0aW9uLCByYW5rLCByYmluZCwgUmVkdWNlLCByb3duYW1lcywgc2FwcGx5LCBzZXRkaWZmLCBzb3J0LCB0YWJsZSwgdGFwcGx5LCB1bmlvbixcbiAgICB1bmlxdWUsIHVuc3BsaXQsIHdoaWNoLCB3aGljaC5tYXgsIHdoaWNoLm1pblxuXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDigJhTNFZlY3RvcnPigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpiYXNl4oCZOlxuXG4gICAgZXhwYW5kLmdyaWRcblxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBJUmFuZ2VzXG5XYXJuaW5nOiBwYWNrYWdlIOKAmElSYW5nZXPigJkgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiAzLjYuMlxuQXR0YWNoaW5nIHBhY2thZ2U6IOKAmElSYW5nZXPigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpnckRldmljZXPigJk6XG5cbiAgICB3aW5kb3dzXG5cbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogR2Vub21pY1Jhbmdlc1xuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBHZW5vbWVJbmZvRGJcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogU3VtbWFyaXplZEV4cGVyaW1lbnRcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogQmlvYmFzZVxuV2VsY29tZSB0byBCaW9jb25kdWN0b3JcblxuICAgIFZpZ25ldHRlcyBjb250YWluIGludHJvZHVjdG9yeSBtYXRlcmlhbDsgdmlldyB3aXRoICdicm93c2VWaWduZXR0ZXMoKScuIFRvIGNpdGVcbiAgICBCaW9jb25kdWN0b3IsIHNlZSAnY2l0YXRpb24oXCJCaW9iYXNlXCIpJywgYW5kIGZvciBwYWNrYWdlcyAnY2l0YXRpb24oXCJwa2duYW1lXCIpJy5cblxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBEZWxheWVkQXJyYXlcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogbWF0cml4U3RhdHNcblxuQXR0YWNoaW5nIHBhY2thZ2U6IOKAmG1hdHJpeFN0YXRz4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpCaW9iYXNl4oCZOlxuXG4gICAgYW55TWlzc2luZywgcm93TWVkaWFuc1xuXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IEJpb2NQYXJhbGxlbFxuV2FybmluZzogbXVsdGlwbGUgbWV0aG9kcyB0YWJsZXMgZm91bmQgZm9yIOKAmHR5cGXigJlXYXJuaW5nOiBtdWx0aXBsZSBtZXRob2RzIHRhYmxlcyBmb3VuZCBmb3Ig4oCYc3BsaXRBc0xpc3TigJlcbkF0dGFjaGluZyBwYWNrYWdlOiDigJhEZWxheWVkQXJyYXnigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOm1hdHJpeFN0YXRz4oCZOlxuXG4gICAgY29sTWF4cywgY29sTWlucywgY29sUmFuZ2VzLCByb3dNYXhzLCByb3dNaW5zLCByb3dSYW5nZXNcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpCaW9jR2VuZXJpY3PigJk6XG5cbiAgICB0eXBlXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpiYXNl4oCZOlxuXG4gICAgYXBlcm0sIGFwcGx5LCByb3dzdW1cblxuV2FybmluZzogcmVwbGFjaW5nIHByZXZpb3VzIGltcG9ydCDigJhCaW9jR2VuZXJpY3M6OnR5cGXigJkgYnkg4oCYRGVsYXllZEFycmF5Ojp0eXBl4oCZIHdoZW4gbG9hZGluZyDigJhTdW1tYXJpemVkRXhwZXJpbWVudOKAmVJlZ2lzdGVyZWQgUzMgbWV0aG9kIG92ZXJ3cml0dGVuIGJ5ICdodG1sd2lkZ2V0cyc6XG4gIG1ldGhvZCAgICAgICAgICAgZnJvbSAgICAgICAgIFxuICBwcmludC5odG1sd2lkZ2V0IHRvb2xzOnJzdHVkaW9cblJlZ2lzdGVyZWQgUzMgbWV0aG9kIG92ZXJ3cml0dGVuIGJ5ICdkYXRhLnRhYmxlJzpcbiAgbWV0aG9kICAgICAgICAgICBmcm9tXG4gIHByaW50LmRhdGEudGFibGUgICAgIFxuRXJyb3I6IHBhY2thZ2Ugb3IgbmFtZXNwYWNlIGxvYWQgZmFpbGVkIGZvciDigJhERVNlcTLigJk6XG4gb2JqZWN0cyDigJhyb3dTdW1z4oCZLCDigJhjb2xTdW1z4oCZLCDigJhyb3dNZWFuc+KAmSwg4oCYY29sTWVhbnPigJkgYXJlIG5vdCBleHBvcnRlZCBieSAnbmFtZXNwYWNlOlM0VmVjdG9ycydcbiJ9 -->
 <pre><code>Loading required package: DESeq2
 Loading required package: S4Vectors
-Loading required package: stats4
+Warning: package ‘S4Vectors’ was built under R version 3.6.3Loading required package: stats4
 Loading required package: BiocGenerics
 Loading required package: parallel
 
@@ -1774,9 +1768,8 @@ Attaching package: ‘BiocGenerics’
 
 The following objects are masked from ‘package:parallel’:
 
-    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ, clusterExport,
-    clusterMap, parApply, parCapply, parLapply, parLapplyLB, parRapply, parSapply,
-    parSapplyLB
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ, clusterExport, clusterMap,
+    parApply, parCapply, parLapply, parLapplyLB, parRapply, parSapply, parSapplyLB
 
 The following objects are masked from ‘package:stats’:
 
@@ -1784,11 +1777,11 @@ The following objects are masked from ‘package:stats’:
 
 The following objects are masked from ‘package:base’:
 
-    anyDuplicated, append, as.data.frame, basename, cbind, colnames, dirname,
-    do.call, duplicated, eval, evalq, Filter, Find, get, grep, grepl, intersect,
-    is.unsorted, lapply, Map, mapply, match, mget, order, paste, pmax, pmax.int,
-    pmin, pmin.int, Position, rank, rbind, Reduce, rownames, sapply, setdiff, sort,
-    table, tapply, union, unique, unsplit, which, which.max, which.min
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, Filter, Find, get, grep, grepl, intersect, is.unsorted,
+    lapply, Map, mapply, match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply, union,
+    unique, unsplit, which, which.max, which.min
 
 
 Attaching package: ‘S4Vectors’
@@ -1798,7 +1791,7 @@ The following object is masked from ‘package:base’:
     expand.grid
 
 Loading required package: IRanges
-
+Warning: package ‘IRanges’ was built under R version 3.6.2
 Attaching package: ‘IRanges’
 
 The following object is masked from ‘package:grDevices’:
@@ -1816,7 +1809,7 @@ Welcome to Bioconductor
 
 Loading required package: DelayedArray
 Loading required package: matrixStats
-Warning: package ‘matrixStats’ was built under R version 3.6.3
+
 Attaching package: ‘matrixStats’
 
 The following objects are masked from ‘package:Biobase’:
@@ -1824,23 +1817,29 @@ The following objects are masked from ‘package:Biobase’:
     anyMissing, rowMedians
 
 Loading required package: BiocParallel
-
+Warning: multiple methods tables found for ‘type’Warning: multiple methods tables found for ‘splitAsList’
 Attaching package: ‘DelayedArray’
 
 The following objects are masked from ‘package:matrixStats’:
 
     colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
 
+The following object is masked from ‘package:BiocGenerics’:
+
+    type
+
 The following objects are masked from ‘package:base’:
 
     aperm, apply, rowsum
 
-Registered S3 method overwritten by &#39;htmlwidgets&#39;:
+Warning: replacing previous import ‘BiocGenerics::type’ by ‘DelayedArray::type’ when loading ‘SummarizedExperiment’Registered S3 method overwritten by &#39;htmlwidgets&#39;:
   method           from         
   print.htmlwidget tools:rstudio
 Registered S3 method overwritten by &#39;data.table&#39;:
   method           from
-  print.data.table     </code></pre>
+  print.data.table     
+Error: package or namespace load failed for ‘DESeq2’:
+ objects ‘rowSums’, ‘colSums’, ‘rowMeans’, ‘colMeans’ are not exported by &#39;namespace:S4Vectors&#39;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVxdWlyZShnZ3Bsb3QyKVxuYGBgIn0= -->
 <pre class="r"><code>require(ggplot2)</code></pre>
@@ -1857,18 +1856,26 @@ Registered S3 method overwritten by &#39;data.table&#39;:
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVxdWlyZShDb21wbGV4SGVhdG1hcClcbmBgYCJ9 -->
 <pre class="r"><code>require(ComplexHeatmap)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBDb21wbGV4SGVhdG1hcFxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBncmlkXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5Db21wbGV4SGVhdG1hcCB2ZXJzaW9uIDIuMC4wXG5CaW9jb25kdWN0b3IgcGFnZTogaHR0cDovL2Jpb2NvbmR1Y3Rvci5vcmcvcGFja2FnZXMvQ29tcGxleEhlYXRtYXAvXG5HaXRodWIgcGFnZTogaHR0cHM6Ly9naXRodWIuY29tL2pva2VyZ29vL0NvbXBsZXhIZWF0bWFwXG5Eb2N1bWVudGF0aW9uOiBodHRwOi8vam9rZXJnb28uZ2l0aHViLmlvL0NvbXBsZXhIZWF0bWFwLXJlZmVyZW5jZVxuXG5JZiB5b3UgdXNlIGl0IGluIHB1Ymxpc2hlZCByZXNlYXJjaCwgcGxlYXNlIGNpdGU6XG5HdSwgWi4gQ29tcGxleCBoZWF0bWFwcyByZXZlYWwgcGF0dGVybnMgYW5kIGNvcnJlbGF0aW9ucyBpbiBtdWx0aWRpbWVuc2lvbmFsIFxuICBnZW5vbWljIGRhdGEuIEJpb2luZm9ybWF0aWNzIDIwMTYuXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBDb21wbGV4SGVhdG1hcFxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBncmlkXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5Db21wbGV4SGVhdG1hcCB2ZXJzaW9uIDIuMTMuM1xuQmlvY29uZHVjdG9yIHBhZ2U6IGh0dHA6Ly9iaW9jb25kdWN0b3Iub3JnL3BhY2thZ2VzL0NvbXBsZXhIZWF0bWFwL1xuR2l0aHViIHBhZ2U6IGh0dHBzOi8vZ2l0aHViLmNvbS9qb2tlcmdvby9Db21wbGV4SGVhdG1hcFxuRG9jdW1lbnRhdGlvbjogaHR0cDovL2pva2VyZ29vLmdpdGh1Yi5pby9Db21wbGV4SGVhdG1hcC1yZWZlcmVuY2VcblxuSWYgeW91IHVzZSBpdCBpbiBwdWJsaXNoZWQgcmVzZWFyY2gsIHBsZWFzZSBjaXRlIGVpdGhlciBvbmU6XG4tIEd1LCBaLiBDb21wbGV4IEhlYXRtYXAgVmlzdWFsaXphdGlvbi4gaU1ldGEgMjAyMi5cbi0gR3UsIFouIENvbXBsZXggaGVhdG1hcHMgcmV2ZWFsIHBhdHRlcm5zIGFuZCBjb3JyZWxhdGlvbnMgaW4gbXVsdGlkaW1lbnNpb25hbCBcbiAgICBnZW5vbWljIGRhdGEuIEJpb2luZm9ybWF0aWNzIDIwMTYuXG5cblxuVGhlIG5ldyBJbnRlcmFjdGl2ZUNvbXBsZXhIZWF0bWFwIHBhY2thZ2UgY2FuIGRpcmVjdGx5IGV4cG9ydCBzdGF0aWMgXG5jb21wbGV4IGhlYXRtYXBzIGludG8gYW4gaW50ZXJhY3RpdmUgU2hpbnkgYXBwIHdpdGggemVybyBlZmZvcnQuIEhhdmUgYSB0cnkhXG5cblRoaXMgbWVzc2FnZSBjYW4gYmUgc3VwcHJlc3NlZCBieTpcbiAgc3VwcHJlc3NQYWNrYWdlU3RhcnR1cE1lc3NhZ2VzKGxpYnJhcnkoQ29tcGxleEhlYXRtYXApKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuIn0= -->
 <pre><code>Loading required package: ComplexHeatmap
 Loading required package: grid
 ========================================
-ComplexHeatmap version 2.0.0
+ComplexHeatmap version 2.13.3
 Bioconductor page: http://bioconductor.org/packages/ComplexHeatmap/
 Github page: https://github.com/jokergoo/ComplexHeatmap
 Documentation: http://jokergoo.github.io/ComplexHeatmap-reference
 
-If you use it in published research, please cite:
-Gu, Z. Complex heatmaps reveal patterns and correlations in multidimensional 
-  genomic data. Bioinformatics 2016.
+If you use it in published research, please cite either one:
+- Gu, Z. Complex Heatmap Visualization. iMeta 2022.
+- Gu, Z. Complex heatmaps reveal patterns and correlations in multidimensional 
+    genomic data. Bioinformatics 2016.
+
+
+The new InteractiveComplexHeatmap package can directly export static 
+complex heatmaps into an interactive Shiny app with zero effort. Have a try!
+
+This message can be suppressed by:
+  suppressPackageStartupMessages(library(ComplexHeatmap))
 ========================================</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVxdWlyZShjaXJjbGl6ZSlcbmBgYCJ9 -->
@@ -2018,20 +2025,12 @@ Ramos_1O2_PlusCyclo_3 &quot;0&quot;                  &quot;1&quot;              
 <h1>Start DESeq2 analysis</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGRzIDwtIERFU2VxRGF0YVNldEZyb21NYXRyaXgoY291bnREYXRhID0gY3RzLCBjb2xEYXRhID0gZGYsIGRlc2lnbiA9IH4wICsgQ29uZGl0aW9uKVxuZGRzXG5gYGAifQ== -->
-<pre class="r"><code>dds &lt;- DESeqDataSetFromMatrix(countData = cts, colData = df, design = ~0 + Condition)
-dds</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGRzIDwtIERFU2VxRGF0YVNldEZyb21NYXRyaXgoY291bnREYXRhID0gY3RzLCBjb2xEYXRhID0gZGYsIGRlc2lnbiA9IH4wICsgQ29uZGl0aW9uKVxuYGBgIn0= -->
+<pre class="r"><code>dds &lt;- DESeqDataSetFromMatrix(countData = cts, colData = df, design = ~0 + Condition)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiY2xhc3M6IERFU2VxRGF0YVNldCBcbmRpbTogNTY4MzIgOSBcbm1ldGFkYXRhKDEpOiB2ZXJzaW9uXG5hc3NheXMoMSk6IGNvdW50c1xucm93bmFtZXMoNTY4MzIpOiBERFgxMUwxIFdBU0g3UCAuLi4gTVQtVFQgTVQtVFBcbnJvd0RhdGEgbmFtZXMoMCk6XG5jb2xuYW1lcyg5KTogUmFtb3NfMTlPMl9Ob0N5Y2xvXzEgUmFtb3NfMTlPMl9Ob0N5Y2xvXzIgLi4uIFJhbW9zXzFPMl9QbHVzQ3ljbG9fMlxuICBSYW1vc18xTzJfUGx1c0N5Y2xvXzNcbmNvbERhdGEgbmFtZXMoNik6IENvbmRpdGlvbiBPMiAuLi4gMTlwZXJjZW50TzIuQ3lBbWludXMgMXBlcmNlbnRPMi5DeUFwbHVzXG4ifQ== -->
-<pre><code>class: DESeqDataSet 
-dim: 56832 9 
-metadata(1): version
-assays(1): counts
-rownames(56832): DDX11L1 WASH7P ... MT-TT MT-TP
-rowData names(0):
-colnames(9): Ramos_19O2_NoCyclo_1 Ramos_19O2_NoCyclo_2 ... Ramos_1O2_PlusCyclo_2
-  Ramos_1O2_PlusCyclo_3
-colData names(6): Condition O2 ... 19percentO2.CyAminus 1percentO2.CyAplus</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gREVTZXFEYXRhU2V0RnJvbU1hdHJpeChjb3VudERhdGEgPSBjdHMsIGNvbERhdGEgPSBkZiwgZGVzaWduID0gfjAgKyAgOiBcbiAgY291bGQgbm90IGZpbmQgZnVuY3Rpb24gXCJERVNlcURhdGFTZXRGcm9tTWF0cml4XCJcbiJ9 -->
+<pre><code>Error in DESeqDataSetFromMatrix(countData = cts, colData = df, design = ~0 +  : 
+  could not find function &quot;DESeqDataSetFromMatrix&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
