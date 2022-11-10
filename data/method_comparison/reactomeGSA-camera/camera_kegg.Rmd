@@ -1,0 +1,163 @@
+---
+title: "CAMERA + Fisher p-value combination"
+output: html_notebook
+---
+
+
+```{r}
+require(limma)
+proteomics <- read.csv("bonita_proteomics.csv", row.names = 1, check.names = 1)
+phosphoproteomics <- read.csv("bonita_phosphoproteomics.csv", row.names = 1, check.names = 0)
+transcriptomics <- read.csv("bonita_transcriptomics.csv", row.names = 1, check.names =1)
+contrasts <- read.csv("concatenated_conditions_CAMERA.csv", row.names = 1, check.names = FALSE)
+prot_contrast <- contrasts[colnames(proteomics),]
+mrna_contrast <- contrasts[colnames(transcriptomics),]
+phosph_contrast <- contrasts[colnames(phosphoproteomics),]
+kegg <- clusterProfiler::read.gmt('kegg_networks_edited.gmt')
+#keggList <- setNames(lapply(unique(kegg$ont), function(x){return(kegg$gene[kegg$ont == x])}), unique(kegg$ont))
+keggList <- setNames(lapply(unique(as.vector(kegg$term)), function(x){return(kegg$gene[kegg$term == x])}), unique(kegg$term))
+```
+
+
+# Proteomics
+
+
+```{r}
+colnames(prot_contrast) <- make.names(colnames(prot_contrast))
+camera_prot1 <- camera(y=proteomics, index = ids2indices(keggList, rownames(proteomics)),design=prot_contrast, contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2NoCyA"), levels = make.names(colnames(prot_contrast))))
+camera_prot1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
+camera_prot2 <- camera(y=proteomics, index = ids2indices(keggList, rownames(proteomics)),design=prot_contrast, contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(prot_contrast))))
+camera_prot2$Contrast <- "X19O2NoCyA - X1O2PlusCyA"
+camera_prot3 <- camera(y=proteomics, index = ids2indices(keggList, rownames(proteomics)),design=prot_contrast, contrast = makeContrasts(contrasts = c("X1O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(prot_contrast)))) 
+camera_prot3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
+
+camera_prot1$GeneSet <- rownames(camera_prot1)
+rownames(camera_prot1) <- NULL
+camera_prot2$GeneSet <- rownames(camera_prot2)
+rownames(camera_prot2) <- NULL
+camera_prot3$GeneSet <- rownames(camera_prot3)
+rownames(camera_prot3) <- NULL
+
+camera_prot <- rbind(camera_prot1, camera_prot2, camera_prot3)
+camera_prot$Method <- 'Proteomics'
+head(camera_prot)
+```
+
+# Phosphoproteomics
+
+```{r}
+
+colnames(phosph_contrast) <- make.names(colnames(phosph_contrast))
+camera_phosph1 <- camera(y=phosphoproteomics, index = ids2indices(keggList, rownames(phosphoproteomics)),design=phosph_contrast, contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2NoCyA"), levels = make.names(colnames(phosph_contrast))))
+camera_phosph1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
+camera_phosph2 <- camera(y=phosphoproteomics, index = ids2indices(keggList, rownames(phosphoproteomics)),design=phosph_contrast,  contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(phosph_contrast))))
+camera_phosph2$Contrast <- "X19O2NoCyA - X1O2PlusCyA"
+camera_phosph3 <- camera(y=phosphoproteomics, index = ids2indices(keggList, rownames(phosphoproteomics)),design=phosph_contrast,  contrast = makeContrasts(contrasts = c("X1O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(phosph_contrast))))
+camera_phosph3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
+
+camera_phosph1$GeneSet <- rownames(camera_phosph1)
+rownames(camera_prot1) <- NULL
+camera_phosph2$GeneSet <- rownames(camera_phosph2)
+rownames(camera_phosph2) <- NULL
+camera_phosph3$GeneSet <- rownames(camera_phosph3)
+rownames(camera_phosph3) <- NULL
+
+
+camera_phosph <- rbind(camera_phosph1, camera_phosph2, camera_phosph3)
+camera_phosph$Method <- 'Phosphoproteomics'
+head(camera_phosph)
+
+```
+
+# Transcriptomics
+
+```{r}
+colnames(mrna_contrast) <- make.names(colnames(mrna_contrast))
+camera_mrna1 <- camera(y=transcriptomics, index = ids2indices(keggList, rownames(transcriptomics)),design=mrna_contrast, contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2NoCyA"), levels = make.names(colnames(mrna_contrast))))
+camera_mrna1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
+camera_mrna2 <- camera(y=transcriptomics, index = ids2indices(keggList, rownames(transcriptomics)),design=mrna_contrast,  contrast = makeContrasts(contrasts = c("X19O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(mrna_contrast))))
+camera_mrna2$Contrast <- "X19O2NoCyA - X1O2PlusCyA"
+camera_mrna3 <- camera(y=transcriptomics, index = ids2indices(keggList, rownames(transcriptomics)),design=mrna_contrast,  contrast = makeContrasts(contrasts = c("X1O2NoCyA - X1O2PlusCyA"), levels = make.names(colnames(mrna_contrast)))) 
+camera_mrna3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
+
+camera_mrna1$GeneSet <- rownames(camera_mrna1)
+rownames(camera_mrna1) <- NULL
+camera_mrna2$GeneSet <- rownames(camera_mrna2)
+rownames(camera_mrna2) <- NULL
+camera_mrna3$GeneSet <- rownames(camera_mrna3)
+rownames(camera_mrna3) <- NULL
+
+
+camera_mrna <- rbind(camera_mrna1, camera_mrna2, camera_mrna3)
+camera_mrna$Method <- 'Transcriptomics'
+head(camera_mrna)
+```
+```{r}
+camera_allResults <- rbind(camera_prot, camera_phosph, camera_mrna)
+camera_allResults$negativelog10FDR <- -1*log10(camera_allResults$FDR)
+#camera_allResults$Pathway <- gsub("KEGG|_|\\d+$", " ", camera_allResults$Pathway)
+camera_allResults$Pathway <- camera_allResults$GeneSet
+```
+
+
+# Combine p-values
+
+```{r}
+
+require(metap)
+temp <- as.data.frame(reshape2::acast(data = camera_allResults, Contrast ~ Pathway , value.var = 'FDR', fun.aggregate = function(x){return(metap::sumz(x)$p)}))
+temp <- as.data.frame(reshape2::melt(as.matrix(temp)))
+temp$Method <- "Combined"
+colnames(temp) <- c("Contrast", "Pathway", "FDR", "Method")
+temp$negativelog10FDR <- (-1)*log10(temp$FDR)
+hist(temp$FDR)
+write.csv(temp, "camera_combinedPvalues.csv")
+
+```
+
+```{r}
+
+camera_allResults <- rbind(camera_allResults[,colnames(temp)], temp)
+write.csv(camera_allResults, file = 'camera_allResults.csv')
+head(camera_allResults)
+
+```
+
+```{r}
+temp <- camera_allResults$FDR < 0.05 #PValue < 0.01
+camera_allResults <- na.omit(camera_allResults[temp,])
+camera_allResults
+```
+
+# Plot
+
+```{r}
+require(ggplot2)
+#camera_allResults$Pathway <- str_to_title(trimws(gsub("\\s\\-\\sHomo\\sSapiens\\s\\(Human\\)", "", camera_allResults$Pathway)))
+ggplot(camera_allResults) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method') + theme_bw()
+ggsave(filename = "camera_allResults.svg", width = 12, height = 10, units = 'in')
+ggsave(filename = 'camera_allResults.png', width = 12, height =10, units = 'in')
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,234 @@
+---
+title: "leapR"
+output: html_notebook
+---
+
+# LeapR
+
+
+### Figure 2
+We will compare the ability of transcriptomics, proteomics, and phosphoproteomics to inform about
+differences between short and long surviving patient groups.
+
+This spans the multiple enrichment methods in leapR and also includes multi-omics
+
+The resulting heatmap is presented as Figure 2 in the paper.
+
+```{r}
+proteomics <- read.csv("bonita_proteomics.csv", row.names = 1, check.names = 1)
+phosphoproteomics <- read.csv("bonita_phosphoproteomics.csv", row.names = 1, check.names = 0)
+transcriptomics <- read.csv("bonita_transcriptomics.csv", row.names = 1, check.names =1)
+contrasts <- read.csv("concatenated_conditions_CAMERA.csv", row.names = 1, check.names = FALSE)
+prot_contrast <- contrasts[colnames(proteomics),]
+mrna_contrast <- contrasts[colnames(transcriptomics),]
+phosph_contrast <- contrasts[colnames(phosphoproteomics),]
+```
+# load the single omic and multi-omic pathway databases
+
+```{r}
+
+require(leapR)
+require(stringr)
+#data("krbpaths")
+#data("mo_krbpaths")
+#data('msigdb')
+krbpaths <- leapR::read_gene_sets("kegg_networks_edited.gmt")#("c2.cp.kegg.v7.5.1.symbols.gmt")
+krbpaths$names <- str_to_title(trimws(gsub("\\s\\-\\sHomo\\sSapiens\\s\\(Human\\)", "", krbpaths$names)))
+mo_krbpaths <- leapR::read_gene_sets("kegg_networks_edited.gmt")#("c2.cp.kegg.v7.5.1.symbols.gmt")
+mo_krbpaths$names <- str_to_title(trimws(gsub("\\s\\-\\sHomo\\sSapiens\\s\\(Human\\)", "", mo_krbpaths$names)))
+#msigdb$names <- msigdb$names[grepl("KEGG", msigdb$names)]
+#msigdb$desc <- msigdb$desc[grepl("KEGG", msigdb$names)]
+#msigdb$sizes <- msigdb$sizes[grepl("KEGG", msigdb$names)]
+#msigdb$matrix <- msigdb$matrix[msigdb$names[grepl("KEGG", msigdb$names)]]
+#mo_krbpaths$names <- mo_krbpaths$names[grepl("KEGG", mo_krbpaths$names)]
+#mo_krbpaths$desc <- mo_krbpaths$desc[grepl("KEGG", mo_krbpaths$names)]
+#mo_krbpaths$sizes <- mo_krbpaths$sizes[grepl("KEGG", mo_krbpaths$names)]
+#mo_krbpaths$matrix <- mo_krbpaths$matrix[mo_krbpaths$names[grepl("KEGG", mo_krbpaths$names)]]
+```
+
+# Run leapR analysis
+
+```{r}
+run_leapR <- function(shortlist, longlist, contrast1, contrast2) {
+  # comparison enrichment in transcriptional data
+  transdata.comp.enrichment.svl = leapR(
+    geneset = krbpaths,
+    enrichment_method = 'enrichment_comparison',
+    datamatrix = transcriptomics,
+    primary_columns = intersect(colnames(transcriptomics), shortlist),
+    secondary_columns = intersect(colnames(transcriptomics), longlist), min_p_threshold=1
+  )
+  transdata.comp.enrichment.svl$Method <- "Transcriptomics"
+  
+  
+  # comparison enrichment in proteomics data
+  # this is the same code used above, just repeated here for clarity
+  protdata.comp.enrichment.svl = leapR(
+    geneset = krbpaths,
+    enrichment_method = 'enrichment_comparison',
+    datamatrix = proteomics,
+    primary_columns = intersect(colnames(proteomics), shortlist),
+    secondary_columns = intersect(colnames(proteomics), longlist), min_p_threshold=1
+  )
+  protdata.comp.enrichment.svl$Method <- "Proteomics"
+  
+  # comparison enrichment in phosphoproteomics data
+  phosphodata.comp.enrichment.svl = leapR(
+    geneset = krbpaths,
+    enrichment_method = 'enrichment_comparison',
+    datamatrix = phosphoproteomics,
+    primary_columns = intersect(colnames(phosphoproteomics), shortlist),
+    secondary_columns = intersect(colnames(phosphoproteomics), longlist), min_p_threshold=1
+  )
+  phosphodata.comp.enrichment.svl$Method <- "Phosphoproteomics"
+  
+  prot2 <- proteomics
+  colnames(prot2) <-
+    unlist(lapply(colnames(prot2), function(x) {
+      return(names(as.list(contrasts[x, ])[as.list(contrasts[x, ]) == 1]))
+    }))
+  mrna2 <- transcriptomics
+  colnames(mrna2) <-
+    unlist(lapply(colnames(mrna2), function(x) {
+      return(names(as.list(contrasts[x, ])[as.list(contrasts[x, ]) == 1]))
+    }))
+  
+  phosph2 <- phosphoproteomics
+  colnames(phosph2) <-
+    unlist(lapply(colnames(phosph2), function(x) {
+      return(names(as.list(contrasts[x, ])[as.list(contrasts[x, ]) == 1]))
+    }))
+  
+  
+  combodata <-
+    combine_omics(
+      proteomics = prot2,
+      transcriptomics = mrna2,
+      phospho = phosph2,
+      id_column = 1
+    )
+  
+  # comparison enrichment for combodata
+  combodata.enrichment.svl = leapR(
+    geneset = mo_krbpaths,
+    enrichment_method = 'enrichment_comparison',
+    datamatrix = combodata,
+    primary_columns = c(contrast1),
+    secondary_columns = c(contrast2),
+    id_column = 1, min_p_threshold=1
+  )
+  combodata.enrichment.svl$pvalue[is.na(combodata.enrichment.svl$pvalue)] <-
+    1
+  #combodata.enrichment.svl <- combodata.enrichment.svl[combodata.enrichment.svl$pvalue < 1,]
+  head(combodata.enrichment.svl)
+  min(combodata.enrichment.svl$pvalue)
+  max(combodata.enrichment.svl$pvalue)
+
+  combodata.enrichment.svl$Method <- "Combined"
+  head(combodata.enrichment.svl)
+  min(combodata.enrichment.svl$pvalue)
+  max(combodata.enrichment.svl$pvalue)
+  
+  #transdata.comp.enrichment.svl <- transdata.comp.enrichment.svl[grepl("KEGG", rownames(transdata.comp.enrichment.svl)), ]
+  temp <- !is.na(transdata.comp.enrichment.svl$BH_pvalue) #PValue < 0.01
+  transdata.comp.enrichment.svl <- transdata.comp.enrichment.svl[temp,]
+  transdata.comp.enrichment.svl$BH_pvalue <- p.adjust(transdata.comp.enrichment.svl$pvalue, "BH")
+  
+  #protdata.comp.enrichment.svl <- protdata.comp.enrichment.svl[grepl("KEGG", rownames(protdata.comp.enrichment.svl)), ]
+  temp <- !is.na(protdata.comp.enrichment.svl$BH_pvalue) #PValue < 0.01
+  protdata.comp.enrichment.svl <- protdata.comp.enrichment.svl[temp,]
+  
+  protdata.comp.enrichment.svl$BH_pvalue <- p.adjust(protdata.comp.enrichment.svl$pvalue, "BH")
+  
+  
+  #phosphodata.comp.enrichment.svl <- phosphodata.comp.enrichment.svl[grepl("KEGG", rownames(phosphodata.comp.enrichment.svl)), ]
+  temp <- !is.na(phosphodata.comp.enrichment.svl$BH_pvalue) #PValue < 0.01
+  phosphodata.comp.enrichment.svl <- phosphodata.comp.enrichment.svl[temp,]
+  
+  phosphodata.comp.enrichment.svl$BH_pvalue <- p.adjust(phosphodata.comp.enrichment.svl$pvalue, "BH")
+  combodata.enrichment.svl <- combodata.enrichment.svl[grepl("KEGG", rownames(combodata.enrichment.svl)), ]
+  temp <- !is.na(combodata.enrichment.svl$BH_pvalue) #PValue < 0.01
+  combodata.enrichment.svl <- combodata.enrichment.svl[temp,]
+  
+  combodata.enrichment.svl$BH_pvalue <- p.adjust(combodata.enrichment.svl$pvalue, "BH")
+  
+  transdata.comp.enrichment.svl$Pathway <- rownames(transdata.comp.enrichment.svl)
+  protdata.comp.enrichment.svl$Pathway <- rownames(protdata.comp.enrichment.svl)
+  phosphodata.comp.enrichment.svl$Pathway <- rownames(phosphodata.comp.enrichment.svl)
+  combodata.enrichment.svl$Pathway <- rownames(combodata.enrichment.svl)
+  
+  results1 <-
+    rbind(
+      transdata.comp.enrichment.svl,
+      protdata.comp.enrichment.svl,
+      phosphodata.comp.enrichment.svl,
+      combodata.enrichment.svl
+    )
+  return (results1)
+}
+```
+
+# Contrast: "X19O2NoCyA - X1O2NoCyA"
+
+``` {r, echo=TRUE, warning=FALSE, message=FALSE}
+shortlist <- rownames(contrasts)[contrasts$`19O2NoCyA` == 1]
+longlist <- rownames(contrasts)[contrasts$`1O2NoCyA` == 1]
+contrast1 <- '19O2NoCyA'
+contrast2 <- '1O2NoCyA'
+results1 <- run_leapR(shortlist, longlist, contrast1, contrast2)
+results1$Contrast <- "X19O2NoCyA - X1O2NoCyA"
+head(results1)
+```
+# Contrast: "X1O2PlusCyA - X19O2NoCyA"
+
+```{r}
+shortlist <- rownames(contrasts)[contrasts$`1O2PlusCyA` == 1]
+longlist <- rownames(contrasts)[contrasts$`1O2NoCyA` == 1]
+contrast1 <- '1O2PlusCyA'
+contrast2 <- '19O2NoCyA'
+results2 <- run_leapR(shortlist, longlist, contrast1, contrast2)
+results2$Contrast <- "X1O2PlusCyA - X19O2NoCyA"
+head(results2)
+```
+# Contrast: "X1O2NoCyA - X1O2PlusCyA"
+
+```{r}
+shortlist <- rownames(contrasts)[contrasts$`1O2NoCyA` == 1]
+longlist <- rownames(contrasts)[contrasts$`1O2PlusCyA` == 1]
+contrast1 <- '1O2NoCyA'
+contrast2 <- '19O2PlusCyA'
+results3 <- run_leapR(shortlist, longlist, contrast1, contrast2)
+results3$Contrast <- "X1O2NoCyA - X1O2PlusCyA"
+head(results3)
+```
+
+
+```{r}
+results <- rbind(results1, results2, results3)
+
+
+results$negativelog10pvalue <- (-1)*log10(results$pvalue)
+results$negativelog10FDR <- (-1)*log10(results$BH_pvalue)
+temp <- !is.na(results$BH_pvalue) #PValue < 0.01
+results <- results[temp,]
+write.csv(results, "leapR_allResults.csv")
+
+print(c(min(results$BH_pvalue[results$Method == "Transcriptomics"]), max(results$BH_pvalue[results$Method == "Transcriptomics"])))
+print(c(min(results$BH_pvalue[results$Method == "Proteomics"]), max(results$BH_pvalue[results$Method == "Proteomics"])))
+
+temp <- results$BH_pvalue < 0.05 #PValue < 0.01
+#temp <- (results$pvalue < 0.05 & results$Method %in% c("Proteomics", "Transcriptomics")) | (results$BH_pvalue < 0.05 &results$Method %in% c("Phosphoproteomics"))
+results <- results[temp,]
+results$Pathway <- gsub("KEGG|_|\\d+$", " ", results$Pathway)
+head(results)
+dim(results)
+```
+# Plot results
+
+```{r}
+require(ggplot2)
+ggplot(results) + geom_point(aes(x=negativelog10FDR, y=Pathway, color=Contrast)) + facet_wrap(facets = 'Method', nrow = 1) + theme_bw() + xlab("-log10(FDR-corrected P value)")
+ggsave(filename = "leapR_allResults.svg", width = 12, height = 10, units = 'in')
+ggsave(filename = "leapR_allResults.png", width = 12, height = 10, units = 'in')
+```
+
