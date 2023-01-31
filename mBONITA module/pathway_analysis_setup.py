@@ -542,7 +542,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("-makeMetaNetwork", metavar='makemetaNetwork', help = "Should the networks in the paths file be composed to make a combined network?")
     parser.add_argument("--data")
-    parser.add_argument("-customNetwork", metavar = 'customNetwork', default='False', type=str)
+    parser.add_argument("-customNetwork", metavar = 'customNetwork', default='False', type=str, help = "Should mBONITA use custom networks that are in graphml format in the current working directory? This option only accepts True or False; other values will throw an error.")
     results = parser.parse_args()
     dataName = results.data
     gmtName = results.gmt
@@ -554,7 +554,7 @@ if __name__ == "__main__":
     makemetaNetwork = results.makeMetaNetwork
     sss, geneDict, cvDict = readFpkmData(dataName, results.sep)  # read in data
     pickle.dump( sss, open( 'sss.pickle', "wb" ) ) # save data in correct format for runs
-    """
+    
     if org == "human":
         if gmtName == "None":
             print(
@@ -583,6 +583,5 @@ if __name__ == "__main__":
             )  # checked
             if makemetaNetwork:
                 makemetaNetwork(pathList, geneDict)
-    """
-    if customNetwork:
+    if customNetwork == "True":
         retrieveGraph_customGraph( geneDict, customNetwork) # generate gpickles needed for pathway analysis

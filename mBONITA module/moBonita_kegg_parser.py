@@ -374,11 +374,74 @@ def find_pathways_kegg(
                 pickle.dump(pathwaySampleList, open(coder + "_sss.pickle", "wb"))
     return pathwayDict
 
+def processMetaNetwork(metaNetwork, geneList):
+    
+    removeNodeList = [x for x in list(metaNetwork.nodes()) if not x in geneList]
+    for rm in removeNodeList:
+        for start in metaNetwork.predecessors(rm):
+            for finish in metaNetwork.successors(rm):
+                edge1 = metaNetwork.get_edge_data(start, rm)["signal"]
+                edge2 = metaNetwork.get_edge_data(rm, finish)["signal"]
+                inhCount = 0
+                if edge1 == "i":
+                    inhCount = inhCount + 1
+                if edge2 == "i":
+                    inhCount = inhCount + 1
+                if inhCount == 1:
+                    metaNetwork.add_edge(start, finish, signal="i")
+                else:
+                    metaNetwork.add_edge(start, finish, signal="a")
+        metaNetwork.remove_node(rm)
+    metaNetwork.remove_nodes_from(
+        [
+            n
+            for n in metaNetwork
+            if n
+            not in set(max(nx.connected_components(metaNetwork.to_undirected()), key=len))
+        ]
+    )
+    return metaNetwork
+
+def providedNetworks(coder, geneDict):
+    geneList=geneDict.keys()
+    graph = nx.read_graphml(coder)
+    print(coder)
+    graph = processMetaNetwork(graph, geneList)
+    print(
+    "Provided Network: ",
+    coder,
+    " Nodes: ",
+    len(graph.nodes()),
+    " Edges: ",
+    len(graph.edges()),
+    )
+    minimumOverlap = len(graph.nodes())
+    test = minimumOverlap + 1
+    #nx.write_graphml(graph, coder + "_before.graphml")
+    if (
+        test > minimumOverlap and len(graph.edges()) > 0
+    ):  # if there are at least minimumOverlap genes shared between the network and the genes in the dataset
+        nx.write_graphml(graph,coder+'_processed.graphml') # write graph out
+        #nx.write_graphml(graph, coder + ".graphml")
+        nx.write_gpickle(graph, coder + ".gpickle")
+        print(
+            "nodes: ",
+            str(len(graph.nodes())),
+            ",   edges:",
+            str(len(graph.edges())),
+        )
+    # save the removed nodes and omics data values for just those nodes in the particular pathway
+    pathwaySampleList = [{} for q in range(len(geneDict[list(graph.nodes())[0]]))]
+    for noder in list(graph.nodes()):
+        for jn in range(len(pathwaySampleList)):
+            pathwaySampleList[jn][noder] = geneDict[noder][jn]
+        pickle.dump(pathwaySampleList, open(coder + "_sss.pickle", "wb"))
+
 if __name__ == "__main__":
     # read in options
     parser = argparse.ArgumentParser()
     parser.set_defaults(
-        sep=",", org="hsa", pathways="None"
+        sep=",", org="hsa", pathways="None", usePredefined = "False"
     )
     parser.add_argument(
         "-sep",
@@ -399,30 +462,40 @@ if __name__ == "__main__":
         help="File with list of pathways to be considered each on one line",
     )
     parser.add_argument("-data", "--data", help="Delimited data file with columns = samples and rows = genes")
+    parser.add_argument('-usePredefined', '--usePredefined', help = "use graphml files in the current working directory")
     results = parser.parse_args()
     dataName = results.data
     org = results.org
     paths = results.pathways
+    usePredefined = results.usePredefined
     sss, geneDict = readFpkmData(dataName, results.sep)  # read in data
     pickle.dump( sss, open( 'sss.pickle', "wb" ) ) # save data in correct format for runs
-    if paths == "None":
+    if paths == "None" and usePredefined == "False":
         find_pathways_kegg(
             geneList=geneDict.keys(),
             preDefList=[],
             organism=org
         )
     else:
-        with open(paths, "r") as inputfile:
-            lines = inputfile.readlines()
-        pathList = []
-        for line in lines:
-            for element in line.split(","):
-                pathList.append(element.strip())
-        find_pathways_kegg(
-            geneList=geneDict.keys(),
-            preDefList=pathList,
-            organism=org
-        )
+        if paths != "None" and usePredefined == "False":
+            with open(paths, "r") as inputfile:
+                lines = inputfile.readlines()
+            pathList = []
+            for line in lines:
+                for element in line.split(","):
+                    pathList.append(element.strip())
+            find_pathways_kegg(
+                geneList=geneDict.keys(),
+                preDefList=pathList,
+                organism=org
+            )
+        else:
+            if usePredefined == "True":
+                from glob import glob
+                graphs = tuple(glob("*.graphml"))
+                for coder in graphs:
+                    #print(nx.get_edge_attributes(nx.read_graphml(coder), "signal"))
+                    providedNetworks(coder, geneDict)
 
 
 """
