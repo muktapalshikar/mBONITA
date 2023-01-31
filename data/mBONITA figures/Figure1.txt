@@ -1,0 +1,17 @@
+(3032, 53)
+['Gene', 'Gr1_F1: 126, Sample, 1', 'Gr1_F2: 126, Sample, 1', 'Gr1_F3: 126, Sample, 1', 'Gr1_F1: 128C, Sample, 4', 'Gr1_F2: 128C, Sample, 4', 'Gr1_F3: 128C, Sample, 4', 'Gr2_F1: 128N, Control, 781', 'Gr2_F2: 128N, Control, 781', 'Gr2_F3: 128N, Control, 781']
+(2271, 9) (17396, 9) (5160, 9)
+(1505, 9) (1505, 9) (1505, 9)
+SpearmanrResult(correlation=0.5886991599573645, pvalue=0.0) (0.553364370771462, 0.0)
+SpearmanrResult(correlation=0.15014123129749696, pvalue=4.039661181923027e-69) (0.14463551187554077, 3.1719057597636444e-64)
+SpearmanrResult(correlation=0.1702839941161167, pvalue=1.1722744915653633e-88) (0.1628388943509297, 3.892339621902827e-81)
+Traceback (most recent call last):
+  File "Figure1.py", line 635, in <module>
+    trans_prot = getOverlapGraph(netList=[transcriptomics_net, proteomics_net])
+  File "Figure1.py", line 622, in getOverlapGraph
+    overlapNet = nx.intersection_all(netList)
+  File "/software/anaconda3/2020.11/lib/python3.8/site-packages/networkx/algorithms/operators/all.py", line 162, in intersection_all
+    R = nx.intersection(R, H)
+  File "/software/anaconda3/2020.11/lib/python3.8/site-packages/networkx/algorithms/operators/binary.py", line 172, in intersection
+    raise nx.NetworkXError("Node sets of graphs are not equal")
+networkx.exception.NetworkXError: Node sets of graphs are not equal

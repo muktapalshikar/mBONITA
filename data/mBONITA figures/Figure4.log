@@ -1,0 +1,7 @@
+SpearmanrResult(correlation=0.6867837115377149, pvalue=9.626829659199569e-135) (0.6690997226118638, 1.6526220232161595e-125)
+SpearmanrResult(correlation=0.508371074424687, pvalue=3.703227535470222e-64) (0.5128060894355442, 1.957875466792241e-65)
+SpearmanrResult(correlation=0.5458940381785978, pvalue=1.397722685407209e-75) (0.5640169041501858, 1.229904637581181e-81)
+Traceback (most recent call last):
+  File "Figure4.py", line 533, in <module>
+    commonNodesRules = df[df.nodeList.isin(
+NameError: name 'df' is not defined

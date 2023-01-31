@@ -274,8 +274,6 @@ print(len(outputfiles), outputfiles[0:5])
 #  - randomERSIndividual - random individual from the ERS
 #  - minLocalSearchError - lowest error for the rules tried for each node
 
-# In[ ]:
-
 
 import pickle
 from utils import *
