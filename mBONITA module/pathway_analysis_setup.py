@@ -1,7 +1,7 @@
 # import python packages
 import networkx as nx
 import operator
-
+from glob import glob
 import scipy.stats as stat
 import requests
 import argparse as argparse
@@ -457,7 +457,7 @@ def retrieveGraph_customGraph(geneDict, customNetwork):
     coder=customNetwork[:-8]
     
     graph = simplifyNetworkpathwayAnalysis(
-        graph, geneDict, coder
+        graph, geneDict#, coder
     )  # simplify graph to nodes in dataset
     nx.write_graphml(graph, coder + ".graphml")  # write graph out as graphml
     nx.write_gpickle(graph, coder + ".gpickle")  # write graph out as gpickle
@@ -528,7 +528,7 @@ if __name__ == "__main__":
         "-t", action="store_const", const="\t", dest="sep", help="Tab delimited?"
     )
     parser.add_argument(
-        "-org", "--org", metavar="org", help="How are columns in datafile specified"
+        "-org", "--org", metavar="org", help="three -letter code for organism - please see KEGG documentation for all code names"
     )
     parser.add_argument(
         "-paths",
@@ -540,9 +540,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "-gmt", "--gmt", metavar="gmt", help="GMT file with human pathways from msigDB"
     )
-    parser.add_argument("-makeMetaNetwork", metavar='makemetaNetwork', help = "Should the networks in the paths file be composed to make a combined network?")
+    parser.add_argument("-makeMetaNetwork", "--makeMetaNetwork", metavar='makemetaNetwork', help = "Should the networks in the paths file be composed to make a combined network?")
     parser.add_argument("--data")
-    parser.add_argument("-customNetwork", metavar = 'customNetwork', default='False', type=str, help = "Should mBONITA use custom networks that are in graphml format in the current working directory? This option only accepts True or False; other values will throw an error.")
+    parser.add_argument("-customNetwork", "--customNetwork", metavar = 'customNetwork', default='False', type=str)
     results = parser.parse_args()
     dataName = results.data
     gmtName = results.gmt
@@ -553,8 +553,7 @@ if __name__ == "__main__":
     customNetwork = results.customNetwork
     makemetaNetwork = results.makeMetaNetwork
     sss, geneDict, cvDict = readFpkmData(dataName, results.sep)  # read in data
-    pickle.dump( sss, open( 'sss.pickle', "wb" ) ) # save data in correct format for runs
-    
+    pickle.dump( sss, open( 'sss.pickle', "wb" ) ) # save data in correct format for runs  
     if org == "human":
         if gmtName == "None":
             print(
@@ -578,10 +577,11 @@ if __name__ == "__main__":
             for line in lines:
                 for element in line.split(","):
                     pathList.append(element.strip())
+            print(pathList)
             find_pathways_organism(
                 cvDict, organism=org, preDefList=pathList, writeGraphml=True
             )  # checked
-            if makemetaNetwork:
+            if makemetaNetwork == "True":
                 makemetaNetwork(pathList, geneDict)
-    if customNetwork == "True":
-        retrieveGraph_customGraph( geneDict, customNetwork) # generate gpickles needed for pathway analysis
+    if customNetwork != "False":
+        retrieveGraph_customGraph(geneDict, net) # generate gpickles needed for pathway analysis  
