@@ -42,8 +42,8 @@ mBONITA also requires a condition and contrast file for pathway analysis. An exa
 
 Briefly, if your dataset looks something like this:
 
-| Genes | Condition1_replicate1_proteomics  | Condition1_replicate2_proteomics | Condition2_replicate1_proteomics  | Condition2_replicate2_proteomics | Condition1_replicate1_phosphoproteomics | Condition1_replicate2_phosphoproteomics | Condition2_replicate1_phosphoproteomics | Condition2_replicate2_phosphoproteomics |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Genes | Condition1_ replicate1_ proteomics  | Condition1_ replicate2_ proteomics | Condition2_ replicate1_ proteomics  | Condition2_ replicate2_ proteomics | Condition1_ replicate1_ phospho proteomics | Condition1_ replicate2_ phospho proteomics | Condition2_ replicate1_ phospho proteomics | Condition2_ replicate2_ phospho proteomics |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Gene1 | - | - | - | - | - | - | - | - |
 | Gene2  | - | - | - | - | - | - | - | - |
 | Gene3  | - | - | - | - | - | - | - | - |
