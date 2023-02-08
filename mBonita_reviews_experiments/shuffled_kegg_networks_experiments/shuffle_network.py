@@ -24,13 +24,13 @@ def shuffleNet (net):
 # shuffle 5 kegg networks
 # selected KEGG networks:
 
-nets = tuple(glob("hsa*.graphml"))
+nets = tuple(glob("graphmls/hsa*.graphml"))
 print(nets)
 for net in nets:
-    for i in range(0,6):
+    for i in range(6, 51):
         print(net)
         print(str(net[:-8]))
-        fileName = "shuffled_" + str(net[:-8]) + "_" + str(i)+ ".graphml"
+        fileName = "shuffled_" + str(net[:-8].replace("graphmls/", "")) + "_" + str(i)+ ".graphml"
         net2 = nx.read_graphml(net)
         nx.write_graphml(shuffleNet(net2), fileName)
         print(fileName)

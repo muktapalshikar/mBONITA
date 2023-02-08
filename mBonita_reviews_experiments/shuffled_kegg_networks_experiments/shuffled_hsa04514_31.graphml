@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d5" for="edge" attr.name="type" attr.type="string"/>
+<key id="d4" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d3" for="edge" attr.name="color" attr.type="string"/>
+<key id="d2" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="ALCAM">
+  <data key="d0">ALCAM</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="SPN">
+  <data key="d0">SPN</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PTPRC">
+  <data key="d0">PTPRC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CD22">
+  <data key="d0">CD22</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ITGB1">
+  <data key="d0">ITGB1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ITGAL">
+  <data key="d0">ITGAL</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="MAG">
+  <data key="d0">MAG</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="MPZ">
+  <data key="d0">MPZ</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CNTNAP2">
+  <data key="d0">CNTNAP2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CNTNAP1">
+  <data key="d0">CNTNAP1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="NEGR1">
+  <data key="d0">NEGR1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CADM1">
+  <data key="d0">CADM1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CD226">
+  <data key="d0">CD226</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="GLG1">
+  <data key="d0">GLG1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="SELPLG">
+  <data key="d0">SELPLG</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="SELL">
+  <data key="d0">SELL</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="MADCAM1">
+  <data key="d0">MADCAM1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ITGB7">
+  <data key="d0">ITGB7</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ITGA4">
+  <data key="d0">ITGA4</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PECAM1">
+  <data key="d0">PECAM1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CD58">
+  <data key="d0">CD58</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ICAM3">
+  <data key="d0">ICAM3</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ICAM1">
+  <data key="d0">ICAM1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ICAM2">
+  <data key="d0">ICAM2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="JAM3">
+  <data key="d0">JAM3</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="F11R">
+  <data key="d0">F11R</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ESAM">
+  <data key="d0">ESAM</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CD86">
+  <data key="d0">CD86</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CD80">
+  <data key="d0">CD80</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CD28">
+  <data key="d0">CD28</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="OCLN">
+  <data key="d0">OCLN</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ICOSLG">
+  <data key="d0">ICOSLG</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="TIGIT">
+  <data key="d0">TIGIT</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="NTNG1">
+  <data key="d0">NTNG1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="NTNG2">
+  <data key="d0">NTNG2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="LRRC4">
+  <data key="d0">LRRC4</data>
+  <data key="d1">ortholog</data>
+</node>
+<edge source="PTPRC" target="ICAM1">
+  <data key="d2">i</data>
+</edge>
+<edge source="CD22" target="CD28">
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGB1" target="ITGA4">
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGB1" target="JAM3">
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGB1" target="ITGAL">
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGB1" target="ICAM3">
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGAL" target="ICAM3">
+  <data key="d3">purple</data>
+  <data key="d4">binding/association</data>
+  <data key="d5">PPrel</data>
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGAL" target="JAM3">
+  <data key="d2">i</data>
+</edge>
+<edge source="ITGAL" target="ITGB1">
+  <data key="d2">i</data>
+</edge>
+<edge source="ITGAL" target="ICAM1">
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGAL" target="ITGA4">
+  <data key="d2">i</data>
+</edge>
+<edge source="ITGAL" target="F11R">
+  <data key="d2">i</data>
+</edge>
+<edge source="CD226" target="F11R">
+  <data key="d2">i</data>
+</edge>
+<edge source="CD226" target="JAM3">
+  <data key="d2">a</data>
+</edge>
+<edge source="CD226" target="ITGB7">
+  <data key="d2">i</data>
+</edge>
+<edge source="CD226" target="ITGA4">
+  <data key="d2">a</data>
+</edge>
+<edge source="CD226" target="ICAM2">
+  <data key="d2">a</data>
+</edge>
+<edge source="GLG1" target="MADCAM1">
+  <data key="d2">a</data>
+</edge>
+<edge source="SELPLG" target="ITGB7">
+  <data key="d2">i</data>
+</edge>
+<edge source="SELL" target="ITGB7">
+  <data key="d2">i</data>
+</edge>
+<edge source="MADCAM1" target="ITGA4">
+  <data key="d3">purple</data>
+  <data key="d4">binding/association</data>
+  <data key="d5">PPrel</data>
+  <data key="d2">a</data>
+</edge>
+<edge source="MADCAM1" target="JAM3">
+  <data key="d2">i</data>
+</edge>
+<edge source="MADCAM1" target="GLG1">
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGB7" target="CD226">
+  <data key="d2">i</data>
+</edge>
+<edge source="ITGB7" target="SELL">
+  <data key="d2">i</data>
+</edge>
+<edge source="ITGB7" target="SELPLG">
+  <data key="d2">i</data>
+</edge>
+<edge source="ITGA4" target="ITGB1">
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGA4" target="MADCAM1">
+  <data key="d3">purple</data>
+  <data key="d4">binding/association</data>
+  <data key="d5">PPrel</data>
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGA4" target="JAM3">
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGA4" target="CD226">
+  <data key="d2">a</data>
+</edge>
+<edge source="ITGA4" target="ITGAL">
+  <data key="d2">i</data>
+</edge>
+<edge source="ICAM3" target="ITGAL">
+  <data key="d3">purple</data>
+  <data key="d4">binding/association</data>
+  <data key="d5">PPrel</data>
+  <data key="d2">a</data>
+</edge>
+<edge source="ICAM3" target="F11R">
+  <data key="d2">a</data>
+</edge>
+<edge source="ICAM3" target="ITGB1">
+  <data key="d2">a</data>
+</edge>
+<edge source="ICAM1" target="ICAM2">
+  <data key="d2">i</data>
+</edge>
+<edge source="ICAM1" target="JAM3">
+  <data key="d2">i</data>
+</edge>
+<edge source="ICAM1" target="F11R">
+  <data key="d2">a</data>
+</edge>
+<edge source="ICAM1" target="PTPRC">
+  <data key="d2">a</data>
+</edge>
+<edge source="ICAM1" target="ITGAL">
+  <data key="d2">a</data>
+</edge>
+<edge source="ICAM2" target="ICAM1">
+  <data key="d2">i</data>
+</edge>
+<edge source="ICAM2" target="NTNG2">
+  <data key="d2">a</data>
+</edge>
+<edge source="ICAM2" target="CD226">
+  <data key="d2">i</data>
+</edge>
+<edge source="JAM3" target="ICAM1">
+  <data key="d2">i</data>
+</edge>
+<edge source="JAM3" target="ITGB1">
+  <data key="d2">i</data>
+</edge>
+<edge source="JAM3" target="ITGA4">
+  <data key="d2">a</data>
+</edge>
+<edge source="JAM3" target="ITGAL">
+  <data key="d2">i</data>
+</edge>
+<edge source="JAM3" target="MADCAM1">
+  <data key="d2">a</data>
+</edge>
+<edge source="JAM3" target="CD226">
+  <data key="d2">i</data>
+</edge>
+<edge source="F11R" target="CD226">
+  <data key="d2">a</data>
+</edge>
+<edge source="F11R" target="ICAM1">
+  <data key="d2">a</data>
+</edge>
+<edge source="F11R" target="ICOSLG">
+  <data key="d2">a</data>
+</edge>
+<edge source="F11R" target="ICAM3">
+  <data key="d2">a</data>
+</edge>
+<edge source="F11R" target="CD28">
+  <data key="d2">i</data>
+</edge>
+<edge source="F11R" target="ITGAL">
+  <data key="d2">i</data>
+</edge>
+<edge source="CD86" target="LRRC4">
+  <data key="d2">i</data>
+</edge>
+<edge source="CD80" target="CD28">
+  <data key="d3">green</data>
+  <data key="d4">activation</data>
+  <data key="d5">PPrel</data>
+  <data key="d2">a</data>
+</edge>
+<edge source="CD28" target="CD80">
+  <data key="d3">green</data>
+  <data key="d4">activation</data>
+  <data key="d5">PPrel</data>
+  <data key="d2">i</data>
+</edge>
+<edge source="CD28" target="CD22">
+  <data key="d2">a</data>
+</edge>
+<edge source="CD28" target="F11R">
+  <data key="d2">a</data>
+</edge>
+<edge source="ICOSLG" target="F11R">
+  <data key="d2">a</data>
+</edge>
+<edge source="NTNG2" target="ICAM2">
+  <data key="d2">i</data>
+</edge>
+<edge source="LRRC4" target="CD86">
+  <data key="d2">a</data>
+</edge>
+</graph></graphml>

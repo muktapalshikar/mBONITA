@@ -1,0 +1,512 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d5" for="edge" attr.name="type" attr.type="string"/>
+<key id="d4" for="edge" attr.name="subtype" attr.type="string"/>
+<key id="d3" for="edge" attr.name="color" attr.type="string"/>
+<key id="d2" for="edge" attr.name="signal" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="WASF2">
+  <data key="d0">WASF2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="WASF1">
+  <data key="d0">WASF1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="APC">
+  <data key="d0">APC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ABI2">
+  <data key="d0">ABI2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="NCKAP1">
+  <data key="d0">NCKAP1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BAIAP2">
+  <data key="d0">BAIAP2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="GSN">
+  <data key="d0">GSN</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="VCL">
+  <data key="d0">VCL</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PXN">
+  <data key="d0">PXN</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="SLC9A1">
+  <data key="d0">SLC9A1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="GIT1">
+  <data key="d0">GIT1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ENAH">
+  <data key="d0">ENAH</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="DIAPH3">
+  <data key="d0">DIAPH3</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CDC42">
+  <data key="d0">CDC42</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="RHOA">
+  <data key="d0">RHOA</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="ARHGEF6">
+  <data key="d0">ARHGEF6</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="GNG12">
+  <data key="d0">GNG12</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CRK">
+  <data key="d0">CRK</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="BCAR1">
+  <data key="d0">BCAR1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="PTK2">
+  <data key="d0">PTK2</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="SRC">
+  <data key="d0">SRC</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="FN1">
+  <data key="d0">FN1</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="F2R">
+  <data key="d0">F2R</data>
+  <data key="d1">ortholog</data>
+</node>
+<node id="CXCR4">
+  <data key="d0">CXCR4</data>
+  <data key="d1">ortholog</data>
+</node>
+<edge source="WASF2" target="CDC42">
+  <data key="d2">a</data>
+</edge>
+<edge source="WASF1" target="APC">
+  <data key="d2">a</data>
+</edge>
+<edge source="WASF1" target="ABI2">
+  <data key="d3">red</data>
+  <data key="d4">inhibition</data>
+  <data key="d5">PPrel</data>
+  <data key="d2">a</data>
+</edge>
+<edge source="WASF1" target="NCKAP1">
+  <data key="d3">red</data>
+  <data key="d4">inhibition</data>
+  <data key="d5">PPrel</data>
+  <data key="d2">i</data>
+</edge>
+<edge source="WASF1" target="CDC42">
+  <data key="d2">a</data>
+</edge>
+<edge source="WASF1" target="RHOA">
+  <data key="d2">a</data>
+</edge>
+<edge source="WASF1" target="GNG12">
+  <data key="d2">a</data>
+</edge>
+<edge source="WASF1" target="CRK">
+  <data key="d2">i</data>
+</edge>
+<edge source="WASF1" target="PTK2">
+  <data key="d2">a</data>
+</edge>
+<edge source="WASF1" target="GIT1">
+  <data key="d2">a</data>
+</edge>
+<edge source="WASF1" target="BAIAP2">
+  <data key="d2">a</data>
+</edge>
+<edge source="APC" target="BAIAP2">
+  <data key="d2">i</data>
+</edge>
+<edge source="APC" target="WASF1">
+  <data key="d2">a</data>
+</edge>
+<edge source="APC" target="RHOA">
+  <data key="d2">a</data>
+</edge>
+<edge source="APC" target="GIT1">
+  <data key="d2">a</data>
+</edge>
+<edge source="APC" target="CXCR4">
+  <data key="d2">i</data>
+</edge>
+<edge source="APC" target="ARHGEF6">
+  <data key="d2">a</data>
+</edge>
+<edge source="ABI2" target="WASF1">
+  <data key="d3">red</data>
+  <data key="d4">inhibition</data>
+  <data key="d5">PPrel</data>
+  <data key="d2">i</data>
+</edge>
+<edge source="ABI2" target="RHOA">
+  <data key="d2">i</data>
+</edge>
+<edge source="ABI2" target="GIT1">
+  <data key="d2">a</data>
+</edge>
+<edge source="ABI2" target="FN1">
+  <data key="d2">i</data>
+</edge>
+<edge source="ABI2" target="GNG12">
+  <data key="d2">a</data>
+</edge>
+<edge source="ABI2" target="ENAH">
+  <data key="d2">a</data>
+</edge>
+<edge source="ABI2" target="CDC42">
+  <data key="d2">a</data>
+</edge>
+<edge source="ABI2" target="NCKAP1">
+  <data key="d2">a</data>
+</edge>
+<edge source="ABI2" target="CRK">
+  <data key="d2">a</data>
+</edge>
+<edge source="NCKAP1" target="WASF1">
+  <data key="d3">red</data>
+  <data key="d4">inhibition</data>
+  <data key="d5">PPrel</data>
+  <data key="d2">a</data>
+</edge>
+<edge source="NCKAP1" target="RHOA">
+  <data key="d2">a</data>
+</edge>
+<edge source="NCKAP1" target="GNG12">
+  <data key="d2">i</data>
+</edge>
+<edge source="NCKAP1" target="PTK2">
+  <data key="d2">i</data>
+</edge>
+<edge source="NCKAP1" target="GIT1">
+  <data key="d2">i</data>
+</edge>
+<edge source="NCKAP1" target="BAIAP2">
+  <data key="d2">i</data>
+</edge>
+<edge source="NCKAP1" target="BCAR1">
+  <data key="d2">i</data>
+</edge>
+<edge source="NCKAP1" target="CRK">
+  <data key="d2">i</data>
+</edge>
+<edge source="NCKAP1" target="ABI2">
+  <data key="d2">i</data>
+</edge>
+<edge source="BAIAP2" target="APC">
+  <data key="d2">i</data>
+</edge>
+<edge source="BAIAP2" target="RHOA">
+  <data key="d2">a</data>
+</edge>
+<edge source="BAIAP2" target="ARHGEF6">
+  <data key="d2">i</data>
+</edge>
+<edge source="BAIAP2" target="FN1">
+  <data key="d2">a</data>
+</edge>
+<edge source="BAIAP2" target="GNG12">
+  <data key="d2">i</data>
+</edge>
+<edge source="BAIAP2" target="CDC42">
+  <data key="d2">i</data>
+</edge>
+<edge source="BAIAP2" target="WASF1">
+  <data key="d2">i</data>
+</edge>
+<edge source="BAIAP2" target="GIT1">
+  <data key="d2">a</data>
+</edge>
+<edge source="BAIAP2" target="BCAR1">
+  <data key="d2">i</data>
+</edge>
+<edge source="BAIAP2" target="NCKAP1">
+  <data key="d2">a</data>
+</edge>
+<edge source="BAIAP2" target="SRC">
+  <data key="d2">i</data>
+</edge>
+<edge source="GSN" target="RHOA">
+  <data key="d2">i</data>
+</edge>
+<edge source="GSN" target="CRK">
+  <data key="d2">a</data>
+</edge>
+<edge source="VCL" target="DIAPH3">
+  <data key="d2">a</data>
+</edge>
+<edge source="VCL" target="GIT1">
+  <data key="d2">a</data>
+</edge>
+<edge source="PXN" target="RHOA">
+  <data key="d2">i</data>
+</edge>
+<edge source="SLC9A1" target="RHOA">
+  <data key="d2">i</data>
+</edge>
+<edge source="GIT1" target="RHOA">
+  <data key="d2">a</data>
+</edge>
+<edge source="GIT1" target="PTK2">
+  <data key="d2">i</data>
+</edge>
+<edge source="GIT1" target="NCKAP1">
+  <data key="d2">i</data>
+</edge>
+<edge source="GIT1" target="WASF1">
+  <data key="d2">a</data>
+</edge>
+<edge source="GIT1" target="ABI2">
+  <data key="d2">a</data>
+</edge>
+<edge source="GIT1" target="BAIAP2">
+  <data key="d2">a</data>
+</edge>
+<edge source="GIT1" target="APC">
+  <data key="d2">a</data>
+</edge>
+<edge source="GIT1" target="ARHGEF6">
+  <data key="d2">i</data>
+</edge>
+<edge source="GIT1" target="VCL">
+  <data key="d2">a</data>
+</edge>
+<edge source="ENAH" target="ABI2">
+  <data key="d2">a</data>
+</edge>
+<edge source="DIAPH3" target="VCL">
+  <data key="d2">a</data>
+</edge>
+<edge source="DIAPH3" target="RHOA">
+  <data key="d2">i</data>
+</edge>
+<edge source="CDC42" target="WASF1">
+  <data key="d2">i</data>
+</edge>
+<edge source="CDC42" target="RHOA">
+  <data key="d2">i</data>
+</edge>
+<edge source="CDC42" target="WASF2">
+  <data key="d2">i</data>
+</edge>
+<edge source="CDC42" target="FN1">
+  <data key="d2">a</data>
+</edge>
+<edge source="CDC42" target="BAIAP2">
+  <data key="d2">i</data>
+</edge>
+<edge source="CDC42" target="CRK">
+  <data key="d2">a</data>
+</edge>
+<edge source="CDC42" target="ABI2">
+  <data key="d2">a</data>
+</edge>
+<edge source="CDC42" target="PTK2">
+  <data key="d2">i</data>
+</edge>
+<edge source="RHOA" target="APC">
+  <data key="d2">a</data>
+</edge>
+<edge source="RHOA" target="CDC42">
+  <data key="d2">a</data>
+</edge>
+<edge source="RHOA" target="SLC9A1">
+  <data key="d2">i</data>
+</edge>
+<edge source="RHOA" target="GSN">
+  <data key="d2">i</data>
+</edge>
+<edge source="RHOA" target="BAIAP2">
+  <data key="d2">i</data>
+</edge>
+<edge source="RHOA" target="ABI2">
+  <data key="d2">i</data>
+</edge>
+<edge source="RHOA" target="NCKAP1">
+  <data key="d2">i</data>
+</edge>
+<edge source="RHOA" target="WASF1">
+  <data key="d2">a</data>
+</edge>
+<edge source="RHOA" target="GIT1">
+  <data key="d2">a</data>
+</edge>
+<edge source="RHOA" target="ARHGEF6">
+  <data key="d2">i</data>
+</edge>
+<edge source="RHOA" target="GNG12">
+  <data key="d2">i</data>
+</edge>
+<edge source="RHOA" target="BCAR1">
+  <data key="d2">i</data>
+</edge>
+<edge source="RHOA" target="PTK2">
+  <data key="d2">i</data>
+</edge>
+<edge source="RHOA" target="SRC">
+  <data key="d2">a</data>
+</edge>
+<edge source="RHOA" target="F2R">
+  <data key="d2">a</data>
+</edge>
+<edge source="RHOA" target="PXN">
+  <data key="d2">a</data>
+</edge>
+<edge source="RHOA" target="FN1">
+  <data key="d2">i</data>
+</edge>
+<edge source="RHOA" target="DIAPH3">
+  <data key="d2">a</data>
+</edge>
+<edge source="ARHGEF6" target="BAIAP2">
+  <data key="d2">a</data>
+</edge>
+<edge source="ARHGEF6" target="RHOA">
+  <data key="d2">i</data>
+</edge>
+<edge source="ARHGEF6" target="GNG12">
+  <data key="d2">a</data>
+</edge>
+<edge source="ARHGEF6" target="BCAR1">
+  <data key="d2">i</data>
+</edge>
+<edge source="ARHGEF6" target="GIT1">
+  <data key="d2">i</data>
+</edge>
+<edge source="ARHGEF6" target="APC">
+  <data key="d2">i</data>
+</edge>
+<edge source="GNG12" target="NCKAP1">
+  <data key="d2">a</data>
+</edge>
+<edge source="GNG12" target="WASF1">
+  <data key="d2">a</data>
+</edge>
+<edge source="GNG12" target="RHOA">
+  <data key="d2">i</data>
+</edge>
+<edge source="GNG12" target="ARHGEF6">
+  <data key="d2">i</data>
+</edge>
+<edge source="GNG12" target="BAIAP2">
+  <data key="d2">a</data>
+</edge>
+<edge source="GNG12" target="BCAR1">
+  <data key="d2">i</data>
+</edge>
+<edge source="GNG12" target="ABI2">
+  <data key="d2">a</data>
+</edge>
+<edge source="CRK" target="WASF1">
+  <data key="d2">i</data>
+</edge>
+<edge source="CRK" target="CDC42">
+  <data key="d2">a</data>
+</edge>
+<edge source="CRK" target="NCKAP1">
+  <data key="d2">a</data>
+</edge>
+<edge source="CRK" target="GSN">
+  <data key="d2">i</data>
+</edge>
+<edge source="CRK" target="BCAR1">
+  <data key="d2">a</data>
+</edge>
+<edge source="CRK" target="PTK2">
+  <data key="d2">a</data>
+</edge>
+<edge source="CRK" target="ABI2">
+  <data key="d2">a</data>
+</edge>
+<edge source="BCAR1" target="RHOA">
+  <data key="d2">i</data>
+</edge>
+<edge source="BCAR1" target="PTK2">
+  <data key="d2">a</data>
+</edge>
+<edge source="BCAR1" target="BAIAP2">
+  <data key="d2">i</data>
+</edge>
+<edge source="BCAR1" target="ARHGEF6">
+  <data key="d2">a</data>
+</edge>
+<edge source="BCAR1" target="GNG12">
+  <data key="d2">i</data>
+</edge>
+<edge source="BCAR1" target="NCKAP1">
+  <data key="d2">i</data>
+</edge>
+<edge source="BCAR1" target="CRK">
+  <data key="d2">i</data>
+</edge>
+<edge source="PTK2" target="NCKAP1">
+  <data key="d2">i</data>
+</edge>
+<edge source="PTK2" target="WASF1">
+  <data key="d2">a</data>
+</edge>
+<edge source="PTK2" target="GIT1">
+  <data key="d2">a</data>
+</edge>
+<edge source="PTK2" target="RHOA">
+  <data key="d2">a</data>
+</edge>
+<edge source="PTK2" target="BCAR1">
+  <data key="d2">a</data>
+</edge>
+<edge source="PTK2" target="CRK">
+  <data key="d2">a</data>
+</edge>
+<edge source="PTK2" target="CDC42">
+  <data key="d2">a</data>
+</edge>
+<edge source="SRC" target="RHOA">
+  <data key="d2">a</data>
+</edge>
+<edge source="SRC" target="BAIAP2">
+  <data key="d2">i</data>
+</edge>
+<edge source="FN1" target="BAIAP2">
+  <data key="d2">a</data>
+</edge>
+<edge source="FN1" target="CDC42">
+  <data key="d2">a</data>
+</edge>
+<edge source="FN1" target="ABI2">
+  <data key="d2">i</data>
+</edge>
+<edge source="FN1" target="RHOA">
+  <data key="d2">a</data>
+</edge>
+<edge source="F2R" target="RHOA">
+  <data key="d2">i</data>
+</edge>
+<edge source="CXCR4" target="APC">
+  <data key="d2">a</data>
+</edge>
+</graph></graphml>
