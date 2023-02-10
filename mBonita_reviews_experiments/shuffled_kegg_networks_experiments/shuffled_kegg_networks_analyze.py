@@ -6,7 +6,7 @@ import pickle
 from pathway_analysis_score_pathways import *
 import re
 import scipy.stats
-
+import matplotlib.pyplot as plt
 # finds pathways that should be compared
 def findPathwayList_noReps():
     pathways = []
@@ -93,11 +93,31 @@ for path in set(pathImportances_complete.OriginalNetwork):
         importanceScorePvals[path][gene]['pvalue'] = pval
         importanceScorePvalsDF = importanceScorePvalsDF.append(pd.Series([path, gene, score, zscore, pval]), ignore_index=True)
 #print(pd.DataFrame.from_dict(importanceScorePvals, orient='columns'))
-importanceScorePvalsDF.columns = ['OriginalNetwork', 'Gene', 'ImportanceScore', 'Zscore', 'Pvalue']
+importanceScorePvalsDF.columns = ['Original Network', 'Gene', 'ImportanceScore', 'Zscore', 'Pvalue']
+importanceScorePvalsDF["NegativeLog10Pvalue"] = [(-1)*np.log10(i) for i in  importanceScorePvalsDF.Pvalue]
 print(importanceScorePvalsDF)
-print(scipy.stats.pearsonr(importanceScorePvalsDF.ImportanceScore, importanceScorePvalsDF.Pvalue))
-print(scipy.stats.pearsonr(importanceScorePvalsDF.ImportanceScore, abs(importanceScorePvalsDF.Zscore)))
+importanceScorePvalsDF.to_csv("importanceScorePvalsDF.csv")
+print(scipy.stats.spearmanr(importanceScorePvalsDF.ImportanceScore, importanceScorePvalsDF.Pvalue))
+print(scipy.stats.spearmanr(importanceScorePvalsDF.ImportanceScore, abs(importanceScorePvalsDF.Zscore)))
 print(np.mean(importanceScorePvalsDF.Pvalue))
-
-
-
+print(importanceScorePvalsDF[importanceScorePvalsDF.ImportanceScore==1])
+print(importanceScorePvalsDF[importanceScorePvalsDF.ImportanceScore>=0.75])
+print(importanceScorePvalsDF[importanceScorePvalsDF.ImportanceScore>=0.5])
+threshold = (-1)*np.log10(0.1)
+import seaborn as sns
+sns.set_style("whitegrid")
+sns.set_context("paper")
+fig, ax = plt.subplots(figsize=(6,4.5))
+graph = sns.scatterplot(data=importanceScorePvalsDF, x="ImportanceScore", y="NegativeLog10Pvalue", style="Original Network", hue="Original Network", palette="Set2", s=40)
+graph.axhline(threshold, linestyle="--", color='black')
+graph.axvline(0.75, color='black', linestyle="--" )
+graph.set_xlabel("mBONITA Importance Score" , size = 14)
+graph.set_ylabel("-log10 (p-value)" , size = 14)
+#print(importanceScorePvalsDF.ImportanceScore[importanceScorePvalsDF.ImportanceScore==1].tolist()[0])
+plt.text(x=1-0.1,y=importanceScorePvalsDF.NegativeLog10Pvalue[importanceScorePvalsDF.ImportanceScore==1].tolist()[0], s=importanceScorePvalsDF.Gene[importanceScorePvalsDF.ImportanceScore==1].tolist()[0], size='large')
+plt.text(x=1-0.1,y=importanceScorePvalsDF.NegativeLog10Pvalue[importanceScorePvalsDF.ImportanceScore==1].tolist()[1], s=importanceScorePvalsDF.Gene[importanceScorePvalsDF.ImportanceScore==1].tolist()[1], size='large')
+plt.text(x=1-0.1,y=importanceScorePvalsDF.NegativeLog10Pvalue[importanceScorePvalsDF.ImportanceScore==1].tolist()[2]-0.5, s=importanceScorePvalsDF.Gene[importanceScorePvalsDF.ImportanceScore==1].tolist()[2], size='large')
+plt.text(x=1-0.1,y=importanceScorePvalsDF.NegativeLog10Pvalue[importanceScorePvalsDF.ImportanceScore==1].tolist()[3], s=importanceScorePvalsDF.Gene[importanceScorePvalsDF.ImportanceScore==1].tolist()[3], size='large')
+plt.text(x=1-0.1,y=importanceScorePvalsDF.NegativeLog10Pvalue[importanceScorePvalsDF.ImportanceScore==1].tolist()[4], s=importanceScorePvalsDF.Gene[importanceScorePvalsDF.ImportanceScore==1].tolist()[4], size='large')
+fig = graph.get_figure()
+fig.savefig("supplementary_figure_2.pdf")

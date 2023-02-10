@@ -32,5 +32,6 @@ MOFAobject <- create_mofa(data)
 concatenated = read.csv("concatenated_datasets.csv", row.names = 1)
 head(concatenated)
 conditions = read.csv("concatenated_conditions.csv")
+head(conditions)
 ```
 
