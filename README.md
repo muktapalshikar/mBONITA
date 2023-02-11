@@ -69,6 +69,12 @@ And your contrast file will look like this:
 
 ## Step 1: Download and prepare KEGG pathways for pathway analysis
 
+Ensure that you are in the same working directory as all files associated with the mBONITA module.
+
+Then compile the portions of mBONITA written in C by typing the following into your terminal. 
+
+```make```
+
 Use the command ```python3 pathway_analysis_setup.py --help``` for more information on each parameter. The examples below cover most use cases.
 
 - Option 1: On a gmt of human pathways *mBONITA* needs omics data, gmt file, and an indication of what character is used to separate columns in the file

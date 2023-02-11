@@ -1,0 +1,504 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\date{}
+
+\begin{document}
+
+\begin{figure}
+\centering
+\includegraphics{https://img.shields.io/github/last-commit/mgp13/moBONITA?style=for-the-badge}
+\caption{GitHub last commit}
+\end{figure}
+
+\hypertarget{mbonita-multi-omics-boolean-omics-network-invariant-time-analysis}{%
+\section{mBONITA: multi-omics Boolean Omics Network Invariant-Time
+Analysis}\label{mbonita-multi-omics-boolean-omics-network-invariant-time-analysis}}
+
+\hypertarget{authors}{%
+\subsection{Authors:}\label{authors}}
+
+Mukta G. Palshikar, Xiaojun Min, Alexander Crystal, Jiayue Meng, Shannon
+P. Hilchey, Martin Zand, Juilee Thakar
+
+\hypertarget{abstract}{%
+\subsection{Abstract:}\label{abstract}}
+
+Multi-omics profiling provides a holistic picture of a condition being
+examined and capture the complexity of signaling events, beginning from
+the original cause (environmental or genetic), to downstream functional
+changes at multiple molecular layers. Pathway enrichment analysis has
+been used with multi-omics datasets to characterize signaling
+mechanisms. However, technical and biological variability between these
+layered datasets are challenges for integrative computational analyses.
+We present a Boolean network-based method, multi-omics Boolean Omics
+Network Invariant-Time Analysis (mBONITA) to integrate omics datasets
+that quantify multiple molecular layers. \emph{mBONITA} utilizes prior
+knowledge networks to perform topology-based pathway analysis. In
+addition, \emph{mBONITA} identifies genes that are consistently
+modulated across molecular measurements by combining observed
+fold-changes and variance with a measure of node (i.e., gene or protein)
+influence over signaling, and a measure of the strength of evidence for
+that gene across datasets. We used \emph{mBONITA} to integrate
+multi-omics datasets from RAMOS B cells treated with the
+immunosuppressant drug cyclosporine A under varying oxygen tensions to
+identify pathways involved in hypoxia-mediated chemotaxis. We compare
+\emph{mBONITA}'s performance with 6 other pathway analysis methods
+designed for multi-omics data and show that \emph{mBONITA} identifies a
+set of pathways with evidence of modulation across all omics layers.
+
+\includegraphics{https://github.com/mgp13/moBONITA/blob/main/Picture1.png?raw=true\#gh-light-mode-only}
+\includegraphics{https://github.com/mgp13/moBONITA/blob/main/Picture2.png?raw=true\#gh-dark-mode-only}
+
+\hypertarget{mbonita-tutorial}{%
+\subsection{\texorpdfstring{\emph{mBONITA}
+tutorial}{mBONITA tutorial}}\label{mbonita-tutorial}}
+
+\hypertarget{requirements}{%
+\subsubsection{Requirements}\label{requirements}}
+
+The \emph{mBONITA} tool is written in Python3 and C. I strongly
+recommend that \emph{mBONITA} be run on a computing cluster such as the
+University of Rochester's BlueHive, and that jobs are submitted using a
+scheduler such as SLURM. Dependencies are listed in the conda
+environment file (SPECIFY FILENAME HERE).
+
+\textbf{Minor caveat} - \emph{mBONITA} is not a Python package like
+numpy or scipy, which allow users to import individual functions and
+(re)use them in custom code. \emph{mBONITA} is an all-in-one pipeline
+that doesn't allow function import or much customization beyond the
+pre-specified parameters. I welcome advanced users to modify code and
+submit pull requests, but this is beyond what most users will need.
+
+\emph{mBONITA} requires the following inputs (Step 0):
+
+\begin{itemize}
+\tightlist
+\item
+  A pre-preprocessed multi-omics dataset from matched samples, prepared
+  in a combined matrix format as in (link to Python notebook here)
+\item
+  A conditions file in matrix format, which specfies the experimental
+  conditions for each sample in the training dataset above
+\item
+  A contrast file that specifies which pairs of experimental conditions
+  are to be compared during pathway analysis
+\end{itemize}
+
+to perform the following tasks:
+
+\begin{itemize}
+\tightlist
+\item
+  Download and prepare KEGG pathways for pathway analysis (Step 1)
+\item
+  Infer Boolean regulatory/signaling rules for KEGG pathways using the
+  combined multi-omics dataset (Step 2)
+\item
+  Perform topology-informed pathway analysis for user-specified pairs of
+  experimental conditions (Step 3)
+\end{itemize}
+
+This tutorial will go through the \emph{mBONITA} pipeline using a
+multi-omics dataset of transcriptomics, proteomics, and
+phosphoproteomics from RAMOS B cells, as described in the \emph{mBONITA}
+publication.
+
+\hypertarget{step-0-process-multi-omics-data-and-generate-conditions-and-contrast-files}{%
+\subsubsection{Step 0: Process multi-omics data and generate conditions
+and contrast
+files}\label{step-0-process-multi-omics-data-and-generate-conditions-and-contrast-files}}
+
+I expect that most users will begin with 2 or more processed datasets
+from separate multi-omics datasets. These datasets will usually be
+log2-normalized. The Jupyter notebook (\textbf{Figure1.ipynb}) outlines
+how to combine log2-normalized proteomics, phosphoproteomics and
+transcriptomics datasets as in the \emph{mBONITA} publication and
+prepare them in a matrix format for mBONITA.
+
+mBONITA also requires a condition and contrast file for pathway
+analysis. An example of how to prepare these files is in
+(\textbf{Figure1.ipynb}).
+
+Briefly, if your dataset looks something like this:
+
+\begin{longtable}[]{@{}lllllllll@{}}
+\toprule
+\begin{minipage}[b]{0.08\columnwidth}\raggedright
+Genes\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Condition1\_ replicate1\_ proteomics\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Condition1\_ replicate2\_ proteomics\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Condition2\_ replicate1\_ proteomics\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Condition2\_ replicate2\_ proteomics\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Condition1\_ replicate1\_ phospho proteomics\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Condition1\_ replicate2\_ phospho proteomics\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Condition2\_ replicate1\_ phospho proteomics\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Condition2\_ replicate2\_ phospho proteomics\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Gene1\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Gene2\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Gene3\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Gene4\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+-\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+Then your condition file will look like this:
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Sample & Condition1 & Condition2\tabularnewline
+\midrule
+\endhead
+Condition1\_replicate1\_proteomics & 1 & 0\tabularnewline
+Condition1\_replicate2\_proteomics & 1 & 0\tabularnewline
+Condition2\_replicate1\_proteomics & 0 & 1\tabularnewline
+Condition2\_replicate2\_proteomics & 0 & 1\tabularnewline
+Condition1\_replicate1\_phosphoproteomics & 1 & 0\tabularnewline
+Condition1\_replicate2\_phosphoproteomics & 1 & 0\tabularnewline
+Condition2\_replicate1\_phosphoproteomics & 0 & 1\tabularnewline
+Condition2\_replicate2\_phosphoproteomics & 0 & 1\tabularnewline
+\bottomrule
+\end{longtable}
+
+And your contrast file will look like this:
+
+~Condition1 \textbar{} Condition2 \textbar{}
+
+\hypertarget{step-1-download-and-prepare-kegg-pathways-for-pathway-analysis}{%
+\subsection{Step 1: Download and prepare KEGG pathways for pathway
+analysis}\label{step-1-download-and-prepare-kegg-pathways-for-pathway-analysis}}
+
+Ensure that you are in the same working directory as all files
+associated with the mBONITA module.
+
+Then compile the portions of mBONITA written in C by typing the
+following into your terminal.
+
+\texttt{make}
+
+Use the command \texttt{python3\ pathway\_analysis\_setup.py\ -\/-help}
+for more information on each parameter. The examples below cover most
+use cases.
+
+\begin{itemize}
+\tightlist
+\item
+  Option 1: On a gmt of human pathways \emph{mBONITA} needs omics data,
+  gmt file, and an indication of what character is used to separate
+  columns in the file
+\end{itemize}
+
+\textbf{comma separated}
+
+\texttt{python\ pathway\_analysis\_setup.py\ -gmt\ Your\_gmt\_file\ -sep\ ,\ -\/-data\ Your\_omics\_data}
+
+\textbf{tab separated}
+
+\texttt{python\ pathway\_analysis\_setup.py\ -t\ -gmt\ Your\_gmt\_file\ -\/-data\ Your\_omics\_data}
+
+\begin{itemize}
+\tightlist
+\item
+  Option 2: On all KEGG pathways for any organism \emph{mBONITA} needs
+  omics data, organism code, and an indication of what character is used
+  to separate columns in the file.
+\end{itemize}
+
+\textbf{comma separated, human:} \emph{MOST COMMON USAGE}
+
+\texttt{python\ pathway\_analysis\_setup.py\ -org\ hsa\ -sep\ ,\ -\/-data\ Your\_omics\_data}
+
+\textbf{comma separated, mouse}
+
+\texttt{python\ pathway\_analysis\_setup.py\ -org\ mmu\ -sep\ ,\ -\/-data\ Your\_omics\_data}
+
+\textbf{tab separated:}
+
+\texttt{python\ pathway\_analysis\_setup.py\ -sep\ ,\ -org\ hsa\ -\/-data\ Your\_omics\_data}
+
+\begin{itemize}
+\tightlist
+\item
+  Option 3: On a list of KEGG pathways for any organism \emph{mBONITA}
+  needs omics data, organism code, the list of pathways, and an
+  indication of what character is used to separate columns in the file.
+\end{itemize}
+
+The pathway list should be a plain-text file formatted like so. The
+codes are KEGG network codes (Example:
+https://www.genome.jp/pathway/hsa04066) and hsa stands for \emph{Homo
+sapiens}.
+
+\begin{verbatim}
+hsa04066
+hsa04151
+hsa04514
+hsa04670
+hsa04810
+\end{verbatim}
+
+\textbf{comma separated, human}
+
+\texttt{python\ pathway\_analysis\_setup.py\ -org\ hsa\ -sep\ ,\ -paths\ Your\_pathway\_list\ -\/-data\ Your\_omics\_data}
+
+\textbf{comma separated, mouse}
+
+\texttt{python\ pathway\_analysis\_setup.py\ -org\ mmu\ -sep\ ,\ -paths\ Your\_pathway\_list\ -\/-data\ Your\_omics\_data}
+
+\textbf{tab separated}
+
+\texttt{python\ pathway\_analysis\_setup.py\ -t\ -org\ Your\_org\_code\ -paths\ Your\_pathway\_list\ -\/-data\ Your\_omics\_data}
+
+\begin{itemize}
+\tightlist
+\item
+  Option 4: On a custom network in graphml format \emph{mBONITA} needs
+  omics data, the path to the custom network, and an indication of what
+  character is used to separate columns in the file.
+\end{itemize}
+
+Note that the default value for the \texttt{customNetwork} parameter is
+the string \texttt{False}. Any other value will trigger a search for a
+network with that name.
+
+\textbf{comma separated, custom network `network.graphml'}
+
+\texttt{python\ pathway\_analysis\_setup.py\ -\/-sep\ ,\ -\/-data\ Your\_omics\_data\ -\/-customNetwork\ network.graphml}
+
+\hypertarget{step-2-infer-boolean-regulatorysignaling-rules-and-calculate-node-importance-scores-for-kegg-pathways-using-the-combined-multi-omics-dataset}{%
+\subsection{Step 2: Infer Boolean regulatory/signaling rules and
+calculate node importance scores for KEGG pathways using the combined
+multi-omics
+dataset}\label{step-2-infer-boolean-regulatorysignaling-rules-and-calculate-node-importance-scores-for-kegg-pathways-using-the-combined-multi-omics-dataset}}
+
+Simply run the script \textbf{find\_rules\_pathway\_analysis.sh} which
+will automatically submit appropriate jobs to a SLURM queue:
+
+\texttt{bash\ find\_rules\_pathway\_analysis.sh}
+
+Please note that these scripts are written for SLURM.
+\textbf{find\_rules\_pathway\_analysis.sh} loops over all networks to
+execute the script \textbf{calcNodeImportance.sh}, which in turn
+executes the Python script \textbf{pathway\_analysis\_score\_nodes.py}.
+I'm open to writing these scripts for other job scheduling managers. The
+Python script can also be run by itself on a desktop, but I advise doing
+this only for small networks/training datasets.
+
+\hypertarget{step-3-perform-topology-informed-pathway-analysis-for-user-specified-pairs-of-experimental-conditions}{%
+\subsection{Step 3: Perform topology-informed pathway analysis for
+user-specified pairs of experimental
+conditions}\label{step-3-perform-topology-informed-pathway-analysis-for-user-specified-pairs-of-experimental-conditions}}
+
+Run the Python script pathway\_analysis\_score\_pathways\_mBonita.py
+with the following parameters. An example is listed below.
+
+\begin{itemize}
+\tightlist
+\item
+  path to training dataset file (concatenated)
+\item
+  conditions file
+\item
+  contrast file
+\end{itemize}
+
+For file formats, please refer to Step 0.
+
+Here is an example command:
+
+\texttt{python3\ pathway\_analysis\_score\_pathways\_mBonita.py\ concatenated\_datasets.csv\ concatenated\_conditions.csv\ contrasts.csv\ -sep\ ,}
+
+\hypertarget{analysis-of-the-mbonita-output}{%
+\subsection{\texorpdfstring{Analysis of the \emph{mBONITA}
+output}{Analysis of the mBONITA output}}\label{analysis-of-the-mbonita-output}}
+
+\hypertarget{inferred-boolean-rules}{%
+\subsubsection{Inferred Boolean rules}\label{inferred-boolean-rules}}
+
+Jupyter notebook: \textbf{Figure4.ipynb}
+
+Python script: \textbf{Figure4.py}
+
+These scripts contain code to open the local1.pickle files generated
+during the rule inference process (these files contain the inferred
+network model in a slightly complex data structure) and process the
+information into a single dataframe.
+
+\textbf{One row in the dataframe contains information for one node. The
+dataframe has the following columns:} - Network name - readable,
+descriptive KEGG network name - Method name - subfolder of the main
+directory in which the pickle was found - andNodeList - indices of
+parent nodes - andNodeInvertList - a bitstring encoding the activation
+and inhibition edges. True implies that the edge from the corresponding
+parent node in the andNodeList is an inhibitory edge - ruleLengths -
+length (ie, size) of the ERS for the node - equivs - bitstring
+representation of the equivalent rule set - plainRules - plain text
+representation of the rules in the ERS - randomERSIndividual - random
+individual from the ERS - minLocalSearchError - lowest error for the
+rules tried for each node
+
+\hypertarget{node-importance-scores}{%
+\subsubsection{Node importance scores}\label{node-importance-scores}}
+
+Importance scores are stored as node attributes in the
+\textbf{xyz\_rules.graphml} files generated after the node importance
+score calculation step (Step 2 above). These graphml files can be
+visualized in software such as Gephi or Cytoscape.
+
+Alternatively, Figure4.py has some suggestions for reading in these
+graphml files and aggregating these node importance scores using pandas
+and networkx and generating a single dataframe.
+
+\hypertarget{pathway-analysis}{%
+\subsubsection{Pathway analysis}\label{pathway-analysis}}
+
+Results are returned as a single csv file, \textbf{pvalues.csv}.
+
+See \textbf{Figure4.py} for some suggestions on plotting the results.
+
+\end{document}
