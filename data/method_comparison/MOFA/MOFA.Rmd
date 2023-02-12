@@ -5,7 +5,7 @@ output: html_notebook
 
 Model training (follows tutorial https://raw.githack.com/bioFAM/MOFA2_tutorials/master/R_tutorials/getting_started_R.html)
 
-```{r}
+```{r, eval=FALSE}
 require(data.table)
 require(MOFA2)
 require(purrr)
@@ -15,7 +15,7 @@ require(MOFAdata)
 ```
 Load data
 
-```{r}
+```{r, eval=FALSE}
 data <- make_example_data(
   n_views = 3, 
   n_samples = 15, 
@@ -25,7 +25,7 @@ data <- make_example_data(
 MOFAobject <- create_mofa(data)
 ```
 
-```{r}
+```{r, eval=FALSE}
 #transcriptomics = read.csv("bonita_transcriptomics.csv", row.names=1)
 #proteomics = read.csv("bonita_proteomics.csv", row.names=1)
 #phosphoproteomics = read.csv("bonita_phosphoproteomics.csv", row.names=1)
@@ -34,4 +34,183 @@ head(concatenated)
 conditions = read.csv("concatenated_conditions.csv")
 head(conditions)
 ```
+
+```{r}
+require(reshape2)
+```
+
+```{r}
+cv = function(x){
+  return(sd(x)/mean(x))
+}
+```
+
+```{r}
+transcriptomics = read.csv("bonita_transcriptomics.csv")
+proteomics = read.csv("bonita_proteomics.csv")
+phosphoproteomics = read.csv("bonita_phosphoproteomics.csv")
+```
+
+```{r}
+cvRows = apply(transcriptomics[1:nrow(transcriptomics),2:ncol(transcriptomics)],  1, cv)
+hist(cvRows)
+threshold = mean(cvRows)
+hvgsTrans = transcriptomics[cvRows>2*threshold,]
+dim(hvgsTrans)
+```
+
+```{r}
+cvRows = apply(proteomics[1:nrow(proteomics),2:ncol(proteomics)],  1, cv)
+hist(cvRows)
+threshold = mean(cvRows)
+hvgsProt = proteomics[cvRows>2*threshold,]
+dim(hvgsProt)
+```
+
+
+```{r}
+cvRows = apply(phosphoproteomics[1:nrow(phosphoproteomics),2:ncol(phosphoproteomics)],  1, cv)
+hist(cvRows)
+threshold = mean(cvRows)
+hvgsPhosph = phosphoproteomics[cvRows>2*threshold,]
+dim(hvgsPhosph)
+```
+
+```{r}
+transMelt = melt(hvgsTrans, id.vars = 'X')
+transMelt$View = "Transcriptomics"
+head(transMelt)
+protMelt = melt(hvgsProt, id.vars = 'X')
+protMelt$View = "Proteomics"
+head(protMelt)
+phosphMelt = melt(hvgsPhosph, id.vars = 'X')
+phosphMelt$View = "Phosphoproteomics"
+head(phosphMelt)
+concatMelt = rbind(transMelt, protMelt, phosphMelt)
+colnames(concatMelt) = c("feature", "sample", "value", "view")
+concatMelt$sample = make.names(concatMelt$sample)
+head(concatMelt)
+```
+```{r}
+conditions = read.csv("concatenated_conditions.csv")
+conditions$variable = make.names(conditions$variable)
+head(conditions)
+```
+
+```{r}
+levels(concatMelt$sample)[!make.names(levels(concatMelt$sample)) %in% make.names(conditions$variable)]
+```
+
+
+```{r}
+concatMelt$sample = unlist(lapply(concatMelt$sample, function(x){conditions$Condition[conditions$variable == x]})) 
+#concatMelt$sample = make.unique(concatMelt$sample)
+
+```
+
+```{r}
+write.csv(concatMelt, "concatMelt.csv")
+```
+
+```{r,eval=FALSE}
+require(MOFA2)
+MOFAobject <- create_mofa(concatMelt)
+```
+
+```{r,eval=FALSE}
+plot_data_overview(MOFAobject)
+```
+
+
+```{r,eval=FALSE}
+MOFAobject <- prepare_mofa(
+  object = MOFAobject)
+```
+
+
+```{r,eval=FALSE}
+
+outfile = file.path(getwd(),"model.hdf5")
+MOFAobject.trained <- run_mofa(MOFAobject, outfile)
+```
+
+```{r}
+require(MOFA2)
+model <- load_model("model.hdf5")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

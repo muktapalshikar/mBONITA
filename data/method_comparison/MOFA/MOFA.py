@@ -12,32 +12,8 @@ import requests # to download the online data
 ## Load data ##
 ###############
 
-# Two formats are allowed for the input data:
-
-# Option 1: a nested list of matrices, where the first index refers to the view and the second index refers to the group.
-#           samples are stored in the rows and features are stored in the columns.
-# 			Missing values must be filled with NAs, including samples missing an entire view
-
-# datadir = "/Users/ricard/data/mofaplus/test"
-# views = ["0","1"]
-# groups = ["0","1"]
-# data = [None]*len(views)
-# for m in range(len(views)):
-#     data[m] = [None]*len(groups)
-#     for g in range(len(groups)):
-#         datafile = "%s/%s_%s.txt.gz" % (datadir, views[m], groups[g])
-#         data[m][g] = pd.read_csv(datafile, header=None, sep=' ')
-
-# Option 2: a data.frame with columns ["sample","feature","view","group","value"]
-#           In this case there is no need to have missing values in the data.frame,
-#           they will be automatically filled in when creating the corresponding matrices
-
-file = "ftp://ftp.ebi.ac.uk/pub/databases/mofa/getting_started/data.txt.gz"
-data = pd.read_csv(file, sep="\t")
-
-transcriptomics = pd.read_csv("bonita_transcriptomics.csv")
-proteomics = pd.read_csv("bonita_proteomics.csv")
-phosphoproteomics = pd.read_csv("bonita_phosphoproteomics.csv")
+data = pd.read_csv("concatMelt.csv", index_col=0)
+data
 
 ###########################
 ## Initialise MOFA model ##
@@ -52,29 +28,10 @@ ent = entry_point()
 # - scale_groups: if groups have significantly different ranges, it is good practice to scale each group to unit variance
 # - scale_views: if views have significantly different ranges, it is good practice to scale each view to unit variance
 ent.set_data_options(
-	scale_groups = False, 
-	scale_views = False
+	scale_groups = True, 
+	scale_views = True
 )
 
-
-## (3, option 1) Set data using the nested list of matrices format ##
-views_names = ["view1","view2"]
-groups_names = ["groupA","groupB"]
-
-# samples_names nested list with length NGROUPS. Each entry g is a list with the sample names for the g-th group
-# - if not provided, MOFA will fill it with default samples names
-# samples_names = (...)
-
-# features_names nested list with length NVIEWS. Each entry m is a list with the features names for the m-th view
-# - if not provided, MOFA will fill it with default features names
-# features_names = (...)
-
-# ent.set_data_matrix(data, 
-# 	views_names = views_names, 
-# 	groups_names = groups_names, 
-# 	samples_names = samples_names,   
-# 	features_names = features_names
-# )
 
 # (3, option 2) Set data using a long data frame
 ent.set_data_df(data)
@@ -91,13 +48,6 @@ ent.set_data_df(data)
 # Simple (using default values)
 ent.set_model_options()
 
-# Advanced (using personalised values)
-ent.set_model_options(
-	factors = 5, 
-	spikeslab_weights = True, 
-	ard_factors = True, 
-	ard_weights = True
-)
 
 
 ## (5) Set training options ##
@@ -112,19 +62,12 @@ ent.set_model_options(
 # - verbose: verbose mode?
 # - seed: random seed
 
-# Simple (using default values)
-ent.set_train_options()
 
 # Advanced (using personalised values)
 ent.set_train_options(
-	iter = 100, 
-	convergence_mode = "fast", 
-	startELBO = 1, 
-	freqELBO = 1, 
-	dropR2 = None, 
-	gpu_mode = False, 
-	verbose = False, 
-	seed = 42
+	convergence_mode = "fast",
+	seed = 1,
+	iter = 10
 )
 
 
@@ -163,24 +106,8 @@ ent.run()
 ## Save the model ##
 ####################
 
-outfile = "test.hdf5"
+outfile = "model.hdf5"
 
 # - save_data: logical indicating whether to save the training data in the hdf5 file.
 # this is useful for some downstream analysis in R, but it can take a lot of disk space.
 ent.save(outfile, save_data=True)
-
-######################################################
-## (Optional Extract metrics from the trained model ##
-######################################################
-
-# NOTE: downstream analysis is done efficiently with the MOFA2 R package
-
-# Extract factors (per group)
-factors = ent.model.nodes["Z"].getExpectation()
-
-# Extract weights (per view)
-weights = ent.model.nodes["W"].getExpectation()
-
-# Extract variance explained
-r2 = ent.model.calculate_variance_explained()
-
