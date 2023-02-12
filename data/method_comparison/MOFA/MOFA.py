@@ -5,8 +5,8 @@
 
 from mofapy2.run.entry_point import entry_point
 import pandas as pd
-import io
-import requests # to download the online data
+#import io
+#import requests # to download the online data
 
 ###############
 ## Load data ##
@@ -14,7 +14,6 @@ import requests # to download the online data
 
 data = pd.read_csv("concatMelt.csv", index_col=0)
 data
-
 ###########################
 ## Initialise MOFA model ##
 ###########################
@@ -28,7 +27,6 @@ ent = entry_point()
 # - scale_groups: if groups have significantly different ranges, it is good practice to scale each group to unit variance
 # - scale_views: if views have significantly different ranges, it is good practice to scale each view to unit variance
 ent.set_data_options(
-	scale_groups = True, 
 	scale_views = True
 )
 
@@ -46,8 +44,9 @@ ent.set_data_df(data)
 # - ard_weights: use ARD prior in the weights? (TRUE if using multiple views)
 
 # Simple (using default values)
-ent.set_model_options()
-
+ent.set_model_options(
+	factors = 9
+)
 
 
 ## (5) Set training options ##
@@ -67,7 +66,7 @@ ent.set_model_options()
 ent.set_train_options(
 	convergence_mode = "fast",
 	seed = 1,
-	iter = 10
+	iter = 1000
 )
 
 

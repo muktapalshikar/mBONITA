@@ -1,0 +1,28 @@
+variable,1percent O2 CyAplus,1percent O2 CyAminus,19percent O2 CyAminus,Dataset,Condition,SampleNumber,SampleName
+norm_1-A,0,1,0,Proteomics,1percent O2 CyAminus,1,1percent O2 CyAminus_1
+norm_1-B,0,1,0,Proteomics,1percent O2 CyAminus,2,1percent O2 CyAminus_2
+norm_1-C,0,1,0,Proteomics,1percent O2 CyAminus,3,1percent O2 CyAminus_3
+Ramos_1O2_NoCyclo_2,0,1,0,Transcriptomics,1percent O2 CyAminus,1,1percent O2 CyAminus_1
+Ramos_1O2_NoCyclo_1,0,1,0,Transcriptomics,1percent O2 CyAminus,2,1percent O2 CyAminus_2
+Ramos_1O2_NoCyclo_3,0,1,0,Transcriptomics,1percent O2 CyAminus,3,1percent O2 CyAminus_3
+Gr1_F1..126..Sample..1,0,1,0,Phosphoproteomics,1percent O2 CyAminus,1,1percent O2 CyAminus_1
+Gr1_F2..126..Sample..1,0,1,0,Phosphoproteomics,1percent O2 CyAminus,2,1percent O2 CyAminus_2
+Gr1_F3..126..Sample..1,0,1,0,Phosphoproteomics,1percent O2 CyAminus,3,1percent O2 CyAminus_3
+norm_1-1ug-B,1,0,0,Proteomics,1percent O2 CyAplus,1,1percent O2 CyAplus_1
+norm_1-1ug-A,1,0,0,Proteomics,1percent O2 CyAplus,2,1percent O2 CyAplus_2
+norm_1-1ug-C,1,0,0,Proteomics,1percent O2 CyAplus,3,1percent O2 CyAplus_3
+Ramos_1O2_PlusCyclo_2,1,0,0,Transcriptomics,1percent O2 CyAplus,1,1percent O2 CyAplus_1
+Ramos_1O2_PlusCyclo_3,1,0,0,Transcriptomics,1percent O2 CyAplus,2,1percent O2 CyAplus_2
+Ramos_1O2_PlusCyclo_1,1,0,0,Transcriptomics,1percent O2 CyAplus,3,1percent O2 CyAplus_3
+"Gr1_F1: 128C, Sample, 4",1,0,0,Phosphoproteomics,1percent O2 CyAplus,1,1percent O2 CyAplus_1
+"Gr1_F2: 128C, Sample, 4",1,0,0,Phosphoproteomics,1percent O2 CyAplus,2,1percent O2 CyAplus_2
+"Gr1_F3: 128C, Sample, 4",1,0,0,Phosphoproteomics,1percent O2 CyAplus,3,1percent O2 CyAplus_3
+norm_19-A,0,0,1,Proteomics,19percent O2 CyAminus,1,19percent O2 CyAminus_1
+norm_19-B,0,0,1,Proteomics,19percent O2 CyAminus,2,19percent O2 CyAminus_2
+norm_19-C,0,0,1,Proteomics,19percent O2 CyAminus,3,19percent O2 CyAminus_3
+Ramos_19O2_NoCyclo_2,0,0,1,Transcriptomics,19percent O2 CyAminus,1,19percent O2 CyAminus_1
+Ramos_19O2_NoCyclo_1,0,0,1,Transcriptomics,19percent O2 CyAminus,2,19percent O2 CyAminus_2
+Ramos_19O2_NoCyclo_3,0,0,1,Transcriptomics,19percent O2 CyAminus,3,19percent O2 CyAminus_3
+"Gr2_F1: 128N, Control, 781",0,0,1,Phosphoproteomics,19percent O2 CyAminus,1,19percent O2 CyAminus_1
+"Gr2_F2: 128N, Control, 781",0,0,1,Phosphoproteomics,19percent O2 CyAminus,2,19percent O2 CyAminus_2
+"Gr2_F3: 128N, Control, 781",0,0,1,Phosphoproteomics,19percent O2 CyAminus,3,19percent O2 CyAminus_3

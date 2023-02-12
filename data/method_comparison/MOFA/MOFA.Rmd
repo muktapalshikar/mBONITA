@@ -92,9 +92,11 @@ concatMelt$sample = make.names(concatMelt$sample)
 head(concatMelt)
 ```
 ```{r}
-conditions = read.csv("concatenated_conditions.csv")
+conditions = read.csv("concatenated_conditions_MOFA.csv")
 conditions$variable = make.names(conditions$variable)
 head(conditions)
+conditions$sample = conditions$variable 
+#conditions$SampleName = unlist(lapply(1:length(conditions$variable), function(i){paste0(conditions$Condition[i], "_", make.names(conditions$Dataset[i]),"_", conditions$SampleNumber[i])}))
 ```
 
 ```{r}
@@ -103,13 +105,17 @@ levels(concatMelt$sample)[!make.names(levels(concatMelt$sample)) %in% make.names
 
 
 ```{r}
-concatMelt$sample = unlist(lapply(concatMelt$sample, function(x){conditions$Condition[conditions$variable == x]})) 
+concatMelt$sample = unlist(lapply(concatMelt$sample, function(x){conditions$SampleName[conditions$variable == x]}))
 #concatMelt$sample = make.unique(concatMelt$sample)
-
+concatMelt$feature = unlist(lapply(1:length(concatMelt$feature), function(i){paste0(concatMelt$feature[i], "_", concatMelt$view[i])})) 
+concatMelt$group = "group_0"
+#concatMelt = concatMelt[!duplicated(concatMelt[,c("feature","sample","view","group")]),] # remove duplicates
 ```
 
 ```{r}
+concatMelt$sample = make.names(concatMelt$sample)
 write.csv(concatMelt, "concatMelt.csv")
+unique(concatMelt$sample)
 ```
 
 ```{r,eval=FALSE}
@@ -138,19 +144,92 @@ MOFAobject.trained <- run_mofa(MOFAobject, outfile)
 require(MOFA2)
 model <- load_model("model.hdf5")
 ```
+```{r}
+plot_data_overview(model)
+```
+
+```{r}
+
+```
+
+```{r}
+model@cache[["variance_explained"]]
+plot_variance_explained(model)
+```
+```{r}
+plot_data_heatmap(model,
+  view = "Transcriptomics",         # view of interest
+  factor = 1,             # factor of interest
+  features = 20,          # number of features to plot (they are selected by weight)
+  
+  # extra arguments that are passed to the `pheatmap` function
+  cluster_rows = TRUE, cluster_cols = TRUE,
+  show_rownames = TRUE, show_colnames = TRUE
+)
+```
+
+```{r}
+plot_data_heatmap(model,
+  view = "Proteomics",         # view of interest
+  factor = 1,             # factor of interest
+  features = 20,          # number of features to plot (they are selected by weight)
+  
+  # extra arguments that are passed to the `pheatmap` function
+  cluster_rows = TRUE, cluster_cols = TRUE,
+  show_rownames = TRUE, show_colnames = TRUE
+)
+```
+
+```{r}
+plot_data_heatmap(model,
+  view = "Phosphoproteomics",         # view of interest
+  factor = 1,             # factor of interest
+  features = 20,          # number of features to plot (they are selected by weight)
+  
+  # extra arguments that are passed to the `pheatmap` function
+  cluster_rows = TRUE, cluster_cols = TRUE,
+  show_rownames = TRUE, show_colnames = TRUE
+)
+```
+
+```{r}
+sample_metadata = conditions[,c("SampleName","Condition")]
+sample_metadata$sample = make.names(sample_metadata$SampleName)
+sample_metadata = sample_metadata[!duplicated(sample_metadata),]
+samples_metadata(model) <- sample_metadata
+```
+
+```{r}
+plot_dimred(model,
+  method = "TSNE",  # method can be either "TSNE" or "UMAP"
+  color_by = "Condition",
+  perplexity = 1, dot_size = 5, label=TRUE
+)
+```
+
+```{r}
+require(MOFAdata)
+data("MSigDB_v6.0_C5_human") 
+MSigDB_v6.0_C5_human[1:5,1:5]
+```
+
+```{r}
+require(clusterprofiler)
+```
 
 
+```{r}
+enrichment.parametric <- run_enrichment(model,
+  view = "Transcriptomics", factors = 1:3,
+  feature.sets = MSigDB_v6.0_C5_human,
+  sign = "negative",
+  statistical.test = "parametric"
+)
+```
 
+```{r}
 
-
-
-
-
-
-
-
-
-
+```
 
 
 
