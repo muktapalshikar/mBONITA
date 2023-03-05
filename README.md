@@ -20,7 +20,7 @@ The *mBONITA* tool is written in Python3 and C. I strongly recommend that *mBONI
 
 **Minor caveat** - *mBONITA* is not a Python package like numpy or scipy, which allow users to import individual functions and (re)use them in custom code. *mBONITA* is an all-in-one pipeline that doesn't allow function import or much customization beyond the pre-specified parameters. I welcome advanced users to modify code and submit pull requests, but this is beyond what most users will need. 
 
-*mBONITA* requires the following inputs (Step 0):
+*mBONITA* requires the following inputs (see Step 0 below):
 
 - A pre-preprocessed multi-omics dataset from matched samples, prepared in a combined matrix format as in (link to Python notebook here)
 - A conditions file in matrix format, which specfies the experimental conditions for each sample in the training dataset above
@@ -33,6 +33,20 @@ to perform the following tasks:
 - Perform topology-informed pathway analysis for user-specified pairs of experimental conditions (Step 3)
 
 This tutorial will go through the *mBONITA* pipeline using a multi-omics dataset of transcriptomics, proteomics, and phosphoproteomics from RAMOS B cells, as described in the *mBONITA* publication.
+
+### Installation: 
+
+- As stated above, *mBONITA* is designed for use with Linux-based high-performance computing systems, such as the computing clusters available at most academic institutions. We reiterate that these installation instructions may vary slightly between such systems, and the currently provided SLURM scripts will need to be rewritten if your system uses a different scheduling system. Even if your system uses SLURM, we strongly recommend checking the provided SLURM scripts and changing the sbatch parameters and module names as necessary. While this should be relatively simple, we are happy to assist with this. There's no real reason one can't run *mBONITA* on a Windows system, however, we haven't tested this functionality. 
+- Click on the green 'Code' button at the top of this GitHub page and download the mBONITA github repository using the 'Download ZIP' or 'Open in GitHub Desktop' options. If using the 'Download ZIP' option, make sure that you have unzipped the folder before proceeding.
+- Transfer your data files (see Step 0 below for details) to the folder labeled 'mBONITA module'. This will be the working directory for all your experiments/analysis.
+- mBONITA requires a working C compiler, such as gcc on Linux or mingw-w64 on Windows. 
+- Install the required Python packages into a conda environment using the provided conda environment file () or, alternatively, manually install the list of dependencies in that file. We refer users to the conda documentation, but here's an example command that creates the 'BONITA' environment referred to in our SLURM scripts:
+```
+conda env create -f platform_BONITA.yaml
+
+conda activate BONITA
+```
+- Run all commands in a terminal window. You will need Python and your C compiler in your PATH variable. Once again, make sure that you are in the correct working directory.
 
 ### Step 0: Process multi-omics data and generate conditions and contrast files
 
