@@ -168,14 +168,25 @@ Please note that these scripts are written for SLURM. **find_rules_pathway_analy
 
 ## Step 3: Perform topology-informed pathway analysis for user-specified pairs of experimental conditions
 
-Run the Python script pathway_analysis_score_pathways_mBonita.py with the following parameters. An example is listed below. 
+Wait for all the rule inference jobs to finish. Then run the following command:
+
+```
+bash cleanup.sh
+```
+
+Run the Python script pathway_analysis_score_pathways_mBonita.py with the following parameters. 
 
 - path to training dataset file (concatenated)
 - conditions file
 - contrast file
 
-For file formats, please refer to Step 0.
+Example:
 
+```
+python3 pathway_analysis_score_pathways_mBonita.py your_omics_dataset.csv your_conditions_file.csv your_contrasts_file.csv -sep ,
+```
+
+For file formats, please refer to Step 0.
 
 ***If following along with the example/tutorial files listed above:***
 
