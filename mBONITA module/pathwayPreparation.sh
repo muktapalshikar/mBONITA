@@ -5,7 +5,7 @@
 #SBATCH -t 1:00:00
 
 module load anaconda3/2020.11
-activate scBONITA
+activate BONITA
 
 #Option 1: On a gmt of human pathways BONITA needs omics data, gmt file, and an indication of what character is used to separate columns in the file
 #comma separated
@@ -19,7 +19,7 @@ activate scBONITA
 #comma separated, mouse: 
 #python pathway_analysis_setup.py -org mmu -sep , Your_omics_data
 #tab separated: 
-python pathway_analysis_setup.py -sep , -org "hsa" --data "phospho_LSP1.csv"
+python pathway_analysis_setup.py -sep , -org "hsa" --data "concatenated_conditions.csv"
 
 #Option 3: On a list of KEGG pathways for any organism BONITA needs omics data, organism code, the list of pathways, and an indication of what character is used to separate columns in the file. 
 #comma separated, human

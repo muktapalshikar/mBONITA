@@ -151,8 +151,15 @@ Note that the default value for the ```customNetwork``` parameter is the string 
 
 ***If following along with the example/tutorial files listed above:***
 
+Run the SLURM script to run the mBONITA pipeline for all KEGG pathways that overlap with concatenated_datasets.csv.
+
+```
+sbatch pathwayPreparation.sh
 ```
 
+which contains the command:
+```
+python pathway_analysis_setup.py -sep , -org "hsa" --data "concatenated_conditions.csv"
 ```
 
 ## Step 2: Infer Boolean regulatory/signaling rules and calculate node importance scores for KEGG pathways using the combined multi-omics dataset
@@ -191,6 +198,8 @@ For file formats, please refer to Step 0.
 ***If following along with the example/tutorial files listed above:***
 
 ```
+bash cleanup.sh
+
 sbatch run_pathway_analysis.sh
 ```
 
