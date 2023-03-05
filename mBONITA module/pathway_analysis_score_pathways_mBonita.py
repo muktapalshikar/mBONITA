@@ -117,7 +117,7 @@ def analyze_pathways_mBonita(contrastName, conditionName, dataName, delimited):
         pvaluesDF = pd.concat([pvaluesDF, temp])
     #print(temp)
     pvaluesDF['Pathway Name'] = [pathDict[i[3:]] for i in pvaluesDF.Pathway]
-    pvaluesDF.to_csv("pvals_temp.csv", index = False)
+    pvaluesDF.to_csv("Pvalues.csv", index = False)
 
 if __name__ == "__main__":
     

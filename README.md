@@ -205,47 +205,51 @@ A set of CSV files are returned.
 
 Contains the standard deviation for the expression of each gene in each omics dataset provided.
 
-,Phosphoproteomics,Proteomics,Transcriptomics
-RP11-34P13.18,0.0,0.0,0.10767801162496944
-AP006222.1,0.0,0.0,0.08797905555042072
-RP4-669L17.4,0.0,0.0,0.05736019119163047
+|,|Phosphoproteomics|Proteomics|Transcriptomics|
+| -------------| -------------| -------------| -------------
+|RP11-34P13.18|0.0|0.0|0.10767801162496944|
+|AP006222.1|0.0|0.0|0.08797905555042072|
+|RP4-669L17.4|0.0|0.0|0.05736019119163047|
 
 - RelativeAbundance.csv
 
 Contains the fold changes for each gene in each omics dataset and contrast provided.
 
-,Phosphoproteomics,Proteomics,Transcriptomics,Contrast
-RP11-34P13.18,0.0,0.0,0.008468574055408795,"19% O2, CyA-_vs_1% O2, CyA+"
-AP006222.1,0.0,0.0,0.06476006663777902,"19% O2, CyA-_vs_1% O2, CyA+"
-RP4-669L17.4,0.0,0.0,0.02453693719545281,"19% O2, CyA-_vs_1% O2, CyA+"
+|Phosphoproteomics|Proteomics|Transcriptomics|Contrast
+| -------------| -------------| -------------| -------------| 
+|RP11-34P13.18|0.0|0.0|0.008468574055408795|"19% O2, CyA-_vs_1% O2, CyA+"|
+|AP006222.1|0.0|0.0|0.06476006663777902|"19% O2, CyA-_vs_1% O2, CyA+"|
+|RP4-669L17.4|0.0|0.0|0.02453693719545281|"19% O2, CyA-_vs_1% O2, CyA+"|
 
 - nodeModulation.csv
 
 Contains mBONITA's node modulation score for each gene in each omics dataset and contrast provided.
 
-,index,nodeModulation,Contrast,Pathway
-1,ACTL6A,0.6873673776689714,"1% O2, CyA+_vs_1% O2, CyA-",hsa05225
-2,APC,66.5190913005752,"1% O2, CyA+_vs_1% O2, CyA-",hsa05225
-3,ARAF,195.3686334082354,"1% O2, CyA+_vs_1% O2, CyA-",hsa05225
+,|index |nodeModulation|Contrast|Pathway|
+| -------------| -------------| -------------| -------------| -------------
+1|ACTL6A|0.6873673776689714|"1% O2, CyA+_vs_1% O2, CyA-"|hsa05225
+2|APC|66.5190913005752|"1% O2, CyA+_vs_1% O2, CyA-"|hsa05225
+3|ARAF|195.3686334082354|"1% O2, CyA+_vs_1% O2, CyA-"|hsa05225
 
 - ImportanceScores.csv
-
 
 Contains mBONITA's node modulation score for each gene in each pathway.
 
 ,index,ImportanceScore,Pathway
-0,GNAS,162.1799398,hsa04921
-1,OXTR,513.1222962,hsa04921
-2,RAF1,81.1653654,hsa04921
+| -------------| -------------| -------------| -------------|
+0|GNAS|162.1799398|hsa04921|
+1|OXTR|513.1222962|hsa04921|
+2|RAF1|81.1653654|hsa04921|
 
 - EvidenceScore.csv
 
 Contains mBONITA's evidence score for each gene.
 
-,EvidenceScore
-RP11-34P13.18,1
-AP006222.1,1
-RP4-669L17.4,1
+,|EvidenceScore
+| -------------| -------------|
+RP11-34P13.18|1
+AP006222.1|1
+RP4-669L17.4|1
 
 - PValues.csv
 
@@ -253,8 +257,9 @@ Contains pvalues for each contrast.
 
 (truncated example)
 
-,pathway,code,nodes,"1% O2, CyA+-1% O2, CyA-","1% O2, CyA--19% O2, CyA-","19% O2, CyA--1% O2, CyA+"
-0,Hepatocellular carcinoma,05225,"['EGFR', 'GRB2', 'MTOR', ...]",2.091042097078314e-06,7.270927424078314e-06,4.913378378390522e-06
-1,Vasopressin-regulated water reabsorption,04962,"['GNAS', 'AQP3', 'STX4', ...]",0.011525657525206859,0.011502011268563666,0.015870658725322166
-2,Viral life cycle - HIV-1,03250,"['PSIP1', 'TSG101', 'PDCD6IP', ...]",0.001158399836113599,0.0036377529570514695,0.002225168601570879
-3,GnRH signaling pathway,04912,"['CDC42', 'ATF4', 'MAPK7',...]",0.0004169666452885795,0.0005590675770277639,0.000495535057094964
+|pathway|code|nodes|"1% O2, CyA+-1% O2, CyA-"|"1% O2, CyA--19% O2, CyA-"|"19% O2, CyA--1% O2, CyA+"| 
+| ------------- | -------------| -------------| -------------| -------------| -------------
+0|Hepatocellular carcinoma|05225|"['EGFR', 'GRB2', 'MTOR', ...]"|2.091042097078314e-06|7.270927424078314e-06|4.913378378390522e-06| 
+1|Vasopressin-regulated water reabsorption|04962|"['GNAS', 'AQP3', 'STX4', ...]"|0.011525657525206859|0.011502011268563666|0.015870658725322166| 
+2|Viral life cycle - HIV-1|03250|"['PSIP1', 'TSG101', 'PDCD6IP', ...]"|0.001158399836113599|0.0036377529570514695|0.002225168601570879| 
+3|GnRH signaling pathway|04912|"['CDC42', 'ATF4', 'MAPK7',...]"|0.0004169666452885795|0.0005590675770277639|0.000495535057094964| 
