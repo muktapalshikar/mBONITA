@@ -40,13 +40,14 @@ This tutorial will go through the *mBONITA* pipeline using a multi-omics dataset
 - Click on the green 'Code' button at the top of this GitHub page and download the mBONITA github repository using the 'Download ZIP' or 'Open in GitHub Desktop' options. If using the 'Download ZIP' option, make sure that you have unzipped the folder before proceeding.
 - Transfer your data files (see Step 0 below for details) to the folder labeled 'mBONITA module'. This will be the working directory for all your experiments/analysis.
 - mBONITA requires a working C compiler, such as gcc on Linux or mingw-w64 on Windows. 
-- Install the required Python packages into a conda environment using the provided conda environment file [BONITA.yml](https://github.com/mgp13/mBONITA/blob/a3946d4cb20855bf2d14fe0234d0108aa9c9c523/mBONITA%20module/BONITA.yml) or, alternatively, manually install the list of dependencies in that file. We refer users to the conda documentation, but here's an example command that creates the 'BONITA' environment referred to in our SLURM scripts:
+- Install the required Python packages into a conda environment using the provided conda environment file [BONITA.yml](https://github.com/mgp13/mBONITA/blob/a3946d4cb20855bf2d14fe0234d0108aa9c9c523/mBONITA%20module/BONITA.yml) or, alternatively, manually install the list of dependencies in that file. We refer users to the conda documentation, but here's an example command that creates the **BONITA** environment referred to in our SLURM scripts:
 ```
 conda env create -f BONITA.yml
 
 conda activate BONITA
 ```
 - Run all commands in a terminal window. You will need Python and your C compiler in your PATH variable. Once again, make sure that you are in the correct working directory.
+- The (mBONITA module)[https://github.com/mgp13/mBONITA/tree/main/mBONITA%20module] folder contains the processed transcriptomics, proteomics and phosphoproteomics datasets used in the paper. The original datasets may be downloaded from GEO and PRIDE (refer to manuscript for accession numbers). We have provided the file (concatenated_datasets.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_datasets.csv], which is a combination of the files (bonita_transcriptomics.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/bonita_transcriptomics.csv], (bonita_proteomics.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/bonita_proteomics.csv] and (bonita_phosphoproteomics.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/bonita_phosphoproteomics.csv], as the training dataset for the tutorial below. The corresponding contrasts file (contrasts.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/contrasts.csv] and conditions file (concatenated_conditions.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_conditions.csv] are also in the folder.
 
 ### Step 0: Process multi-omics data and generate conditions and contrast files
 
@@ -54,7 +55,7 @@ I expect that most users will begin with 2 or more processed datasets from separ
 
 mBONITA also requires a condition and contrast file for pathway analysis. An example of how to prepare these files is in [**Figure1.ipynb**](https://github.com/mgp13/mBONITA/blob/7255e434352085670414d337abd246c376d450d7/code%20used%20to%20generate%20figures%20in%20manuscript/Figure%201/Figure1.ipynb).
 
-Briefly, if your dataset looks something like this:
+Briefly, if your dataset looks something like this (a real-life example is (concatenated_datasets.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_datasets.csv]):
 
 | Genes | Condition1_ replicate1_ proteomics  | Condition1_ replicate2_ proteomics | Condition2_ replicate1_ proteomics  | Condition2_ replicate2_ proteomics | Condition1_ replicate1_ phospho proteomics | Condition1_ replicate2_ phospho proteomics | Condition2_ replicate1_ phospho proteomics | Condition2_ replicate2_ phospho proteomics |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -63,7 +64,7 @@ Briefly, if your dataset looks something like this:
 | Gene3  | - | - | - | - | - | - | - | - |
 | Gene4  | - | - | - | - | - | - | - | - |
 
-Then your condition file will look like this:
+Then your condition file will look like this (Example: (concatenated_conditions.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_conditions.csv]):
 
 | Sample |  Condition1 | Condition2  | 
 | ------------- | ------------- | ------------- | 
@@ -77,7 +78,7 @@ Then your condition file will look like this:
 | Condition2_replicate2_phosphoproteomics  | 0  | 1  |
 
 
-And your contrast file will look like this:
+And your contrast file will look like this (Example: (contrasts.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/contrasts.csv]):
 
 |  Condition1 | Condition2  |
 
