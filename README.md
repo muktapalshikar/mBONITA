@@ -50,7 +50,7 @@ conda activate BONITA
 
 ### Step 0: Process multi-omics data and generate conditions and contrast files
 
-I expect that most users will begin with 2 or more processed datasets from separate multi-omics datasets. These datasets will usually be log2-normalized. The Jupyter notebook (**Figure1.ipynb**) outlines how to combine log2-normalized proteomics, phosphoproteomics and transcriptomics datasets as in the *mBONITA* publication and prepare them in a matrix format for mBONITA.
+I expect that most users will begin with 2 or more processed datasets from separate multi-omics datasets. These datasets will usually be log2-normalized. The Jupyter notebook [**Figure1.ipynb**](https://github.com/mgp13/mBONITA/blob/7255e434352085670414d337abd246c376d450d7/code%20used%20to%20generate%20figures%20in%20manuscript/Figure%201/Figure1.ipynb) outlines how to combine log2-normalized proteomics, phosphoproteomics and transcriptomics datasets as in the *mBONITA* publication and prepare them in a matrix format for mBONITA.
 
 mBONITA also requires a condition and contrast file for pathway analysis. An example of how to prepare these files is in [**Figure1.ipynb**](https://github.com/mgp13/mBONITA/blob/7255e434352085670414d337abd246c376d450d7/code%20used%20to%20generate%20figures%20in%20manuscript/Figure%201/Figure1.ipynb).
 
