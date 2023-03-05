@@ -92,7 +92,7 @@ Then compile the portions of mBONITA written in C by typing the following into y
 
 Use the command ```python3 pathway_analysis_setup.py --help``` for more information on each parameter. The examples below cover most use cases.
 
-- Option 1: On a gmt of human pathways *mBONITA* needs omics data, gmt file, and an indication of what character is used to separate columns in the file
+- ***Option 1:*** On a gmt of human pathways *mBONITA* needs omics data, gmt file, and an indication of what character is used to separate columns in the file
 
 **comma separated**
 
@@ -102,7 +102,7 @@ Use the command ```python3 pathway_analysis_setup.py --help``` for more informat
 
 ```python pathway_analysis_setup.py -t -gmt Your_gmt_file --data Your_omics_data```
 
-- Option 2: On all KEGG pathways for any organism *mBONITA* needs omics data, organism code, and an indication of what character is used to separate columns in the file.
+- ***Option 2:*** On all KEGG pathways for any organism *mBONITA* needs omics data, organism code, and an indication of what character is used to separate columns in the file.
 
 **comma separated, human:** *MOST COMMON USAGE*
 
@@ -116,7 +116,8 @@ Use the command ```python3 pathway_analysis_setup.py --help``` for more informat
 
 ```python pathway_analysis_setup.py -sep , -org hsa --data Your_omics_data```
 
-- Option 3: On a list of KEGG pathways for any organism *mBONITA* needs omics data, organism code, the list of pathways, and an indication of what character is used to separate columns in the file. 
+
+- ***Option 3:*** On a list of KEGG pathways for any organism *mBONITA* needs omics data, organism code, the list of pathways, and an indication of what character is used to separate columns in the file. 
 
 The pathway list should be a plain-text file formatted like so. The codes are KEGG network codes (Example: https://www.genome.jp/pathway/hsa04066) and hsa stands for *Homo sapiens*. 
 
@@ -140,13 +141,19 @@ hsa04810
 
 ```python pathway_analysis_setup.py -t -org Your_org_code -paths Your_pathway_list --data Your_omics_data```
 
-- Option 4: On a custom network in graphml format *mBONITA* needs omics data, the path to the custom network, and an indication of what character is used to separate columns in the file. 
+- ***Option 4:*** On a custom network in graphml format *mBONITA* needs omics data, the path to the custom network, and an indication of what character is used to separate columns in the file. 
 
 Note that the default value for the ```customNetwork``` parameter is the string ```False```. Any other value will trigger a search for a network with that name.
 
 **comma separated, custom network 'network.graphml'**
 
 ```python pathway_analysis_setup.py --sep , --data Your_omics_data --customNetwork network.graphml```
+
+***If following along with the example/tutorial files listed above:***
+
+```
+
+```
 
 ## Step 2: Infer Boolean regulatory/signaling rules and calculate node importance scores for KEGG pathways using the combined multi-omics dataset
 
@@ -155,6 +162,9 @@ Simply run the script **find_rules_pathway_analysis.sh** which will automaticall
 ```bash find_rules_pathway_analysis.sh```
 
 Please note that these scripts are written for SLURM. **find_rules_pathway_analysis.sh** loops over all networks to execute the script **calcNodeImportance.sh**, which in turn executes the Python script **pathway_analysis_score_nodes.py**. I'm open to writing these scripts for other job scheduling managers. The Python script can also be run by itself on a desktop, but I advise doing this only for small networks/training datasets.
+
+***If following along with the example/tutorial files listed above, the instructions remain the same.***
+
 
 ## Step 3: Perform topology-informed pathway analysis for user-specified pairs of experimental conditions
 
@@ -166,9 +176,18 @@ Run the Python script pathway_analysis_score_pathways_mBonita.py with the follow
 
 For file formats, please refer to Step 0.
 
-Here is an example command:
 
-```python3 pathway_analysis_score_pathways_mBonita.py concatenated_datasets.csv concatenated_conditions.csv contrasts.csv -sep ,```
+***If following along with the example/tutorial files listed above:***
+
+```
+sbatch run_pathway_analysis.sh
+```
+
+which contains the command:
+
+```
+python3 pathway_analysis_score_pathways_mBonita.py concatenated_datasets.csv concatenated_conditions.csv contrasts.csv -sep ,
+```
 
 ## Analysis of the *mBONITA* output
 
