@@ -1,0 +1,27 @@
+name: BONITA
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - babel
+  - beautifulsoup4
+  - bioservices
+  - libxml2
+  - lxml
+  - matplotlib-base
+  - matplotlib-inline
+  - networkx
+  - numpy
+  - pandas
+  - python
+  - requests
+  - scipy
+  - seaborn
+  - spyder
+  - statsmodels
+  - unicodedata2
+  - unidecode
+  - urllib3
+  - yaml
+prefix: /home/mpalshik/.conda/envs/BONITA
