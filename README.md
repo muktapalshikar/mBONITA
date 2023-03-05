@@ -52,7 +52,7 @@ conda activate BONITA
 
 I expect that most users will begin with 2 or more processed datasets from separate multi-omics datasets. These datasets will usually be log2-normalized. The Jupyter notebook (**Figure1.ipynb**) outlines how to combine log2-normalized proteomics, phosphoproteomics and transcriptomics datasets as in the *mBONITA* publication and prepare them in a matrix format for mBONITA.
 
-mBONITA also requires a condition and contrast file for pathway analysis. An example of how to prepare these files is in [**Figure1.ipynb**]().
+mBONITA also requires a condition and contrast file for pathway analysis. An example of how to prepare these files is in [**Figure1.ipynb**](https://github.com/mgp13/mBONITA/blob/7255e434352085670414d337abd246c376d450d7/code%20used%20to%20generate%20figures%20in%20manuscript/Figure%201/Figure1.ipynb).
 
 Briefly, if your dataset looks something like this:
 
@@ -173,11 +173,12 @@ Here is an example command:
 
 ### Inferred Boolean rules
 
-Jupyter notebook: **Figure4.ipynb**
+Jupyter notebook: [**Figure4.ipynb**](https://github.com/mgp13/mBONITA/blob/654aff7569c7a78ef54d3df124ac8a1c37d6b7c8/code%20used%20to%20generate%20figures%20in%20manuscript/Figure_4_and_5/Figure4.ipynb)
 
-Python script: **Figure4.py**
+Script: [**Figure4.py**](https://github.com/mgp13/mBONITA/blob/654aff7569c7a78ef54d3df124ac8a1c37d6b7c8/code%20used%20to%20generate%20figures%20in%20manuscript/Figure_4_and_5/Figure4.py)
 
-These scripts contain code to open the local1.pickle files generated during the rule inference process (these files contain the inferred network model in a slightly complex data structure) and process the information into a single dataframe.
+
+This contains code to open the local1.pickle files generated during the rule inference process (these files contain the inferred network model in a slightly complex data structure) and process the information into a single dataframe.
 
 **One row in the dataframe contains information for one node. The dataframe has the following columns:**
   - Network name - readable, descriptive KEGG network name
@@ -189,12 +190,6 @@ These scripts contain code to open the local1.pickle files generated during the 
   - plainRules - plain text representation of the rules in the ERS
   - randomERSIndividual - random individual from the ERS
   - minLocalSearchError - lowest error for the rules tried for each node
-
-### Node importance scores
-
-Importance scores are stored as node attributes in the **xyz_rules.graphml** files generated after the node importance score calculation step (Step 2 above). These graphml files can be visualized in software such as Gephi or Cytoscape.
-
-Alternatively, Figure4.py has some suggestions for reading in these graphml files and aggregating these node importance scores using pandas and networkx and generating a single dataframe.
 
 
 ### Pathway analysis
@@ -240,6 +235,10 @@ Contains mBONITA's node modulation score for each gene in each pathway.
 |0|GNAS|162.1799398|hsa04921|
 |1|OXTR|513.1222962|hsa04921|
 |2|RAF1|81.1653654|hsa04921|
+
+Importance scores are also stored as node attributes in the **xyz_rules.graphml** files generated after the node importance score calculation step (Step 2 above). These graphml files can be visualized in software such as Gephi or Cytoscape.
+
+Alternatively, [**Figure4.py**](https://github.com/mgp13/mBONITA/blob/654aff7569c7a78ef54d3df124ac8a1c37d6b7c8/code%20used%20to%20generate%20figures%20in%20manuscript/Figure_4_and_5/Figure4.py) has some suggestions for reading in these graphml files and aggregating these node importance scores using pandas and networkx and generating a single dataframe.
 
 - EvidenceScore.csv
 
