@@ -40,9 +40,9 @@ This tutorial will go through the *mBONITA* pipeline using a multi-omics dataset
 - Click on the green 'Code' button at the top of this GitHub page and download the mBONITA github repository using the 'Download ZIP' or 'Open in GitHub Desktop' options. If using the 'Download ZIP' option, make sure that you have unzipped the folder before proceeding.
 - Transfer your data files (see Step 0 below for details) to the folder labeled 'mBONITA module'. This will be the working directory for all your experiments/analysis.
 - mBONITA requires a working C compiler, such as gcc on Linux or mingw-w64 on Windows. 
-- Install the required Python packages into a conda environment using the provided conda environment file () or, alternatively, manually install the list of dependencies in that file. We refer users to the conda documentation, but here's an example command that creates the 'BONITA' environment referred to in our SLURM scripts:
+- Install the required Python packages into a conda environment using the provided conda environment file [BONITA.yml](https://github.com/mgp13/mBONITA/blob/a3946d4cb20855bf2d14fe0234d0108aa9c9c523/mBONITA%20module/BONITA.yml) or, alternatively, manually install the list of dependencies in that file. We refer users to the conda documentation, but here's an example command that creates the 'BONITA' environment referred to in our SLURM scripts:
 ```
-conda env create -f platform_BONITA.yaml
+conda env create -f BONITA.yml
 
 conda activate BONITA
 ```
