@@ -235,11 +235,11 @@ Contains mBONITA's node modulation score for each gene in each omics dataset and
 
 Contains mBONITA's node modulation score for each gene in each pathway.
 
-,index,ImportanceScore,Pathway
+|,|index|ImportanceScore|Pathway|
 | -------------| -------------| -------------| -------------|
-0|GNAS|162.1799398|hsa04921|
-1|OXTR|513.1222962|hsa04921|
-2|RAF1|81.1653654|hsa04921|
+|0|GNAS|162.1799398|hsa04921|
+|1|OXTR|513.1222962|hsa04921|
+|2|RAF1|81.1653654|hsa04921|
 
 - EvidenceScore.csv
 
