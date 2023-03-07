@@ -68,16 +68,16 @@ Briefly, if your dataset looks something like this (a real-life example is [conc
 
 Then your condition file will look like this (Example: [concatenated_conditions.csv](https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_conditions.csv)):
 
-| Sample |  Condition1 | Condition2  | Dataset |
-| ------------- | ------------- | ------------- | ------------- |
-| Condition1_replicate1_proteomics | 1  | 0  | Proteomics |
-| Condition1_replicate2_proteomics  | 1  | 0  | Proteomics |
-| Condition2_replicate1_proteomics | 0  | 1  |  Proteomics |
-| Condition2_replicate2_proteomics  | 0  | 1  | Proteomics |
-| Condition1_replicate1_phosphoproteomics | 1  | 0  |  Phosphoproteomics |
-| Condition1_replicate2_phosphoproteomics  | 1  | 0  | Phosphoproteomics |
-| Condition2_replicate1_phosphoproteomics | 0  | 1  |  Phosphoproteomics |
-| Condition2_replicate2_phosphoproteomics  | 0  | 1  | Phosphoproteomics |
+| Sample |  Condition | Dataset |
+| ------------- | ------------- |------------- |
+| Condition1_replicate1_proteomics | Condition1 | Proteomics |
+| Condition1_replicate2_proteomics  | Condition1  | Proteomics |
+| Condition2_replicate1_proteomics | Condition2 | Proteomics |
+| Condition2_replicate2_proteomics  | Condition2   | Proteomics |
+| Condition1_replicate1_phosphoproteomics | Condition1  | Phosphoproteomics |
+| Condition1_replicate2_phosphoproteomics  | Condition1 | Phosphoproteomics |
+| Condition2_replicate1_phosphoproteomics | Condition2 | Phosphoproteomics |
+| Condition2_replicate2_phosphoproteomics  | Condition2 | Phosphoproteomics |
 
 
 And your contrast file will look like this (Example: [contrasts.csv](https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/contrasts.csv)):
@@ -206,6 +206,11 @@ Run the following command in the terminal
 ```
 python pathway_analysis_score_nodes.py test_network.gpickle 1
 ```
+
+You will see the following output files:
+- test_network_1_scores1.pickle
+- test_network_1_rules.txt
+- test_network_1_local1.pickle
 
 The option '1' stands in for the SLURM array ID. The SLURM script in the standard workflow runs the rule inference pipeline 5 times per network.
 

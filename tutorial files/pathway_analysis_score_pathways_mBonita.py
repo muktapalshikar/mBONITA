@@ -9,6 +9,7 @@ def analyze_pathways_mBonita(contrastName, conditionName, dataName, delimited):
     data = pd.read_csv(dataName, sep = delimited, index_col = 0).T
     contrasts = pd.read_csv(contrastName, sep = delimited, header = None)
     conditionMatrix = pd.read_csv(conditionName, sep = delimited, index_col=0)
+    print(conditionMatrix)
     # check if 'Dataset' column exists in conditionMatrix
     if not 'Dataset' in conditionMatrix.columns:
         print("Condition matrix must have a column 'Dataset' indicating the original omics dataset")
@@ -133,19 +134,20 @@ if __name__ == "__main__":
     parser.add_argument(
         "-t", action="store_const", const="\t", dest="sep", help="Tab delimited?"
     )
-    parser.add_argument("data")
+    parser.add_argument("-data", "--data")
 
-    parser.add_argument("matrix")
-    parser.add_argument("diffName")
+    parser.add_argument("-conditions","--conditions")
+    parser.add_argument("-contrast", "--contrast")
 
     results = parser.parse_args()
     
-    contrastName = "contrasts.csv"
-    conditionName="concatenated_conditions.csv"
-    dataName = "concatenated_datasets.csv"
-    delimited = ","
+    contrastName = results.contrast
+    conditionName=  results.conditions
+    dataName = results.data
+    delimited = results.sep
 
-    analyze_pathways_mBonita(contrastName = "contrasts.csv", conditionName="concatenated_conditions.csv", dataName = "concatenated_datasets.csv", delimited = ",")
+    #analyze_pathways_mBonita(contrastName = "contrasts.csv", conditionName="concatenated_conditions.csv", dataName = "concatenated_datasets.csv", delimited = ",")
+    analyze_pathways_mBonita(contrastName=contrastName,conditionName=conditionName, dataName = dataName ,  delimited =delimited)
 
 """
 from pathway_analysis_score_pathways import findPathwayList

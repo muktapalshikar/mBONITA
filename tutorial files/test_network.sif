@@ -13,3 +13,14 @@ A,H,a
 I,B,i
 A,J,a
 C,J,a
+
+A=A
+B=B
+C=C
+D=A and not B
+E=A or not B
+F=(A and not B) or (A and not C)
+G=(A)or(B and C)
+H=A
+I=not B
+J=A or C
