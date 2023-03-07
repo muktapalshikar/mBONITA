@@ -71,13 +71,13 @@ Then your condition file will look like this (Example: (concatenated_conditions.
 | Sample |  Condition1 | Condition2  | Dataset |
 | ------------- | ------------- | ------------- | ------------- |
 | Condition1_replicate1_proteomics | 1  | 0  | Proteomics |
-| Condition1_replicate2_proteomics  | 1  | 0  |
-| Condition2_replicate1_proteomics | 0  | 1  | 
-| Condition2_replicate2_proteomics  | 0  | 1  |
-| Condition1_replicate1_phosphoproteomics | 1  | 0  | 
-| Condition1_replicate2_phosphoproteomics  | 1  | 0  |
-| Condition2_replicate1_phosphoproteomics | 0  | 1  | 
-| Condition2_replicate2_phosphoproteomics  | 0  | 1  |
+| Condition1_replicate2_proteomics  | 1  | 0  | Proteomics |
+| Condition2_replicate1_proteomics | 0  | 1  |  Proteomics |
+| Condition2_replicate2_proteomics  | 0  | 1  | Proteomics |
+| Condition1_replicate1_phosphoproteomics | 1  | 0  |  Phosphoproteomics |
+| Condition1_replicate2_phosphoproteomics  | 1  | 0  | Phosphoproteomics |
+| Condition2_replicate1_phosphoproteomics | 0  | 1  |  Phosphoproteomics |
+| Condition2_replicate2_phosphoproteomics  | 0  | 1  | Phosphoproteomics |
 
 
 And your contrast file will look like this (Example: (contrasts.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/contrasts.csv]):
