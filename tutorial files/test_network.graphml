@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="edge" attr.name="signal" attr.type="string"/>
+<graph edgedefault="directed"><node id="A"/>
+<node id="D"/>
+<node id="B"/>
+<node id="E"/>
+<node id="F"/>
+<node id="C"/>
+<node id="G"/>
+<node id="H"/>
+<node id="I"/>
+<node id="J"/>
+<edge source="A" target="D">
+  <data key="d0">a</data>
+</edge>
+<edge source="A" target="E">
+  <data key="d0">a</data>
+</edge>
+<edge source="A" target="F">
+  <data key="d0">a</data>
+</edge>
+<edge source="A" target="G">
+  <data key="d0">a</data>
+</edge>
+<edge source="A" target="H">
+  <data key="d0">a</data>
+</edge>
+<edge source="A" target="J">
+  <data key="d0">a</data>
+</edge>
+<edge source="D" target="A">
+  <data key="d0">a</data>
+</edge>
+<edge source="D" target="B">
+  <data key="d0">i</data>
+</edge>
+<edge source="B" target="D">
+  <data key="d0">i</data>
+</edge>
+<edge source="B" target="E">
+  <data key="d0">i</data>
+</edge>
+<edge source="B" target="F">
+  <data key="d0">i</data>
+</edge>
+<edge source="B" target="G">
+  <data key="d0">a</data>
+</edge>
+<edge source="B" target="I">
+  <data key="d0">i</data>
+</edge>
+<edge source="E" target="A">
+  <data key="d0">a</data>
+</edge>
+<edge source="E" target="B">
+  <data key="d0">i</data>
+</edge>
+<edge source="F" target="A">
+  <data key="d0">a</data>
+</edge>
+<edge source="F" target="B">
+  <data key="d0">i</data>
+</edge>
+<edge source="F" target="C">
+  <data key="d0">i</data>
+</edge>
+<edge source="C" target="F">
+  <data key="d0">i</data>
+</edge>
+<edge source="C" target="G">
+  <data key="d0">a</data>
+</edge>
+<edge source="C" target="J">
+  <data key="d0">a</data>
+</edge>
+<edge source="G" target="A">
+  <data key="d0">a</data>
+</edge>
+<edge source="G" target="B">
+  <data key="d0">a</data>
+</edge>
+<edge source="G" target="C">
+  <data key="d0">a</data>
+</edge>
+<edge source="H" target="A">
+  <data key="d0">a</data>
+</edge>
+<edge source="I" target="B">
+  <data key="d0">i</data>
+</edge>
+<edge source="J" target="A">
+  <data key="d0">a</data>
+</edge>
+<edge source="J" target="C">
+  <data key="d0">a</data>
+</edge>
+</graph></graphml>

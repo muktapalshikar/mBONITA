@@ -36,10 +36,10 @@ This tutorial will go through the *mBONITA* pipeline using a multi-omics dataset
 
 ### Installation: 
 
-- As stated above, *mBONITA* is designed for use with Linux-based high-performance computing systems, such as the computing clusters available at most academic institutions. We reiterate that these installation instructions may vary slightly between such systems, and the currently provided SLURM scripts will need to be rewritten if your system uses a different scheduling system. Even if your system uses SLURM, we strongly recommend checking the provided SLURM scripts and changing the sbatch parameters and module names as necessary. While this should be relatively simple, we are happy to assist with this. There's no real reason one can't run *mBONITA* on a Windows system, however, we haven't tested this functionality. 
+- As stated above, *mBONITA* is designed for use with Linux-based high-performance computing systems, such as the computing clusters available at most academic institutions. We reiterate that these installation instructions may vary slightly between such systems, and the currently provided SLURM scripts will need to be rewritten if your system uses a different scheduling system. Even if your system uses SLURM, we strongly recommend checking the provided SLURM scripts and changing the sbatch parameters and module names as necessary. While this should be relatively simple, we are happy to assist with this. There's no real reason one can't modify *mBONITA* to runon a Windows system, however, we haven't tested this functionality and this will require a bit of rewriting of mBONITA's C components. 
 - Click on the green 'Code' button at the top of this GitHub page and download the mBONITA github repository using the 'Download ZIP' or 'Open in GitHub Desktop' options. If using the 'Download ZIP' option, make sure that you have unzipped the folder before proceeding.
 - Transfer your data files (see Step 0 below for details) to the folder labeled 'mBONITA module'. This will be the working directory for all your experiments/analysis.
-- mBONITA requires a working C compiler, such as gcc on Linux or mingw-w64 on Windows. 
+- mBONITA requires the C compiler gcc on Linux.
 - Install the required Python packages into a conda environment using the provided conda environment file [BONITA.yml](https://github.com/mgp13/mBONITA/blob/a3946d4cb20855bf2d14fe0234d0108aa9c9c523/mBONITA%20module/BONITA.yml) or, alternatively, manually install the list of dependencies in that file. We refer users to the conda documentation, but here's an example command that creates the **BONITA** environment referred to in our SLURM scripts:
 ```
 conda env create -f BONITA.yml
@@ -66,9 +66,9 @@ Briefly, if your dataset looks something like this (a real-life example is (conc
 
 Then your condition file will look like this (Example: (concatenated_conditions.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_conditions.csv]):
 
-| Sample |  Condition1 | Condition2  | 
+| Sample |  Condition1 | Condition2  | Dataset |
 | ------------- | ------------- | ------------- | 
-| Condition1_replicate1_proteomics | 1  | 0  | 
+| Condition1_replicate1_proteomics | 1  | 0  | Proteomics |
 | Condition1_replicate2_proteomics  | 1  | 0  |
 | Condition2_replicate1_proteomics | 0  | 1  | 
 | Condition2_replicate2_proteomics  | 0  | 1  |
@@ -89,6 +89,7 @@ Ensure that you are in the same working directory as all files associated with t
 Then compile the portions of mBONITA written in C by typing the following into your terminal. 
 
 ```make```
+
 
 Use the command ```python3 pathway_analysis_setup.py --help``` for more information on each parameter. The examples below cover most use cases.
 
@@ -137,7 +138,7 @@ hsa04810
 
 ```python pathway_analysis_setup.py -org mmu -sep , -paths Your_pathway_list --data Your_omics_data```
 
-**tab separated**
+**tab separated** # NOTE THE DIFFERENT SPECIFICATION OF THE SEPARATOR (uses -t instead of --sep)
 
 ```python pathway_analysis_setup.py -t -org Your_org_code -paths Your_pathway_list --data Your_omics_data```
 
@@ -149,7 +150,31 @@ Note that the default value for the ```customNetwork``` parameter is the string 
 
 ```python pathway_analysis_setup.py --sep , --data Your_omics_data --customNetwork network.graphml```
 
-***If following along with the example/tutorial files listed above:***
+
+***If following along with the example/tutorial files in the tutorial folder:***
+
+Run the following command in the terminal
+
+```
+python pathway_analysis_setup.py --sep , --data test_input_data.txt --customNetwork test_network.graphml -t
+```
+
+You will see the output:
+
+```
+Please provide either a specific organism for which all of KEGG should be searched using "-org" or specify a gmt of specific human pathways using "paths"
+Using the custom network test_network.graphml
+['A', 'D', 'B', 'E', 'F', 'C', 'G', 'H', 'I', 'J']
+('nodes: ', '10', ',   edges:', '28')
+
+```
+A number of files will be generated:
+
+- sss.pickle: dictionary with samples and corresponding data
+- test_network.gpickle: processed graph
+- test_network_sss.pickle: data corresponding to nodes in the network
+
+***If following along with the real-life data files used in the manuscript and listed above:***
 
 Run the SLURM script to run the mBONITA pipeline for all KEGG pathways that overlap with concatenated_datasets.csv.
 
@@ -170,7 +195,17 @@ Simply run the script **find_rules_pathway_analysis.sh** which will automaticall
 
 Please note that these scripts are written for SLURM. **find_rules_pathway_analysis.sh** loops over all networks to execute the script **calcNodeImportance.sh**, which in turn executes the Python script **pathway_analysis_score_nodes.py**. I'm open to writing these scripts for other job scheduling managers. The Python script can also be run by itself on a desktop, but I advise doing this only for small networks/training datasets.
 
-***If following along with the example/tutorial files listed above, the instructions remain the same.***
+***If following along with the real-life data files listed above and used in the manuscript, the instructions remain the same.***
+
+***If following along with the example/tutorial files in the tutorial folder:***
+
+Run the following command in the terminal
+
+```
+python pathway_analysis_score_nodes.py test_network.gpickle 1
+```
+
+You will see an output of nodes along with their predictors (ie, their upstream nodes with high correlation to them ), and a table showing the results of the genetic algorithm (generation, number of evaluations, average value of optimization function, standard deviation, minimum and maximum). 
 
 
 ## Step 3: Perform topology-informed pathway analysis for user-specified pairs of experimental conditions

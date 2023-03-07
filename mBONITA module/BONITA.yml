@@ -23,5 +23,7 @@ dependencies:
   - unicodedata2
   - unidecode
   - urllib3
+  - pickle
+  - deap
   - yaml
 prefix: /home/mpalshik/.conda/envs/BONITA
