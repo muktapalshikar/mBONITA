@@ -168,7 +168,7 @@ def findPathwayList():
     for code in codes:
         pathVals = []
         rules = []
-        for i in range(1, 6):
+        for i in range(1):
             [
                 bruteOut1,
                 dev,

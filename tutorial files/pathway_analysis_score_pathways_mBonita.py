@@ -20,7 +20,7 @@ def analyze_pathways_mBonita(contrastName, conditionName, dataName, delimited):
     else:
         data = pd.read_csv(dataName, sep = delimited, index_col = 0).T
         contrasts = pd.read_csv(contrastName, sep = delimited, header = None)
-        conditionMatrix = pd.read_csv(conditionName, sep = delimited, index_col=0)
+        conditionMatrix = pd.read_csv(conditionName, sep = delimited)
         groupedData = data.groupby([conditionMatrix['Dataset'], conditionMatrix['Condition']], axis = 0)
         meanAbundance = groupedData.mean()
         CV = data.groupby(conditionMatrix['Dataset'], axis = 0).std()
