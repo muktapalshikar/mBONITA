@@ -168,7 +168,7 @@ def findPathwayList():
     for code in codes:
         pathVals = []
         rules = []
-        for i in range(1):
+        for i in [1]:
             [
                 bruteOut1,
                 dev,
@@ -192,7 +192,7 @@ def findPathwayList():
         ImportanceVals = {}  # average importance vals over trials
         for node in range(len(storeModel[1])):
             ImportanceVals[storeModel[1][node]] = float(
-                np.mean([pathVals[i][node] for i in range(5)])
+                np.mean([pathVals[i][node] for i in [0]])
             )
         # add nodes removed during network simplification back in
         #print(ImportanceVals)

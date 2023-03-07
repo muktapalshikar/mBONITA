@@ -48,7 +48,8 @@ conda activate BONITA
 ```
 - Run all commands in a terminal window. You will need Python and your C compiler in your PATH variable. Once again, make sure that you are in the correct working directory.
 - The [mBONITA module](https://github.com/mgp13/mBONITA/tree/main/mBONITA%20module) folder contains the processed transcriptomics, proteomics and phosphoproteomics datasets used in the paper. The original datasets may be downloaded from GEO and PRIDE (refer to manuscript for accession numbers). We have provided the file [concatenated_datasets.csv](https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_datasets.csv), which is a combination of the files [bonita_transcriptomics.csv](https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/bonita_transcriptomics.csv), [bonita_proteomics.csv](https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/bonita_proteomics.csv) and [bonita_phosphoproteomics.csv](https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/bonita_phosphoproteomics.csv), as the training dataset for the tutorial below. The corresponding contrasts file [contrasts.csv](https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/contrasts.csv) and conditions file [concatenated_conditions.csv](https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_conditions.csv) are also in the folder.
-- The [tutorial files](https://github.com/mgp13/mBONITA/tree/main/tutorial%20files) folder contains a toy example dataset [test_input_data.txt](https://github.com/mgp13/mBONITA/blob/1a72cf4fb3b5ab4976f4d3518c7719c7f6192b6a/tutorial%20files/test_input_data.txt) and network [test_network.graphml](https://github.com/mgp13/mBONITA/blob/1a72cf4fb3b5ab4976f4d3518c7719c7f6192b6a/tutorial%20files/test_network.graphml). These can be used to try the mBONITA pipeline out, although I don't suggest treating these results as anything other than a proof of bare-minimum function.
+- The [tutorial files](https://github.com/mgp13/mBONITA/tree/main/tutorial%20files) folder contains a toy example dataset [test_input_data.txt](https://github.com/mgp13/mBONITA/blob/1a72cf4fb3b5ab4976f4d3518c7719c7f6192b6a/tutorial%20files/test_input_data.txt) and network [test_network.graphml](https://github.com/mgp13/mBONITA/blob/1a72cf4fb3b5ab4976f4d3518c7719c7f6192b6a/tutorial%20files/test_network.graphml). These can be used to try the mBONITA pipeline out, although I don't suggest treating these results as anything other than a proof of bare-minimum function. *If you're using this tutorial, please use the python files in this folder only - there are some tiny modifications to allow for the fact that the tutorial rule inference does not have five iterations.*
+
 ##
 
 ### Step 0: Process multi-omics data and generate conditions and contrast files
@@ -253,6 +254,14 @@ which contains the command:
 python3 pathway_analysis_score_pathways_mBonita.py concatenated_datasets.csv concatenated_conditions.csv contrasts.csv -sep ,
 ```
 
+***If following along with the example/tutorial files in the tutorial folder:***
+
+Run the following command in the terminal
+
+```
+python pathway_analysis_score_pathways_mBonita.py --data test_input_data.txt --conditions test_conditions.txt --contrast test_contrast.txt -t
+```
+
 ## Analysis of the *mBONITA* output
 
 ### Inferred Boolean rules
@@ -277,6 +286,8 @@ This contains code to open the local1.pickle files generated during the rule inf
 
 
 ### Pathway analysis
+
+**Note: The tutorial/toy example will NOT return a Pvalues file, as rule inference was only run for one network. The other files should be generated.**
 
 A set of CSV files are returned.
 
