@@ -32,7 +32,7 @@ to perform the following tasks:
 - Infer Boolean regulatory/signaling rules for KEGG pathways using the combined multi-omics dataset (Step 2)
 - Perform topology-informed pathway analysis for user-specified pairs of experimental conditions (Step 3)
 
-This tutorial will go through the *mBONITA* pipeline using a multi-omics dataset of transcriptomics, proteomics, and phosphoproteomics from RAMOS B cells, as described in the *mBONITA* publication.
+This tutorial will go through the *mBONITA* pipeline using a multi-omics dataset of transcriptomics, proteomics, and phosphoproteomics from RAMOS B cells, as described in the *mBONITA* publication, as well as a toy example in the mBONITA tutorial folder.
 
 ### Installation: 
 
@@ -48,6 +48,8 @@ conda activate BONITA
 ```
 - Run all commands in a terminal window. You will need Python and your C compiler in your PATH variable. Once again, make sure that you are in the correct working directory.
 - The (mBONITA module)[https://github.com/mgp13/mBONITA/tree/main/mBONITA%20module] folder contains the processed transcriptomics, proteomics and phosphoproteomics datasets used in the paper. The original datasets may be downloaded from GEO and PRIDE (refer to manuscript for accession numbers). We have provided the file (concatenated_datasets.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_datasets.csv], which is a combination of the files (bonita_transcriptomics.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/bonita_transcriptomics.csv], (bonita_proteomics.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/bonita_proteomics.csv] and (bonita_phosphoproteomics.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/bonita_phosphoproteomics.csv], as the training dataset for the tutorial below. The corresponding contrasts file (contrasts.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/contrasts.csv] and conditions file (concatenated_conditions.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_conditions.csv] are also in the folder.
+- The (mBONITA tutorial)[] folder contains a toy example dataset ()[], network ()[]. These can be used to try the mBONITA pipeline out, although I don't suggest treating these results as anything other than a proof of bare-minimum function.
+##
 
 ### Step 0: Process multi-omics data and generate conditions and contrast files
 
@@ -67,7 +69,7 @@ Briefly, if your dataset looks something like this (a real-life example is (conc
 Then your condition file will look like this (Example: (concatenated_conditions.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_conditions.csv]):
 
 | Sample |  Condition1 | Condition2  | Dataset |
-| ------------- | ------------- | ------------- | 
+| ------------- | ------------- | ------------- | ------------- |
 | Condition1_replicate1_proteomics | 1  | 0  | Proteomics |
 | Condition1_replicate2_proteomics  | 1  | 0  |
 | Condition2_replicate1_proteomics | 0  | 1  | 
@@ -204,6 +206,8 @@ Run the following command in the terminal
 ```
 python pathway_analysis_score_nodes.py test_network.gpickle 1
 ```
+
+The option '1' stands in for the SLURM array ID. The SLURM script in the standard workflow runs the rule inference pipeline 5 times per network.
 
 You will see an output of nodes along with their predictors (ie, their upstream nodes with high correlation to them ), and a table showing the results of the genetic algorithm (generation, number of evaluations, average value of optimization function, standard deviation, minimum and maximum). 
 
