@@ -57,7 +57,7 @@ I expect that most users will begin with 2 or more processed datasets from separ
 
 mBONITA also requires a condition and contrast file for pathway analysis. An example of how to prepare these files is in [**Figure1.ipynb**](https://github.com/mgp13/mBONITA/blob/7255e434352085670414d337abd246c376d450d7/code%20used%20to%20generate%20figures%20in%20manuscript/Figure%201/Figure1.ipynb).
 
-Briefly, if your dataset looks something like this (a real-life example is (concatenated_datasets.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_datasets.csv]):
+Briefly, if your dataset looks something like this (a real-life example is [concatenated_datasets.csv](https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_datasets.csv):
 
 | Genes | Condition1_ replicate1_ proteomics  | Condition1_ replicate2_ proteomics | Condition2_ replicate1_ proteomics  | Condition2_ replicate2_ proteomics | Condition1_ replicate1_ phospho proteomics | Condition1_ replicate2_ phospho proteomics | Condition2_ replicate1_ phospho proteomics | Condition2_ replicate2_ phospho proteomics |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -66,7 +66,7 @@ Briefly, if your dataset looks something like this (a real-life example is (conc
 | Gene3  | - | - | - | - | - | - | - | - |
 | Gene4  | - | - | - | - | - | - | - | - |
 
-Then your condition file will look like this (Example: (concatenated_conditions.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_conditions.csv]):
+Then your condition file will look like this (Example: [concatenated_conditions.csv](https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/concatenated_conditions.csv)):
 
 | Sample |  Condition1 | Condition2  | Dataset |
 | ------------- | ------------- | ------------- | ------------- |
@@ -80,7 +80,7 @@ Then your condition file will look like this (Example: (concatenated_conditions.
 | Condition2_replicate2_phosphoproteomics  | 0  | 1  | Phosphoproteomics |
 
 
-And your contrast file will look like this (Example: (contrasts.csv)[https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/contrasts.csv]):
+And your contrast file will look like this (Example: [contrasts.csv](https://github.com/mgp13/mBONITA/blob/3cdb24ecfd80b4c8726c84d061206f857df82850/mBONITA%20module/contrasts.csv)):
 
 |  Condition1 | Condition2  |
 
